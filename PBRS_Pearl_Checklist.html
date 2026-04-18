@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PBRS Pearl Building Rating — Design Checklist</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --blue: #2c6fad;
+    --blue-light: #e8f2fb;
+    --blue-mid: #b5d4f4;
+    --green: #2a7a2a;
+    --green-light: #eaf4ea;
+    --amber: #b07d00;
+    --amber-light: #fdf3dc;
+    --red: #9a1f1f;
+    --red-light: #fdf0f0;
+    --gray-50: #f8f8f7;
+    --gray-100: #f0efeb;
+    --gray-200: #e0dfd9;
+    --gray-300: #c8c7c0;
+    --gray-500: #888780;
+    --gray-700: #4a4a48;
+    --gray-900: #1e1e1c;
+    --border: #dddcd6;
+    --radius: 6px;
+    --radius-lg: 10px;
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  html { font-size: 14px; }
+  body { font-family: var(--font); color: var(--gray-900); background: #f4f3ef; min-height: 100vh; }
+
+  /* ---------- LAYOUT ---------- */
+  .page-wrap { max-width: 1020px; margin: 0 auto; padding: 0 16px 48px; }
+  .site-header { background: #fff; border-bottom: 1px solid var(--border); padding: 0 16px; position: sticky; top: 0; z-index: 100; }
+  .header-inner { max-width: 1020px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 52px; gap: 12px; }
+  .header-logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 32px; height: 32px; background: var(--blue); border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .logo-mark svg { width: 18px; height: 18px; fill: #fff; }
+  .header-title { font-size: 14px; font-weight: 600; color: var(--gray-900); line-height: 1.2; }
+  .header-sub { font-size: 11px; color: var(--gray-500); margin-top: 1px; }
+  .header-actions { display: flex; gap: 8px; align-items: center; }
+
+  /* ---------- BUTTONS ---------- */
+  .btn { padding: 7px 16px; font-size: 12.5px; border-radius: var(--radius); cursor: pointer; border: 1px solid var(--border); background: #fff; color: var(--gray-700); font-family: var(--font); font-weight: 500; transition: background 0.1s, border-color 0.1s; white-space: nowrap; }
+  .btn:hover { background: var(--gray-50); border-color: var(--gray-300); }
+  .btn.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .btn.primary:hover { background: #245d93; border-color: #245d93; }
+  .btn.sm { padding: 5px 12px; font-size: 11.5px; }
+
+  /* ---------- PAGE SECTIONS ---------- */
+  #view-setup, #view-stage { display: none; }
+  #view-setup.active, #view-stage.active { display: block; }
+
+  /* ---------- PAGE TITLE ROW ---------- */
+  .page-title-row { display: flex; align-items: flex-end; justify-content: space-between; padding: 22px 0 14px; gap: 16px; flex-wrap: wrap; }
+  .page-title { font-size: 20px; font-weight: 600; color: var(--gray-900); }
+  .page-desc { font-size: 12.5px; color: var(--gray-500); margin-top: 3px; }
+
+  /* ---------- SUMMARY CARDS ---------- */
+  .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 18px; }
+  @media (max-width: 700px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+  .sum-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; }
+  .sum-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-500); margin-bottom: 5px; }
+  .sum-value { font-size: 26px; font-weight: 600; line-height: 1; color: var(--gray-900); }
+  .sum-sub { font-size: 11px; color: var(--gray-500); margin-top: 4px; }
+  .rating-pill { display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+  .rp-0 { background: var(--gray-100); color: var(--gray-700); }
+  .rp-1 { background: #e2f0e2; color: #1b5e1b; }
+  .rp-2 { background: #c8e6c8; color: #14511a; }
+  .rp-3 { background: #aad4aa; color: #0c4012; }
+  .rp-4 { background: #85c490; color: #05300b; }
+  .rp-5 { background: #5aad6a; color: #011f05; }
+
+  /* ---------- KICKOFF NOTE ---------- */
+  .notice { background: var(--blue-light); border-left: 3px solid var(--blue); border-radius: 0 var(--radius) var(--radius) 0; padding: 9px 14px; font-size: 12.5px; color: #1a4a77; margin-bottom: 16px; line-height: 1.5; }
+
+  /* ---------- STAGE TABS ---------- */
+  .stage-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 18px; }
+  .stage-tab { padding: 9px 22px; font-size: 13px; cursor: pointer; background: none; border: none; color: var(--gray-500); font-family: var(--font); font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.1s; }
+  .stage-tab:hover { color: var(--gray-900); }
+  .stage-tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+
+  /* ---------- CREDIT SECTIONS ---------- */
+  .section-wrap { margin-bottom: 6px; }
+  .section-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--gray-100); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; user-select: none; transition: background 0.1s; }
+  .section-head:hover { background: var(--gray-200); }
+  .section-head.open { border-radius: var(--radius) var(--radius) 0 0; border-bottom-color: transparent; }
+  .sec-left { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--gray-900); }
+  .sec-chevron { color: var(--gray-500); font-size: 10px; transition: transform 0.15s; display: inline-block; }
+  .sec-chevron.open { transform: rotate(90deg); }
+  .sec-pts { font-size: 12px; color: var(--gray-500); font-weight: 400; }
+
+  /* ---------- CREDIT ROWS (SETUP) ---------- */
+  .credits-body { border: 1px solid var(--border); border-top: none; border-radius: 0 0 var(--radius) var(--radius); background: #fff; }
+  .credit-row { display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px 10px 32px; border-bottom: 1px solid var(--border); transition: background 0.08s; }
+  .credit-row:last-child { border-bottom: none; }
+  .credit-row.checked { background: #f4f9ff; }
+  .credit-row.req-row { background: #fafaf8; }
+  .credit-cb { width: 15px; height: 15px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--blue); }
+  .credit-cb:disabled { cursor: default; accent-color: var(--gray-300); }
+  .credit-meta { flex: 1; min-width: 0; }
+  .credit-code-line { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+  .credit-code { font-size: 11.5px; font-weight: 700; color: var(--blue); }
+  .req-badge { font-size: 9.5px; background: #f0e8ff; color: #6b3fa0; border-radius: 3px; padding: 1px 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .credit-name { font-size: 13px; color: var(--gray-900); }
+  .credit-pts-note { font-size: 11px; color: var(--gray-500); }
+
+  /* ---------- STAGE CREDIT ROWS ---------- */
+  .stage-credit-block { border-bottom: 1px solid var(--border); }
+  .stage-credit-block:last-child { border-bottom: none; }
+  .stage-credit-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px 10px 32px; cursor: pointer; transition: background 0.08s; gap: 12px; }
+  .stage-credit-head:hover { background: var(--gray-50); }
+  .stage-credit-head.open { background: #f7f9fd; }
+  .sch-left { flex: 1; min-width: 0; }
+  .sch-title-row { display: flex; align-items: center; gap: 7px; margin-bottom: 4px; flex-wrap: wrap; }
+  .progress-bar-wrap { display: flex; align-items: center; gap: 8px; }
+  .progress-track { height: 4px; width: 160px; background: var(--gray-200); border-radius: 2px; flex-shrink: 0; }
+  .progress-fill { height: 4px; border-radius: 2px; transition: width 0.2s; }
+  .prog-done { background: var(--green); }
+  .prog-partial { background: var(--amber); }
+  .prog-empty { background: var(--gray-300); }
+  .sch-right { font-size: 11.5px; font-weight: 600; flex-shrink: 0; }
+  .status-done { color: var(--green); }
+  .status-partial { color: var(--amber); }
+  .status-pending { color: var(--gray-500); }
+
+  /* ---------- CRITERIA PANEL ---------- */
+  .criteria-panel { padding: 10px 16px 14px 48px; background: #fbfbf9; border-top: 1px solid var(--border); }
+  .criteria-item { display: flex; align-items: flex-start; gap: 9px; margin-bottom: 8px; }
+  .criteria-item:last-of-type { margin-bottom: 0; }
+  .criteria-cb { width: 14px; height: 14px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--green); }
+  .criteria-text { font-size: 13px; line-height: 1.5; color: var(--gray-900); }
+  .criteria-text.done { color: var(--gray-500); text-decoration: line-through; }
+  .note-label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 12px; margin-bottom: 4px; }
+  .note-field { width: 100%; font-size: 12.5px; font-family: var(--font); color: var(--gray-900); background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 7px 10px; resize: vertical; min-height: 44px; line-height: 1.5; transition: border-color 0.1s; }
+  .note-field:focus { outline: none; border-color: var(--blue); }
+
+  /* ---------- STAGE SUMMARY ---------- */
+  .stage-summary { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 18px; margin-top: 18px; }
+  .ss-title { font-size: 13px; font-weight: 600; margin-bottom: 12px; color: var(--gray-900); }
+  .ss-row { display: flex; justify-content: space-between; align-items: flex-start; font-size: 12.5px; padding: 7px 0; border-bottom: 1px solid var(--border); gap: 16px; }
+  .ss-row:last-child { border-bottom: none; }
+  .ss-row-label { color: var(--gray-700); flex-shrink: 0; }
+  .ss-codes { font-weight: 600; text-align: right; line-height: 1.6; }
+  .ss-green { color: var(--green); }
+  .ss-amber { color: var(--amber); }
+  .ss-red { color: var(--red); }
+
+  /* ---------- PROJECT INFO BANNER ---------- */
+  .project-banner { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .proj-field { display: flex; flex-direction: column; gap: 3px; }
+  .proj-field label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-500); }
+  .proj-field input, .proj-field select { font-size: 13px; font-family: var(--font); color: var(--gray-900); border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; background: #fff; min-width: 160px; }
+  .proj-field input:focus, .proj-field select:focus { outline: none; border-color: var(--blue); }
+
+  /* ---------- PRINT ---------- */
+  @media print {
+    .site-header, .header-actions, .btn, .stage-tabs, .page-title-row .btn { display: none !important; }
+    .page-wrap { max-width: 100%; padding: 0; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 20 20"><polygon points="10,2 18,7 18,13 10,18 2,13 2,7"/></svg>
+      </div>
+      <div>
+        <div class="header-title">Pearl Building Rating System</div>
+        <div class="header-sub">Design Checklist · PBRS Version 1.0 · Estidama Abu Dhabi</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn sm" onclick="exportData()">Export JSON</button>
+      <button class="btn sm" onclick="importData()">Import JSON</button>
+      <button class="btn sm" onclick="window.print()">Print</button>
+      <span id="save-indicator" style="font-size:11px;color:var(--green);display:none;">✓ Saved</span>
+    </div>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <!-- SETUP VIEW -->
+  <div id="view-setup" class="active">
+    <div class="page-title-row">
+      <div>
+        <div class="page-title">Credit Selection</div>
+        <div class="page-desc">Select credits to target at project kick-off. Mandatory credits are pre-selected.</div>
+      </div>
+      <button class="btn primary" onclick="goToStage()">Start Stage Tracking →</button>
+    </div>
+
+    <div class="project-banner">
+      <div class="proj-field"><label>Project name</label><input type="text" id="proj-name" placeholder="e.g. Al Maryah Tower" oninput="saveState()"/></div>
+      <div class="proj-field"><label>Project number</label><input type="text" id="proj-num" placeholder="e.g. 2024-ADH-001" oninput="saveState()"/></div>
+      <div class="proj-field"><label>Building use</label>
+        <select id="proj-type" onchange="saveState()">
+          <option value="">— Select —</option>
+          <option>Office</option><option>Retail</option><option>Multi-Residential</option><option>School</option><option>Mixed Use</option>
+        </select>
+      </div>
+      <div class="proj-field"><label>Target Pearl rating</label>
+        <select id="proj-target" onchange="saveState()">
+          <option value="">— Select —</option>
+          <option>1 Pearl</option><option>2 Pearl (60 pts)</option><option>3 Pearl (85 pts)</option><option>4 Pearl (115 pts)</option><option>5 Pearl (140 pts)</option>
+        </select>
+      </div>
+      <div class="proj-field"><label>PQP name</label><input type="text" id="proj-pqp" placeholder="Pearl Qualified Professional" oninput="saveState()"/></div>
+      <div class="proj-field"><label>Date</label><input type="date" id="proj-date" oninput="saveState()"/></div>
+    </div>
+
+    <div class="summary-grid" id="setup-summary"></div>
+    <div class="notice">Tick the optional credits your team will pursue. Mandatory credits (R) are required for all Pearl ratings and cannot be deselected. Points shown are the maximum available per credit.</div>
+    <div id="setup-credits"></div>
+  </div>
+
+  <!-- STAGE VIEW -->
+  <div id="view-stage">
+    <div class="page-title-row">
+      <div>
+        <div class="page-title" id="stage-view-title">Stage Checklist</div>
+        <div class="page-desc" id="stage-view-sub"></div>
+      </div>
+      <button class="btn" onclick="goToSetup()">← Credit Selection</button>
+    </div>
+    <div class="summary-grid" id="stage-summary"></div>
+    <div class="stage-tabs">
+      <button class="stage-tab active" data-stage="concept" onclick="setStage('concept')">Concept Design</button>
+      <button class="stage-tab" data-stage="schematic" onclick="setStage('schematic')">Schematic Design</button>
+      <button class="stage-tab" data-stage="detailed" onclick="setStage('detailed')">Detailed Design</button>
+    </div>
+    <div id="stage-credits"></div>
+    <div class="stage-summary" id="stage-end-summary"></div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════════════════
+const SECTIONS = {
+  IDP: 'IDP — Integrated Development Process',
+  NS:  'NS — Natural Systems',
+  LBo: 'LB — Livable Buildings (Outdoors)',
+  LBi: 'LB — Livable Buildings (Indoors)',
+  PW:  'PW — Precious Water',
+  RE:  'RE — Resourceful Energy',
+  SM:  'SM — Stewarding Materials',
+  IP:  'IP — Innovating Practice',
+};
+
+const CREDITS = {
+IDP:[
+  {code:'IDP-R1',title:'Integrated Development Strategy',pts:'R',req:true,criteria:{
+    concept:['Appoint Pearl Qualified Professional (PQP) for the project','Assemble Integrated Development Process (IDP) team with all key disciplines (architecture, MEP, civil, landscape, sustainability)','Hold IDP kick-off workshop — document sustainability objectives and targets','Define sustainability vision statement and credit scorecard'],
+    schematic:['Conduct minimum 3 IDP workshops — document with signed meeting minutes','Demonstrate cross-disciplinary integration of sustainability decisions','Update sustainability scorecard to reflect schematic design decisions','Review EIDP evidence showing IDP is influencing design'],
+    detailed:['Finalise IDP summary report covering all design stages','Confirm all major design decisions are aligned with IDP outcomes','Prepare IDP report for design rating submission to Estidama']}},
+  {code:'IDP-R2',title:'Tenant Fit-Out Design & Construction Guide',pts:'R',req:true,criteria:{
+    concept:['Confirm whether project is Core & Shell (credit only applies to Core & Shell)'],
+    schematic:['Draft Tenant Fit-Out Guide framework covering sustainability vision and credit targets'],
+    detailed:['Finalise Tenant Fit-Out Design & Construction Guide','Confirm guide is attached to lease documents for all future tenants']}},
+  {code:'IDP-R3',title:'Basic Commissioning',pts:'R',req:true,criteria:{
+    concept:["Appoint Independent Commissioning Agent (ICA) reporting directly to the owner","Define Owner's Project Requirements (OPR) document with owner"],
+    schematic:['ICA reviews schematic design documents and provides written comments',"Develop Commissioning Plan including OPR and Basis of Design narrative"],
+    detailed:['Include comprehensive commissioning requirements in project specifications','Issue final Commissioning Plan prior to construction start']}},
+  {code:'IDP-1',title:'Life Cycle Costing',pts:4,req:false,criteria:{
+    concept:['Engage qualified Chartered Surveyor with previous LCC experience on min. 2 similar projects','Start Life Cycle Cost (LCC) analysis during concept design to evaluate and compare design options'],
+    schematic:['Update LCC model with schematic design decisions and technology choices','Provide evidence from EIDP that LCC results are influencing design'],
+    detailed:['Finalise LCC report at end of detailed design stage','Document summary of all design decisions informed by LCC analysis']}},
+  {code:'IDP-2',title:'Guest Worker Accommodation',pts:2,req:false,criteria:{
+    concept:['Confirm whether project will use construction guest workers'],
+    schematic:['Draft Construction Guest Worker Accommodation Plan framework'],
+    detailed:['Finalise plan covering: accommodation facilities, welfare, healthcare, transport, grievance mechanism, recreational facilities']}},
+  {code:'IDP-3',title:'Construction Environmental Management',pts:2,req:false,criteria:{
+    concept:['Define scope of works and identify environmental sensitivities on and adjacent to site'],
+    schematic:['Draft Construction Environmental Management Plan (CEMP) framework'],
+    detailed:['Finalise CEMP covering dust, noise, vibration, waste, water quality, ecology protection','Include CEMP requirements in tender and contract documents']}},
+  {code:'IDP-4',title:'Building Envelope Verification',pts:1,req:false,criteria:{
+    concept:['Define building envelope performance targets (U-values, SHGC, airtightness)'],
+    schematic:['Specify building envelope performance criteria in outline specifications'],
+    detailed:['Include envelope air permeability testing requirements in specifications','Appoint independent testing agent for post-construction air permeability verification']}},
+  {code:'IDP-5',title:'Re-Commissioning',pts:2,req:false,criteria:{
+    concept:["Confirm owner's commitment to ongoing commissioning beyond initial handover"],
+    schematic:['Include re-commissioning requirements within the commissioning plan'],
+    detailed:['Develop Re-Commissioning Plan for Year 1 tuning and Year 2 re-commissioning','Specify O&M Manual and Building Log Book (BLB) requirements in contracts']}},
+  {code:'IDP-6',title:'Sustainability Communication',pts:2,req:false,criteria:{
+    concept:['Define target audience and scope of sustainability communication strategy'],
+    schematic:['Draft Sustainability Communication Strategy framework'],
+    detailed:['Finalise Sustainability Communication Plan covering occupant information, in-building displays, and annual reporting']}},
+],
+NS:[
+  {code:'NS-R1',title:'Natural Systems Assessment',pts:'R',req:true,criteria:{
+    concept:['Undertake Preliminary Environmental Review (PER) of site by qualified ecologist','Identify all natural systems on, adjacent to, and hydrologically connected to the site'],
+    schematic:['Conduct detailed Natural Systems Assessment (NSA) — map habitats, species, groundwater, coastal features','NSA to be prepared by a qualified ecological consultant'],
+    detailed:['Finalise NSA report and confirm all significant natural assets are documented','Confirm NSA findings are embedded in design and construction plans']}},
+  {code:'NS-R2',title:'Natural Systems Protection',pts:'R',req:true,criteria:{
+    concept:['Identify priority habitats and species requiring protection','Define site exclusion zones and protective buffer distances'],
+    schematic:['Develop Natural Systems Protection Plan with qualified ecologist','Confirm design layout avoids all significant natural assets'],
+    detailed:['Finalise protection measures in construction drawings and specifications','Include natural systems protection requirements in all construction contracts']}},
+  {code:'NS-R3',title:'Natural Systems Design & Management Strategy',pts:'R',req:true,criteria:{
+    concept:['Identify opportunities to integrate and enhance natural systems within the design'],
+    schematic:['Develop Natural Systems Design & Management Strategy following hierarchy: protect → restore → enhance'],
+    detailed:['Finalise strategy covering design, construction phase, and long-term operational management']}},
+  {code:'NS-1',title:'Reuse of Land',pts:2,req:false,criteria:{
+    concept:['Confirm site qualifies as previously developed land (brownfield) per PBRS definition'],
+    schematic:['Gather documentary evidence of prior development on site'],
+    detailed:['Finalise land reuse narrative with site history maps, photographs, and official records']}},
+  {code:'NS-2',title:'Remediation of Contaminated Land',pts:2,req:false,criteria:{
+    concept:['Commission Phase 1 Desk Study Environmental Assessment','Identify potential contamination sources on and surrounding site'],
+    schematic:['Undertake Phase 2 intrusive site investigation if contamination is identified or suspected'],
+    detailed:['Develop and implement a Remediation Action Plan (RAP)','Confirm site meets agreed clean-up criteria with regulator sign-off']}},
+  {code:'NS-3',title:'Ecological Enhancement',pts:2,req:false,criteria:{
+    concept:['Identify specific opportunities for ecological enhancement beyond baseline mitigation'],
+    schematic:['Develop Ecological Enhancement Plan with qualified ecologist'],
+    detailed:['Finalise design details for green roofs, habitat boxes, bioswales, and enhanced planting']}},
+  {code:'NS-4',title:'Habitat Creation & Restoration',pts:6,req:false,criteria:{
+    concept:['Identify degraded, lost, or functionally reduced habitats on or adjacent to the site'],
+    schematic:['Develop Habitat Creation & Restoration Plan with qualified ecologist — target priority habitat types'],
+    detailed:['Finalise species selections, planting plans, and habitat management commitments','Secure long-term habitat management agreement (minimum 10 years)']}},
+],
+LBo:[
+  {code:'LBo-R1',title:'Plan 2030',pts:'R',req:true,criteria:{
+    concept:["Review Abu Dhabi Plan 2030 requirements applicable to the site",'Confirm project complies with land use, density, open space, and sustainability policies'],
+    schematic:['Demonstrate project design positively responds to Plan 2030 urban structure framework'],
+    detailed:['Confirm all Plan 2030 compliance documented in drawings and planning submission']}},
+  {code:'LBo-R2',title:'Urban Systems Assessment',pts:'R',req:true,criteria:{
+    concept:['Undertake Urban Systems Assessment mapping existing context: pedestrian routes, transport, public space, community facilities'],
+    schematic:['Demonstrate project design responds positively to Urban Systems Assessment findings'],
+    detailed:['Finalise Urban Systems Assessment report for design rating submission']}},
+  {code:'LBo-R3',title:'Outdoor Thermal Comfort Strategy',pts:'R',req:true,criteria:{
+    concept:['Define all outdoor spaces requiring thermal comfort assessment','Appoint specialist consultant for outdoor microclimate analysis'],
+    schematic:['Conduct outdoor thermal comfort simulations (CFD/UTCI analysis)','Develop Outdoor Thermal Comfort Strategy — shading, planting, materials, misting'],
+    detailed:['Finalise outdoor shading structures and confirm compliance with thermal comfort targets in all key spaces']}},
+  {code:'LBo-1',title:'Improved Outdoor Thermal Comfort',pts:2,req:false,criteria:{
+    concept:['Set outdoor thermal comfort performance target (UTCI or PMV-based) beyond minimum'],
+    schematic:['Simulate outdoor thermal comfort for all key pedestrian spaces','Demonstrate measurable improvement above the minimum strategy requirement'],
+    detailed:['Confirm shading elements, high-reflectance materials, and vegetation in detailed construction drawings']}},
+  {code:'LBo-2',title:'Pearl Rated Communities',pts:1,req:false,criteria:{
+    concept:['Confirm site is located within a Pearl Rated Community development'],
+    schematic:['Obtain written confirmation from the community master developer'],
+    detailed:['Document evidence of Pearl Rated Community location in credit submission']}},
+  {code:'LBo-3',title:'Accessible Community Facilities',pts:1,req:false,criteria:{
+    concept:['Map all community facilities within 800m walking distance of the main building entrance'],
+    schematic:['Confirm minimum 4 different community facility types are within walking distance'],
+    detailed:['Finalise site plan showing pedestrian walking routes to all identified community facilities']}},
+  {code:'LBo-4',title:'Active Urban Environments',pts:1,req:false,criteria:{
+    concept:['Assess ground floor activation opportunities along all street-facing facades'],
+    schematic:['Design active uses (retail, café, services) occupying min. 50% of ground floor street-facing frontage'],
+    detailed:['Confirm active use layouts, frontage transparency, and access points in detailed drawings']}},
+  {code:'LBo-6',title:'Public Transport',pts:3,req:false,criteria:{
+    concept:['Map all public transport stops within 500m of the building main entrance'],
+    schematic:['Confirm frequency and types of public transport services available','Assess walking routes and their quality for pedestrians'],
+    detailed:['Provide covered, weather-protected pedestrian routes to nearest public transport stops']}},
+  {code:'LBo-7',title:'Bicycle Facilities',pts:2,req:false,criteria:{
+    concept:['Define projected cycling demand and target levels for the building use'],
+    schematic:['Design secure long-stay cycle parking, shower, and changing facilities','Calculate quantities per PBRS requirements'],
+    detailed:['Finalise cycle storage layout, quantities, security measures, and wayfinding in construction drawings']}},
+  {code:'LBo-8',title:'Preferred Car Parking Spaces',pts:1,req:false,criteria:{
+    concept:['Identify eligible preferred parking categories: carpool, EV charging, low-emission vehicles'],
+    schematic:['Allocate minimum 5% of total parking spaces to preferred categories'],
+    detailed:['Mark preferred spaces with appropriate signage and markings in parking layout drawings']}},
+  {code:'LBo-9',title:'Travel Plan',pts:1,req:false,criteria:{
+    concept:['Confirm commitment to developing a comprehensive Travel Plan'],
+    schematic:['Draft Travel Plan framework with baseline travel assessment'],
+    detailed:['Finalise Travel Plan with mode share targets, monitoring programme, and responsible party']}},
+  {code:'LBo-10',title:'Light Pollution Reduction',pts:1,req:false,criteria:{
+    concept:['Identify sensitive receivers around the site: residential buildings, habitats, night sky'],
+    schematic:['Establish lighting design criteria to limit spill light and upward light emission'],
+    detailed:['Confirm all external luminaires comply with light pollution limits and BUG ratings in detailed specifications']}},
+],
+LBi:[
+  {code:'LBi-R1',title:'Healthy Ventilation Delivery',pts:'R',req:true,criteria:{
+    concept:['Confirm HVAC strategy provides adequate outdoor air to all occupied spaces'],
+    schematic:['Demonstrate ventilation rates meet ASHRAE 62.1 minimum requirements for all spaces'],
+    detailed:['Include ventilation performance testing and TAB (Testing, Adjusting, Balancing) requirements in mechanical specifications']}},
+  {code:'LBi-R2',title:'Smoking Control',pts:'R',req:true,criteria:{
+    concept:['Define no-smoking policy for all indoor areas and building entrances'],
+    schematic:['Locate any designated outdoor smoking areas minimum 7.5m from all building entrances and air intakes'],
+    detailed:['Confirm no-smoking signage, policy documentation, and lease enforcement provisions']}},
+  {code:'LBi-R3',title:'Legionella Prevention',pts:'R',req:true,criteria:{
+    concept:['Identify all domestic water systems and cooling towers at risk of Legionella growth'],
+    schematic:['Develop Legionella Risk Assessment and Water Safety Control Strategy with specialist'],
+    detailed:['Include Legionella prevention measures — temperature maintenance, biocide dosing, monitoring — in MEP specs and O&M Manual']}},
+  {code:'LBi-1',title:'Ventilation Quality',pts:3,req:false,criteria:{
+    concept:['Set enhanced IAQ target beyond ASHRAE 62.1 minimum outdoor air rates'],
+    schematic:['Design for improved outdoor air supply — consider demand-controlled ventilation with CO₂ sensing','Evaluate enhanced filtration to MERV 13 or higher'],
+    detailed:['Specify CO₂/VOC sensors, IAQ monitoring system, and enhanced filtration in mechanical specifications']}},
+  {code:'LBi-2.1',title:'Material Emissions: Adhesives & Sealants',pts:1,req:false,criteria:{
+    concept:['Flag low-VOC adhesives and sealants as a project-wide requirement'],
+    schematic:['Specify VOC content limits for all adhesives and sealants per SCAQMD Rule 1168'],
+    detailed:['Confirm all specified adhesive and sealant products meet required VOC limits in specifications and materials schedule']}},
+  {code:'LBi-2.2',title:'Material Emissions: Paints & Coatings',pts:1,req:false,criteria:{
+    concept:['Flag low-VOC paints and coatings as a project-wide requirement'],
+    schematic:['Specify VOC content limits per GS-11 (architectural paints) and GS-03 (anti-corrosive coatings)'],
+    detailed:['Confirm all specified paint and coating products meet VOC limits in specifications']}},
+  {code:'LBi-2.3',title:'Material Emissions: Carpet & Hard Flooring',pts:1,req:false,criteria:{
+    concept:['Identify flooring product categories and flag low-emission requirement across all'],
+    schematic:['Specify carpet meeting CRI Green Label Plus; hard flooring per FloorScore or equivalent'],
+    detailed:['Confirm all flooring products meet emission certification standards in specifications and finishes schedule']}},
+  {code:'LBi-5.1',title:'Thermal Comfort: Thermal Zoning',pts:1,req:false,criteria:{
+    concept:['Identify occupancy patterns and areas with different thermal comfort requirements'],
+    schematic:['Design HVAC with independently controlled thermal zones for different occupancy types and orientations'],
+    detailed:['Confirm independent zone control reflected in MEP drawings and BMS configuration']}},
+  {code:'LBi-5.3',title:'Thermal Comfort: Thermal Comfort Modelling',pts:2,req:false,criteria:{
+    concept:['Commit to thermal comfort modelling using ASHRAE 55 PMV/PPD methodology'],
+    schematic:['Conduct thermal comfort simulation for all representative occupied space types','Demonstrate spaces achieve PMV between -0.5 and +0.5'],
+    detailed:['Submit thermal comfort modelling report confirming compliance with ASHRAE 55 criteria']}},
+  {code:'LBi-6',title:'High Frequency Lighting',pts:1,req:false,criteria:{
+    concept:['Identify all spaces with fluorescent lighting and specify high-frequency ballast requirement'],
+    schematic:['Confirm all fluorescent fittings use high-frequency ballasts (≥40kHz) or are replaced by LED'],
+    detailed:['Include high-frequency ballast or LED-only requirement in electrical specifications']}},
+  {code:'LBi-7',title:'Daylight & Glare',pts:2,req:false,criteria:{
+    concept:['Set daylight performance target for all regularly occupied spaces'],
+    schematic:['Conduct daylight simulation — achieve min. 2% daylight factor (or equivalent LEED EQ metric)','Design glare control strategy: external overhangs, internal blinds, fritting, for all glazed facades'],
+    detailed:['Confirm daylight simulation results and glare control specifications in detailed design package']}},
+  {code:'LBi-9',title:'Indoor Noise Pollution',pts:1,req:false,criteria:{
+    concept:['Identify all noise-sensitive spaces: offices, classrooms, bedrooms, meeting rooms'],
+    schematic:['Develop acoustic strategy — partition performance, HVAC background noise limits (NR/NC), façade sound reduction'],
+    detailed:['Confirm all acoustic specifications meet target background noise levels and sound insulation ratings in all sensitive spaces']}},
+],
+PW:[
+  {code:'PW-R1',title:'Minimum Interior Water Use Reduction',pts:'R',req:true,criteria:{
+    concept:['Establish water consumption baseline using PBRS standard fixture flow rates','Define minimum reduction target: 15% below baseline'],
+    schematic:['Select water-efficient sanitary fixtures and fittings — dual-flush WCs, flow-restricted taps','Calculate projected water consumption against PBRS baseline'],
+    detailed:['Specify all fixtures with confirmed flow rates in plumbing specifications','Finalise water efficiency calculations demonstrating minimum 15% reduction']}},
+  {code:'PW-R2',title:'Exterior Water Monitoring',pts:'R',req:true,criteria:{
+    concept:['Identify all exterior water uses: irrigation, cooling towers, water features, washing'],
+    schematic:['Design dedicated sub-metering for each exterior water use category'],
+    detailed:['Include sub-meters with data-logging capability in MEP drawings and specifications']}},
+  {code:'PW-1',title:'Improved Interior Water Use Reduction',pts:15,req:false,criteria:{
+    concept:['Set enhanced water reduction target beyond the 15% minimum (targeting 30–50%+)'],
+    schematic:['Select ultra-low flow fixtures: dual-flush WCs (3/4.5L), 6L/min taps, waterless urinals','Calculate projected savings for each level of improvement to identify achievable credit points'],
+    detailed:['Confirm all fixture flow rates in plumbing specifications','Finalise calculations demonstrating credit level achieved and attach to credit submission']}},
+  {code:'PW-2.1',title:'Exterior Water Reduction: Landscaping',pts:8,req:false,criteria:{
+    concept:['Define landscape concept based on native and adaptive low-water plant palette','Set irrigation water use reduction target vs. conventional landscaping baseline'],
+    schematic:['Develop detailed planting schedule with water demand calculations per irrigation zone','Design efficient drip or micro-irrigation system with smart controller and soil moisture sensors'],
+    detailed:['Finalise irrigation design with zone scheduling, controller specification, and water budget calculations','Confirm use of treated sewage effluent (TSE) or recycled water for irrigation']}},
+  {code:'PW-2.2',title:'Exterior Water Reduction: Heat Rejection',pts:8,req:false,criteria:{
+    concept:['Confirm cooling tower or heat rejection system type, scale, and water use implications'],
+    schematic:['Specify water-efficient heat rejection equipment','Design water treatment system to maximise cycles of concentration (target ≥5 cycles)'],
+    detailed:['Confirm makeup water quantities, blowdown rates, and cycles of concentration in MEP specifications and calculations']}},
+  {code:'PW-3',title:'Water Monitoring & Leak Detection',pts:4,req:false,criteria:{
+    concept:['Identify all major water end-uses requiring individual sub-metering'],
+    schematic:['Design comprehensive sub-metering strategy covering all end-uses','Include automatic leak detection and pulse-monitoring system'],
+    detailed:['Specify sub-meters, pulse data loggers, and leak detection equipment in MEP drawings and specifications']}},
+  {code:'PW-4',title:'Stormwater Management',pts:4,req:false,criteria:{
+    concept:['Assess site stormwater runoff volumes and peak flow rates using local rainfall data','Identify opportunities for stormwater attenuation and beneficial reuse'],
+    schematic:['Design stormwater attenuation strategy: detention tanks, permeable paving, bioswales','Model post-development runoff and demonstrate reduction vs. pre-development baseline'],
+    detailed:['Finalise stormwater design with calculations and confirm performance against runoff reduction targets']}},
+],
+RE:[
+  {code:'RE-R1',title:'Minimum Energy Performance',pts:'R',req:true,criteria:{
+    concept:['Define building energy performance target: minimum 10% improvement over ASHRAE 90.1 baseline','Appoint energy modeller and establish energy modelling brief (EUI targets per building use)'],
+    schematic:['Conduct parametric energy model per ANSI/ASHRAE/IESNA 90.1-2007','Demonstrate minimum 10% energy cost saving vs. baseline building'],
+    detailed:['Finalise energy model with all detailed design inputs including actual equipment schedules','Include energy performance target and modelling summary in design documentation']}},
+  {code:'RE-R2',title:'Energy Monitoring & Reporting',pts:'R',req:true,criteria:{
+    concept:['Define all major energy end-uses requiring dedicated sub-metering (HVAC, lighting, small power, lifts, specialist equipment)'],
+    schematic:['Design energy metering strategy covering all major end-use categories'],
+    detailed:['Include energy sub-meters and BMS energy reporting dashboard in MEP specifications']}},
+  {code:'RE-R3',title:'Ozone Impacts of Refrigerants & Fire Suppression',pts:'R',req:true,criteria:{
+    concept:['Identify all refrigerants planned for HVAC, refrigeration, and fire suppression systems'],
+    schematic:['Confirm zero ODP (Ozone Depletion Potential) refrigerants and fire suppression agents are selected for all systems'],
+    detailed:['Include zero ODP refrigerant and fire agent requirements in MEP and fire protection specifications']}},
+  {code:'RE-1',title:'Improved Energy Performance',pts:15,req:false,criteria:{
+    concept:['Set energy improvement target beyond 10% minimum — assess potential for 20–40%+ improvement'],
+    schematic:['Optimise energy model: building fabric, HVAC CoP, lighting density, controls, and renewables','Model different improvement scenarios to identify achievable credit points'],
+    detailed:['Finalise energy model reflecting all detailed design decisions and specifications','Document all energy efficiency measures with performance data in specifications']}},
+  {code:'RE-2',title:'Cool Building Strategies',pts:6,req:false,criteria:{
+    concept:['Identify passive cooling and heat island reduction strategies suitable for project type and climate'],
+    schematic:['Integrate passive measures: external shading, high-performance glazing, night purge ventilation','Select high-reflectance roofing materials (SRI ≥ 29 for low-slope, ≥ 78 for steep-slope roofs)','Select paving materials with SRI ≥ 29 for at least 50% of site hardscape'],
+    detailed:['Confirm SRI values, shading geometry dimensions, and cool roof product specifications in drawings and specs']}},
+  {code:'RE-3',title:'Energy Efficient Appliances',pts:3,req:false,criteria:{
+    concept:['Identify all major energy-consuming appliances and fixed equipment categories'],
+    schematic:['Specify Energy Star or equivalent rated equipment for all applicable categories'],
+    detailed:['Confirm energy efficiency ratings of all specified appliances in equipment schedule and specifications']}},
+  {code:'RE-4',title:'Vertical Transportation',pts:3,req:false,criteria:{
+    concept:['Define vertical transportation requirements: number of lifts, escalators, travel height, usage intensity'],
+    schematic:['Specify high-efficiency permanent magnet motors, regenerative drives, and automatic standby mode for all passenger lifts'],
+    detailed:['Confirm lift energy performance class and specifications — confirm with lift manufacturer energy data']}},
+  {code:'RE-5',title:'Peak Load Reduction',pts:4,req:false,criteria:{
+    concept:['Assess demand management opportunities: thermal storage, load shifting, smart controls'],
+    schematic:['Design demand response capability in BMS — automatic load shedding, pre-cooling, intelligent scheduling'],
+    detailed:['Include demand management, peak load control logic, and thermal storage specifications in MEP and BMS specifications']}},
+  {code:'RE-6',title:'Renewable Energy',pts:9,req:false,criteria:{
+    concept:['Assess on-site renewable energy potential: rooftop PV, building-integrated PV, solar thermal, wind'],
+    schematic:['Size renewable energy systems and model annual generation output','Confirm available roof/façade areas, structural capacity, and shading constraints for PV'],
+    detailed:['Finalise PV/solar thermal design, energy generation calculations, grid connection, and protection relay specifications']}},
+  {code:'RE-7',title:'Global Warming Impacts of Refrigerants',pts:4,req:false,criteria:{
+    concept:['Identify all refrigerants planned for HVAC and refrigeration systems','Establish low GWP refrigerant selection policy for project'],
+    schematic:['Select low GWP refrigerants for all systems','Assess and document lifecycle GWP using TEWI (Total Equivalent Warming Impact) methodology'],
+    detailed:['Confirm low GWP refrigerant selections with manufacturers and include in MEP specifications']}},
+],
+SM:[
+  {code:'SM-R1',title:'Hazardous Materials Elimination',pts:'R',req:true,criteria:{
+    concept:['Define prohibited materials list: asbestos, lead paint, PCBs, urea-formaldehyde insulation, PVC if applicable'],
+    schematic:['Confirm no prohibited materials are included in outline specification materials lists'],
+    detailed:['Include comprehensive hazardous materials prohibition clause in all work section specifications']}},
+  {code:'SM-R2',title:'Basic Construction Waste Management',pts:'R',req:true,criteria:{
+    concept:['Estimate construction and demolition waste volumes by material type','Set minimum waste diversion target: 50% by weight or volume'],
+    schematic:['Develop Construction & Demolition Waste Management Plan (CDWMP) framework identifying waste streams and recyclers'],
+    detailed:['Finalise CDWMP with specific waste stream targets, approved recycling facilities, and reporting templates','Include CDWMP in tender and construction contract documents']}},
+  {code:'SM-R3',title:'Basic Operational Waste Management',pts:'R',req:true,criteria:{
+    concept:['Estimate annual operational waste volumes at full building occupancy','Review Centre of Waste Management (CWM) Abu Dhabi requirements and available infrastructure'],
+    schematic:["Design waste storage areas with segregation: green (plastics/glass/metal), blue (paper/cardboard), black (general waste)",'Ensure maximum 30m carry distance from any point in building to nearest waste collection point'],
+    detailed:['Finalise waste room sizes and bin configurations in architectural drawings','Confirm minimum 40% waste diversion rate in Operational Waste Strategy']}},
+  {code:'SM-1',title:'Non-Polluting Materials',pts:3,req:false,criteria:{
+    concept:['Identify all material categories with indoor pollution potential: paints, varnishes, adhesives, sealants, flooring, ceiling tiles'],
+    schematic:['Specify low-VOC or zero-VOC products across all identified categories with specific VOC content limits'],
+    detailed:['Confirm all specified materials meet VOC and chemical emission standards — compile materials compliance schedule']}},
+  {code:'SM-6',title:'Design for Durability',pts:1,req:false,criteria:{
+    concept:['Define design life targets for key building components (structure, envelope, services, finishes)'],
+    schematic:["Develop Building Durability Plan (BDP) covering envelope waterproofing, structural protection, component service lives"],
+    detailed:['Finalise BDP with component lifespan schedule, maintenance plan, and protective detail specifications','Include BDP in O&M Manual']}},
+  {code:'SM-7',title:'Building Reuse',pts:2,req:false,criteria:{
+    concept:['Confirm whether existing building structure or fabric on site is available and structurally suitable for reuse'],
+    schematic:['Undertake structural assessment of reusable elements','Calculate and demonstrate percentage of existing structure, façade, or internal elements to be retained'],
+    detailed:['Confirm all retained/reused elements in structural and architectural drawings and specification']}},
+  {code:'SM-9',title:'Regional Materials',pts:2,req:false,criteria:{
+    concept:['Define regional sourcing target: materials extracted and manufactured within 800km of site'],
+    schematic:['Identify key structural and finishing materials available from verified regional sources'],
+    detailed:['Specify regional materials requirements in specifications and confirm sourcing in materials schedule with supplier locations']}},
+  {code:'SM-10',title:'Recycled Materials',pts:6,req:false,criteria:{
+    concept:['Set recycled content target for the project by total material value (targeting 10–20%+)'],
+    schematic:['Identify materials with significant post-consumer/post-industrial recycled content: structural steel, concrete with GGBS/PFA, insulation'],
+    detailed:['Specify minimum recycled content percentages by material value in specifications','Compile recycled materials schedule with manufacturer documentation']}},
+  {code:'SM-13',title:'Improved Construction Waste Management',pts:2,req:false,criteria:{
+    concept:['Set enhanced waste diversion target beyond 50% minimum (targeting 75% or higher)'],
+    schematic:['Identify additional waste streams for recovery: structural timber, steelwork, formwork, packaging, concrete'],
+    detailed:['Finalise enhanced CDWMP with specific recyclers, diversion calculation methodology, and reporting system']}},
+],
+IP:[
+  {code:'IP-1',title:'Innovative Cultural & Regional Practices',pts:1,req:false,criteria:{
+    concept:['Identify a specific opportunity for cultural or regional design innovation addressing one of the Estidama pillars (environmental, cultural, social, economic)'],
+    schematic:['Develop brief outline of proposed innovative solution with supporting feasibility rationale'],
+    detailed:['Prepare Innovative Solution Report demonstrating cultural/regional innovation — submit to Estidama for approval']}},
+  {code:'IP-2',title:'Innovating Practice',pts:2,req:false,criteria:{
+    concept:['Identify an area of genuine design or technical innovation going beyond existing PBRS credit requirements'],
+    schematic:['Develop innovation concept brief with preliminary feasibility study, cost-benefit analysis, and risk assessment'],
+    detailed:['Prepare full Innovative Solution Report with measurable performance impacts across Estidama pillars — submit to Estidama for approval']}},
+],
+};
+
+const ALL_CREDITS = Object.values(CREDITS).flat();
+const RATING_THRESHOLDS = [
+  {min:0,label:'1 Pearl'},{min:60,label:'2 Pearl'},{min:85,label:'3 Pearl'},{min:115,label:'4 Pearl'},{min:140,label:'5 Pearl'}
+];
+const STAGES = ['concept','schematic','detailed'];
+const STAGE_LABELS = {concept:'Concept Design',schematic:'Schematic Design',detailed:'Detailed Design'};
+
+// ═══════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════
+let S = {
+  view: 'setup',
+  stage: 'concept',
+  selected: {},
+  secOpen: {},
+  criteriaChecked: {},
+  notes: {},
+};
+
+// pre-select mandatory credits
+ALL_CREDITS.forEach(c => { if (c.req) S.selected[c.code] = true; });
+
+// ═══════════════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════════════
+function getPossiblePts() {
+  return ALL_CREDITS.filter(c => !c.req && S.selected[c.code]).reduce((s,c) => s + c.pts, 0);
+}
+function getRating(pts) {
+  let r = 0;
+  RATING_THRESHOLDS.forEach((t,i) => { if (pts >= t.min) r = i; });
+  return r;
+}
+function ck(code, stage, idx) { return code + '|' + stage + '|' + idx; }
+function nk(code, stage) { return code + '|' + stage; }
+function creditStatus(code, stage) {
+  const c = ALL_CREDITS.find(x => x.code === code);
+  if (!c || !c.criteria[stage]) return {done:0,total:0};
+  const total = c.criteria[stage].length;
+  let done = 0;
+  for (let i = 0; i < total; i++) if (S.criteriaChecked[ck(code,stage,i)]) done++;
+  return {done, total};
+}
+function stageSummary(stage) {
+  const sel = ALL_CREDITS.filter(c => S.selected[c.code] && c.criteria[stage]);
+  const full=[], partial=[], pending=[];
+  sel.forEach(c => {
+    const {done,total} = creditStatus(c.code, stage);
+    if (done === total && total > 0) full.push(c);
+    else if (done > 0) partial.push(c);
+    else pending.push(c);
+  });
+  return {full, partial, pending};
+}
+
+// ═══════════════════════════════════════════════════════════
+// RENDER SETUP
+// ═══════════════════════════════════════════════════════════
+function renderSetupSummary() {
+  const possible = getPossiblePts();
+  const r = getRating(possible);
+  const req = ALL_CREDITS.filter(c => c.req).length;
+  const selOpt = ALL_CREDITS.filter(c => !c.req && S.selected[c.code]).length;
+  document.getElementById('setup-summary').innerHTML = `
+    <div class="sum-card"><div class="sum-label">Mandatory credits</div><div class="sum-value">${req}</div><div class="sum-sub">Required for any Pearl</div></div>
+    <div class="sum-card"><div class="sum-label">Optional selected</div><div class="sum-value">${selOpt}</div><div class="sum-sub">of ${ALL_CREDITS.filter(c=>!c.req).length} available</div></div>
+    <div class="sum-card"><div class="sum-label">Potential points</div><div class="sum-value">${possible}</div><div class="sum-sub">excl. mandatory</div></div>
+    <div class="sum-card"><div class="sum-label">Target rating</div><div class="sum-value" style="padding-top:4px"><span class="rating-pill rp-${r}">&diams; ${RATING_THRESHOLDS[r].label}</span></div><div class="sum-sub">${possible>=140?'5 Pearl achievable':possible>=115?'4 Pearl achievable':possible>=85?'3 Pearl achievable':possible>=60?'2 Pearl achievable':'1 Pearl (mandatory only)'}</div></div>
+  `;
+}
+
+function renderSetupCredits() {
+  let html = '';
+  Object.entries(CREDITS).forEach(([sec, credits]) => {
+    const open = S.secOpen['s_'+sec];
+    const secPts = credits.filter(c=>!c.req).reduce((s,c)=>s+c.pts,0);
+    const selPts = credits.filter(c=>!c.req&&S.selected[c.code]).reduce((s,c)=>s+c.pts,0);
+    html += `<div class="section-wrap">
+      <div class="section-head ${open?'open':''}" onclick="toggleSec('s_${sec}')">
+        <div class="sec-left"><span class="sec-chevron ${open?'open':''}">&#9654;</span>${SECTIONS[sec]}</div>
+        <div class="sec-pts">${selPts} / ${secPts} pts selected</div>
+      </div>`;
+    if (open) {
+      html += `<div class="credits-body">`;
+      credits.forEach(c => {
+        const sel = S.selected[c.code];
+        html += `<div class="credit-row ${sel?'checked':''} ${c.req?'req-row':''}">
+          <input type="checkbox" class="credit-cb" ${sel?'checked':''} ${c.req?'disabled':''} onchange="toggleCredit('${c.code}', this.checked)"/>
+          <div class="credit-meta">
+            <div class="credit-code-line">
+              <span class="credit-code">${c.code}</span>
+              ${c.req?'<span class="req-badge">Required</span>':''}
+            </div>
+            <div class="credit-name">${c.title}</div>
+            <div class="credit-pts-note">${c.req ? 'No credit points — mandatory for all Pearl ratings' : 'Maximum ' + c.pts + ' credit point' + (c.pts>1?'s':'')}</div>
+          </div>
+        </div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</div>`;
+  });
+  document.getElementById('setup-credits').innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════
+// RENDER STAGE
+// ═══════════════════════════════════════════════════════════
+function renderStageSummaryCards() {
+  const stage = S.stage;
+  const {full,partial,pending} = stageSummary(stage);
+  const possible = getPossiblePts();
+  const r = getRating(possible);
+  const total = ALL_CREDITS.filter(c => S.selected[c.code] && c.criteria[stage]).length;
+  document.getElementById('stage-summary').innerHTML = `
+    <div class="sum-card"><div class="sum-label">Fully complied</div><div class="sum-value" style="color:var(--green)">${full.length}</div><div class="sum-sub">all criteria checked</div></div>
+    <div class="sum-card"><div class="sum-label">In progress</div><div class="sum-value" style="color:var(--amber)">${partial.length}</div><div class="sum-sub">partially checked</div></div>
+    <div class="sum-card"><div class="sum-label">Not started</div><div class="sum-value" style="color:var(--red)">${pending.length}</div><div class="sum-sub">of ${total} credits this stage</div></div>
+    <div class="sum-card"><div class="sum-label">Target rating</div><div class="sum-value" style="padding-top:4px"><span class="rating-pill rp-${r}">&diams; ${RATING_THRESHOLDS[r].label}</span></div><div class="sum-sub">${possible} pts potential</div></div>
+  `;
+}
+
+function renderStageCredits() {
+  const stage = S.stage;
+  let html = '';
+  Object.entries(CREDITS).forEach(([sec, credits]) => {
+    const stagedCredits = credits.filter(c => S.selected[c.code] && c.criteria[stage]);
+    if (!stagedCredits.length) return;
+    const open = S.secOpen['ss_'+sec];
+    const doneCount = stagedCredits.filter(c => { const {done,total}=creditStatus(c.code,stage); return done===total&&total>0; }).length;
+    html += `<div class="section-wrap">
+      <div class="section-head ${open?'open':''}" onclick="toggleSec('ss_${sec}')">
+        <div class="sec-left"><span class="sec-chevron ${open?'open':''}">&#9654;</span>${SECTIONS[sec]}</div>
+        <div class="sec-pts">${doneCount} / ${stagedCredits.length} credits done</div>
+      </div>`;
+    if (open) {
+      html += `<div class="credits-body">`;
+      stagedCredits.forEach(c => {
+        const {done,total} = creditStatus(c.code, stage);
+        const pct = total > 0 ? Math.round(done/total*100) : 0;
+        const statClass = done===total&&total>0 ? 'status-done' : done>0 ? 'status-partial' : 'status-pending';
+        const statLabel = done===total&&total>0 ? 'Complete' : done>0 ? `${done}/${total} done` : 'Not started';
+        const progClass = done===total&&total>0 ? 'prog-done' : done>0 ? 'prog-partial' : 'prog-empty';
+        const cOpen = S.secOpen['cc_'+c.code];
+        html += `<div class="stage-credit-block">
+          <div class="stage-credit-head ${cOpen?'open':''}" onclick="toggleSec('cc_${c.code}')">
+            <div class="sch-left">
+              <div class="sch-title-row">
+                <span class="credit-code">${c.code}</span>
+                <span style="font-size:13px;font-weight:600;color:var(--gray-900)">${c.title}</span>
+                ${c.req?'<span class="req-badge">Required</span>':'<span style="font-size:11px;color:var(--gray-500)">· '+c.pts+' pt'+(c.pts>1?'s':'')+'</span>'}
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-track"><div class="progress-fill ${progClass}" style="width:${pct}%"></div></div>
+                <span class="sch-right ${statClass}">${statLabel}</span>
+              </div>
+            </div>
+            <span style="font-size:18px;color:var(--gray-300);transform:${cOpen?'rotate(90deg)':'none'};transition:transform 0.15s;display:inline-block;">&#8250;</span>
+          </div>`;
+        if (cOpen) {
+          const noteKey = nk(c.code, stage);
+          html += `<div class="criteria-panel">`;
+          c.criteria[stage].forEach((item, idx) => {
+            const key = ck(c.code, stage, idx);
+            const chk = S.criteriaChecked[key];
+            html += `<div class="criteria-item">
+              <input type="checkbox" class="criteria-cb" ${chk?'checked':''} onchange="toggleCriteria('${key}', this.checked)"/>
+              <span class="criteria-text ${chk?'done':''}">${item}</span>
+            </div>`;
+          });
+          html += `<div class="note-label">Coordination notes &amp; action items</div>
+            <textarea class="note-field" placeholder="Record responsibilities, follow-up actions, consultants to coordinate with, or pending items for next stage…" onchange="setNote('${noteKey}', this.value)">${S.notes[noteKey]||''}</textarea>
+          </div>`;
+        }
+        html += `</div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</div>`;
+  });
+  document.getElementById('stage-credits').innerHTML = html;
+}
+
+function renderStageEndSummary() {
+  const stage = S.stage;
+  const {full,partial,pending} = stageSummary(stage);
+  let html = `<div class="ss-title">Stage summary — ${STAGE_LABELS[stage]}</div>`;
+  if (full.length) html += `<div class="ss-row"><div class="ss-row-label">&#10003; Fully complied</div><div class="ss-codes ss-green">${full.map(c=>c.code).join(' &nbsp;·&nbsp; ')}</div></div>`;
+  if (partial.length) html += `<div class="ss-row"><div class="ss-row-label">&#9654; In progress — carry to next stage</div><div class="ss-codes ss-amber">${partial.map(c=>c.code).join(' &nbsp;·&nbsp; ')}</div></div>`;
+  if (pending.length) html += `<div class="ss-row"><div class="ss-row-label">&#9651; Not started — action needed</div><div class="ss-codes ss-red">${pending.map(c=>c.code).join(' &nbsp;·&nbsp; ')}</div></div>`;
+  if (!full.length && !partial.length && !pending.length) html += `<div class="ss-row"><div class="ss-row-label" style="color:var(--gray-500)">No credits selected for this stage.</div></div>`;
+  document.getElementById('stage-end-summary').innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════
+// FULL RENDERS
+// ═══════════════════════════════════════════════════════════
+function renderSetup() {
+  renderSetupSummary();
+  renderSetupCredits();
+}
+function renderStageView() {
+  document.querySelectorAll('.stage-tab').forEach(t => t.classList.toggle('active', t.dataset.stage === S.stage));
+  const pn = document.getElementById('proj-name');
+  document.getElementById('stage-view-title').textContent = (pn&&pn.value ? pn.value + ' — ' : '') + 'Stage Checklist';
+  document.getElementById('stage-view-sub').textContent = 'Tracking ' + ALL_CREDITS.filter(c=>S.selected[c.code]).length + ' selected credits';
+  renderStageSummaryCards();
+  renderStageCredits();
+  renderStageEndSummary();
+}
+
+// ═══════════════════════════════════════════════════════════
+// EVENT HANDLERS
+// ═══════════════════════════════════════════════════════════
+function toggleSec(key) {
+  S.secOpen[key] = !S.secOpen[key];
+  if (S.view === 'setup') renderSetup();
+  else renderStageView();
+  saveState();
+}
+function toggleCredit(code, checked) {
+  S.selected[code] = checked;
+  renderSetup();
+  saveState();
+}
+function toggleCriteria(key, checked) {
+  S.criteriaChecked[key] = checked;
+  renderStageView();
+  saveState();
+}
+function setNote(key, val) {
+  S.notes[key] = val;
+  saveState();
+}
+function setStage(stage) {
+  S.stage = stage;
+  renderStageView();
+  saveState();
+}
+function goToStage() {
+  S.view = 'stage';
+  document.getElementById('view-setup').classList.remove('active');
+  document.getElementById('view-stage').classList.add('active');
+  renderStageView();
+  saveState();
+}
+function goToSetup() {
+  S.view = 'setup';
+  document.getElementById('view-stage').classList.remove('active');
+  document.getElementById('view-setup').classList.add('active');
+  renderSetup();
+  saveState();
+}
+
+// ═══════════════════════════════════════════════════════════
+// PERSIST — localStorage
+// ═══════════════════════════════════════════════════════════
+function saveState() {
+  try {
+    const data = {
+      s: S,
+      meta: {
+        projName: document.getElementById('proj-name')?.value||'',
+        projNum: document.getElementById('proj-num')?.value||'',
+        projType: document.getElementById('proj-type')?.value||'',
+        projTarget: document.getElementById('proj-target')?.value||'',
+        projPqp: document.getElementById('proj-pqp')?.value||'',
+        projDate: document.getElementById('proj-date')?.value||'',
+      }
+    };
+    localStorage.setItem('pbrs_checklist', JSON.stringify(data));
+    const ind = document.getElementById('save-indicator');
+    if(ind){ind.style.display='inline';clearTimeout(ind._t);ind._t=setTimeout(()=>ind.style.display='none',1500);}
+  } catch(e){}
+}
+function loadState() {
+  try {
+    const raw = localStorage.getItem('pbrs_checklist');
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    if (data.s) {
+      S.selected = data.s.selected || S.selected;
+      S.secOpen = data.s.secOpen || {};
+      S.criteriaChecked = data.s.criteriaChecked || {};
+      S.notes = data.s.notes || {};
+      S.view = data.s.view || 'setup';
+      S.stage = data.s.stage || 'concept';
+    }
+    if (data.meta) {
+      setTimeout(()=>{
+        if(data.meta.projName) document.getElementById('proj-name').value=data.meta.projName;
+        if(data.meta.projNum) document.getElementById('proj-num').value=data.meta.projNum;
+        if(data.meta.projType) document.getElementById('proj-type').value=data.meta.projType;
+        if(data.meta.projTarget) document.getElementById('proj-target').value=data.meta.projTarget;
+        if(data.meta.projPqp) document.getElementById('proj-pqp').value=data.meta.projPqp;
+        if(data.meta.projDate) document.getElementById('proj-date').value=data.meta.projDate;
+      },50);
+    }
+  } catch(e){}
+}
+
+// ═══════════════════════════════════════════════════════════
+// EXPORT / IMPORT
+// ═══════════════════════════════════════════════════════════
+function exportData() {
+  const data = {
+    version: '1.0',
+    exported: new Date().toISOString(),
+    project: {
+      name: document.getElementById('proj-name')?.value||'',
+      number: document.getElementById('proj-num')?.value||'',
+      type: document.getElementById('proj-type')?.value||'',
+      target: document.getElementById('proj-target')?.value||'',
+      pqp: document.getElementById('proj-pqp')?.value||'',
+      date: document.getElementById('proj-date')?.value||'',
+    },
+    state: S
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'PBRS_Checklist_' + (data.project.name||'Project').replace(/\s+/g,'_') + '.json';
+  a.click();
+}
+function importData() {
+  const inp = document.createElement('input');
+  inp.type = 'file'; inp.accept = '.json';
+  inp.onchange = e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (data.state) {
+          S = data.state;
+          if (data.project) {
+            document.getElementById('proj-name').value = data.project.name||'';
+            document.getElementById('proj-num').value = data.project.number||'';
+            document.getElementById('proj-type').value = data.project.type||'';
+            document.getElementById('proj-target').value = data.project.target||'';
+            document.getElementById('proj-pqp').value = data.project.pqp||'';
+            document.getElementById('proj-date').value = data.project.date||'';
+          }
+          if (S.view === 'stage') {
+            document.getElementById('view-setup').classList.remove('active');
+            document.getElementById('view-stage').classList.add('active');
+            renderStageView();
+          } else {
+            renderSetup();
+          }
+          saveState();
+        }
+      } catch(err) { alert('Could not read file. Please check it is a valid PBRS checklist export.'); }
+    };
+    reader.readAsText(file);
+  };
+  inp.click();
+}
+
+// ═══════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════
+loadState();
+if (S.view === 'stage') {
+  document.getElementById('view-setup').classList.remove('active');
+  document.getElementById('view-stage').classList.add('active');
+  renderStageView();
+} else {
+  renderSetup();
+}
+</script>
+</body>
+</html>
