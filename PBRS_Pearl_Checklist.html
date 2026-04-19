@@ -213,7 +213,7 @@
         <div class="page-title">Credit Selection</div>
         <div class="page-desc">Select credits to target at project kick-off. Mandatory credits are pre-selected.</div>
       </div>
-      <button class="btn primary" onclick="goToStage()">Start Stage Tracking →</button>
+      <button class="btn primary" onclick="goToStage()">Start Stage Tracking â†’</button>
     </div>
 
     <div class="project-banner">
@@ -256,7 +256,7 @@
         <div class="page-title" id="stage-view-title">Stage Checklist</div>
         <div class="page-desc" id="stage-view-sub"></div>
       </div>
-      <button class="btn" onclick="goToSetup()">← Credit Selection</button>
+      <button class="btn" onclick="goToSetup()">â† Credit Selection</button>
     </div>
     <div class="summary-grid" id="stage-summary"></div>
     <div class="stage-tabs">
@@ -270,9 +270,9 @@
 </div>
 
 <script>
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // DATA
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 const SECTIONS = {
   IDP: 'IDP — Integrated Development Process',
   NS:  'NS — Natural Systems',
@@ -351,7 +351,7 @@ NS:[
     detailed:['Finalise protection measures in construction drawings and specifications','Include natural systems protection requirements in all construction contracts']}},
   {code:'NS-R3',title:'Natural Systems Design & Management Strategy',desc:'Identify opportunities to integrate and enhance natural systems within the design',pts:'R',req:true,criteria:{
     concept:['Identify opportunities to integrate and enhance natural systems within the design'],
-    schematic:['Develop Natural Systems Design & Management Strategy following hierarchy: protect → restore → enhance'],
+    schematic:['Develop Natural Systems Design & Management Strategy following hierarchy: protect â†’ restore â†’ enhance'],
     detailed:['Finalise strategy covering design, construction phase, and long-term operational management']}},
   {code:'NS-1',title:'Reuse of Land',desc:'Confirm site qualifies as previously developed land (brownfield) per PBRS definition',pts:2,req:false,pointOptions:[
     {pts:1,label:'1 pt — Documentary evidence of prior development',desc:'Gather documentary evidence (site history maps, photographs, official records) confirming prior development'},
@@ -422,13 +422,10 @@ LBo:[
     concept:['Define projected cycling demand and target levels for the building use'],
     schematic:['Design secure long-stay cycle parking, shower, and changing facilities','Calculate quantities per PBRS requirements'],
     detailed:['Finalise cycle storage layout, quantities, security measures, and wayfinding in construction drawings']}},
-  {code:'LBo-8',title:'Preferred Car Parking Spaces',desc:'Minimize light pollution and reduce impacts on night-time environments',pts:1,req:false,pointOptions:[
-    {pts:1,label:'Pedestrian & bicycle infrastructure connected to networks',desc:'Provide pedestrian/bicycle infrastructure connecting to surrounding networks'}
-  ],criteria:{
-    concept:['Define minimum parking strategy to reduce overall car parking provision and encourage active transport'],
-    schematic:['Design preferred car parking spaces for car share, electric vehicles, and accessible use','Provide clear active transport and drop-off connections to building entrances'],
-    detailed:['Finalise preferred parking layout with reduced parking footprint and safe pedestrian/cycle access pathways']
-  }},
+  {code:'LBo-8',title:'Preferred Car Parking Spaces',desc:'Identify preferred parking spaces and related allocation criteria',pts:1,req:false,criteria:{
+    concept:['Identify preferred parking spaces and define allocation criteria'],
+    schematic:['Reserve preferred parking spaces for low-emission, carpools, or accessible use'],
+    detailed:['Confirm signage, location, and counts in detailed parking drawings']}},
   {code:'LBo-9',title:'Travel Plan',desc:'Confirm commitment to developing a comprehensive Travel Plan',pts:1,req:false,criteria:{
     concept:['Confirm commitment to developing a comprehensive Travel Plan'],
     schematic:['Draft Travel Plan framework with baseline travel assessment'],
@@ -735,9 +732,9 @@ const SECTION_COLORS = {
   IP: '#4a4a8c',
 };
 
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // STATE
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 let S = {
   view: 'setup',
   stage: 'concept',
@@ -754,9 +751,9 @@ let S = {
 // pre-select mandatory credits
 ALL_CREDITS.forEach(c => { if (c.req) S.selected[c.code] = true; });
 
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // UTILS
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function getCreditPoints(code) {
   const c = ALL_CREDITS.find(x => x.code === code);
   if (!c || c.req) return 0;
@@ -795,9 +792,9 @@ function stageSummary(stage) {
   return {full, partial, pending};
 }
 
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // RENDER SETUP
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function renderSetupSummary() {
   const possible = getPossiblePts();
   const r = getRating(possible);
@@ -915,9 +912,9 @@ function renderSetupCredits() {
   document.getElementById('setup-credits').innerHTML = html;
 }
 
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // RENDER STAGE
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function renderStageSummaryCards() {
   const stage = S.stage;
   const {full,partial,pending} = stageSummary(stage);
@@ -1004,9 +1001,9 @@ function renderStageEndSummary() {
   document.getElementById('stage-end-summary').innerHTML = html;
 }
 
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // FULL RENDERS
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function renderSetup() {
   renderProjectSelect();
   renderSetupSummary();
@@ -1024,9 +1021,9 @@ function renderStageView() {
   renderStageEndSummary();
 }
 
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // EVENT HANDLERS
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function toggleSec(key) {
   S.secOpen[key] = !S.secOpen[key];
   if (S.view === 'setup') renderSetup();
@@ -1093,9 +1090,9 @@ function goToSetup() {
   saveState();
 }
 
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // PERSIST — localStorage
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function saveState() {
   try {
     const data = {
@@ -1139,9 +1136,9 @@ function loadState() {
   } catch(e){}
 }
 
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // EXPORT / IMPORT
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function buildProjectEntry() {
   const now = new Date().toISOString();
   const id = S.currentProjectId || 'prj_' + Date.now();
@@ -1290,9 +1287,9 @@ function importData() {
   inp.click();
 }
 
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // INIT
-// ═══════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 loadState();
 if (S.view === 'stage') {
   document.getElementById('view-setup').classList.remove('active');
