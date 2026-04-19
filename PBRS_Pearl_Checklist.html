@@ -61,6 +61,15 @@
   /* ---------- SUMMARY CARDS ---------- */
   .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 18px; }
   @media (max-width: 700px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+  .pile-chart { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px 12px; margin-bottom: 18px; }
+  .pile-chart .pile-title { font-size: 12.5px; color: var(--gray-600); margin-bottom: 10px; font-weight: 600; }
+  .pile-row { display: flex; height: 22px; border-radius: 999px; overflow: hidden; background: var(--gray-100); margin-bottom: 8px; }
+  .pile-segment { display: flex; align-items: center; justify-content: center; font-size: 11px; color: #fff; padding: 0 8px; min-width: 28px; white-space: nowrap; text-shadow: 0 0 2px rgba(0,0,0,0.25); }
+  .pile-segment.light { opacity: 0.88; }
+  .pile-segment.dark { opacity: 1; }
+  .pile-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+  .pile-chip { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: #f8f8f7; border-radius: 999px; font-size: 11px; color: var(--gray-700); }
+  .pile-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
   .sum-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; }
   .sum-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-500); margin-bottom: 5px; }
   .sum-value { font-size: 26px; font-weight: 600; line-height: 1; color: var(--gray-900); }
@@ -82,6 +91,12 @@
   .stage-tab:hover { color: var(--gray-900); }
   .stage-tab.active { color: var(--blue); border-bottom-color: var(--blue); }
 
+  .section-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .section-tab-button { padding: 9px 16px; font-size: 13px; font-family: var(--font); font-weight: 600; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; color: var(--gray-700); cursor: pointer; transition: background 0.1s, border-color 0.1s, color 0.1s; }
+  .section-tab-button:hover { background: var(--gray-50); }
+  .section-tab-button.active { color: var(--blue); border-color: var(--blue); box-shadow: inset 0 -2px 0 0 var(--blue); }
+  .section-tab-button.disabled { color: var(--gray-400); border-color: var(--border); cursor: default; background: #f9f9f7; }
+
   /* ---------- CREDIT SECTIONS ---------- */
   .section-wrap { margin-bottom: 6px; }
   .section-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--gray-100); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; user-select: none; transition: background 0.1s; }
@@ -101,6 +116,9 @@
   .credit-cb { width: 15px; height: 15px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--blue); }
   .credit-cb:disabled { cursor: default; accent-color: var(--gray-300); }
   .credit-meta { flex: 1; min-width: 0; }
+  .credit-pts-select { margin-top: 8px; border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; font-size: 12.5px; font-family: var(--font); background: #fff; color: var(--gray-900); }
+  .credit-pts-select:disabled { opacity: 0.55; }
+  .credit-description, .credit-option-desc { font-size: 12px; color: var(--gray-600); margin-top: 6px; line-height: 1.4; }
   .credit-code-line { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
   .credit-code { font-size: 11.5px; font-weight: 700; color: var(--blue); }
   .req-badge { font-size: 9.5px; background: #f0e8ff; color: #6b3fa0; border-radius: 3px; padding: 1px 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -149,11 +167,13 @@
   .ss-red { color: var(--red); }
 
   /* ---------- PROJECT INFO BANNER ---------- */
-  .project-banner { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; display: flex; gap: 24px; flex-wrap: wrap; }
-  .proj-field { display: flex; flex-direction: column; gap: 3px; }
-  .proj-field label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-500); }
-  .proj-field input, .proj-field select { font-size: 13px; font-family: var(--font); color: var(--gray-900); border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; background: #fff; min-width: 160px; }
+  .project-banner { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; display: flex; align-items: flex-end; gap: 12px; flex-wrap: nowrap; overflow-x: auto; }
+  .proj-field { display: flex; flex-direction: column; gap: 3px; flex: 1 1 160px; min-width: 150px; }
+  .proj-field.project-record { flex: 0 0 260px; min-width: 220px; }
+  .proj-field label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-500); white-space: nowrap; }
+  .proj-field input, .proj-field select { font-size: 13px; font-family: var(--font); color: var(--gray-900); border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; background: #fff; min-width: 0; }
   .proj-field input:focus, .proj-field select:focus { outline: none; border-color: var(--blue); }
+  @media (max-width: 980px) { .project-banner { flex-wrap: wrap; } }
 
   /* ---------- PRINT ---------- */
   @media print {
@@ -197,6 +217,15 @@
     </div>
 
     <div class="project-banner">
+      <div class="proj-field project-record">
+        <label>Project record</label>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <select id="proj-select" onchange="loadProject(this.value)" style="flex:1;min-width:120px;padding:5px 8px;border:1px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:13px;color:var(--gray-900);background:#fff;">
+            <option value="">New project</option>
+          </select>
+          <button class="btn sm" type="button" onclick="saveProject()">Save</button>
+        </div>
+      </div>
       <div class="proj-field"><label>Project name</label><input type="text" id="proj-name" placeholder="e.g. Al Maryah Tower" oninput="saveState()"/></div>
       <div class="proj-field"><label>Project number</label><input type="text" id="proj-num" placeholder="e.g. 2024-ADH-001" oninput="saveState()"/></div>
       <div class="proj-field"><label>Building use</label>
@@ -211,12 +240,12 @@
           <option>1 Pearl</option><option>2 Pearl (60 pts)</option><option>3 Pearl (85 pts)</option><option>4 Pearl (115 pts)</option><option>5 Pearl (140 pts)</option>
         </select>
       </div>
-      <div class="proj-field"><label>PQP name</label><input type="text" id="proj-pqp" placeholder="Pearl Qualified Professional" oninput="saveState()"/></div>
-      <div class="proj-field"><label>Date</label><input type="date" id="proj-date" oninput="saveState()"/></div>
     </div>
 
     <div class="summary-grid" id="setup-summary"></div>
-    <div class="notice">Tick the optional credits your team will pursue. Mandatory credits (R) are required for all Pearl ratings and cannot be deselected. Points shown are the maximum available per credit.</div>
+    <div id="points-pile-chart"></div>
+    <div class="notice">Tick the optional credits your team will pursue. Mandatory credits (R) are required for all Pearl ratings and cannot be deselected. For multi-point credits, choose the award level that matches the manual criteria; each option includes a short description.</div>
+    <div class="section-tabs" id="setup-section-tabs"></div>
     <div id="setup-credits"></div>
   </div>
 
@@ -257,289 +286,432 @@ const SECTIONS = {
 
 const CREDITS = {
 IDP:[
-  {code:'IDP-R1',title:'Integrated Development Strategy',pts:'R',req:true,criteria:{
+  {code:'IDP-R1',title:'Integrated Development Strategy',desc:'Appoint Pearl Qualified Professional (PQP) for the project',pts:'R',req:true,criteria:{
     concept:['Appoint Pearl Qualified Professional (PQP) for the project','Assemble Integrated Development Process (IDP) team with all key disciplines (architecture, MEP, civil, landscape, sustainability)','Hold IDP kick-off workshop — document sustainability objectives and targets','Define sustainability vision statement and credit scorecard'],
     schematic:['Conduct minimum 3 IDP workshops — document with signed meeting minutes','Demonstrate cross-disciplinary integration of sustainability decisions','Update sustainability scorecard to reflect schematic design decisions','Review EIDP evidence showing IDP is influencing design'],
     detailed:['Finalise IDP summary report covering all design stages','Confirm all major design decisions are aligned with IDP outcomes','Prepare IDP report for design rating submission to Estidama']}},
-  {code:'IDP-R2',title:'Tenant Fit-Out Design & Construction Guide',pts:'R',req:true,criteria:{
+  {code:'IDP-R2',title:'Tenant Fit-Out Design & Construction Guide',desc:'Confirm whether project is Core & Shell (credit only applies to Core & Shell)',pts:'R',req:true,criteria:{
     concept:['Confirm whether project is Core & Shell (credit only applies to Core & Shell)'],
     schematic:['Draft Tenant Fit-Out Guide framework covering sustainability vision and credit targets'],
     detailed:['Finalise Tenant Fit-Out Design & Construction Guide','Confirm guide is attached to lease documents for all future tenants']}},
-  {code:'IDP-R3',title:'Basic Commissioning',pts:'R',req:true,criteria:{
+  {code:'IDP-R3',title:'Basic Commissioning',desc:'Appoint Independent Commissioning Agent (ICA) reporting directly to the owner',pts:'R',req:true,criteria:{
     concept:["Appoint Independent Commissioning Agent (ICA) reporting directly to the owner","Define Owner's Project Requirements (OPR) document with owner"],
     schematic:['ICA reviews schematic design documents and provides written comments',"Develop Commissioning Plan including OPR and Basis of Design narrative"],
     detailed:['Include comprehensive commissioning requirements in project specifications','Issue final Commissioning Plan prior to construction start']}},
-  {code:'IDP-1',title:'Life Cycle Costing',pts:4,req:false,criteria:{
+  {code:'IDP-1',title:'Life Cycle Costing',desc:'Engage qualified Chartered Surveyor with previous LCC experience on min. 2 similar projects',pts:4,req:false,pointOptions:[
+    {pts:1,label:'1 pt — LCC during concept design',desc:'Engage qualified LCC professional; start analysis during concept stage'},
+    {pts:2,label:'2 pts — LCC updated at schematic',desc:'Update LCC model with schematic design decisions and demonstrate influence on design'},
+    {pts:3,label:'3 pts — LCC finalized at detailed design',desc:'Finalize LCC report; document all design decisions informed by LCC analysis'},
+    {pts:4,label:'4 pts — Comprehensive LCC with alternatives',desc:'Complete LCC comparing multiple design alternatives with documented recommendations incorporated'}
+  ],criteria:{
     concept:['Engage qualified Chartered Surveyor with previous LCC experience on min. 2 similar projects','Start Life Cycle Cost (LCC) analysis during concept design to evaluate and compare design options'],
     schematic:['Update LCC model with schematic design decisions and technology choices','Provide evidence from EIDP that LCC results are influencing design'],
     detailed:['Finalise LCC report at end of detailed design stage','Document summary of all design decisions informed by LCC analysis']}},
-  {code:'IDP-2',title:'Guest Worker Accommodation',pts:2,req:false,criteria:{
+  {code:'IDP-2',title:'Guest Worker Accommodation',desc:'Provide adequate accommodation and welfare provisions for construction guest workers',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — Basic accommodation plan',desc:'Develop Construction Guest Worker Accommodation Plan framework covering minimum facilities'},
+    {pts:2,label:'2 pts — Comprehensive accommodation plan',desc:'Finalise comprehensive plan covering accommodation, welfare, healthcare, transport, grievance mechanism, recreational facilities'}
+  ],criteria:{
     concept:['Confirm whether project will use construction guest workers'],
     schematic:['Draft Construction Guest Worker Accommodation Plan framework'],
     detailed:['Finalise plan covering: accommodation facilities, welfare, healthcare, transport, grievance mechanism, recreational facilities']}},
-  {code:'IDP-3',title:'Construction Environmental Management',pts:2,req:false,criteria:{
+  {code:'IDP-3',title:'Construction Environmental Management',desc:'Develop and implement comprehensive environmental management plan during construction',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — CEMP framework',desc:'Draft Construction Environmental Management Plan (CEMP) framework covering key environmental controls'},
+    {pts:2,label:'2 pts — Finalized CEMP',desc:'Finalise CEMP covering dust, noise, vibration, waste, water quality, ecology protection with tender integration'}
+  ],criteria:{
     concept:['Define scope of works and identify environmental sensitivities on and adjacent to site'],
     schematic:['Draft Construction Environmental Management Plan (CEMP) framework'],
     detailed:['Finalise CEMP covering dust, noise, vibration, waste, water quality, ecology protection','Include CEMP requirements in tender and contract documents']}},
-  {code:'IDP-4',title:'Building Envelope Verification',pts:1,req:false,criteria:{
+  {code:'IDP-4',title:'Building Envelope Verification',desc:'Define building envelope performance targets (U-values, SHGC, airtightness)',pts:1,req:false,criteria:{
     concept:['Define building envelope performance targets (U-values, SHGC, airtightness)'],
     schematic:['Specify building envelope performance criteria in outline specifications'],
     detailed:['Include envelope air permeability testing requirements in specifications','Appoint independent testing agent for post-construction air permeability verification']}},
-  {code:'IDP-5',title:'Re-Commissioning',pts:2,req:false,criteria:{
+  {code:'IDP-5',title:'Re-Commissioning',desc:'Confirm owner commitment to ongoing commissioning beyond initial handover for performance verification',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — Re-commissioning included',desc:'Include re-commissioning requirements within the commissioning plan'},
+    {pts:2,label:'2 pts — Year 1-2 re-commissioning plan',desc:'Develop Re-Commissioning Plan for Year 1 tuning and Year 2 re-commissioning with O&M Manual and Building Log Book'}
+  ],criteria:{
     concept:["Confirm owner's commitment to ongoing commissioning beyond initial handover"],
     schematic:['Include re-commissioning requirements within the commissioning plan'],
     detailed:['Develop Re-Commissioning Plan for Year 1 tuning and Year 2 re-commissioning','Specify O&M Manual and Building Log Book (BLB) requirements in contracts']}},
-  {code:'IDP-6',title:'Sustainability Communication',pts:2,req:false,criteria:{
+  {code:'IDP-6',title:'Sustainability Communication',desc:'Develop and implement sustainability communication strategy for occupants and stakeholders',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — Communication strategy framework',desc:'Draft Sustainability Communication Strategy framework targeting key audiences'},
+    {pts:2,label:'2 pts — Full communication plan',desc:'Finalise Sustainability Communication Plan covering occupant information, in-building displays, and annual reporting'}
+  ],criteria:{
     concept:['Define target audience and scope of sustainability communication strategy'],
     schematic:['Draft Sustainability Communication Strategy framework'],
     detailed:['Finalise Sustainability Communication Plan covering occupant information, in-building displays, and annual reporting']}},
 ],
 NS:[
-  {code:'NS-R1',title:'Natural Systems Assessment',pts:'R',req:true,criteria:{
+  {code:'NS-R1',title:'Natural Systems Assessment',desc:'Undertake Preliminary Environmental Review (PER) of site by qualified ecologist',pts:'R',req:true,criteria:{
     concept:['Undertake Preliminary Environmental Review (PER) of site by qualified ecologist','Identify all natural systems on, adjacent to, and hydrologically connected to the site'],
     schematic:['Conduct detailed Natural Systems Assessment (NSA) — map habitats, species, groundwater, coastal features','NSA to be prepared by a qualified ecological consultant'],
     detailed:['Finalise NSA report and confirm all significant natural assets are documented','Confirm NSA findings are embedded in design and construction plans']}},
-  {code:'NS-R2',title:'Natural Systems Protection',pts:'R',req:true,criteria:{
+  {code:'NS-R2',title:'Natural Systems Protection',desc:'Identify priority habitats and species requiring protection',pts:'R',req:true,criteria:{
     concept:['Identify priority habitats and species requiring protection','Define site exclusion zones and protective buffer distances'],
     schematic:['Develop Natural Systems Protection Plan with qualified ecologist','Confirm design layout avoids all significant natural assets'],
     detailed:['Finalise protection measures in construction drawings and specifications','Include natural systems protection requirements in all construction contracts']}},
-  {code:'NS-R3',title:'Natural Systems Design & Management Strategy',pts:'R',req:true,criteria:{
+  {code:'NS-R3',title:'Natural Systems Design & Management Strategy',desc:'Identify opportunities to integrate and enhance natural systems within the design',pts:'R',req:true,criteria:{
     concept:['Identify opportunities to integrate and enhance natural systems within the design'],
     schematic:['Develop Natural Systems Design & Management Strategy following hierarchy: protect → restore → enhance'],
     detailed:['Finalise strategy covering design, construction phase, and long-term operational management']}},
-  {code:'NS-1',title:'Reuse of Land',pts:2,req:false,criteria:{
+  {code:'NS-1',title:'Reuse of Land',desc:'Confirm site qualifies as previously developed land (brownfield) per PBRS definition',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — Documentary evidence of prior development',desc:'Gather documentary evidence (site history maps, photographs, official records) confirming prior development'},
+    {pts:2,label:'2 pts — Finalized land reuse narrative',desc:'Submit complete land reuse narrative with documented site history demonstrating prior development'}
+  ],criteria:{
     concept:['Confirm site qualifies as previously developed land (brownfield) per PBRS definition'],
     schematic:['Gather documentary evidence of prior development on site'],
     detailed:['Finalise land reuse narrative with site history maps, photographs, and official records']}},
-  {code:'NS-2',title:'Remediation of Contaminated Land',pts:2,req:false,criteria:{
-    concept:['Commission Phase 1 Desk Study Environmental Assessment','Identify potential contamination sources on and surrounding site'],
-    schematic:['Undertake Phase 2 intrusive site investigation if contamination is identified or suspected'],
-    detailed:['Develop and implement a Remediation Action Plan (RAP)','Confirm site meets agreed clean-up criteria with regulator sign-off']}},
-  {code:'NS-3',title:'Ecological Enhancement',pts:2,req:false,criteria:{
+  {code:'NS-2',title:'Remediation of Contaminated Land',desc:'To encourage and promote the remediation of land for building development',pts:2,req:false,criteria:{
+    concept:['Demonstrate the site is contaminated by undertaking investigative analysis through completion of Phase I and Phase II American Society for Testing and Materials (ASTM) analysis, or similar','Demonstrate that a Site Contamination Assessment Report has been provided identifying, estimating and evaluating the hazard risks on site','Demonstrate that the results of the Contamination Assessment Report have informed the overall design and layout of the development'],
+    schematic:['Demonstrate the site is contaminated and an assessment report and remediation strategy has been prepared'],
+    detailed:['Demonstrate that the land, prior to development, was identified as contaminated through the site contamination assessment report and that adequate remedial steps were taken to decontaminate or safely encapsulate the site prior to construction']}},
+  {code:'NS-3',title:'Ecological Enhancement',desc:'Restore native plant communities to support local biodiversity and ecological enhancement',pts:2,req:false,pointOptions:[
+    {pts:2,label:'80%+ of landscaped areas with native species',desc:'Achieve 80% or more of landscaped areas with native plant species'}
+  ],criteria:{
     concept:['Identify specific opportunities for ecological enhancement beyond baseline mitigation'],
     schematic:['Develop Ecological Enhancement Plan with qualified ecologist'],
     detailed:['Finalise design details for green roofs, habitat boxes, bioswales, and enhanced planting']}},
-  {code:'NS-4',title:'Habitat Creation & Restoration',pts:6,req:false,criteria:{
+  {code:'NS-4',title:'Habitat Creation & Restoration',desc:'Enhance site biodiversity through ecological design and habitat creation',pts:3,req:false,pointOptions:[
+    {pts:1,label:'1 pt — Basic biodiversity measures',desc:'Implement basic biodiversity measures (plantings, habitat features)'},
+    {pts:3,label:'3 pts — Comprehensive biodiversity strategy',desc:'Implement comprehensive biodiversity strategy with species count targets'}
+  ],criteria:{
     concept:['Identify degraded, lost, or functionally reduced habitats on or adjacent to the site'],
     schematic:['Develop Habitat Creation & Restoration Plan with qualified ecologist — target priority habitat types'],
     detailed:['Finalise species selections, planting plans, and habitat management commitments','Secure long-term habitat management agreement (minimum 10 years)']}},
 ],
 LBo:[
-  {code:'LBo-R1',title:'Plan 2030',pts:'R',req:true,criteria:{
+  {code:'LBo-R1',title:'Plan 2030',desc:'Review Abu Dhabi Plan 2030 requirements applicable to the site',pts:'R',req:true,criteria:{
     concept:["Review Abu Dhabi Plan 2030 requirements applicable to the site",'Confirm project complies with land use, density, open space, and sustainability policies'],
     schematic:['Demonstrate project design positively responds to Plan 2030 urban structure framework'],
     detailed:['Confirm all Plan 2030 compliance documented in drawings and planning submission']}},
-  {code:'LBo-R2',title:'Urban Systems Assessment',pts:'R',req:true,criteria:{
+  {code:'LBo-R2',title:'Urban Systems Assessment',desc:'Undertake Urban Systems Assessment mapping existing context: pedestrian routes, transport, public space, community facilities',pts:'R',req:true,criteria:{
     concept:['Undertake Urban Systems Assessment mapping existing context: pedestrian routes, transport, public space, community facilities'],
     schematic:['Demonstrate project design responds positively to Urban Systems Assessment findings'],
     detailed:['Finalise Urban Systems Assessment report for design rating submission']}},
-  {code:'LBo-R3',title:'Outdoor Thermal Comfort Strategy',pts:'R',req:true,criteria:{
+  {code:'LBo-R3',title:'Outdoor Thermal Comfort Strategy',desc:'Define all outdoor spaces requiring thermal comfort assessment',pts:'R',req:true,criteria:{
     concept:['Define all outdoor spaces requiring thermal comfort assessment','Appoint specialist consultant for outdoor microclimate analysis'],
     schematic:['Conduct outdoor thermal comfort simulations (CFD/UTCI analysis)','Develop Outdoor Thermal Comfort Strategy — shading, planting, materials, misting'],
     detailed:['Finalise outdoor shading structures and confirm compliance with thermal comfort targets in all key spaces']}},
-  {code:'LBo-1',title:'Improved Outdoor Thermal Comfort',pts:2,req:false,criteria:{
+  {code:'LBo-1',title:'Improved Outdoor Thermal Comfort',desc:'Limit impervious surfaces and reduce urban heat island effect through outdoor thermal management',pts:1,req:false,pointOptions:[
+    {pts:1,label:'Hardscape limited to 50% or less of site',desc:'Limit site hardscape (paving, roof) to 50% or less of total site area'}
+  ],criteria:{
     concept:['Set outdoor thermal comfort performance target (UTCI or PMV-based) beyond minimum'],
     schematic:['Simulate outdoor thermal comfort for all key pedestrian spaces','Demonstrate measurable improvement above the minimum strategy requirement'],
     detailed:['Confirm shading elements, high-reflectance materials, and vegetation in detailed construction drawings']}},
-  {code:'LBo-2',title:'Pearl Rated Communities',pts:1,req:false,criteria:{
+  {code:'LBo-2',title:'Pearl Rated Communities',desc:'Confirm site is located within a Pearl Rated Community development',pts:1,req:false,criteria:{
     concept:['Confirm site is located within a Pearl Rated Community development'],
     schematic:['Obtain written confirmation from the community master developer'],
     detailed:['Document evidence of Pearl Rated Community location in credit submission']}},
-  {code:'LBo-3',title:'Accessible Community Facilities',pts:1,req:false,criteria:{
+  {code:'LBo-3',title:'Accessible Community Facilities',desc:'Map all community facilities within 800m walking distance of the main building entrance',pts:1,req:false,criteria:{
     concept:['Map all community facilities within 800m walking distance of the main building entrance'],
     schematic:['Confirm minimum 4 different community facility types are within walking distance'],
     detailed:['Finalise site plan showing pedestrian walking routes to all identified community facilities']}},
-  {code:'LBo-4',title:'Active Urban Environments',pts:1,req:false,criteria:{
+  {code:'LBo-4',title:'Active Urban Environments',desc:'Assess ground floor activation opportunities along all street-facing facades',pts:1,req:false,criteria:{
     concept:['Assess ground floor activation opportunities along all street-facing facades'],
     schematic:['Design active uses (retail, café, services) occupying min. 50% of ground floor street-facing frontage'],
     detailed:['Confirm active use layouts, frontage transparency, and access points in detailed drawings']}},
-  {code:'LBo-6',title:'Public Transport',pts:3,req:false,criteria:{
+  {code:'LBo-6',title:'Public Transport',desc:'Locate development near quality public transit infrastructure',pts:2,req:false,pointOptions:[
+    {pts:1,label:'Lighting design limiting spillover and glare',desc:'Implement lighting design limiting spillover and glare'},
+    {pts:2,label:'Full night-sky compliance',desc:'Achieve full night-sky compliance with no upward light'}
+  ],criteria:{
     concept:['Map all public transport stops within 500m of the building main entrance'],
     schematic:['Confirm frequency and types of public transport services available','Assess walking routes and their quality for pedestrians'],
     detailed:['Provide covered, weather-protected pedestrian routes to nearest public transport stops']}},
-  {code:'LBo-7',title:'Bicycle Facilities',pts:2,req:false,criteria:{
+  {code:'LBo-7',title:'Bicycle Facilities',desc:'Support non-motorized transportation through site design',pts:1,req:false,pointOptions:[
+    {pts:1,label:'Located near quality public transit',desc:'Locate within specified distance of public transit with defined frequency/service'}
+  ],criteria:{
     concept:['Define projected cycling demand and target levels for the building use'],
     schematic:['Design secure long-stay cycle parking, shower, and changing facilities','Calculate quantities per PBRS requirements'],
     detailed:['Finalise cycle storage layout, quantities, security measures, and wayfinding in construction drawings']}},
-  {code:'LBo-8',title:'Preferred Car Parking Spaces',pts:1,req:false,criteria:{
-    concept:['Identify eligible preferred parking categories: carpool, EV charging, low-emission vehicles'],
-    schematic:['Allocate minimum 5% of total parking spaces to preferred categories'],
-    detailed:['Mark preferred spaces with appropriate signage and markings in parking layout drawings']}},
-  {code:'LBo-9',title:'Travel Plan',pts:1,req:false,criteria:{
+  {code:'LBo-8',title:'Preferred Car Parking Spaces',desc:'Minimize light pollution and reduce impacts on night-time environments',pts:1,req:false,pointOptions:[
+    {pts:1,label:'Pedestrian & bicycle infrastructure connected to networks',desc:'Provide pedestrian/bicycle infrastructure connecting to surrounding networks'}
+  ],criteria:{
+    concept:['Define minimum parking strategy to reduce overall car parking provision and encourage active transport'],
+    schematic:['Design preferred car parking spaces for car share, electric vehicles, and accessible use','Provide clear active transport and drop-off connections to building entrances'],
+    detailed:['Finalise preferred parking layout with reduced parking footprint and safe pedestrian/cycle access pathways']
+  }},
+  {code:'LBo-9',title:'Travel Plan',desc:'Confirm commitment to developing a comprehensive Travel Plan',pts:1,req:false,criteria:{
     concept:['Confirm commitment to developing a comprehensive Travel Plan'],
     schematic:['Draft Travel Plan framework with baseline travel assessment'],
     detailed:['Finalise Travel Plan with mode share targets, monitoring programme, and responsible party']}},
-  {code:'LBo-10',title:'Light Pollution Reduction',pts:1,req:false,criteria:{
+  {code:'LBo-10',title:'Light Pollution Reduction',desc:'Identify sensitive receivers around the site: residential buildings, habitats, night sky',pts:1,req:false,criteria:{
     concept:['Identify sensitive receivers around the site: residential buildings, habitats, night sky'],
     schematic:['Establish lighting design criteria to limit spill light and upward light emission'],
     detailed:['Confirm all external luminaires comply with light pollution limits and BUG ratings in detailed specifications']}},
 ],
 LBi:[
-  {code:'LBi-R1',title:'Healthy Ventilation Delivery',pts:'R',req:true,criteria:{
+  {code:'LBi-R1',title:'Healthy Ventilation Delivery',desc:'Confirm HVAC strategy provides adequate outdoor air to all occupied spaces',pts:'R',req:true,criteria:{
     concept:['Confirm HVAC strategy provides adequate outdoor air to all occupied spaces'],
     schematic:['Demonstrate ventilation rates meet ASHRAE 62.1 minimum requirements for all spaces'],
     detailed:['Include ventilation performance testing and TAB (Testing, Adjusting, Balancing) requirements in mechanical specifications']}},
-  {code:'LBi-R2',title:'Smoking Control',pts:'R',req:true,criteria:{
+  {code:'LBi-R2',title:'Smoking Control',desc:'Define no-smoking policy for all indoor areas and building entrances',pts:'R',req:true,criteria:{
     concept:['Define no-smoking policy for all indoor areas and building entrances'],
     schematic:['Locate any designated outdoor smoking areas minimum 7.5m from all building entrances and air intakes'],
     detailed:['Confirm no-smoking signage, policy documentation, and lease enforcement provisions']}},
-  {code:'LBi-R3',title:'Legionella Prevention',pts:'R',req:true,criteria:{
+  {code:'LBi-R3',title:'Legionella Prevention',desc:'Identify all domestic water systems and cooling towers at risk of Legionella growth',pts:'R',req:true,criteria:{
     concept:['Identify all domestic water systems and cooling towers at risk of Legionella growth'],
     schematic:['Develop Legionella Risk Assessment and Water Safety Control Strategy with specialist'],
     detailed:['Include Legionella prevention measures — temperature maintenance, biocide dosing, monitoring — in MEP specs and O&M Manual']}},
-  {code:'LBi-1',title:'Ventilation Quality',pts:3,req:false,criteria:{
+  {code:'LBi-1',title:'Ventilation Quality',desc:'Set enhanced IAQ target beyond ASHRAE 62.1 minimum outdoor air rates',pts:3,req:false,pointOptions:[
+    {pts:1,label:'1 pt — Demand-controlled ventilation',desc:'Implement CO₂ or VOC sensing with demand-controlled ventilation'},
+    {pts:2,label:'2 pts — Enhanced filtration (MERV 13)',desc:'Specify enhanced filtration to MERV 13 or higher'},
+    {pts:3,label:'3 pts — Full advanced IAQ strategy',desc:'Combine demand-controlled ventilation with MERV 13+ filtration and continuous IAQ monitoring'}
+  ],criteria:{
     concept:['Set enhanced IAQ target beyond ASHRAE 62.1 minimum outdoor air rates'],
     schematic:['Design for improved outdoor air supply — consider demand-controlled ventilation with CO₂ sensing','Evaluate enhanced filtration to MERV 13 or higher'],
     detailed:['Specify CO₂/VOC sensors, IAQ monitoring system, and enhanced filtration in mechanical specifications']}},
-  {code:'LBi-2.1',title:'Material Emissions: Adhesives & Sealants',pts:1,req:false,criteria:{
+  {code:'LBi-2.1',title:'Material Emissions: Adhesives & Sealants',desc:'Flag low-VOC adhesives and sealants as a project-wide requirement',pts:1,req:false,criteria:{
     concept:['Flag low-VOC adhesives and sealants as a project-wide requirement'],
     schematic:['Specify VOC content limits for all adhesives and sealants per SCAQMD Rule 1168'],
     detailed:['Confirm all specified adhesive and sealant products meet required VOC limits in specifications and materials schedule']}},
-  {code:'LBi-2.2',title:'Material Emissions: Paints & Coatings',pts:1,req:false,criteria:{
+  {code:'LBi-2.2',title:'Material Emissions: Paints & Coatings',desc:'Flag low-VOC paints and coatings as a project-wide requirement',pts:1,req:false,criteria:{
     concept:['Flag low-VOC paints and coatings as a project-wide requirement'],
     schematic:['Specify VOC content limits per GS-11 (architectural paints) and GS-03 (anti-corrosive coatings)'],
     detailed:['Confirm all specified paint and coating products meet VOC limits in specifications']}},
-  {code:'LBi-2.3',title:'Material Emissions: Carpet & Hard Flooring',pts:1,req:false,criteria:{
+  {code:'LBi-2.3',title:'Material Emissions: Carpet & Hard Flooring',desc:'Identify flooring product categories and flag low-emission requirement across all',pts:1,req:false,criteria:{
     concept:['Identify flooring product categories and flag low-emission requirement across all'],
     schematic:['Specify carpet meeting CRI Green Label Plus; hard flooring per FloorScore or equivalent'],
     detailed:['Confirm all flooring products meet emission certification standards in specifications and finishes schedule']}},
-  {code:'LBi-5.1',title:'Thermal Comfort: Thermal Zoning',pts:1,req:false,criteria:{
+  {code:'LBi-5.1',title:'Thermal Comfort: Thermal Zoning',desc:'Identify occupancy patterns and areas with different thermal comfort requirements',pts:1,req:false,criteria:{
     concept:['Identify occupancy patterns and areas with different thermal comfort requirements'],
     schematic:['Design HVAC with independently controlled thermal zones for different occupancy types and orientations'],
     detailed:['Confirm independent zone control reflected in MEP drawings and BMS configuration']}},
-  {code:'LBi-5.3',title:'Thermal Comfort: Thermal Comfort Modelling',pts:2,req:false,criteria:{
+  {code:'LBi-5.3',title:'Thermal Comfort: Thermal Comfort Modelling',desc:'Commit to thermal comfort modelling using ASHRAE 55 PMV/PPD methodology',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — PMV modeling for representative spaces',desc:'Conduct thermal comfort simulation for all representative occupied space types demonstrating PMV compliance'},
+    {pts:2,label:'2 pts — Comprehensive PMV analysis',desc:'Submit comprehensive thermal comfort modelling report confirming all spaces achieve ASHRAE 55 criteria (PMV between -0.5 and +0.5)'}
+  ],criteria:{
     concept:['Commit to thermal comfort modelling using ASHRAE 55 PMV/PPD methodology'],
     schematic:['Conduct thermal comfort simulation for all representative occupied space types','Demonstrate spaces achieve PMV between -0.5 and +0.5'],
     detailed:['Submit thermal comfort modelling report confirming compliance with ASHRAE 55 criteria']}},
-  {code:'LBi-6',title:'High Frequency Lighting',pts:1,req:false,criteria:{
+  {code:'LBi-6',title:'High Frequency Lighting',desc:'Identify all spaces with fluorescent lighting and specify high-frequency ballast requirement',pts:1,req:false,criteria:{
     concept:['Identify all spaces with fluorescent lighting and specify high-frequency ballast requirement'],
     schematic:['Confirm all fluorescent fittings use high-frequency ballasts (≥40kHz) or are replaced by LED'],
     detailed:['Include high-frequency ballast or LED-only requirement in electrical specifications']}},
-  {code:'LBi-7',title:'Daylight & Glare',pts:2,req:false,criteria:{
+  {code:'LBi-7',title:'Daylight & Glare',desc:'Set daylight performance target for all regularly occupied spaces',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — Daylight or glare control',desc:'Achieve minimum 2% daylight factor for 75%+ of regularly occupied spaces OR implement comprehensive glare control'},
+    {pts:2,label:'2 pts — Full daylight and glare strategy',desc:'Achieve 2% daylight factor for 75%+ of occupied spaces AND implement external/internal glare control for all glazed facades'}
+  ],criteria:{
     concept:['Set daylight performance target for all regularly occupied spaces'],
     schematic:['Conduct daylight simulation — achieve min. 2% daylight factor (or equivalent LEED EQ metric)','Design glare control strategy: external overhangs, internal blinds, fritting, for all glazed facades'],
     detailed:['Confirm daylight simulation results and glare control specifications in detailed design package']}},
-  {code:'LBi-9',title:'Indoor Noise Pollution',pts:1,req:false,criteria:{
+  {code:'LBi-9',title:'Indoor Noise Pollution',desc:'Identify all noise-sensitive spaces: offices, classrooms, bedrooms, meeting rooms',pts:1,req:false,criteria:{
     concept:['Identify all noise-sensitive spaces: offices, classrooms, bedrooms, meeting rooms'],
     schematic:['Develop acoustic strategy — partition performance, HVAC background noise limits (NR/NC), façade sound reduction'],
     detailed:['Confirm all acoustic specifications meet target background noise levels and sound insulation ratings in all sensitive spaces']}},
 ],
 PW:[
-  {code:'PW-R1',title:'Minimum Interior Water Use Reduction',pts:'R',req:true,criteria:{
+  {code:'PW-R1',title:'Minimum Interior Water Use Reduction',desc:'Establish water consumption baseline using PBRS standard fixture flow rates',pts:'R',req:true,criteria:{
     concept:['Establish water consumption baseline using PBRS standard fixture flow rates','Define minimum reduction target: 15% below baseline'],
     schematic:['Select water-efficient sanitary fixtures and fittings — dual-flush WCs, flow-restricted taps','Calculate projected water consumption against PBRS baseline'],
     detailed:['Specify all fixtures with confirmed flow rates in plumbing specifications','Finalise water efficiency calculations demonstrating minimum 15% reduction']}},
-  {code:'PW-R2',title:'Exterior Water Monitoring',pts:'R',req:true,criteria:{
+  {code:'PW-R2',title:'Exterior Water Monitoring',desc:'Identify all exterior water uses: irrigation, cooling towers, water features, washing',pts:'R',req:true,criteria:{
     concept:['Identify all exterior water uses: irrigation, cooling towers, water features, washing'],
     schematic:['Design dedicated sub-metering for each exterior water use category'],
     detailed:['Include sub-meters with data-logging capability in MEP drawings and specifications']}},
-  {code:'PW-1',title:'Improved Interior Water Use Reduction',pts:15,req:false,criteria:{
+  {code:'PW-1',title:'Improved Interior Water Use Reduction',desc:'Achieve further reductions in building potable water consumption beyond minimum baseline',pts:15,req:false,pointOptions:[
+    {pts:1,label:'4% potable water reduction',desc:'4% potable water reduction vs. baseline'},
+    {pts:2,label:'8% potable water reduction',desc:'8% reduction vs. baseline'},
+    {pts:3,label:'12% potable water reduction',desc:'12% reduction vs. baseline'},
+    {pts:4,label:'16% potable water reduction',desc:'16% reduction vs. baseline'},
+    {pts:5,label:'20% potable water reduction',desc:'20% reduction vs. baseline'},
+    {pts:6,label:'24% potable water reduction',desc:'24% reduction vs. baseline'},
+    {pts:7,label:'28% potable water reduction',desc:'28% reduction vs. baseline'},
+    {pts:8,label:'32% potable water reduction',desc:'32% reduction vs. baseline'},
+    {pts:9,label:'36% potable water reduction',desc:'36% reduction vs. baseline'},
+    {pts:10,label:'40% potable water reduction',desc:'40% reduction vs. baseline'},
+    {pts:11,label:'44% potable water reduction',desc:'44% reduction vs. baseline'},
+    {pts:12,label:'48% potable water reduction',desc:'48% reduction vs. baseline'},
+    {pts:13,label:'52% potable water reduction',desc:'52% reduction vs. baseline'},
+    {pts:14,label:'56% potable water reduction',desc:'56% reduction vs. baseline'},
+    {pts:15,label:'60% or greater potable water reduction',desc:'60% potable water reduction vs. baseline'}
+  ],criteria:{
     concept:['Set enhanced water reduction target beyond the 15% minimum (targeting 30–50%+)'],
     schematic:['Select ultra-low flow fixtures: dual-flush WCs (3/4.5L), 6L/min taps, waterless urinals','Calculate projected savings for each level of improvement to identify achievable credit points'],
     detailed:['Confirm all fixture flow rates in plumbing specifications','Finalise calculations demonstrating credit level achieved and attach to credit submission']}},
-  {code:'PW-2.1',title:'Exterior Water Reduction: Landscaping',pts:8,req:false,criteria:{
+  {code:'PW-2.1',title:'Exterior Water Reduction: Landscaping',desc:'Minimize landscaping water demands through effective plant selection, irrigation strategies, and recycled water use',pts:10,req:false,pointOptions:[
+    {pts:2,label:'Plant selection: <4 L/m²/day irrigation',desc:'Average landscape irrigation demand <4 liters/m²/day'},
+    {pts:4,label:'Plant selection: <2 L/m²/day irrigation',desc:'Average landscape irrigation demand <2 liters/m²/day'},
+    {pts:1,label:'Water efficient irrigation system',desc:'Water Efficient Irrigation System incorporated into landscape design'},
+    {pts:1,label:'Irrigation operation & maintenance plan',desc:'Irrigation Operation & Maintenance Plan developed'},
+    {pts:2,label:'Recycled water serving exterior irrigation',desc:'100% of exterior irrigation demand served via Exterior Water Allowance + recycled water mainline loop'},
+    {pts:2,label:'Non-water turf substitutes (Schools only)',desc:'Non-water turf substitutes installed in place of turf on playing fields'}
+  ],criteria:{
     concept:['Define landscape concept based on native and adaptive low-water plant palette','Set irrigation water use reduction target vs. conventional landscaping baseline'],
     schematic:['Develop detailed planting schedule with water demand calculations per irrigation zone','Design efficient drip or micro-irrigation system with smart controller and soil moisture sensors'],
     detailed:['Finalise irrigation design with zone scheduling, controller specification, and water budget calculations','Confirm use of treated sewage effluent (TSE) or recycled water for irrigation']}},
-  {code:'PW-2.2',title:'Exterior Water Reduction: Heat Rejection',pts:8,req:false,criteria:{
+  {code:'PW-2.2',title:'Exterior Water Reduction: Heat Rejection',desc:'Reduce potable water consumption for heat rejection through recycled water use or elimination of water-based cooling',pts:8,req:false,pointOptions:[
+    {pts:2,label:'>25% cooling water via recycled water',desc:'>25% of cooling tower/district cooling water make-up requirements served via Exterior Water Allowance'},
+    {pts:3,label:'>50% cooling water via recycled water',desc:'>50% served via Exterior Water Allowance'},
+    {pts:4,label:'>75% cooling water via recycled water',desc:'>75% served via Exterior Water Allowance'},
+    {pts:5,label:'100% cooling water via recycled water',desc:'100% served via Exterior Water Allowance'},
+    {pts:8,label:'No water for heat rejection',desc:'Project uses no water for heat rejection (passive cooling, dry coolers, or other alternative methods)'}
+  ],criteria:{
     concept:['Confirm cooling tower or heat rejection system type, scale, and water use implications'],
     schematic:['Specify water-efficient heat rejection equipment','Design water treatment system to maximise cycles of concentration (target ≥5 cycles)'],
     detailed:['Confirm makeup water quantities, blowdown rates, and cycles of concentration in MEP specifications and calculations']}},
-  {code:'PW-3',title:'Water Monitoring & Leak Detection',pts:4,req:false,criteria:{
+  {code:'PW-3',title:'Water Monitoring & Leak Detection',desc:'Encourage monitoring of interior water use to enable identification and correction of leaks',pts:2,req:false,pointOptions:[
+    {pts:2,label:'Sub-metering for water monitoring',desc:'Install sub-metering systems monitoring individual water end-uses (fixtures, equipment) with central data logging and reporting capability to identify leaks and usage patterns'}
+  ],criteria:{
     concept:['Identify all major water end-uses requiring individual sub-metering'],
     schematic:['Design comprehensive sub-metering strategy covering all end-uses','Include automatic leak detection and pulse-monitoring system'],
     detailed:['Specify sub-meters, pulse data loggers, and leak detection equipment in MEP drawings and specifications']}},
-  {code:'PW-4',title:'Stormwater Management',pts:4,req:false,criteria:{
+  {code:'PW-4',title:'Stormwater Management',desc:'Minimize stormwater run-off volumes and treat stormwater on-site to reduce impact on receiving waters',pts:3,req:false,pointOptions:[
+    {pts:1,label:'Stormwater management: 50%+ of site',desc:'Implement stormwater management controls treating run-off from 50% or more of site area on-site'},
+    {pts:2,label:'Stormwater management: 75%+ of site',desc:'Implement controls treating 75% or more of site area; meet infiltration/retention targets'},
+    {pts:3,label:'Full on-site stormwater treatment',desc:'Achieve full on-site treatment with infiltration to natural groundwater recharge or retention for beneficial reuse'}
+  ],criteria:{
     concept:['Assess site stormwater runoff volumes and peak flow rates using local rainfall data','Identify opportunities for stormwater attenuation and beneficial reuse'],
     schematic:['Design stormwater attenuation strategy: detention tanks, permeable paving, bioswales','Model post-development runoff and demonstrate reduction vs. pre-development baseline'],
     detailed:['Finalise stormwater design with calculations and confirm performance against runoff reduction targets']}},
 ],
 RE:[
-  {code:'RE-R1',title:'Minimum Energy Performance',pts:'R',req:true,criteria:{
+  {code:'RE-R1',title:'Minimum Energy Performance',desc:'Define building energy performance target: minimum 10% improvement over ASHRAE 90.1 baseline',pts:'R',req:true,criteria:{
     concept:['Define building energy performance target: minimum 10% improvement over ASHRAE 90.1 baseline','Appoint energy modeller and establish energy modelling brief (EUI targets per building use)'],
     schematic:['Conduct parametric energy model per ANSI/ASHRAE/IESNA 90.1-2007','Demonstrate minimum 10% energy cost saving vs. baseline building'],
     detailed:['Finalise energy model with all detailed design inputs including actual equipment schedules','Include energy performance target and modelling summary in design documentation']}},
-  {code:'RE-R2',title:'Energy Monitoring & Reporting',pts:'R',req:true,criteria:{
+  {code:'RE-R2',title:'Energy Monitoring & Reporting',desc:'Define all major energy end-uses requiring dedicated sub-metering (HVAC, lighting, small power, lifts, specialist equipment)',pts:'R',req:true,criteria:{
     concept:['Define all major energy end-uses requiring dedicated sub-metering (HVAC, lighting, small power, lifts, specialist equipment)'],
     schematic:['Design energy metering strategy covering all major end-use categories'],
     detailed:['Include energy sub-meters and BMS energy reporting dashboard in MEP specifications']}},
-  {code:'RE-R3',title:'Ozone Impacts of Refrigerants & Fire Suppression',pts:'R',req:true,criteria:{
+  {code:'RE-R3',title:'Ozone Impacts of Refrigerants & Fire Suppression',desc:'Identify all refrigerants planned for HVAC, refrigeration, and fire suppression systems',pts:'R',req:true,criteria:{
     concept:['Identify all refrigerants planned for HVAC, refrigeration, and fire suppression systems'],
     schematic:['Confirm zero ODP (Ozone Depletion Potential) refrigerants and fire suppression agents are selected for all systems'],
     detailed:['Include zero ODP refrigerant and fire agent requirements in MEP and fire protection specifications']}},
-  {code:'RE-1',title:'Improved Energy Performance',pts:15,req:false,criteria:{
+  {code:'RE-1',title:'Improved Energy Performance',desc:'Encourage improved energy performance beyond minimum baseline',pts:15,req:false,pointOptions:[
+    {pts:1,label:'4% energy improvement',desc:'4% improvement in energy performance vs. baseline'},
+    {pts:2,label:'8% energy improvement',desc:'8% improvement vs. baseline'},
+    {pts:3,label:'12% energy improvement',desc:'12% improvement vs. baseline'},
+    {pts:4,label:'16% energy improvement',desc:'16% improvement vs. baseline'},
+    {pts:5,label:'20% energy improvement',desc:'20% improvement vs. baseline'},
+    {pts:6,label:'24% energy improvement',desc:'24% improvement vs. baseline'},
+    {pts:7,label:'28% energy improvement',desc:'28% improvement vs. baseline'},
+    {pts:8,label:'32% energy improvement',desc:'32% improvement vs. baseline'},
+    {pts:9,label:'36% energy improvement',desc:'36% improvement vs. baseline'},
+    {pts:10,label:'40% energy improvement',desc:'40% improvement vs. baseline'},
+    {pts:11,label:'44% energy improvement',desc:'44% improvement vs. baseline'},
+    {pts:12,label:'48% energy improvement',desc:'48% improvement vs. baseline'},
+    {pts:13,label:'52% energy improvement',desc:'52% improvement vs. baseline'},
+    {pts:14,label:'56% energy improvement',desc:'56% improvement vs. baseline'},
+    {pts:15,label:'60% or greater energy improvement',desc:'60% or greater improvement in energy performance vs. baseline'}
+  ],criteria:{
     concept:['Set energy improvement target beyond 10% minimum — assess potential for 20–40%+ improvement'],
     schematic:['Optimise energy model: building fabric, HVAC CoP, lighting density, controls, and renewables','Model different improvement scenarios to identify achievable credit points'],
     detailed:['Finalise energy model reflecting all detailed design decisions and specifications','Document all energy efficiency measures with performance data in specifications']}},
-  {code:'RE-2',title:'Cool Building Strategies',pts:6,req:false,criteria:{
+  {code:'RE-2',title:'Cool Building Strategies',desc:'Reduce cooling energy consumption and urban heat island effect through passive design and reflective materials',pts:3,req:false,pointOptions:[
+    {pts:1,label:'High-reflectance roof: 75%+ of roof area',desc:'Achieve solar reflectance \u22650.65 for roof surfaces (minimum 75% of roof area)'},
+    {pts:1,label:'High-reflectance hardscape: 50%+ of non-building paved areas',desc:'Achieve solar reflectance \u22650.65 for site hardscape surfaces (minimum 50% of non-building paved areas)'},
+    {pts:1,label:'Tree canopy or vegetation shading: 30%+ of hardscape',desc:'Provide tree canopy or vegetation shading 30% or more of site hardscape at maturity'}
+  ],criteria:{
     concept:['Identify passive cooling and heat island reduction strategies suitable for project type and climate'],
     schematic:['Integrate passive measures: external shading, high-performance glazing, night purge ventilation','Select high-reflectance roofing materials (SRI ≥ 29 for low-slope, ≥ 78 for steep-slope roofs)','Select paving materials with SRI ≥ 29 for at least 50% of site hardscape'],
     detailed:['Confirm SRI values, shading geometry dimensions, and cool roof product specifications in drawings and specs']}},
-  {code:'RE-3',title:'Energy Efficient Appliances',pts:3,req:false,criteria:{
+  {code:'RE-3',title:'Energy Efficient Appliances',desc:'Promote use of energy-efficient appliances to reduce plug loads',pts:1,req:false,pointOptions:[
+    {pts:1,label:'90%+ ENERGY STAR certified appliances',desc:'Specify ENERGY STAR certified appliances for 90% or more of applicable major appliances (refrigerators, dishwashers, cooking equipment, etc.)'}
+  ],criteria:{
     concept:['Identify all major energy-consuming appliances and fixed equipment categories'],
     schematic:['Specify Energy Star or equivalent rated equipment for all applicable categories'],
     detailed:['Confirm energy efficiency ratings of all specified appliances in equipment schedule and specifications']}},
-  {code:'RE-4',title:'Vertical Transportation',pts:3,req:false,criteria:{
+  {code:'RE-4',title:'Vertical Transportation',desc:'Improve efficiency of elevators and escalators to reduce energy consumption',pts:2,req:false,pointOptions:[
+    {pts:1,label:'Energy-efficient elevators with regenerative drives',desc:'Install energy-efficient elevators with regenerative drives or equivalent efficiency measures'},
+    {pts:2,label:'Regenerative drives + escalator controls',desc:'Install regenerative drive elevators AND implement escalator controls (auto-start, variable speed)'}
+  ],criteria:{
     concept:['Define vertical transportation requirements: number of lifts, escalators, travel height, usage intensity'],
     schematic:['Specify high-efficiency permanent magnet motors, regenerative drives, and automatic standby mode for all passenger lifts'],
     detailed:['Confirm lift energy performance class and specifications — confirm with lift manufacturer energy data']}},
-  {code:'RE-5',title:'Peak Load Reduction',pts:4,req:false,criteria:{
+  {code:'RE-5',title:'Peak Load Reduction',desc:'Reduce peak demand charges through demand management and load reduction strategies',pts:2,req:false,pointOptions:[
+    {pts:1,label:'10%+ peak demand reduction',desc:'Implement demand reduction strategy (thermal storage, load shifting, etc.) reducing peak demand 10% or more'},
+    {pts:2,label:'20%+ peak demand reduction',desc:'Achieve peak demand reduction of 20% or greater vs. baseline'}
+  ],criteria:{
     concept:['Assess demand management opportunities: thermal storage, load shifting, smart controls'],
     schematic:['Design demand response capability in BMS — automatic load shedding, pre-cooling, intelligent scheduling'],
     detailed:['Include demand management, peak load control logic, and thermal storage specifications in MEP and BMS specifications']}},
-  {code:'RE-6',title:'Renewable Energy',pts:9,req:false,criteria:{
+  {code:'RE-6',title:'Renewable Energy',desc:'Encourage on-site renewable energy generation to offset grid consumption',pts:15,req:false,pointOptions:[
+    {pts:1,label:'4% from on-site renewable sources',desc:'4% of annual energy provided by on-site renewable sources'},
+    {pts:2,label:'8% from on-site renewable sources',desc:'8% of annual energy from on-site renewable'},
+    {pts:3,label:'12% from on-site renewable sources',desc:'12% from on-site renewable'},
+    {pts:4,label:'16% from on-site renewable sources',desc:'16% from on-site renewable'},
+    {pts:5,label:'20% from on-site renewable sources',desc:'20% from on-site renewable'},
+    {pts:6,label:'24% from on-site renewable sources',desc:'24% from on-site renewable'},
+    {pts:7,label:'28% from on-site renewable sources',desc:'28% from on-site renewable'},
+    {pts:8,label:'32% from on-site renewable sources',desc:'32% from on-site renewable'},
+    {pts:9,label:'36% from on-site renewable sources',desc:'36% from on-site renewable'},
+    {pts:10,label:'40% from on-site renewable sources',desc:'40% from on-site renewable'},
+    {pts:11,label:'44% from on-site renewable sources',desc:'44% from on-site renewable'},
+    {pts:12,label:'48% from on-site renewable sources',desc:'48% from on-site renewable'},
+    {pts:13,label:'52% from on-site renewable sources',desc:'52% from on-site renewable'},
+    {pts:14,label:'56% from on-site renewable sources',desc:'56% from on-site renewable'},
+    {pts:15,label:'60%+ from on-site renewable sources',desc:'60% or greater of annual energy from on-site renewable sources'}
+  ],criteria:{
     concept:['Assess on-site renewable energy potential: rooftop PV, building-integrated PV, solar thermal, wind'],
     schematic:['Size renewable energy systems and model annual generation output','Confirm available roof/façade areas, structural capacity, and shading constraints for PV'],
     detailed:['Finalise PV/solar thermal design, energy generation calculations, grid connection, and protection relay specifications']}},
-  {code:'RE-7',title:'Global Warming Impacts of Refrigerants',pts:4,req:false,criteria:{
+  {code:'RE-7',title:'Global Warming Impacts of Refrigerants',desc:'Select refrigerants and fire suppression agents with low global warming potential',pts:1,req:false,pointOptions:[
+    {pts:1,label:'Low-GWP refrigerants (GWP <365) and fire suppression agents',desc:'Specify refrigerants with GWP <365 (excluding CFCs) and fire suppression agents with GWP <150 or equivalent low-GWP alternatives'}
+  ],criteria:{
     concept:['Identify all refrigerants planned for HVAC and refrigeration systems','Establish low GWP refrigerant selection policy for project'],
     schematic:['Select low GWP refrigerants for all systems','Assess and document lifecycle GWP using TEWI (Total Equivalent Warming Impact) methodology'],
     detailed:['Confirm low GWP refrigerant selections with manufacturers and include in MEP specifications']}},
 ],
 SM:[
-  {code:'SM-R1',title:'Hazardous Materials Elimination',pts:'R',req:true,criteria:{
+  {code:'SM-R1',title:'Hazardous Materials Elimination',desc:'Define prohibited materials list: asbestos, lead paint, PCBs, urea-formaldehyde insulation, PVC if applicable',pts:'R',req:true,criteria:{
     concept:['Define prohibited materials list: asbestos, lead paint, PCBs, urea-formaldehyde insulation, PVC if applicable'],
     schematic:['Confirm no prohibited materials are included in outline specification materials lists'],
     detailed:['Include comprehensive hazardous materials prohibition clause in all work section specifications']}},
-  {code:'SM-R2',title:'Basic Construction Waste Management',pts:'R',req:true,criteria:{
+  {code:'SM-R2',title:'Basic Construction Waste Management',desc:'Estimate construction and demolition waste volumes by material type',pts:'R',req:true,criteria:{
     concept:['Estimate construction and demolition waste volumes by material type','Set minimum waste diversion target: 50% by weight or volume'],
     schematic:['Develop Construction & Demolition Waste Management Plan (CDWMP) framework identifying waste streams and recyclers'],
     detailed:['Finalise CDWMP with specific waste stream targets, approved recycling facilities, and reporting templates','Include CDWMP in tender and construction contract documents']}},
-  {code:'SM-R3',title:'Basic Operational Waste Management',pts:'R',req:true,criteria:{
+  {code:'SM-R3',title:'Basic Operational Waste Management',desc:'Estimate annual operational waste volumes at full building occupancy',pts:'R',req:true,criteria:{
     concept:['Estimate annual operational waste volumes at full building occupancy','Review Centre of Waste Management (CWM) Abu Dhabi requirements and available infrastructure'],
     schematic:["Design waste storage areas with segregation: green (plastics/glass/metal), blue (paper/cardboard), black (general waste)",'Ensure maximum 30m carry distance from any point in building to nearest waste collection point'],
     detailed:['Finalise waste room sizes and bin configurations in architectural drawings','Confirm minimum 40% waste diversion rate in Operational Waste Strategy']}},
-  {code:'SM-1',title:'Non-Polluting Materials',pts:3,req:false,criteria:{
+  {code:'SM-1',title:'Non-Polluting Materials',desc:'Eliminate use of polluting materials; promote selection of low-environmental-impact alternatives',pts:3,req:false,pointOptions:[
+    {pts:1,label:'Zero ODP, Low GWP insulation (ODP=0, GWP<5)',desc:'All thermal insulation materials have ODP = 0 AND Global Warming Potential (GWP) < 5'},
+    {pts:1,label:'Chlorine-free materials for key product groups',desc:'Replace chlorine-based materials (PVC, CPE, CPVC, CSPE, polychloroprene) with sustainable alternatives for 3+ product groups at specified coverage: Insulation 80%+, Waterproofing 50%+, Cladding 90%+, Floor/wall coverings 90%+'},
+    {pts:1,label:'Mercury elimination from all materials',desc:'Eliminate mercury from all building materials (lighting, switches, controls, measuring devices); use mercury-free alternatives'}
+  ],criteria:{
     concept:['Identify all material categories with indoor pollution potential: paints, varnishes, adhesives, sealants, flooring, ceiling tiles'],
     schematic:['Specify low-VOC or zero-VOC products across all identified categories with specific VOC content limits'],
     detailed:['Confirm all specified materials meet VOC and chemical emission standards — compile materials compliance schedule']}},
-  {code:'SM-6',title:'Design for Durability',pts:1,req:false,criteria:{
+  {code:'SM-6',title:'Design for Durability',desc:'Define design life targets for key building components (structure, envelope, services, finishes)',pts:1,req:false,criteria:{
     concept:['Define design life targets for key building components (structure, envelope, services, finishes)'],
     schematic:["Develop Building Durability Plan (BDP) covering envelope waterproofing, structural protection, component service lives"],
     detailed:['Finalise BDP with component lifespan schedule, maintenance plan, and protective detail specifications','Include BDP in O&M Manual']}},
-  {code:'SM-7',title:'Building Reuse',pts:2,req:false,criteria:{
+  {code:'SM-7',title:'Building Reuse',desc:'Confirm whether existing building structure or fabric on site is available and structurally suitable for reuse',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — Partial reuse (25-50%)',desc:'Retain and reuse 25-50% of existing building structure, façade, or internal elements'},
+    {pts:2,label:'2 pts — Significant reuse (50%+)',desc:'Retain and reuse 50% or more of existing building structure, façade, or internal elements'}
+  ],criteria:{
     concept:['Confirm whether existing building structure or fabric on site is available and structurally suitable for reuse'],
     schematic:['Undertake structural assessment of reusable elements','Calculate and demonstrate percentage of existing structure, façade, or internal elements to be retained'],
     detailed:['Confirm all retained/reused elements in structural and architectural drawings and specification']}},
-  {code:'SM-9',title:'Regional Materials',pts:2,req:false,criteria:{
+  {code:'SM-9',title:'Regional Materials',desc:'Define regional sourcing target: materials extracted and manufactured within 800km of site',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — 15% regional materials',desc:'Specify materials sourced within 800km comprising 15% or more of total material value'},
+    {pts:2,label:'2 pts — 25%+ regional materials',desc:'Specify materials sourced within 800km comprising 25% or more of total material value'}
+  ],criteria:{
     concept:['Define regional sourcing target: materials extracted and manufactured within 800km of site'],
     schematic:['Identify key structural and finishing materials available from verified regional sources'],
     detailed:['Specify regional materials requirements in specifications and confirm sourcing in materials schedule with supplier locations']}},
-  {code:'SM-10',title:'Recycled Materials',pts:6,req:false,criteria:{
+  {code:'SM-10',title:'Recycled Materials',desc:'Reduce extraction of virgin materials by specifying recycled content',pts:1,req:false,pointOptions:[
+    {pts:1,label:'20%+ recycled content materials',desc:'Specify materials with recycled content (post-consumer and/or post-industrial) comprising 20% or more of total material cost'}
+  ],criteria:{
     concept:['Set recycled content target for the project by total material value (targeting 10–20%+)'],
     schematic:['Identify materials with significant post-consumer/post-industrial recycled content: structural steel, concrete with GGBS/PFA, insulation'],
     detailed:['Specify minimum recycled content percentages by material value in specifications','Compile recycled materials schedule with manufacturer documentation']}},
-  {code:'SM-13',title:'Improved Construction Waste Management',pts:2,req:false,criteria:{
+  {code:'SM-13',title:'Improved Construction Waste Management',desc:'Divert construction waste from landfill through recycling/reuse',pts:1,req:false,pointOptions:[
+    {pts:1,label:'50%+ construction waste diversion',desc:'Divert 50% or more of construction waste from landfill through recycling, reuse, or salvage'}
+  ],criteria:{
     concept:['Set enhanced waste diversion target beyond 50% minimum (targeting 75% or higher)'],
     schematic:['Identify additional waste streams for recovery: structural timber, steelwork, formwork, packaging, concrete'],
     detailed:['Finalise enhanced CDWMP with specific recyclers, diversion calculation methodology, and reporting system']}},
 ],
 IP:[
-  {code:'IP-1',title:'Innovative Cultural & Regional Practices',pts:1,req:false,criteria:{
+  {code:'IP-1',title:'Innovative Cultural & Regional Practices',desc:'Identify a specific opportunity for cultural or regional design innovation addressing one of the Estidama pillars (environmental, cultural, social, economic)',pts:1,req:false,criteria:{
     concept:['Identify a specific opportunity for cultural or regional design innovation addressing one of the Estidama pillars (environmental, cultural, social, economic)'],
     schematic:['Develop brief outline of proposed innovative solution with supporting feasibility rationale'],
     detailed:['Prepare Innovative Solution Report demonstrating cultural/regional innovation — submit to Estidama for approval']}},
-  {code:'IP-2',title:'Innovating Practice',pts:2,req:false,criteria:{
+  {code:'IP-2',title:'Innovating Practice',desc:'Identify an area of genuine design or technical innovation going beyond existing PBRS credit requirements',pts:2,req:false,pointOptions:[
+    {pts:1,label:'1 pt — Innovation concept',desc:'Develop innovation concept brief with feasibility study and preliminary cost-benefit analysis'},
+    {pts:2,label:'2 pts — Approved innovation implementation',desc:'Submit Innovative Solution Report with measurable performance impacts and Estidama approval'}
+  ],criteria:{
     concept:['Identify an area of genuine design or technical innovation going beyond existing PBRS credit requirements'],
     schematic:['Develop innovation concept brief with preliminary feasibility study, cost-benefit analysis, and risk assessment'],
     detailed:['Prepare full Innovative Solution Report with measurable performance impacts across Estidama pillars — submit to Estidama for approval']}},
@@ -552,6 +724,16 @@ const RATING_THRESHOLDS = [
 ];
 const STAGES = ['concept','schematic','detailed'];
 const STAGE_LABELS = {concept:'Concept Design',schematic:'Schematic Design',detailed:'Detailed Design'};
+const SECTION_COLORS = {
+  IDP: '#2c6fad',
+  NS: '#1f7a5f',
+  LBo: '#b07d00',
+  LBi: '#7c3f7c',
+  PW: '#1e85a5',
+  RE: '#b04a00',
+  SM: '#4f772f',
+  IP: '#4a4a8c',
+};
 
 // ═══════════════════════════════════════════════════════════
 // STATE
@@ -559,7 +741,11 @@ const STAGE_LABELS = {concept:'Concept Design',schematic:'Schematic Design',deta
 let S = {
   view: 'setup',
   stage: 'concept',
+  activeSetupSection: Object.keys(CREDITS)[0],
+  currentProjectId: null,
+  projectDb: [],
   selected: {},
+  creditPoints: {},
   secOpen: {},
   criteriaChecked: {},
   notes: {},
@@ -571,8 +757,16 @@ ALL_CREDITS.forEach(c => { if (c.req) S.selected[c.code] = true; });
 // ═══════════════════════════════════════════════════════════
 // UTILS
 // ═══════════════════════════════════════════════════════════
+function getCreditPoints(code) {
+  const c = ALL_CREDITS.find(x => x.code === code);
+  if (!c || c.req) return 0;
+  const max = Number(c.pts) || 0;
+  const points = Number(S.creditPoints[code]);
+  if (S.selected[code]) return points > 0 ? Math.min(points, max) : max;
+  return 0;
+}
 function getPossiblePts() {
-  return ALL_CREDITS.filter(c => !c.req && S.selected[c.code]).reduce((s,c) => s + c.pts, 0);
+  return ALL_CREDITS.filter(c => !c.req).reduce((sum, c) => sum + getCreditPoints(c.code), 0);
 }
 function getRating(pts) {
   let r = 0;
@@ -617,22 +811,92 @@ function renderSetupSummary() {
   `;
 }
 
-function renderSetupCredits() {
+function setSetupSection(section) {
+  S.activeSetupSection = section;
+  renderSetup();
+  saveState();
+}
+
+function renderSetupSectionTabs() {
+  const activeSection = S.activeSetupSection || Object.keys(CREDITS)[0];
   let html = '';
   Object.entries(CREDITS).forEach(([sec, credits]) => {
-    const open = S.secOpen['s_'+sec];
-    const secPts = credits.filter(c=>!c.req).reduce((s,c)=>s+c.pts,0);
-    const selPts = credits.filter(c=>!c.req&&S.selected[c.code]).reduce((s,c)=>s+c.pts,0);
-    html += `<div class="section-wrap">
-      <div class="section-head ${open?'open':''}" onclick="toggleSec('s_${sec}')">
-        <div class="sec-left"><span class="sec-chevron ${open?'open':''}">&#9654;</span>${SECTIONS[sec]}</div>
+    html += `<button type="button" class="section-tab-button ${sec===activeSection?'active':''}" onclick="setSetupSection('${sec}')">${SECTIONS[sec]}</button>`;
+  });
+  document.getElementById('setup-section-tabs').innerHTML = html;
+}
+
+function renderPointsPileChart() {
+  const chart = document.getElementById('points-pile-chart');
+  if (!chart) return;
+  const sectionData = Object.entries(CREDITS).map(([sec, credits]) => {
+    return {
+      sec,
+      optPoints: credits.filter(c => !c.req).reduce((sum, c) => sum + getCreditPoints(c.code), 0),
+      reqCount: credits.filter(c => c.req).length,
+      color: SECTION_COLORS[sec] || '#777',
+    };
+  });
+  const totalOpt = sectionData.reduce((sum, d) => sum + d.optPoints, 0);
+  const totalReq = sectionData.reduce((sum, d) => sum + d.reqCount, 0);
+  let html = `<div class="pile-chart"><div class="pile-title">Credit pile preview</div>`;
+  html += `<div style="font-size:12.5px;color:var(--gray-600);margin-bottom:10px;">Darker bars show mandatory credits by section; lighter bars show selected optional points.</div>`;
+  html += `<div class="pile-row">`;
+  sectionData.filter(d => d.optPoints > 0).forEach(d => {
+    html += `<div class="pile-segment light" title="${SECTIONS[d.sec]} — ${d.optPoints} optional point${d.optPoints===1?'':'s'}" style="background:${d.color};flex:${d.optPoints};">${d.optPoints}</div>`;
+  });
+  html += `</div><div class="pile-row">`;
+  sectionData.filter(d => d.reqCount > 0).forEach(d => {
+    html += `<div class="pile-segment dark" title="${SECTIONS[d.sec]} — ${d.reqCount} mandatory credit${d.reqCount===1?'':'s'}" style="background:${d.color};flex:${d.reqCount};">${d.reqCount}</div>`;
+  });
+  html += `</div><div class="pile-legend">`;
+  sectionData.forEach(d => {
+    if (d.optPoints > 0 || d.reqCount > 0) {
+      html += `<div class="pile-chip"><span class="pile-dot" style="background:${d.color};"></span>${d.sec}</div>`;
+    }
+  });
+  html += `</div></div>`;
+  chart.innerHTML = html;
+}
+
+function renderSetupCredits() {
+  const activeSection = S.activeSetupSection || Object.keys(CREDITS)[0];
+  const credits = CREDITS[activeSection];
+  const secPts = credits.filter(c => !c.req).reduce((s, c) => s + (Number(c.pts) || 0), 0);
+  const selPts = credits.filter(c => !c.req).reduce((s, c) => s + getCreditPoints(c.code), 0);
+  let html = `<div class="section-wrap">
+      <div class="section-head open">
+        <div class="sec-left">${SECTIONS[activeSection]}</div>
         <div class="sec-pts">${selPts} / ${secPts} pts selected</div>
-      </div>`;
-    if (open) {
-      html += `<div class="credits-body">`;
-      credits.forEach(c => {
-        const sel = S.selected[c.code];
-        html += `<div class="credit-row ${sel?'checked':''} ${c.req?'req-row':''}">
+      </div>
+      <div class="credits-body">`;
+  credits.forEach(c => {
+    const sel = S.selected[c.code];
+    const maxPts = Number(c.pts) || 0;
+    const currentPts = sel ? getCreditPoints(c.code) : 0;
+    const hasOptions = Array.isArray(c.pointOptions) && c.pointOptions.length > 0;
+    const creditDesc = c.desc || (c.criteria && c.criteria.concept && c.criteria.concept[0]) || '';
+    let ptsControl = '';
+    let selectedOptionDesc = '';
+    if (!c.req && maxPts > 1) {
+      if (hasOptions) {
+        let options = `<option value="0" disabled ${currentPts===0?'selected':''}>Choose a credit level</option>`;
+        c.pointOptions.forEach(opt => {
+          options += `<option value="${opt.pts}" ${currentPts===opt.pts?'selected':''}>${opt.label}</option>`;
+        });
+        ptsControl = `<div style="margin-top:8px;"><select class="credit-pts-select" onchange="setCreditPoints('${c.code}', this.value)">${options}</select></div>`;
+        const selectedOpt = c.pointOptions.find(opt => opt.pts === currentPts);
+        selectedOptionDesc = selectedOpt ? selectedOpt.desc : '';
+      } else {
+        let options = `<option value="0" disabled ${currentPts===0?'selected':''}>Choose a credit level</option>`;
+        for (let i = 1; i <= maxPts; i++) {
+          options += `<option value="${i}" ${currentPts===i?'selected':''}>${i} pt${i>1?'s':''}</option>`;
+        }
+        ptsControl = `<div style="margin-top:8px;"><select class="credit-pts-select" onchange="setCreditPoints('${c.code}', this.value)">${options}</select></div>`;
+      }
+    }
+    const ptsNote = c.req ? 'No credit points — mandatory for all Pearl ratings' : hasOptions ? (sel ? 'Selected option: ' + currentPts + ' pts' : 'Choose the award level that matches the manual criteria') : (sel && maxPts > 1 ? 'Selected ' + currentPts + ' / ' + maxPts + ' pts' : 'Choose an award level from the dropdown');
+    html += `<div class="credit-row ${sel?'checked':''} ${c.req?'req-row':''}">
           <input type="checkbox" class="credit-cb" ${sel?'checked':''} ${c.req?'disabled':''} onchange="toggleCredit('${c.code}', this.checked)"/>
           <div class="credit-meta">
             <div class="credit-code-line">
@@ -640,14 +904,14 @@ function renderSetupCredits() {
               ${c.req?'<span class="req-badge">Required</span>':''}
             </div>
             <div class="credit-name">${c.title}</div>
-            <div class="credit-pts-note">${c.req ? 'No credit points — mandatory for all Pearl ratings' : 'Maximum ' + c.pts + ' credit point' + (c.pts>1?'s':'')}</div>
+            ${creditDesc ? `<div class="credit-description">${creditDesc}</div>` : ''}
+            <div class="credit-pts-note">${ptsNote}</div>
+            ${ptsControl}
+            ${selectedOptionDesc ? `<div class="credit-option-desc">${selectedOptionDesc}</div>` : ''}
           </div>
         </div>`;
-      });
-      html += `</div>`;
-    }
-    html += `</div>`;
   });
+  html += `</div></div>`;
   document.getElementById('setup-credits').innerHTML = html;
 }
 
@@ -744,7 +1008,10 @@ function renderStageEndSummary() {
 // FULL RENDERS
 // ═══════════════════════════════════════════════════════════
 function renderSetup() {
+  renderProjectSelect();
   renderSetupSummary();
+  renderPointsPileChart();
+  renderSetupSectionTabs();
   renderSetupCredits();
 }
 function renderStageView() {
@@ -767,7 +1034,33 @@ function toggleSec(key) {
   saveState();
 }
 function toggleCredit(code, checked) {
+  const c = ALL_CREDITS.find(x => x.code === code);
   S.selected[code] = checked;
+  if (checked && c && Number(c.pts) > 0) {
+    if (!S.creditPoints[code] || Number(S.creditPoints[code]) === 0) {
+      if (Array.isArray(c.pointOptions) && c.pointOptions.length > 0) {
+        S.creditPoints[code] = c.pointOptions[0].pts;
+      } else {
+        S.creditPoints[code] = 1;
+      }
+    }
+  } else {
+    S.creditPoints[code] = 0;
+  }
+  renderSetup();
+  saveState();
+}
+function setCreditPoints(code, value) {
+  const pts = Number(value);
+  const c = ALL_CREDITS.find(x => x.code === code);
+  const max = c ? Number(c.pts) || 0 : 0;
+  if (pts > 0) {
+    S.selected[code] = true;
+    S.creditPoints[code] = Math.min(pts, max);
+  } else {
+    S.selected[code] = false;
+    S.creditPoints[code] = 0;
+  }
   renderSetup();
   saveState();
 }
@@ -812,8 +1105,6 @@ function saveState() {
         projNum: document.getElementById('proj-num')?.value||'',
         projType: document.getElementById('proj-type')?.value||'',
         projTarget: document.getElementById('proj-target')?.value||'',
-        projPqp: document.getElementById('proj-pqp')?.value||'',
-        projDate: document.getElementById('proj-date')?.value||'',
       }
     };
     localStorage.setItem('pbrs_checklist', JSON.stringify(data));
@@ -828,11 +1119,14 @@ function loadState() {
     const data = JSON.parse(raw);
     if (data.s) {
       S.selected = data.s.selected || S.selected;
+      S.creditPoints = data.s.creditPoints || {};
       S.secOpen = data.s.secOpen || {};
       S.criteriaChecked = data.s.criteriaChecked || {};
       S.notes = data.s.notes || {};
       S.view = data.s.view || 'setup';
       S.stage = data.s.stage || 'concept';
+      S.currentProjectId = data.s.currentProjectId || null;
+      S.projectDb = data.s.projectDb || [];
     }
     if (data.meta) {
       setTimeout(()=>{
@@ -840,8 +1134,6 @@ function loadState() {
         if(data.meta.projNum) document.getElementById('proj-num').value=data.meta.projNum;
         if(data.meta.projType) document.getElementById('proj-type').value=data.meta.projType;
         if(data.meta.projTarget) document.getElementById('proj-target').value=data.meta.projTarget;
-        if(data.meta.projPqp) document.getElementById('proj-pqp').value=data.meta.projPqp;
-        if(data.meta.projDate) document.getElementById('proj-date').value=data.meta.projDate;
       },50);
     }
   } catch(e){}
@@ -850,24 +1142,111 @@ function loadState() {
 // ═══════════════════════════════════════════════════════════
 // EXPORT / IMPORT
 // ═══════════════════════════════════════════════════════════
+function buildProjectEntry() {
+  const now = new Date().toISOString();
+  const id = S.currentProjectId || 'prj_' + Date.now();
+  return {
+    id,
+    name: document.getElementById('proj-name')?.value||'Untitled project',
+    number: document.getElementById('proj-num')?.value||'',
+    type: document.getElementById('proj-type')?.value||'',
+    target: document.getElementById('proj-target')?.value||'',
+    updated: now,
+    state: {
+      view: S.view,
+      stage: S.stage,
+      selected: S.selected,
+      creditPoints: S.creditPoints,
+      secOpen: S.secOpen,
+      criteriaChecked: S.criteriaChecked,
+      notes: S.notes,
+    }
+  };
+}
+
+function saveProject() {
+  const project = buildProjectEntry();
+  const index = S.projectDb.findIndex(p => p.id === project.id);
+  if (index >= 0) S.projectDb[index] = project;
+  else S.projectDb.push(project);
+  S.currentProjectId = project.id;
+  renderProjectSelect();
+  saveState();
+  alert('Project saved to the JSON project list.');
+}
+
+function setProjectFields(project) {
+  document.getElementById('proj-name').value = project.name||'';
+  document.getElementById('proj-num').value = project.number||'';
+  document.getElementById('proj-type').value = project.type||'';
+  document.getElementById('proj-target').value = project.target||'';
+}
+
+function loadProject(id) {
+  if (!id) {
+    S.currentProjectId = null;
+    S.selected = {};
+    S.creditPoints = {};
+    S.secOpen = {};
+    S.criteriaChecked = {};
+    S.notes = {};
+    S.view = 'setup';
+    S.stage = 'concept';
+    setProjectFields({});
+    ALL_CREDITS.forEach(c => { if (c.req) S.selected[c.code] = true; });
+    renderSetup();
+    saveState();
+    return;
+  }
+  const project = S.projectDb.find(p => p.id === id);
+  if (!project) return;
+  S.currentProjectId = id;
+  S.view = project.state.view || 'setup';
+  S.stage = project.state.stage || 'concept';
+  S.selected = project.state.selected || {};
+  S.creditPoints = project.state.creditPoints || {};
+  S.secOpen = project.state.secOpen || {};
+  S.criteriaChecked = project.state.criteriaChecked || {};
+  S.notes = project.state.notes || {};
+  setProjectFields(project);
+  if (S.view === 'stage') {
+    document.getElementById('view-setup').classList.remove('active');
+    document.getElementById('view-stage').classList.add('active');
+    renderStageView();
+  } else {
+    renderSetup();
+  }
+  saveState();
+}
+
+function renderProjectSelect() {
+  const select = document.getElementById('proj-select');
+  if (!select) return;
+  const active = S.currentProjectId || '';
+  let html = '<option value="">New project</option>';
+  S.projectDb.forEach(p => {
+    html += `<option value="${p.id}" ${p.id===active?'selected':''}>${p.name || p.number || 'Project ' + p.id}</option>`;
+  });
+  select.innerHTML = html;
+  select.value = active;
+}
+
 function exportData() {
+  const currentProject = buildProjectEntry();
+  const projects = [...S.projectDb];
+  const idx = projects.findIndex(p => p.id === currentProject.id);
+  if (idx >= 0) projects[idx] = currentProject;
+  else projects.push(currentProject);
   const data = {
     version: '1.0',
     exported: new Date().toISOString(),
-    project: {
-      name: document.getElementById('proj-name')?.value||'',
-      number: document.getElementById('proj-num')?.value||'',
-      type: document.getElementById('proj-type')?.value||'',
-      target: document.getElementById('proj-target')?.value||'',
-      pqp: document.getElementById('proj-pqp')?.value||'',
-      date: document.getElementById('proj-date')?.value||'',
-    },
-    state: S
+    projects: projects,
+    currentProjectId: currentProject.id,
   };
   const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'PBRS_Checklist_' + (data.project.name||'Project').replace(/\s+/g,'_') + '.json';
+  a.download = 'PBRS_Projects_' + (currentProject.name||'Project').replace(/\s+/g,'_') + '.json';
   a.click();
 }
 function importData() {
@@ -880,16 +1259,21 @@ function importData() {
     reader.onload = ev => {
       try {
         const data = JSON.parse(ev.target.result);
-        if (data.state) {
-          S = data.state;
-          if (data.project) {
-            document.getElementById('proj-name').value = data.project.name||'';
-            document.getElementById('proj-num').value = data.project.number||'';
-            document.getElementById('proj-type').value = data.project.type||'';
-            document.getElementById('proj-target').value = data.project.target||'';
-            document.getElementById('proj-pqp').value = data.project.pqp||'';
-            document.getElementById('proj-date').value = data.project.date||'';
+        if (data.projects) {
+          S.projectDb = Array.isArray(data.projects) ? data.projects : [];
+          S.currentProjectId = data.currentProjectId || (S.projectDb[0] && S.projectDb[0].id) || null;
+          renderProjectSelect();
+          if (S.currentProjectId) {
+            loadProject(S.currentProjectId);
+          } else {
+            loadProject('');
           }
+        } else if (data.state) {
+          S = data.state;
+          S.projectDb = data.project ? [Object.assign({id:'prj_' + Date.now()}, data.project, {state:data.state})] : [];
+          S.currentProjectId = S.projectDb[0] ? S.projectDb[0].id : null;
+          if (data.project) setProjectFields(data.project);
+          renderProjectSelect();
           if (S.view === 'stage') {
             document.getElementById('view-setup').classList.remove('active');
             document.getElementById('view-stage').classList.add('active');
@@ -899,7 +1283,7 @@ function importData() {
           }
           saveState();
         }
-      } catch(err) { alert('Could not read file. Please check it is a valid PBRS checklist export.'); }
+      } catch(err) { alert('Could not read file. Please check it is a valid PBRS project database JSON file.'); }
     };
     reader.readAsText(file);
   };
