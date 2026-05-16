@@ -95,7 +95,6 @@
   .section-tab-button { padding: 9px 16px; font-size: 13px; font-family: var(--font); font-weight: 600; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; color: var(--gray-700); cursor: pointer; transition: background 0.1s, border-color 0.1s, color 0.1s; }
   .section-tab-button:hover { background: var(--gray-50); }
   .section-tab-button.active { color: var(--blue); border-color: var(--blue); box-shadow: inset 0 -2px 0 0 var(--blue); }
-  .section-tab-button.disabled { color: var(--gray-400); border-color: var(--border); cursor: default; background: #f9f9f7; }
 
   /* ---------- CREDIT SECTIONS ---------- */
   .section-wrap { margin-bottom: 6px; }
@@ -116,14 +115,23 @@
   .credit-cb { width: 15px; height: 15px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--blue); }
   .credit-cb:disabled { cursor: default; accent-color: var(--gray-300); }
   .credit-meta { flex: 1; min-width: 0; }
-  .credit-pts-select { margin-top: 8px; border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; font-size: 12.5px; font-family: var(--font); background: #fff; color: var(--gray-900); }
-  .credit-pts-select:disabled { opacity: 0.55; }
-  .credit-description, .credit-option-desc { font-size: 12px; color: var(--gray-600); margin-top: 6px; line-height: 1.4; }
+  .credit-pts-select { margin-top: 6px; border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; font-size: 12.5px; font-family: var(--font); background: #fff; color: var(--gray-900); max-width: 100%; }
+  .credit-description { font-size: 12px; color: var(--gray-500); margin-top: 3px; line-height: 1.4; }
   .credit-code-line { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
   .credit-code { font-size: 11.5px; font-weight: 700; color: var(--blue); }
   .req-badge { font-size: 9.5px; background: #f0e8ff; color: #6b3fa0; border-radius: 3px; padding: 1px 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-  .credit-name { font-size: 13px; color: var(--gray-900); }
-  .credit-pts-note { font-size: 11px; color: var(--gray-500); }
+  .uitype-badge { font-size: 9px; border-radius: 3px; padding: 1px 5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .uitype-straight { background: #e8f5e9; color: #2e7d32; }
+  .uitype-dropdown { background: #e3f2fd; color: #1565c0; }
+  .uitype-checkbox { background: #fff3e0; color: #e65100; }
+  .credit-name { font-size: 13px; color: var(--gray-900); font-weight: 500; }
+  .credit-pts-note { font-size: 11px; color: var(--gray-500); margin-top: 3px; }
+
+  /* ---------- CHECKBOX OPTION ROWS ---------- */
+  .option-check-row { display: flex; align-items: flex-start; gap: 8px; margin-top: 7px; cursor: pointer; }
+  .option-check-row input[type=checkbox] { width: 14px; height: 14px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--blue); }
+  .option-check-label { font-size: 12.5px; line-height: 1.4; color: var(--gray-900); }
+  .option-pts-badge { font-weight: 700; color: var(--blue); margin-right: 4px; }
 
   /* ---------- STAGE CREDIT ROWS ---------- */
   .stage-credit-block { border-bottom: 1px solid var(--border); }
@@ -132,26 +140,12 @@
   .stage-credit-head:hover { background: var(--gray-50); }
   .stage-credit-head.open { background: #f7f9fd; }
   .sch-left { flex: 1; min-width: 0; }
-  .sch-title-row { display: flex; align-items: center; gap: 7px; margin-bottom: 4px; flex-wrap: wrap; }
-  .progress-bar-wrap { display: flex; align-items: center; gap: 8px; }
-  .progress-track { height: 4px; width: 160px; background: var(--gray-200); border-radius: 2px; flex-shrink: 0; }
-  .progress-fill { height: 4px; border-radius: 2px; transition: width 0.2s; }
-  .prog-done { background: var(--green); }
-  .prog-partial { background: var(--amber); }
-  .prog-empty { background: var(--gray-300); }
-  .sch-right { font-size: 11.5px; font-weight: 600; flex-shrink: 0; }
-  .status-done { color: var(--green); }
-  .status-partial { color: var(--amber); }
-  .status-pending { color: var(--gray-500); }
+  .sch-title-row { display: flex; align-items: center; gap: 7px; margin-bottom: 2px; flex-wrap: wrap; }
+  .sch-right { font-size: 11.5px; font-weight: 600; flex-shrink: 0; color: var(--gray-500); }
 
-  /* ---------- CRITERIA PANEL ---------- */
-  .criteria-panel { padding: 10px 16px 14px 48px; background: #fbfbf9; border-top: 1px solid var(--border); }
-  .criteria-item { display: flex; align-items: flex-start; gap: 9px; margin-bottom: 8px; }
-  .criteria-item:last-of-type { margin-bottom: 0; }
-  .criteria-cb { width: 14px; height: 14px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--green); }
-  .criteria-text { font-size: 13px; line-height: 1.5; color: var(--gray-900); }
-  .criteria-text.done { color: var(--gray-500); text-decoration: line-through; }
-  .note-label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 12px; margin-bottom: 4px; }
+  /* ---------- NOTES PANEL ---------- */
+  .notes-panel { padding: 10px 16px 14px 48px; background: #fbfbf9; border-top: 1px solid var(--border); }
+  .note-label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
   .note-field { width: 100%; font-size: 12.5px; font-family: var(--font); color: var(--gray-900); background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 7px 10px; resize: vertical; min-height: 44px; line-height: 1.5; transition: border-color 0.1s; }
   .note-field:focus { outline: none; border-color: var(--blue); }
 
@@ -161,10 +155,7 @@
   .ss-row { display: flex; justify-content: space-between; align-items: flex-start; font-size: 12.5px; padding: 7px 0; border-bottom: 1px solid var(--border); gap: 16px; }
   .ss-row:last-child { border-bottom: none; }
   .ss-row-label { color: var(--gray-700); flex-shrink: 0; }
-  .ss-codes { font-weight: 600; text-align: right; line-height: 1.6; }
-  .ss-green { color: var(--green); }
-  .ss-amber { color: var(--amber); }
-  .ss-red { color: var(--red); }
+  .ss-codes { font-weight: 600; text-align: right; line-height: 1.6; color: var(--gray-900); }
 
   /* ---------- PROJECT INFO BANNER ---------- */
   .project-banner { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; display: flex; align-items: flex-end; gap: 12px; flex-wrap: nowrap; overflow-x: auto; }
@@ -244,7 +235,10 @@
 
     <div class="summary-grid" id="setup-summary"></div>
     <div id="points-pile-chart"></div>
-    <div class="notice">Tick the optional credits your team will pursue. Mandatory credits (R) are required for all Pearl ratings and cannot be deselected. For multi-point credits, choose the award level that matches the manual criteria; each option includes a short description.</div>
+    <div class="notice">
+      Tick optional credits your team will pursue. Mandatory credits (R) are pre-selected and cannot be deselected.<br>
+      <strong>Straight</strong> credits are all-or-nothing. <strong>Dropdown</strong> credits have escalating tiers — pick one. <strong>Checkbox</strong> credits have independent sub-options — tick any combination.
+    </div>
     <div class="section-tabs" id="setup-section-tabs"></div>
     <div id="setup-credits"></div>
   </div>
@@ -273,14 +267,8 @@
 
 <script>
 const SECTION_COLORS = {
-  IDP: '#2c6fad',
-  NS: '#1f7a5f',
-  LBo: '#b07d00',
-  LBi: '#7c3f7c',
-  PW: '#1e85a5',
-  RE: '#b04a00',
-  SM: '#4f772f',
-  IP: '#4a4a8c',
+  IDP: '#2c6fad', NS: '#1f7a5f', LBo: '#b07d00', LBi: '#7c3f7c',
+  PW: '#1e85a5', RE: '#b04a00', SM: '#4f772f', IP: '#4a4a8c',
 };
 
 // ═══════════════════════════════════════════════════════════
@@ -292,14 +280,13 @@ let S = {
   activeSetupSection: Object.keys(CREDITS)[0],
   currentProjectId: null,
   projectDb: [],
-  selected: {},
-  creditPoints: {},
+  selected: {},       // straight/dropdown: true|false
+  creditPoints: {},   // dropdown: selected pts value
+  optionChecked: {},  // checkbox: 'CODE|idx' -> true|false
   secOpen: {},
-  criteriaChecked: {},
   notes: {},
 };
 
-// pre-select mandatory credits
 ALL_CREDITS.forEach(c => { if (c.req) S.selected[c.code] = true; });
 
 // ═══════════════════════════════════════════════════════════
@@ -308,40 +295,30 @@ ALL_CREDITS.forEach(c => { if (c.req) S.selected[c.code] = true; });
 function getCreditPoints(code) {
   const c = ALL_CREDITS.find(x => x.code === code);
   if (!c || c.req) return 0;
-  const max = Number(c.pts) || 0;
-  const points = Number(S.creditPoints[code]);
-  if (S.selected[code]) return points > 0 ? Math.min(points, max) : max;
+  if (c.uiType === 'checkbox') {
+    return (c.pointOptions || []).reduce((sum, opt, idx) =>
+      sum + (S.optionChecked[code + '|' + idx] ? opt.pts : 0), 0);
+  }
+  if (!S.selected[code]) return 0;
+  if (c.uiType === 'straight') return Number(c.pts) || 0;
+  if (c.uiType === 'dropdown') {
+    const pts = Number(S.creditPoints[code]);
+    return pts > 0 ? Math.min(pts, Number(c.pts)) : Number(c.pts);
+  }
   return 0;
 }
+
 function getPossiblePts() {
   return ALL_CREDITS.filter(c => !c.req).reduce((sum, c) => sum + getCreditPoints(c.code), 0);
 }
+
 function getRating(pts) {
   let r = 0;
-  RATING_THRESHOLDS.forEach((t,i) => { if (pts >= t.min) r = i; });
+  RATING_THRESHOLDS.forEach((t, i) => { if (pts >= t.min) r = i; });
   return r;
 }
-function ck(code, stage, idx) { return code + '|' + stage + '|' + idx; }
+
 function nk(code, stage) { return code + '|' + stage; }
-function creditStatus(code, stage) {
-  const c = ALL_CREDITS.find(x => x.code === code);
-  if (!c || !c.criteria[stage]) return {done:0,total:0};
-  const total = c.criteria[stage].length;
-  let done = 0;
-  for (let i = 0; i < total; i++) if (S.criteriaChecked[ck(code,stage,i)]) done++;
-  return {done, total};
-}
-function stageSummary(stage) {
-  const sel = ALL_CREDITS.filter(c => S.selected[c.code] && c.criteria[stage]);
-  const full=[], partial=[], pending=[];
-  sel.forEach(c => {
-    const {done,total} = creditStatus(c.code, stage);
-    if (done === total && total > 0) full.push(c);
-    else if (done > 0) partial.push(c);
-    else pending.push(c);
-  });
-  return {full, partial, pending};
-}
 
 // ═══════════════════════════════════════════════════════════
 // RENDER SETUP
@@ -350,10 +327,13 @@ function renderSetupSummary() {
   const possible = getPossiblePts();
   const r = getRating(possible);
   const req = ALL_CREDITS.filter(c => c.req).length;
-  const selOpt = ALL_CREDITS.filter(c => !c.req && S.selected[c.code]).length;
+  const optTotal = ALL_CREDITS.filter(c => !c.req).length;
+  const selOpt = ALL_CREDITS.filter(c => !c.req && (
+    c.uiType === 'checkbox' ? getCreditPoints(c.code) > 0 : S.selected[c.code]
+  )).length;
   document.getElementById('setup-summary').innerHTML = `
     <div class="sum-card"><div class="sum-label">Mandatory credits</div><div class="sum-value">${req}</div><div class="sum-sub">Required for any Pearl</div></div>
-    <div class="sum-card"><div class="sum-label">Optional selected</div><div class="sum-value">${selOpt}</div><div class="sum-sub">of ${ALL_CREDITS.filter(c=>!c.req).length} available</div></div>
+    <div class="sum-card"><div class="sum-label">Optional selected</div><div class="sum-value">${selOpt}</div><div class="sum-sub">of ${optTotal} available</div></div>
     <div class="sum-card"><div class="sum-label">Potential points</div><div class="sum-value">${possible}</div><div class="sum-sub">excl. mandatory</div></div>
     <div class="sum-card"><div class="sum-label">Target rating</div><div class="sum-value" style="padding-top:4px"><span class="rating-pill rp-${r}">&diams; ${RATING_THRESHOLDS[r].label}</span></div><div class="sum-sub">${possible>=140?'5 Pearl achievable':possible>=115?'4 Pearl achievable':possible>=85?'3 Pearl achievable':possible>=60?'2 Pearl achievable':'1 Pearl (mandatory only)'}</div></div>
   `;
@@ -366,10 +346,10 @@ function setSetupSection(section) {
 }
 
 function renderSetupSectionTabs() {
-  const activeSection = S.activeSetupSection || Object.keys(CREDITS)[0];
+  const active = S.activeSetupSection || Object.keys(CREDITS)[0];
   let html = '';
-  Object.entries(CREDITS).forEach(([sec, credits]) => {
-    html += `<button type="button" class="section-tab-button ${sec===activeSection?'active':''}" onclick="setSetupSection('${sec}')">${SECTIONS[sec]}</button>`;
+  Object.entries(CREDITS).forEach(([sec]) => {
+    html += `<button type="button" class="section-tab-button ${sec===active?'active':''}" onclick="setSetupSection('${sec}')">${SECTIONS[sec]}</button>`;
   });
   document.getElementById('setup-section-tabs').innerHTML = html;
 }
@@ -377,88 +357,133 @@ function renderSetupSectionTabs() {
 function renderPointsPileChart() {
   const chart = document.getElementById('points-pile-chart');
   if (!chart) return;
-  const sectionData = Object.entries(CREDITS).map(([sec, credits]) => {
-    return {
-      sec,
-      optPoints: credits.filter(c => !c.req).reduce((sum, c) => sum + getCreditPoints(c.code), 0),
-      reqCount: credits.filter(c => c.req).length,
-      color: SECTION_COLORS[sec] || '#777',
-    };
-  });
-  const totalOpt = sectionData.reduce((sum, d) => sum + d.optPoints, 0);
-  const totalReq = sectionData.reduce((sum, d) => sum + d.reqCount, 0);
+  const sectionData = Object.entries(CREDITS).map(([sec, credits]) => ({
+    sec,
+    optPoints: credits.filter(c => !c.req).reduce((sum, c) => sum + getCreditPoints(c.code), 0),
+    reqCount: credits.filter(c => c.req).length,
+    color: SECTION_COLORS[sec] || '#777',
+  }));
+  const totalOpt = sectionData.reduce((s, d) => s + d.optPoints, 0);
   let html = `<div class="pile-chart"><div class="pile-title">Credit pile preview</div>`;
-  html += `<div style="font-size:12.5px;color:var(--gray-600);margin-bottom:10px;">Darker bars show mandatory credits by section; lighter bars show selected optional points.</div>`;
+  html += `<div style="font-size:12.5px;color:var(--gray-600);margin-bottom:10px;">Darker bars = mandatory credits by section; lighter bars = selected optional points.</div>`;
   html += `<div class="pile-row">`;
   sectionData.filter(d => d.optPoints > 0).forEach(d => {
-    html += `<div class="pile-segment light" title="${SECTIONS[d.sec]} — ${d.optPoints} optional point${d.optPoints===1?'':'s'}" style="background:${d.color};flex:${d.optPoints};">${d.optPoints}</div>`;
+    html += `<div class="pile-segment light" title="${SECTIONS[d.sec]} — ${d.optPoints} optional pt${d.optPoints===1?'':'s'}" style="background:${d.color};flex:${d.optPoints};">${d.optPoints}</div>`;
   });
   html += `</div><div class="pile-row">`;
   sectionData.filter(d => d.reqCount > 0).forEach(d => {
-    html += `<div class="pile-segment dark" title="${SECTIONS[d.sec]} — ${d.reqCount} mandatory credit${d.reqCount===1?'':'s'}" style="background:${d.color};flex:${d.reqCount};">${d.reqCount}</div>`;
+    html += `<div class="pile-segment dark" title="${SECTIONS[d.sec]} — ${d.reqCount} mandatory" style="background:${d.color};flex:${d.reqCount};">${d.reqCount}</div>`;
   });
   html += `</div><div class="pile-legend">`;
   sectionData.forEach(d => {
-    if (d.optPoints > 0 || d.reqCount > 0) {
+    if (d.optPoints > 0 || d.reqCount > 0)
       html += `<div class="pile-chip"><span class="pile-dot" style="background:${d.color};"></span>${d.sec}</div>`;
-    }
   });
   html += `</div></div>`;
   chart.innerHTML = html;
 }
 
-function renderSetupCredits() {
-  const activeSection = S.activeSetupSection || Object.keys(CREDITS)[0];
-  const credits = CREDITS[activeSection];
-  const secPts = credits.filter(c => !c.req).reduce((s, c) => s + (Number(c.pts) || 0), 0);
-  const selPts = credits.filter(c => !c.req).reduce((s, c) => s + getCreditPoints(c.code), 0);
-  let html = `<div class="section-wrap">
-      <div class="section-head open">
-        <div class="sec-left">${SECTIONS[activeSection]}</div>
-        <div class="sec-pts">${selPts} / ${secPts} pts selected</div>
+function renderCreditRow(c) {
+  if (c.req) {
+    return `<div class="credit-row req-row">
+      <input type="checkbox" class="credit-cb" checked disabled/>
+      <div class="credit-meta">
+        <div class="credit-code-line">
+          <span class="credit-code">${c.code}</span>
+          <span class="req-badge">Required</span>
+        </div>
+        <div class="credit-name">${c.title}</div>
+        <div class="credit-pts-note">Mandatory for all Pearl ratings — no credit points</div>
       </div>
-      <div class="credits-body">`;
-  credits.forEach(c => {
-    const sel = S.selected[c.code];
-    const maxPts = Number(c.pts) || 0;
-    const currentPts = sel ? getCreditPoints(c.code) : 0;
-    const hasOptions = Array.isArray(c.pointOptions) && c.pointOptions.length > 0;
-    const creditDesc = c.desc || (c.criteria && c.criteria.concept && c.criteria.concept[0]) || '';
-    let ptsControl = '';
-    let selectedOptionDesc = '';
-    if (!c.req && maxPts > 1) {
-      if (hasOptions) {
-        let options = `<option value="0" disabled ${currentPts===0?'selected':''}>Choose a credit level</option>`;
-        c.pointOptions.forEach(opt => {
-          options += `<option value="${opt.pts}" ${currentPts===opt.pts?'selected':''}>${opt.label}</option>`;
-        });
-        ptsControl = `<div style="margin-top:8px;"><select class="credit-pts-select" onchange="setCreditPoints('${c.code}', this.value)">${options}</select></div>`;
-        const selectedOpt = c.pointOptions.find(opt => opt.pts === currentPts);
-        selectedOptionDesc = selectedOpt ? selectedOpt.desc : '';
-      } else {
-        let options = `<option value="0" disabled ${currentPts===0?'selected':''}>Choose a credit level</option>`;
-        for (let i = 1; i <= maxPts; i++) {
-          options += `<option value="${i}" ${currentPts===i?'selected':''}>${i} pt${i>1?'s':''}</option>`;
-        }
-        ptsControl = `<div style="margin-top:8px;"><select class="credit-pts-select" onchange="setCreditPoints('${c.code}', this.value)">${options}</select></div>`;
-      }
-    }
-    const ptsNote = c.req ? 'No credit points — mandatory for all Pearl ratings' : hasOptions ? (sel ? 'Selected option: ' + currentPts + ' pts' : 'Choose the award level that matches the manual criteria') : (sel && maxPts > 1 ? 'Selected ' + currentPts + ' / ' + maxPts + ' pts' : 'Choose an award level from the dropdown');
-    html += `<div class="credit-row ${sel?'checked':''} ${c.req?'req-row':''}">
-          <input type="checkbox" class="credit-cb" ${sel?'checked':''} ${c.req?'disabled':''} onchange="toggleCredit('${c.code}', this.checked)"/>
-          <div class="credit-meta">
-            <div class="credit-code-line">
-              <span class="credit-code">${c.code}</span>
-              ${c.req?'<span class="req-badge">Required</span>':''}
-            </div>
-            <div class="credit-name">${c.title}</div>
-            ${creditDesc ? `<div class="credit-description">${creditDesc}</div>` : ''}
-            <div class="credit-pts-note">${ptsNote}</div>
-            ${ptsControl}
-            ${selectedOptionDesc ? `<div class="credit-option-desc">${selectedOptionDesc}</div>` : ''}
-          </div>
-        </div>`;
-  });
+    </div>`;
+  }
+
+  const type = c.uiType;
+  const opts = c.pointOptions || [];
+
+  if (type === 'straight') {
+    const sel = !!S.selected[c.code];
+    return `<div class="credit-row ${sel?'checked':''}">
+      <input type="checkbox" class="credit-cb" ${sel?'checked':''} onchange="toggleCredit('${c.code}', this.checked)"/>
+      <div class="credit-meta">
+        <div class="credit-code-line">
+          <span class="credit-code">${c.code}</span>
+          <span class="uitype-badge uitype-straight">Straight</span>
+        </div>
+        <div class="credit-name">${c.title}</div>
+        ${c.desc && c.desc !== 'Desc placeholder' ? `<div class="credit-description">${c.desc}</div>` : ''}
+        <div class="credit-pts-note">${c.pts} pt${c.pts>1?'s':''} if achieved</div>
+        ${sel && opts[0] ? `<div class="credit-description" style="margin-top:6px;color:var(--gray-700);">${opts[0].desc}</div>` : ''}
+      </div>
+    </div>`;
+  }
+
+  if (type === 'dropdown') {
+    const sel = !!S.selected[c.code];
+    const currentPts = Number(S.creditPoints[c.code]) || 0;
+    const optionsHtml = opts.map(opt =>
+      `<option value="${opt.pts}" ${currentPts===opt.pts?'selected':''}>${opt.pts} pt${opt.pts>1?'s':''} — ${opt.desc}</option>`
+    ).join('');
+    return `<div class="credit-row ${sel?'checked':''}">
+      <input type="checkbox" class="credit-cb" ${sel?'checked':''} onchange="toggleCredit('${c.code}', this.checked)"/>
+      <div class="credit-meta">
+        <div class="credit-code-line">
+          <span class="credit-code">${c.code}</span>
+          <span class="uitype-badge uitype-dropdown">Dropdown</span>
+        </div>
+        <div class="credit-name">${c.title}</div>
+        ${c.desc && c.desc !== 'Desc placeholder' ? `<div class="credit-description">${c.desc}</div>` : ''}
+        <div class="credit-pts-note">${sel ? `${currentPts > 0 ? currentPts + ' pts selected' : 'Choose a level'}` : `Up to ${c.pts} pts — choose a level`}</div>
+        ${sel ? `<select class="credit-pts-select" onchange="setCreditPoints('${c.code}', this.value)">
+          <option value="0" disabled ${currentPts===0?'selected':''}>Choose a level…</option>
+          ${optionsHtml}
+        </select>` : ''}
+      </div>
+    </div>`;
+  }
+
+  if (type === 'checkbox') {
+    const earned = getCreditPoints(c.code);
+    const anyChecked = earned > 0;
+    const optRowsHtml = opts.map((opt, idx) => {
+      const chk = !!S.optionChecked[c.code + '|' + idx];
+      return `<label class="option-check-row">
+        <input type="checkbox" ${chk?'checked':''} onchange="toggleOption('${c.code}', ${idx}, this.checked)"/>
+        <span class="option-check-label">
+          <span class="option-pts-badge">${opt.pts} pt${opt.pts>1?'s':''}</span>${opt.desc}
+        </span>
+      </label>`;
+    }).join('');
+    return `<div class="credit-row ${anyChecked?'checked':''}">
+      <div style="width:15px;flex-shrink:0;"></div>
+      <div class="credit-meta">
+        <div class="credit-code-line">
+          <span class="credit-code">${c.code}</span>
+          <span class="uitype-badge uitype-checkbox">Checkbox</span>
+        </div>
+        <div class="credit-name">${c.title}</div>
+        ${c.desc && c.desc !== 'Desc placeholder' ? `<div class="credit-description">${c.desc}</div>` : ''}
+        <div class="credit-pts-note">Select all that apply · ${earned} / ${c.pts} pts</div>
+        <div style="margin-top:4px;">${optRowsHtml}</div>
+      </div>
+    </div>`;
+  }
+
+  return '';
+}
+
+function renderSetupCredits() {
+  const active = S.activeSetupSection || Object.keys(CREDITS)[0];
+  const credits = CREDITS[active] || [];
+  const secMax = credits.filter(c => !c.req).reduce((s, c) => s + (Number(c.pts) || 0), 0);
+  const secSel = credits.filter(c => !c.req).reduce((s, c) => s + getCreditPoints(c.code), 0);
+  let html = `<div class="section-wrap">
+    <div class="section-head open">
+      <div class="sec-left">${SECTIONS[active]}</div>
+      <div class="sec-pts">${secSel} / ${secMax} pts selected</div>
+    </div>
+    <div class="credits-body">`;
+  credits.forEach(c => { html += renderCreditRow(c); });
   html += `</div></div>`;
   document.getElementById('setup-credits').innerHTML = html;
 }
@@ -467,15 +492,17 @@ function renderSetupCredits() {
 // RENDER STAGE
 // ═══════════════════════════════════════════════════════════
 function renderStageSummaryCards() {
-  const stage = S.stage;
-  const {full,partial,pending} = stageSummary(stage);
   const possible = getPossiblePts();
   const r = getRating(possible);
-  const total = ALL_CREDITS.filter(c => S.selected[c.code] && c.criteria[stage]).length;
+  const selCredits = ALL_CREDITS.filter(c => {
+    if (c.req) return true;
+    return c.uiType === 'checkbox' ? getCreditPoints(c.code) > 0 : S.selected[c.code];
+  });
+  const noted = selCredits.filter(c => S.notes[nk(c.code, S.stage)] && S.notes[nk(c.code, S.stage)].trim()).length;
   document.getElementById('stage-summary').innerHTML = `
-    <div class="sum-card"><div class="sum-label">Fully complied</div><div class="sum-value" style="color:var(--green)">${full.length}</div><div class="sum-sub">all criteria checked</div></div>
-    <div class="sum-card"><div class="sum-label">In progress</div><div class="sum-value" style="color:var(--amber)">${partial.length}</div><div class="sum-sub">partially checked</div></div>
-    <div class="sum-card"><div class="sum-label">Not started</div><div class="sum-value" style="color:var(--red)">${pending.length}</div><div class="sum-sub">of ${total} credits this stage</div></div>
+    <div class="sum-card"><div class="sum-label">Selected credits</div><div class="sum-value">${selCredits.length}</div><div class="sum-sub">incl. mandatory</div></div>
+    <div class="sum-card"><div class="sum-label">With notes</div><div class="sum-value" style="color:var(--green)">${noted}</div><div class="sum-sub">this stage</div></div>
+    <div class="sum-card"><div class="sum-label">Potential points</div><div class="sum-value">${possible}</div><div class="sum-sub">excl. mandatory</div></div>
     <div class="sum-card"><div class="sum-label">Target rating</div><div class="sum-value" style="padding-top:4px"><span class="rating-pill rp-${r}">&diams; ${RATING_THRESHOLDS[r].label}</span></div><div class="sum-sub">${possible} pts potential</div></div>
   `;
 }
@@ -484,51 +511,48 @@ function renderStageCredits() {
   const stage = S.stage;
   let html = '';
   Object.entries(CREDITS).forEach(([sec, credits]) => {
-    const stagedCredits = credits.filter(c => S.selected[c.code] && c.criteria[stage]);
-    if (!stagedCredits.length) return;
-    const open = S.secOpen['ss_'+sec];
-    const doneCount = stagedCredits.filter(c => { const {done,total}=creditStatus(c.code,stage); return done===total&&total>0; }).length;
+    const active = credits.filter(c => c.req || (c.uiType === 'checkbox' ? getCreditPoints(c.code) > 0 : S.selected[c.code]));
+    if (!active.length) return;
+    const secOpen = S.secOpen['ss_' + sec];
     html += `<div class="section-wrap">
-      <div class="section-head ${open?'open':''}" onclick="toggleSec('ss_${sec}')">
-        <div class="sec-left"><span class="sec-chevron ${open?'open':''}">&#9654;</span>${SECTIONS[sec]}</div>
-        <div class="sec-pts">${doneCount} / ${stagedCredits.length} credits done</div>
+      <div class="section-head ${secOpen?'open':''}" onclick="toggleSec('ss_${sec}')">
+        <div class="sec-left"><span class="sec-chevron ${secOpen?'open':''}">&#9654;</span>${SECTIONS[sec]}</div>
+        <div class="sec-pts">${active.length} credit${active.length===1?'':'s'}</div>
       </div>`;
-    if (open) {
+    if (secOpen) {
       html += `<div class="credits-body">`;
-      stagedCredits.forEach(c => {
-        const {done,total} = creditStatus(c.code, stage);
-        const pct = total > 0 ? Math.round(done/total*100) : 0;
-        const statClass = done===total&&total>0 ? 'status-done' : done>0 ? 'status-partial' : 'status-pending';
-        const statLabel = done===total&&total>0 ? 'Complete' : done>0 ? `${done}/${total} done` : 'Not started';
-        const progClass = done===total&&total>0 ? 'prog-done' : done>0 ? 'prog-partial' : 'prog-empty';
-        const cOpen = S.secOpen['cc_'+c.code];
+      active.forEach(c => {
+        const cOpen = S.secOpen['cc_' + c.code];
+        const noteKey = nk(c.code, stage);
+        const hasNote = S.notes[noteKey] && S.notes[noteKey].trim();
+        const ptsInfo = c.req ? 'Required' : (() => {
+          if (c.uiType === 'straight') return `${c.pts} pt${c.pts>1?'s':''}`;
+          if (c.uiType === 'dropdown') {
+            const p = Number(S.creditPoints[c.code]) || 0;
+            return p > 0 ? `${p} pts selected` : `Up to ${c.pts} pts`;
+          }
+          if (c.uiType === 'checkbox') {
+            const p = getCreditPoints(c.code);
+            return `${p} / ${c.pts} pts`;
+          }
+          return '';
+        })();
         html += `<div class="stage-credit-block">
           <div class="stage-credit-head ${cOpen?'open':''}" onclick="toggleSec('cc_${c.code}')">
             <div class="sch-left">
               <div class="sch-title-row">
                 <span class="credit-code">${c.code}</span>
                 <span style="font-size:13px;font-weight:600;color:var(--gray-900)">${c.title}</span>
-                ${c.req?'<span class="req-badge">Required</span>':'<span style="font-size:11px;color:var(--gray-500)">· '+c.pts+' pt'+(c.pts>1?'s':'')+'</span>'}
+                ${c.req ? '<span class="req-badge">Required</span>' : ''}
+                ${hasNote ? '<span style="font-size:10px;background:#eaf4ea;color:#2a7a2a;border-radius:3px;padding:1px 5px;font-weight:600;">Note</span>' : ''}
               </div>
-              <div class="progress-bar-wrap">
-                <div class="progress-track"><div class="progress-fill ${progClass}" style="width:${pct}%"></div></div>
-                <span class="sch-right ${statClass}">${statLabel}</span>
-              </div>
+              <div style="font-size:11px;color:var(--gray-500);margin-top:2px;">${ptsInfo}</div>
             </div>
             <span style="font-size:18px;color:var(--gray-300);transform:${cOpen?'rotate(90deg)':'none'};transition:transform 0.15s;display:inline-block;">&#8250;</span>
           </div>`;
         if (cOpen) {
-          const noteKey = nk(c.code, stage);
-          html += `<div class="criteria-panel">`;
-          c.criteria[stage].forEach((item, idx) => {
-            const key = ck(c.code, stage, idx);
-            const chk = S.criteriaChecked[key];
-            html += `<div class="criteria-item">
-              <input type="checkbox" class="criteria-cb" ${chk?'checked':''} onchange="toggleCriteria('${key}', this.checked)"/>
-              <span class="criteria-text ${chk?'done':''}">${item}</span>
-            </div>`;
-          });
-          html += `<div class="note-label">Coordination notes &amp; action items</div>
+          html += `<div class="notes-panel">
+            <div class="note-label">Coordination notes &amp; action items</div>
             <textarea class="note-field" placeholder="Record responsibilities, follow-up actions, consultants to coordinate with, or pending items for next stage…" onchange="setNote('${noteKey}', this.value)">${S.notes[noteKey]||''}</textarea>
           </div>`;
         }
@@ -543,12 +567,15 @@ function renderStageCredits() {
 
 function renderStageEndSummary() {
   const stage = S.stage;
-  const {full,partial,pending} = stageSummary(stage);
   let html = `<div class="ss-title">Stage summary — ${STAGE_LABELS[stage]}</div>`;
-  if (full.length) html += `<div class="ss-row"><div class="ss-row-label">&#10003; Fully complied</div><div class="ss-codes ss-green">${full.map(c=>c.code).join(' &nbsp;·&nbsp; ')}</div></div>`;
-  if (partial.length) html += `<div class="ss-row"><div class="ss-row-label">&#9654; In progress — carry to next stage</div><div class="ss-codes ss-amber">${partial.map(c=>c.code).join(' &nbsp;·&nbsp; ')}</div></div>`;
-  if (pending.length) html += `<div class="ss-row"><div class="ss-row-label">&#9651; Not started — action needed</div><div class="ss-codes ss-red">${pending.map(c=>c.code).join(' &nbsp;·&nbsp; ')}</div></div>`;
-  if (!full.length && !partial.length && !pending.length) html += `<div class="ss-row"><div class="ss-row-label" style="color:var(--gray-500)">No credits selected for this stage.</div></div>`;
+  Object.entries(CREDITS).forEach(([sec, credits]) => {
+    const active = credits.filter(c => c.req || (c.uiType === 'checkbox' ? getCreditPoints(c.code) > 0 : S.selected[c.code]));
+    if (!active.length) return;
+    html += `<div class="ss-row">
+      <div class="ss-row-label">${SECTIONS[sec]}</div>
+      <div class="ss-codes">${active.map(c => c.code).join(' &nbsp;·&nbsp; ')}</div>
+    </div>`;
+  });
   document.getElementById('stage-end-summary').innerHTML = html;
 }
 
@@ -566,7 +593,7 @@ function renderStageView() {
   document.querySelectorAll('.stage-tab').forEach(t => t.classList.toggle('active', t.dataset.stage === S.stage));
   const pn = document.getElementById('proj-name');
   document.getElementById('stage-view-title').textContent = (pn&&pn.value ? pn.value + ' — ' : '') + 'Stage Checklist';
-  document.getElementById('stage-view-sub').textContent = 'Tracking ' + ALL_CREDITS.filter(c=>S.selected[c.code]).length + ' selected credits';
+  document.getElementById('stage-view-sub').textContent = 'Tracking ' + ALL_CREDITS.filter(c => c.req || (c.uiType==='checkbox'?getCreditPoints(c.code)>0:S.selected[c.code])).length + ' selected credits';
   renderStageSummaryCards();
   renderStageCredits();
   renderStageEndSummary();
@@ -577,27 +604,17 @@ function renderStageView() {
 // ═══════════════════════════════════════════════════════════
 function toggleSec(key) {
   S.secOpen[key] = !S.secOpen[key];
-  if (S.view === 'setup') renderSetup();
-  else renderStageView();
+  if (S.view === 'setup') renderSetup(); else renderStageView();
   saveState();
 }
+
 function toggleCredit(code, checked) {
-  const c = ALL_CREDITS.find(x => x.code === code);
   S.selected[code] = checked;
-  if (checked && c && Number(c.pts) > 0) {
-    if (!S.creditPoints[code] || Number(S.creditPoints[code]) === 0) {
-      if (Array.isArray(c.pointOptions) && c.pointOptions.length > 0) {
-        S.creditPoints[code] = c.pointOptions[0].pts;
-      } else {
-        S.creditPoints[code] = 1;
-      }
-    }
-  } else {
-    S.creditPoints[code] = 0;
-  }
+  if (!checked) S.creditPoints[code] = 0;
   renderSetup();
   saveState();
 }
+
 function setCreditPoints(code, value) {
   const pts = Number(value);
   const c = ALL_CREDITS.find(x => x.code === code);
@@ -612,20 +629,24 @@ function setCreditPoints(code, value) {
   renderSetup();
   saveState();
 }
-function toggleCriteria(key, checked) {
-  S.criteriaChecked[key] = checked;
-  renderStageView();
+
+function toggleOption(code, idx, checked) {
+  S.optionChecked[code + '|' + idx] = checked;
+  renderSetup();
   saveState();
 }
+
 function setNote(key, val) {
   S.notes[key] = val;
   saveState();
 }
+
 function setStage(stage) {
   S.stage = stage;
   renderStageView();
   saveState();
 }
+
 function goToStage() {
   S.view = 'stage';
   document.getElementById('view-setup').classList.remove('active');
@@ -633,6 +654,7 @@ function goToStage() {
   renderStageView();
   saveState();
 }
+
 function goToSetup() {
   S.view = 'setup';
   document.getElementById('view-stage').classList.remove('active');
@@ -650,112 +672,102 @@ function saveState() {
       s: S,
       meta: {
         projName: document.getElementById('proj-name')?.value||'',
-        projNum: document.getElementById('proj-num')?.value||'',
+        projNum:  document.getElementById('proj-num')?.value||'',
         projType: document.getElementById('proj-type')?.value||'',
         projTarget: document.getElementById('proj-target')?.value||'',
       }
     };
     localStorage.setItem('pbrs_checklist', JSON.stringify(data));
     const ind = document.getElementById('save-indicator');
-    if(ind){ind.style.display='inline';clearTimeout(ind._t);ind._t=setTimeout(()=>ind.style.display='none',1500);}
-  } catch(e){}
+    if (ind) { ind.style.display='inline'; clearTimeout(ind._t); ind._t=setTimeout(()=>ind.style.display='none', 1500); }
+  } catch(e) {}
 }
+
 function loadState() {
   try {
     const raw = localStorage.getItem('pbrs_checklist');
     if (!raw) return;
     const data = JSON.parse(raw);
     if (data.s) {
-      S.selected = data.s.selected || S.selected;
-      S.creditPoints = data.s.creditPoints || {};
-      S.secOpen = data.s.secOpen || {};
-      S.criteriaChecked = data.s.criteriaChecked || {};
-      S.notes = data.s.notes || {};
-      S.view = data.s.view || 'setup';
-      S.stage = data.s.stage || 'concept';
-      S.currentProjectId = data.s.currentProjectId || null;
-      S.projectDb = data.s.projectDb || [];
+      S.selected        = data.s.selected        || S.selected;
+      S.creditPoints    = data.s.creditPoints     || {};
+      S.optionChecked   = data.s.optionChecked    || {};
+      S.secOpen         = data.s.secOpen          || {};
+      S.notes           = data.s.notes            || {};
+      S.view            = data.s.view             || 'setup';
+      S.stage           = data.s.stage            || 'concept';
+      S.currentProjectId= data.s.currentProjectId || null;
+      S.projectDb       = data.s.projectDb        || [];
+      S.activeSetupSection = data.s.activeSetupSection || Object.keys(CREDITS)[0];
     }
     if (data.meta) {
-      setTimeout(()=>{
-        if(data.meta.projName) document.getElementById('proj-name').value=data.meta.projName;
-        if(data.meta.projNum) document.getElementById('proj-num').value=data.meta.projNum;
-        if(data.meta.projType) document.getElementById('proj-type').value=data.meta.projType;
-        if(data.meta.projTarget) document.getElementById('proj-target').value=data.meta.projTarget;
-      },50);
+      setTimeout(() => {
+        if (data.meta.projName)   document.getElementById('proj-name').value   = data.meta.projName;
+        if (data.meta.projNum)    document.getElementById('proj-num').value    = data.meta.projNum;
+        if (data.meta.projType)   document.getElementById('proj-type').value   = data.meta.projType;
+        if (data.meta.projTarget) document.getElementById('proj-target').value = data.meta.projTarget;
+      }, 50);
     }
-  } catch(e){}
+  } catch(e) {}
 }
 
 // ═══════════════════════════════════════════════════════════
-// EXPORT / IMPORT
+// EXPORT / IMPORT / PROJECT DB
 // ═══════════════════════════════════════════════════════════
 function buildProjectEntry() {
   const now = new Date().toISOString();
   const id = S.currentProjectId || 'prj_' + Date.now();
   return {
-    id,
-    name: document.getElementById('proj-name')?.value||'Untitled project',
-    number: document.getElementById('proj-num')?.value||'',
-    type: document.getElementById('proj-type')?.value||'',
-    target: document.getElementById('proj-target')?.value||'',
-    updated: now,
+    id, updated: now,
+    name:   document.getElementById('proj-name')?.value   || 'Untitled project',
+    number: document.getElementById('proj-num')?.value    || '',
+    type:   document.getElementById('proj-type')?.value   || '',
+    target: document.getElementById('proj-target')?.value || '',
     state: {
-      view: S.view,
-      stage: S.stage,
-      selected: S.selected,
-      creditPoints: S.creditPoints,
-      secOpen: S.secOpen,
-      criteriaChecked: S.criteriaChecked,
-      notes: S.notes,
+      view: S.view, stage: S.stage,
+      selected: S.selected, creditPoints: S.creditPoints,
+      optionChecked: S.optionChecked,
+      secOpen: S.secOpen, notes: S.notes,
     }
   };
 }
 
 function saveProject() {
   const project = buildProjectEntry();
-  const index = S.projectDb.findIndex(p => p.id === project.id);
-  if (index >= 0) S.projectDb[index] = project;
-  else S.projectDb.push(project);
+  const idx = S.projectDb.findIndex(p => p.id === project.id);
+  if (idx >= 0) S.projectDb[idx] = project; else S.projectDb.push(project);
   S.currentProjectId = project.id;
   renderProjectSelect();
   saveState();
-  alert('Project saved to the JSON project list.');
+  alert('Project saved.');
 }
 
-function setProjectFields(project) {
-  document.getElementById('proj-name').value = project.name||'';
-  document.getElementById('proj-num').value = project.number||'';
-  document.getElementById('proj-type').value = project.type||'';
-  document.getElementById('proj-target').value = project.target||'';
+function setProjectFields(p) {
+  document.getElementById('proj-name').value   = p.name   || '';
+  document.getElementById('proj-num').value    = p.number || '';
+  document.getElementById('proj-type').value   = p.type   || '';
+  document.getElementById('proj-target').value = p.target || '';
 }
 
 function loadProject(id) {
   if (!id) {
     S.currentProjectId = null;
-    S.selected = {};
-    S.creditPoints = {};
-    S.secOpen = {};
-    S.criteriaChecked = {};
-    S.notes = {};
-    S.view = 'setup';
-    S.stage = 'concept';
+    S.selected = {}; S.creditPoints = {}; S.optionChecked = {};
+    S.secOpen = {}; S.notes = {}; S.view = 'setup'; S.stage = 'concept';
     setProjectFields({});
     ALL_CREDITS.forEach(c => { if (c.req) S.selected[c.code] = true; });
-    renderSetup();
-    saveState();
-    return;
+    renderSetup(); saveState(); return;
   }
   const project = S.projectDb.find(p => p.id === id);
   if (!project) return;
   S.currentProjectId = id;
-  S.view = project.state.view || 'setup';
-  S.stage = project.state.stage || 'concept';
-  S.selected = project.state.selected || {};
-  S.creditPoints = project.state.creditPoints || {};
-  S.secOpen = project.state.secOpen || {};
-  S.criteriaChecked = project.state.criteriaChecked || {};
-  S.notes = project.state.notes || {};
+  S.view            = project.state.view          || 'setup';
+  S.stage           = project.state.stage         || 'concept';
+  S.selected        = project.state.selected      || {};
+  S.creditPoints    = project.state.creditPoints  || {};
+  S.optionChecked   = project.state.optionChecked || {};
+  S.secOpen         = project.state.secOpen       || {};
+  S.notes           = project.state.notes         || {};
   setProjectFields(project);
   if (S.view === 'stage') {
     document.getElementById('view-setup').classList.remove('active');
@@ -780,23 +792,18 @@ function renderProjectSelect() {
 }
 
 function exportData() {
-  const currentProject = buildProjectEntry();
+  const cur = buildProjectEntry();
   const projects = [...S.projectDb];
-  const idx = projects.findIndex(p => p.id === currentProject.id);
-  if (idx >= 0) projects[idx] = currentProject;
-  else projects.push(currentProject);
-  const data = {
-    version: '1.0',
-    exported: new Date().toISOString(),
-    projects: projects,
-    currentProjectId: currentProject.id,
-  };
-  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+  const idx = projects.findIndex(p => p.id === cur.id);
+  if (idx >= 0) projects[idx] = cur; else projects.push(cur);
+  const data = { version: '1.0', exported: new Date().toISOString(), projects, currentProjectId: cur.id };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'PBRS_Projects_' + (currentProject.name||'Project').replace(/\s+/g,'_') + '.json';
+  a.download = 'PBRS_Projects_' + (cur.name || 'Project').replace(/\s+/g, '_') + '.json';
   a.click();
 }
+
 function importData() {
   const inp = document.createElement('input');
   inp.type = 'file'; inp.accept = '.json';
@@ -811,27 +818,9 @@ function importData() {
           S.projectDb = Array.isArray(data.projects) ? data.projects : [];
           S.currentProjectId = data.currentProjectId || (S.projectDb[0] && S.projectDb[0].id) || null;
           renderProjectSelect();
-          if (S.currentProjectId) {
-            loadProject(S.currentProjectId);
-          } else {
-            loadProject('');
-          }
-        } else if (data.state) {
-          S = data.state;
-          S.projectDb = data.project ? [Object.assign({id:'prj_' + Date.now()}, data.project, {state:data.state})] : [];
-          S.currentProjectId = S.projectDb[0] ? S.projectDb[0].id : null;
-          if (data.project) setProjectFields(data.project);
-          renderProjectSelect();
-          if (S.view === 'stage') {
-            document.getElementById('view-setup').classList.remove('active');
-            document.getElementById('view-stage').classList.add('active');
-            renderStageView();
-          } else {
-            renderSetup();
-          }
-          saveState();
+          loadProject(S.currentProjectId || '');
         }
-      } catch(err) { alert('Could not read file. Please check it is a valid PBRS project database JSON file.'); }
+      } catch(err) { alert('Could not read file. Please check it is a valid PBRS JSON file.'); }
     };
     reader.readAsText(file);
   };
@@ -852,4 +841,3 @@ if (S.view === 'stage') {
 </script>
 </body>
 </html>
-
