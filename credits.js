@@ -1,13 +1,13 @@
-// Static PBRS credit catalog loaded by PBRS_Pearl_Checklist.html
+﻿// Static PBRS credit catalog loaded by PBRS_Pearl_Checklist.html
 const SECTIONS = {
-  IDP: 'IDP — Integrated Development Process',
-  NS:  'NS — Natural Systems',
-  LBo: 'LB — Livable Buildings (Outdoors)',
-  LBi: 'LB — Livable Buildings (Indoors)',
-  PW:  'PW — Precious Water',
-  RE:  'RE — Resourceful Energy',
-  SM:  'SM — Stewarding Materials',
-  IP:  'IP — Innovating Practice',
+  IDP: 'IDP - Integrated Development Process',
+  NS:  'NS - Natural Systems',
+  LBo: 'LB - Livable Buildings (Outdoors)',
+  LBi: 'LB - Livable Buildings (Indoors)',
+  PW:  'PW - Precious Water',
+  RE:  'RE - Resourceful Energy',
+  SM:  'SM - Stewarding Materials',
+  IP:  'IP - Innovating Practice',
 };
 
 const CREDITS = {
@@ -81,8 +81,8 @@ const CREDITS = {
     { code:'LBo-R3', title:'Title placeholder', desc:'Desc placeholder', pts:'R', req:true },
     { code:'LBo-1', title:'Title placeholder', desc:'Desc placeholder', pts:2, req:false, uiType:'dropdown',
       pointOptions:[
-        { pts:1, desc:'50% Car Park,65% Open Space,80% Primary Walkway,80% Secondary Walkway,55% Cycle Tracks' },
-        { pts:2, desc:'55% Car Park,70% Open Space,85% Primary Walkway,85% Secondary Walkway,65% Cycle Tracks' },
+        { pts:1, desc:'50% Car Park, 65% Open Space, 80% Primary Walkway, 80% Secondary Walkway, 55% Cycle Tracks' },
+        { pts:2, desc:'55% Car Park, 70% Open Space, 85% Primary Walkway, 85% Secondary Walkway, 65% Cycle Tracks' },
       ]
     },
     { code:'LBo-2', title:'Title placeholder', desc:'Desc placeholder', pts:1, req:false, uiType:'straight',
@@ -202,7 +202,7 @@ const CREDITS = {
         { pts:1, desc:'General: All high frequency fluorescent ballasts and occupancy sensors meeting credit requirements. Residential: 95% high frequency fluorescent ballasts and communal area occupancy sensors meeting credit requirements.' },
       ]
     },
-    { code:'LBi-7', title:'Title placeholder', desc:'Desc placeholder', pts:1, req:false, uiType:'dropdown',
+    { code:'LBi-7', title:'Title placeholder', desc:'Desc placeholder', pts:2, req:false, uiType:'checkbox',
       pointOptions:[
         { pts:1, desc:'General : min 250 Lux for 50% of occupied area. Resi: min 200 Lux for 50% of living/bedrooms Schools : min 300 Lux for 75% of occupied area Retail development is not eligible. Meet requirements for occupancy sensors relevant to space type. Meet requirements for glare control relevant to space type.' },
         { pts:1, desc:'General : min 250 Lux for 75% of occupied area Resi: min 200 Lux for 75% of living/bedrooms Schools : min 300 Lux for 90% of occupied area Retail development is not eligible. Meet requirements for occupancy sensors relevant to space type. Meet requirements for glare control relevant to space type.' },
@@ -357,7 +357,7 @@ const CREDITS = {
         { pts:1, desc:'Demonstrate that the weighted average of all refrigerants shall have a GWP of 10 or less.' },
         { pts:1, desc:'Demonstrate that a permanent refrigerant leak detection system shall be installed.' },
         { pts:1, desc:'Demonstrate that an automatic refrigerant pump down system shall be installed.' },
-        { pts:1, desc:'Demonstrate that 100% of gaseous fire systems shall have a GWP of 1 or less' },
+        { pts:1, desc:"Demonstrate that 100% of gaseous fire systems shall have a GWP of 1 or less" },
       ]
     },
   ],
@@ -367,7 +367,7 @@ const CREDITS = {
     { code:'SM-R3', title:'Title placeholder', desc:'Desc placeholder', pts:'R', req:true },
     { code:'SM-1', title:'Title placeholder', desc:'Desc placeholder', pts:3, req:false, uiType:'checkbox',
       pointOptions:[
-        { pts:1, desc:"Building meets the 'Zero ODP, Low GWP Insulation' Credit Requirements through design." },
+        { pts:1, desc:"Building meets the Zero ODP, Low GWP Insulation' Credit Requirements through design." },
         { pts:1, desc:"Building meets the 'Chlorine Free Materials' Credit Requirements through design." },
         { pts:1, desc:"Building meets the 'Low Toxicity Materials' Credit Requirements through design." },
       ]
@@ -474,3 +474,4 @@ const RATING_THRESHOLDS = [
 ];
 const STAGES = ['concept','schematic','detailed'];
 const STAGE_LABELS = {concept:'Concept Design',schematic:'Schematic Design',detailed:'Detailed Design'};
+

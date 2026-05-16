@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PBRS Pearl Building Rating — Design Checklist</title>
+<title>PBRS Pearl Building Rating - Design Checklist</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -115,7 +115,6 @@
   .credit-cb { width: 15px; height: 15px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--blue); }
   .credit-cb:disabled { cursor: default; accent-color: var(--gray-300); }
   .credit-meta { flex: 1; min-width: 0; }
-  .credit-pts-select { margin-top: 6px; border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; font-size: 12.5px; font-family: var(--font); background: #fff; color: var(--gray-900); max-width: 100%; }
   .credit-description { font-size: 12px; color: var(--gray-500); margin-top: 3px; line-height: 1.4; }
   .credit-code-line { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
   .credit-code { font-size: 11.5px; font-weight: 700; color: var(--blue); }
@@ -126,6 +125,17 @@
   .uitype-checkbox { background: #fff3e0; color: #e65100; }
   .credit-name { font-size: 13px; color: var(--gray-900); font-weight: 500; }
   .credit-pts-note { font-size: 11px; color: var(--gray-500); margin-top: 3px; }
+  .credit-pts-picker { margin-top: 6px; max-width: 100%; }
+  .credit-pts-summary { list-style: none; border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; font-size: 12.5px; font-family: var(--font); background: #fff; color: var(--gray-900); cursor: pointer; white-space: normal; line-height: 1.35; }
+  .credit-pts-picker[open] .credit-pts-summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+  .credit-pts-summary::-webkit-details-marker { display: none; }
+  .credit-pts-summary::marker { content: ''; }
+  .credit-pts-menu { border: 1px solid var(--border); border-top: none; border-bottom-left-radius: var(--radius); border-bottom-right-radius: var(--radius); background: #fff; overflow: hidden; }
+  .credit-pts-option { display: block; width: 100%; text-align: left; border: none; border-top: 1px solid var(--border); background: #fff; color: var(--gray-900); font: inherit; padding: 7px 10px; cursor: pointer; white-space: normal; line-height: 1.45; }
+  .credit-pts-option:first-child { border-top: none; }
+  .credit-pts-option:hover { background: var(--gray-50); }
+  .credit-pts-option.active { background: var(--blue-light); }
+  .credit-pts-points { font-weight: 700; color: var(--blue); margin-right: 4px; }
 
   /* ---------- CHECKBOX OPTION ROWS ---------- */
   .option-check-row { display: flex; align-items: flex-start; gap: 8px; margin-top: 7px; cursor: pointer; }
@@ -184,14 +194,14 @@
       </div>
       <div>
         <div class="header-title">Pearl Building Rating System</div>
-        <div class="header-sub">Design Checklist · PBRS Version 1.0 · Estidama Abu Dhabi</div>
+        <div class="header-sub">Design Checklist | PBRS Version 1.0 | Estidama Abu Dhabi</div>
       </div>
     </div>
     <div class="header-actions">
       <button class="btn sm" onclick="exportData()">Export JSON</button>
       <button class="btn sm" onclick="importData()">Import JSON</button>
       <button class="btn sm" onclick="window.print()">Print</button>
-      <span id="save-indicator" style="font-size:11px;color:var(--green);display:none;">✓ Saved</span>
+      <span id="save-indicator" style="font-size:11px;color:var(--green);display:none;">Saved</span>
     </div>
   </div>
 </header>
@@ -204,7 +214,7 @@
         <div class="page-title">Credit Selection</div>
         <div class="page-desc">Select credits to target at project kick-off. Mandatory credits are pre-selected.</div>
       </div>
-      <button class="btn primary" onclick="goToStage()">Start Stage Tracking →</button>
+      <button class="btn primary" onclick="goToStage()">Start Stage Tracking -></button>
     </div>
 
     <div class="project-banner">
@@ -221,13 +231,13 @@
       <div class="proj-field"><label>Project number</label><input type="text" id="proj-num" placeholder="e.g. 2024-ADH-001" oninput="saveState()"/></div>
       <div class="proj-field"><label>Building use</label>
         <select id="proj-type" onchange="saveState()">
-          <option value="">— Select —</option>
+          <option value="">- Select -</option>
           <option>Office</option><option>Retail</option><option>Multi-Residential</option><option>School</option><option>Mixed Use</option>
         </select>
       </div>
       <div class="proj-field"><label>Target Pearl rating</label>
         <select id="proj-target" onchange="saveState()">
-          <option value="">— Select —</option>
+          <option value="">- Select -</option>
           <option>1 Pearl</option><option>2 Pearl (60 pts)</option><option>3 Pearl (85 pts)</option><option>4 Pearl (115 pts)</option><option>5 Pearl (140 pts)</option>
         </select>
       </div>
@@ -237,7 +247,7 @@
     <div id="points-pile-chart"></div>
     <div class="notice">
       Tick optional credits your team will pursue. Mandatory credits (R) are pre-selected and cannot be deselected.<br>
-      <strong>Straight</strong> credits are all-or-nothing. <strong>Dropdown</strong> credits have escalating tiers — pick one. <strong>Checkbox</strong> credits have independent sub-options — tick any combination.
+      <strong>Straight</strong> credits are all-or-nothing. <strong>Dropdown</strong> credits have escalating tiers - pick one. <strong>Checkbox</strong> credits have independent sub-options - tick any combination.
     </div>
     <div class="section-tabs" id="setup-section-tabs"></div>
     <div id="setup-credits"></div>
@@ -250,7 +260,7 @@
         <div class="page-title" id="stage-view-title">Stage Checklist</div>
         <div class="page-desc" id="stage-view-sub"></div>
       </div>
-      <button class="btn" onclick="goToSetup()">← Credit Selection</button>
+      <button class="btn" onclick="goToSetup()">&lt;- Credit Selection</button>
     </div>
     <div class="summary-grid" id="stage-summary"></div>
     <div class="stage-tabs">
@@ -271,9 +281,9 @@ const SECTION_COLORS = {
   PW: '#1e85a5', RE: '#b04a00', SM: '#4f772f', IP: '#4a4a8c',
 };
 
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 // STATE
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 let S = {
   view: 'setup',
   stage: 'concept',
@@ -282,6 +292,7 @@ let S = {
   projectDb: [],
   selected: {},       // straight/dropdown: true|false
   creditPoints: {},   // dropdown: selected pts value
+  dropdownChoice: {}, // dropdown: selected option index
   optionChecked: {},  // checkbox: 'CODE|idx' -> true|false
   secOpen: {},
   notes: {},
@@ -289,9 +300,9 @@ let S = {
 
 ALL_CREDITS.forEach(c => { if (c.req) S.selected[c.code] = true; });
 
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 // UTILS
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 function getCreditPoints(code) {
   const c = ALL_CREDITS.find(x => x.code === code);
   if (!c || c.req) return 0;
@@ -302,6 +313,10 @@ function getCreditPoints(code) {
   if (!S.selected[code]) return 0;
   if (c.uiType === 'straight') return Number(c.pts) || 0;
   if (c.uiType === 'dropdown') {
+    const choiceIdx = Number(S.dropdownChoice[code]);
+    if (Number.isInteger(choiceIdx) && (c.pointOptions || [])[choiceIdx]) {
+      return Number((c.pointOptions || [])[choiceIdx].pts) || 0;
+    }
     const pts = Number(S.creditPoints[code]);
     return pts > 0 ? Math.min(pts, Number(c.pts)) : Number(c.pts);
   }
@@ -320,9 +335,9 @@ function getRating(pts) {
 
 function nk(code, stage) { return code + '|' + stage; }
 
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 // RENDER SETUP
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 function renderSetupSummary() {
   const possible = getPossiblePts();
   const r = getRating(possible);
@@ -368,11 +383,11 @@ function renderPointsPileChart() {
   html += `<div style="font-size:12.5px;color:var(--gray-600);margin-bottom:10px;">Darker bars = mandatory credits by section; lighter bars = selected optional points.</div>`;
   html += `<div class="pile-row">`;
   sectionData.filter(d => d.optPoints > 0).forEach(d => {
-    html += `<div class="pile-segment light" title="${SECTIONS[d.sec]} — ${d.optPoints} optional pt${d.optPoints===1?'':'s'}" style="background:${d.color};flex:${d.optPoints};">${d.optPoints}</div>`;
+    html += `<div class="pile-segment light" title="${SECTIONS[d.sec]} - ${d.optPoints} optional pt${d.optPoints===1?'':'s'}" style="background:${d.color};flex:${d.optPoints};">${d.optPoints}</div>`;
   });
   html += `</div><div class="pile-row">`;
   sectionData.filter(d => d.reqCount > 0).forEach(d => {
-    html += `<div class="pile-segment dark" title="${SECTIONS[d.sec]} — ${d.reqCount} mandatory" style="background:${d.color};flex:${d.reqCount};">${d.reqCount}</div>`;
+    html += `<div class="pile-segment dark" title="${SECTIONS[d.sec]} - ${d.reqCount} mandatory" style="background:${d.color};flex:${d.reqCount};">${d.reqCount}</div>`;
   });
   html += `</div><div class="pile-legend">`;
   sectionData.forEach(d => {
@@ -393,7 +408,7 @@ function renderCreditRow(c) {
           <span class="req-badge">Required</span>
         </div>
         <div class="credit-name">${c.title}</div>
-        <div class="credit-pts-note">Mandatory for all Pearl ratings — no credit points</div>
+        <div class="credit-pts-note">Mandatory for all Pearl ratings - no credit points</div>
       </div>
     </div>`;
   }
@@ -421,8 +436,16 @@ function renderCreditRow(c) {
   if (type === 'dropdown') {
     const sel = !!S.selected[c.code];
     const currentPts = Number(S.creditPoints[c.code]) || 0;
-    const optionsHtml = opts.map(opt =>
-      `<option value="${opt.pts}" ${currentPts===opt.pts?'selected':''}>${opt.pts} pt${opt.pts>1?'s':''} — ${opt.desc}</option>`
+    let currentChoice = Number(S.dropdownChoice[c.code]);
+    if (!Number.isInteger(currentChoice) && currentPts > 0) {
+      const legacyIdx = opts.findIndex(opt => Number(opt.pts) === currentPts);
+      currentChoice = legacyIdx >= 0 ? legacyIdx : null;
+    }
+    const optionsHtml = opts.map((opt, idx) =>
+      `<button type="button" class="credit-pts-option ${currentChoice===idx?'active':''}" onclick="setCreditPoints('${c.code}', ${idx})">
+        <span class="credit-pts-points">${opt.pts} pt${opt.pts>1?'s':''}</span>
+        <span>${opt.desc}</span>
+      </button>`
     ).join('');
     return `<div class="credit-row ${sel?'checked':''}">
       <input type="checkbox" class="credit-cb" ${sel?'checked':''} onchange="toggleCredit('${c.code}', this.checked)"/>
@@ -433,11 +456,13 @@ function renderCreditRow(c) {
         </div>
         <div class="credit-name">${c.title}</div>
         ${c.desc && c.desc !== 'Desc placeholder' ? `<div class="credit-description">${c.desc}</div>` : ''}
-        <div class="credit-pts-note">${sel ? `${currentPts > 0 ? currentPts + ' pts selected' : 'Choose a level'}` : `Up to ${c.pts} pts — choose a level`}</div>
-        ${sel ? `<select class="credit-pts-select" onchange="setCreditPoints('${c.code}', this.value)">
-          <option value="0" disabled ${currentPts===0?'selected':''}>Choose a level…</option>
-          ${optionsHtml}
-        </select>` : ''}
+        <div class="credit-pts-note">${currentPts > 0 ? currentPts + ' pts selected' : `Up to ${c.pts} pts - choose a level`}</div>
+        <details class="credit-pts-picker">
+          <summary class="credit-pts-summary">${currentChoice===null ? 'Choose a level...' : `${currentPts} pts selected`}</summary>
+          <div class="credit-pts-menu">
+            ${optionsHtml}
+          </div>
+        </details>
       </div>
     </div>`;
   }
@@ -463,7 +488,7 @@ function renderCreditRow(c) {
         </div>
         <div class="credit-name">${c.title}</div>
         ${c.desc && c.desc !== 'Desc placeholder' ? `<div class="credit-description">${c.desc}</div>` : ''}
-        <div class="credit-pts-note">Select all that apply · ${earned} / ${c.pts} pts</div>
+        <div class="credit-pts-note">Select all that apply | ${earned} / ${c.pts} pts</div>
         <div style="margin-top:4px;">${optRowsHtml}</div>
       </div>
     </div>`;
@@ -488,9 +513,9 @@ function renderSetupCredits() {
   document.getElementById('setup-credits').innerHTML = html;
 }
 
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 // RENDER STAGE
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 function renderStageSummaryCards() {
   const possible = getPossiblePts();
   const r = getRating(possible);
@@ -553,7 +578,7 @@ function renderStageCredits() {
         if (cOpen) {
           html += `<div class="notes-panel">
             <div class="note-label">Coordination notes &amp; action items</div>
-            <textarea class="note-field" placeholder="Record responsibilities, follow-up actions, consultants to coordinate with, or pending items for next stage…" onchange="setNote('${noteKey}', this.value)">${S.notes[noteKey]||''}</textarea>
+            <textarea class="note-field" placeholder="Record responsibilities, follow-up actions, consultants to coordinate with, or pending items for next stage..." onchange="setNote('${noteKey}', this.value)">${S.notes[noteKey]||''}</textarea>
           </div>`;
         }
         html += `</div>`;
@@ -567,21 +592,21 @@ function renderStageCredits() {
 
 function renderStageEndSummary() {
   const stage = S.stage;
-  let html = `<div class="ss-title">Stage summary — ${STAGE_LABELS[stage]}</div>`;
+  let html = `<div class="ss-title">Stage summary - ${STAGE_LABELS[stage]}</div>`;
   Object.entries(CREDITS).forEach(([sec, credits]) => {
     const active = credits.filter(c => c.req || (c.uiType === 'checkbox' ? getCreditPoints(c.code) > 0 : S.selected[c.code]));
     if (!active.length) return;
     html += `<div class="ss-row">
       <div class="ss-row-label">${SECTIONS[sec]}</div>
-      <div class="ss-codes">${active.map(c => c.code).join(' &nbsp;·&nbsp; ')}</div>
+      <div class="ss-codes">${active.map(c => c.code).join(' | ')}</div>
     </div>`;
   });
   document.getElementById('stage-end-summary').innerHTML = html;
 }
 
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 // FULL RENDERS
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 function renderSetup() {
   renderProjectSelect();
   renderSetupSummary();
@@ -592,16 +617,16 @@ function renderSetup() {
 function renderStageView() {
   document.querySelectorAll('.stage-tab').forEach(t => t.classList.toggle('active', t.dataset.stage === S.stage));
   const pn = document.getElementById('proj-name');
-  document.getElementById('stage-view-title').textContent = (pn&&pn.value ? pn.value + ' — ' : '') + 'Stage Checklist';
+  document.getElementById('stage-view-title').textContent = (pn&&pn.value ? pn.value + ' - ' : '') + 'Stage Checklist';
   document.getElementById('stage-view-sub').textContent = 'Tracking ' + ALL_CREDITS.filter(c => c.req || (c.uiType==='checkbox'?getCreditPoints(c.code)>0:S.selected[c.code])).length + ' selected credits';
   renderStageSummaryCards();
   renderStageCredits();
   renderStageEndSummary();
 }
 
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 // EVENT HANDLERS
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 function toggleSec(key) {
   S.secOpen[key] = !S.secOpen[key];
   if (S.view === 'setup') renderSetup(); else renderStageView();
@@ -616,14 +641,18 @@ function toggleCredit(code, checked) {
 }
 
 function setCreditPoints(code, value) {
-  const pts = Number(value);
   const c = ALL_CREDITS.find(x => x.code === code);
-  const max = c ? Number(c.pts) || 0 : 0;
-  if (pts > 0) {
+  const choiceIdx = Number(value);
+  const choice = c && c.uiType === 'dropdown' && Number.isInteger(choiceIdx)
+    ? (c.pointOptions || [])[choiceIdx]
+    : null;
+  if (choice) {
     S.selected[code] = true;
-    S.creditPoints[code] = Math.min(pts, max);
+    S.dropdownChoice[code] = choiceIdx;
+    S.creditPoints[code] = Number(choice.pts) || 0;
   } else {
     S.selected[code] = false;
+    S.dropdownChoice[code] = null;
     S.creditPoints[code] = 0;
   }
   renderSetup();
@@ -663,9 +692,9 @@ function goToSetup() {
   saveState();
 }
 
-// ═══════════════════════════════════════════════════════════
-// PERSIST — localStorage
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
+// PERSIST - localStorage
+// ----------------------------------------------------------------
 function saveState() {
   try {
     const data = {
@@ -691,6 +720,7 @@ function loadState() {
     if (data.s) {
       S.selected        = data.s.selected        || S.selected;
       S.creditPoints    = data.s.creditPoints     || {};
+      S.dropdownChoice  = data.s.dropdownChoice   || {};
       S.optionChecked   = data.s.optionChecked    || {};
       S.secOpen         = data.s.secOpen          || {};
       S.notes           = data.s.notes            || {};
@@ -711,9 +741,9 @@ function loadState() {
   } catch(e) {}
 }
 
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 // EXPORT / IMPORT / PROJECT DB
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 function buildProjectEntry() {
   const now = new Date().toISOString();
   const id = S.currentProjectId || 'prj_' + Date.now();
@@ -726,6 +756,7 @@ function buildProjectEntry() {
     state: {
       view: S.view, stage: S.stage,
       selected: S.selected, creditPoints: S.creditPoints,
+      dropdownChoice: S.dropdownChoice,
       optionChecked: S.optionChecked,
       secOpen: S.secOpen, notes: S.notes,
     }
@@ -752,7 +783,7 @@ function setProjectFields(p) {
 function loadProject(id) {
   if (!id) {
     S.currentProjectId = null;
-    S.selected = {}; S.creditPoints = {}; S.optionChecked = {};
+    S.selected = {}; S.creditPoints = {}; S.dropdownChoice = {}; S.optionChecked = {};
     S.secOpen = {}; S.notes = {}; S.view = 'setup'; S.stage = 'concept';
     setProjectFields({});
     ALL_CREDITS.forEach(c => { if (c.req) S.selected[c.code] = true; });
@@ -765,6 +796,7 @@ function loadProject(id) {
   S.stage           = project.state.stage         || 'concept';
   S.selected        = project.state.selected      || {};
   S.creditPoints    = project.state.creditPoints  || {};
+  S.dropdownChoice  = project.state.dropdownChoice|| {};
   S.optionChecked   = project.state.optionChecked || {};
   S.secOpen         = project.state.secOpen       || {};
   S.notes           = project.state.notes         || {};
@@ -827,9 +859,9 @@ function importData() {
   inp.click();
 }
 
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 // INIT
-// ═══════════════════════════════════════════════════════════
+// ----------------------------------------------------------------
 loadState();
 if (S.view === 'stage') {
   document.getElementById('view-setup').classList.remove('active');
@@ -841,3 +873,4 @@ if (S.view === 'stage') {
 </script>
 </body>
 </html>
+
