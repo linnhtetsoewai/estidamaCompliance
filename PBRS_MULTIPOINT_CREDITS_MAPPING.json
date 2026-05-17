@@ -1,0 +1,737 @@
+[
+  {
+    "code": "PW-1",
+    "section": "PW",
+    "currentPts": 15,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "4% potable water reduction",
+        "desc": "4% potable water reduction vs. baseline"
+      },
+      {
+        "pts": 2,
+        "label": "8% potable water reduction",
+        "desc": "8% reduction vs. baseline"
+      },
+      {
+        "pts": 3,
+        "label": "12% potable water reduction",
+        "desc": "12% reduction vs. baseline"
+      },
+      {
+        "pts": 4,
+        "label": "16% potable water reduction",
+        "desc": "16% reduction vs. baseline"
+      },
+      {
+        "pts": 5,
+        "label": "20% potable water reduction",
+        "desc": "20% reduction vs. baseline"
+      },
+      {
+        "pts": 6,
+        "label": "24% potable water reduction",
+        "desc": "24% reduction vs. baseline"
+      },
+      {
+        "pts": 7,
+        "label": "28% potable water reduction",
+        "desc": "28% reduction vs. baseline"
+      },
+      {
+        "pts": 8,
+        "label": "32% potable water reduction",
+        "desc": "32% reduction vs. baseline"
+      },
+      {
+        "pts": 9,
+        "label": "36% potable water reduction",
+        "desc": "36% reduction vs. baseline"
+      },
+      {
+        "pts": 10,
+        "label": "40% potable water reduction",
+        "desc": "40% reduction vs. baseline"
+      },
+      {
+        "pts": 11,
+        "label": "44% potable water reduction",
+        "desc": "44% reduction vs. baseline"
+      },
+      {
+        "pts": 12,
+        "label": "48% potable water reduction",
+        "desc": "48% reduction vs. baseline"
+      },
+      {
+        "pts": 13,
+        "label": "52% potable water reduction",
+        "desc": "52% reduction vs. baseline"
+      },
+      {
+        "pts": 14,
+        "label": "56% potable water reduction",
+        "desc": "56% reduction vs. baseline"
+      },
+      {
+        "pts": 15,
+        "label": "60% or greater potable water reduction",
+        "desc": "60% potable water reduction vs. baseline"
+      }
+    ],
+    "correctIntentStatement": "Achieve further reductions in building potable water consumption beyond minimum baseline"
+  },
+  {
+    "code": "PW-2.1",
+    "section": "PW",
+    "currentPts": 10,
+    "structure": "multi-path",
+    "pointOptions": [
+      {
+        "pts": 2,
+        "label": "Plant selection: < 4 L/m²/day irrigation",
+        "desc": "Average landscape irrigation demand < 4 liters/m²/day"
+      },
+      {
+        "pts": 4,
+        "label": "Plant selection: < 2 L/m²/day irrigation",
+        "desc": "Average landscape irrigation demand < 2 liters/m²/day"
+      },
+      {
+        "pts": 1,
+        "label": "Water efficient irrigation system",
+        "desc": "Water Efficient Irrigation System incorporated into landscape design"
+      },
+      {
+        "pts": 1,
+        "label": "Irrigation operation & maintenance plan",
+        "desc": "Irrigation Operation & Maintenance Plan developed"
+      },
+      {
+        "pts": 2,
+        "label": "Recycled water serving exterior irrigation",
+        "desc": "100% of exterior irrigation demand served via Exterior Water Allowance + recycled water mainline loop"
+      },
+      {
+        "pts": 2,
+        "label": "Non-water turf substitutes (Schools only)",
+        "desc": "Non-water turf substitutes installed in place of turf on playing fields"
+      }
+    ],
+    "correctIntentStatement": "Minimize landscaping water demands through effective plant selection, irrigation strategies, and recycled water use"
+  },
+  {
+    "code": "PW-2.2",
+    "section": "PW",
+    "currentPts": 8,
+    "structure": "multi-path",
+    "pointOptions": [
+      {
+        "pts": 2,
+        "label": ">25% cooling water via recycled water",
+        "desc": ">25% of cooling tower/district cooling water make-up requirements served via Exterior Water Allowance"
+      },
+      {
+        "pts": 3,
+        "label": ">50% cooling water via recycled water",
+        "desc": ">50% served via Exterior Water Allowance"
+      },
+      {
+        "pts": 4,
+        "label": ">75% cooling water via recycled water",
+        "desc": ">75% served via Exterior Water Allowance"
+      },
+      {
+        "pts": 5,
+        "label": "100% cooling water via recycled water",
+        "desc": "100% served via Exterior Water Allowance"
+      },
+      {
+        "pts": 8,
+        "label": "No water for heat rejection",
+        "desc": "Project uses no water for heat rejection (passive cooling, dry coolers, or other alternative methods)"
+      }
+    ],
+    "correctIntentStatement": "Reduce potable water consumption for heat rejection through recycled water use or elimination of water-based cooling"
+  },
+  {
+    "code": "PW-3",
+    "section": "PW",
+    "currentPts": 2,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 2,
+        "label": "Sub-metering for water monitoring",
+        "desc": "Install sub-metering systems monitoring individual water end-uses (fixtures, equipment) with central data logging and reporting capability to identify leaks and usage patterns"
+      }
+    ],
+    "correctIntentStatement": "Encourage monitoring of interior water use to enable identification and correction of leaks"
+  },
+  {
+    "code": "PW-4",
+    "section": "PW",
+    "currentPts": 3,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Stormwater management: 50%+ of site",
+        "desc": "Implement stormwater management controls treating run-off from 50% or more of site area on-site"
+      },
+      {
+        "pts": 2,
+        "label": "Stormwater management: 75%+ of site",
+        "desc": "Implement controls treating 75% or more of site area; meet infiltration/retention targets"
+      },
+      {
+        "pts": 3,
+        "label": "Full on-site stormwater treatment",
+        "desc": "Achieve full on-site treatment with infiltration to natural groundwater recharge or retention for beneficial reuse"
+      }
+    ],
+    "correctIntentStatement": "Minimize stormwater run-off volumes and treat stormwater on-site to reduce impact on receiving waters"
+  },
+  {
+    "code": "RE-1",
+    "section": "RE",
+    "currentPts": 15,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "4% energy improvement",
+        "desc": "4% improvement in energy performance vs. baseline"
+      },
+      {
+        "pts": 2,
+        "label": "8% energy improvement",
+        "desc": "8% improvement vs. baseline"
+      },
+      {
+        "pts": 3,
+        "label": "12% energy improvement",
+        "desc": "12% improvement vs. baseline"
+      },
+      {
+        "pts": 4,
+        "label": "16% energy improvement",
+        "desc": "16% improvement vs. baseline"
+      },
+      {
+        "pts": 5,
+        "label": "20% energy improvement",
+        "desc": "20% improvement vs. baseline"
+      },
+      {
+        "pts": 6,
+        "label": "24% energy improvement",
+        "desc": "24% improvement vs. baseline"
+      },
+      {
+        "pts": 7,
+        "label": "28% energy improvement",
+        "desc": "28% improvement vs. baseline"
+      },
+      {
+        "pts": 8,
+        "label": "32% energy improvement",
+        "desc": "32% improvement vs. baseline"
+      },
+      {
+        "pts": 9,
+        "label": "36% energy improvement",
+        "desc": "36% improvement vs. baseline"
+      },
+      {
+        "pts": 10,
+        "label": "40% energy improvement",
+        "desc": "40% improvement vs. baseline"
+      },
+      {
+        "pts": 11,
+        "label": "44% energy improvement",
+        "desc": "44% improvement vs. baseline"
+      },
+      {
+        "pts": 12,
+        "label": "48% energy improvement",
+        "desc": "48% improvement vs. baseline"
+      },
+      {
+        "pts": 13,
+        "label": "52% energy improvement",
+        "desc": "52% improvement vs. baseline"
+      },
+      {
+        "pts": 14,
+        "label": "56% energy improvement",
+        "desc": "56% improvement vs. baseline"
+      },
+      {
+        "pts": 15,
+        "label": "60% or greater energy improvement",
+        "desc": "60% or greater improvement in energy performance vs. baseline"
+      }
+    ],
+    "correctIntentStatement": "Encourage improved energy performance beyond minimum baseline"
+  },
+  {
+    "code": "RE-2",
+    "section": "RE",
+    "currentPts": 3,
+    "structure": "multi-path",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "High-reflectance roof: 75%+ of roof area",
+        "desc": "Achieve solar reflectance ≥0.65 for roof surfaces (minimum 75% of roof area)"
+      },
+      {
+        "pts": 1,
+        "label": "High-reflectance hardscape: 50%+ of non-building paved areas",
+        "desc": "Achieve solar reflectance ≥0.65 for site hardscape surfaces (minimum 50% of non-building paved areas)"
+      },
+      {
+        "pts": 1,
+        "label": "Tree canopy or vegetation shading: 30%+ of hardscape",
+        "desc": "Provide tree canopy or vegetation shading 30% or more of site hardscape at maturity"
+      }
+    ],
+    "correctIntentStatement": "Reduce cooling energy consumption and urban heat island effect through passive design and reflective materials"
+  },
+  {
+    "code": "RE-3",
+    "section": "RE",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "90%+ ENERGY STAR certified appliances",
+        "desc": "Specify ENERGY STAR certified appliances for 90% or more of applicable major appliances (refrigerators, dishwashers, cooking equipment, etc.)"
+      }
+    ],
+    "correctIntentStatement": "Promote use of energy-efficient appliances to reduce plug loads"
+  },
+  {
+    "code": "RE-4",
+    "section": "RE",
+    "currentPts": 2,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Energy-efficient elevators with regenerative drives",
+        "desc": "Install energy-efficient elevators with regenerative drives or equivalent efficiency measures"
+      },
+      {
+        "pts": 2,
+        "label": "Regenerative drives + escalator controls",
+        "desc": "Install regenerative drive elevators AND implement escalator controls (auto-start, variable speed)"
+      }
+    ],
+    "correctIntentStatement": "Improve efficiency of elevators and escalators to reduce energy consumption"
+  },
+  {
+    "code": "RE-5",
+    "section": "RE",
+    "currentPts": 2,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "10%+ peak demand reduction",
+        "desc": "Implement demand reduction strategy (thermal storage, load shifting, etc.) reducing peak demand 10% or more"
+      },
+      {
+        "pts": 2,
+        "label": "20%+ peak demand reduction",
+        "desc": "Achieve peak demand reduction of 20% or greater vs. baseline"
+      }
+    ],
+    "correctIntentStatement": "Reduce peak demand charges through demand management and load reduction strategies"
+  },
+  {
+    "code": "RE-6",
+    "section": "RE",
+    "currentPts": 15,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "4% from on-site renewable sources",
+        "desc": "4% of annual energy provided by on-site renewable sources"
+      },
+      {
+        "pts": 2,
+        "label": "8% from on-site renewable sources",
+        "desc": "8% from on-site renewable"
+      },
+      {
+        "pts": 3,
+        "label": "12% from on-site renewable sources",
+        "desc": "12% from on-site renewable"
+      },
+      {
+        "pts": 4,
+        "label": "16% from on-site renewable sources",
+        "desc": "16% from on-site renewable"
+      },
+      {
+        "pts": 5,
+        "label": "20% from on-site renewable sources",
+        "desc": "20% from on-site renewable"
+      },
+      {
+        "pts": 6,
+        "label": "24% from on-site renewable sources",
+        "desc": "24% from on-site renewable"
+      },
+      {
+        "pts": 7,
+        "label": "28% from on-site renewable sources",
+        "desc": "28% from on-site renewable"
+      },
+      {
+        "pts": 8,
+        "label": "32% from on-site renewable sources",
+        "desc": "32% from on-site renewable"
+      },
+      {
+        "pts": 9,
+        "label": "36% from on-site renewable sources",
+        "desc": "36% from on-site renewable"
+      },
+      {
+        "pts": 10,
+        "label": "40% from on-site renewable sources",
+        "desc": "40% from on-site renewable"
+      },
+      {
+        "pts": 11,
+        "label": "44% from on-site renewable sources",
+        "desc": "44% from on-site renewable"
+      },
+      {
+        "pts": 12,
+        "label": "48% from on-site renewable sources",
+        "desc": "48% from on-site renewable"
+      },
+      {
+        "pts": 13,
+        "label": "52% from on-site renewable sources",
+        "desc": "52% from on-site renewable"
+      },
+      {
+        "pts": 14,
+        "label": "56% from on-site renewable sources",
+        "desc": "56% from on-site renewable"
+      },
+      {
+        "pts": 15,
+        "label": "60%+ from on-site renewable sources",
+        "desc": "60% or greater of annual energy from on-site renewable sources"
+      }
+    ],
+    "correctIntentStatement": "Encourage on-site renewable energy generation to offset grid consumption"
+  },
+  {
+    "code": "RE-7",
+    "section": "RE",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Low-GWP refrigerants (GWP <365) and fire suppression agents",
+        "desc": "Specify refrigerants with GWP <365 (excluding CFCs) and fire suppression agents with GWP <150 or equivalent low-GWP alternatives"
+      }
+    ],
+    "correctIntentStatement": "Select refrigerants and fire suppression agents with low global warming potential"
+  },
+  {
+    "code": "SM-1",
+    "section": "SM",
+    "currentPts": 3,
+    "structure": "multi-path",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Zero ODP, Low GWP insulation (ODP=0, GWP<5)",
+        "desc": "All thermal insulation materials have ODP = 0 AND Global Warming Potential (GWP) < 5"
+      },
+      {
+        "pts": 1,
+        "label": "Chlorine-free materials for key product groups",
+        "desc": "Replace chlorine-based materials (PVC, CPE, CPVC, CSPE, polychloroprene) with sustainable alternatives for 3+ product groups at specified coverage: Insulation 80%+, Waterproofing 50%+, Cladding 90%+, Floor/wall coverings 90%+"
+      },
+      {
+        "pts": 1,
+        "label": "Mercury elimination from all materials",
+        "desc": "Eliminate mercury from all building materials (lighting, switches, controls, measuring devices); use mercury-free alternatives"
+      }
+    ],
+    "correctIntentStatement": "Eliminate use of polluting materials; promote selection of low-environmental-impact alternatives"
+  },
+  {
+    "code": "SM-10",
+    "section": "SM",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "20%+ recycled content materials",
+        "desc": "Specify materials with recycled content (post-consumer and/or post-industrial) comprising 20% or more of total material cost"
+      }
+    ],
+    "correctIntentStatement": "Reduce extraction of virgin materials by specifying recycled content"
+  },
+  {
+    "code": "SM-13",
+    "section": "SM",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "50%+ construction waste diversion",
+        "desc": "Divert 50% or more of construction waste from landfill through recycling, reuse, or salvage"
+      }
+    ],
+    "correctIntentStatement": "Divert construction waste from landfill through recycling/reuse"
+  },
+  {
+    "code": "LBo-1",
+    "section": "LBo",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Hardscape limited to 50% or less of site",
+        "desc": "Limit site hardscape (paving, roof) to 50% or less of total site area"
+      }
+    ],
+    "correctIntentStatement": "Limit impervious surfaces and reduce urban heat island effect through outdoor thermal management"
+  },
+  {
+    "code": "LBo-6",
+    "section": "LBo",
+    "currentPts": 2,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Lighting design limiting spillover and glare",
+        "desc": "Implement lighting design limiting spillover and glare"
+      },
+      {
+        "pts": 2,
+        "label": "Full night-sky compliance",
+        "desc": "Achieve full night-sky compliance with no upward light"
+      }
+    ],
+    "correctIntentStatement": "Minimize light pollution and reduce impacts on night-time environments"
+  },
+  {
+    "code": "LBo-8",
+    "section": "LBo",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Located near quality public transit",
+        "desc": "Locate within specified distance of public transit with defined frequency/service"
+      }
+    ],
+    "correctIntentStatement": "Locate development near quality public transit infrastructure"
+  },
+  {
+    "code": "LBo-9",
+    "section": "LBo",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Pedestrian & bicycle infrastructure connected to networks",
+        "desc": "Provide pedestrian/bicycle infrastructure connecting to surrounding networks"
+      }
+    ],
+    "correctIntentStatement": "Support non-motorized transportation through site design"
+  },
+  {
+    "code": "LBi-1",
+    "section": "LBi",
+    "currentPts": 2,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Daylight access to 50%+ of regularly occupied floor area",
+        "desc": "Achieve daylight access to 50% or more of regularly occupied floor area"
+      },
+      {
+        "pts": 2,
+        "label": "Daylight access to 75%+ of regularly occupied floor area",
+        "desc": "Achieve daylight access to 75% or more of regularly occupied floor area"
+      }
+    ],
+    "correctIntentStatement": "Provide natural daylight access to improve occupant wellbeing and ventilation quality"
+  },
+  {
+    "code": "LBi-5.3",
+    "section": "LBi",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Outdoor air quality monitoring with demand-controlled ventilation",
+        "desc": "Install outdoor air quality monitoring system; implement demand-controlled ventilation"
+      }
+    ],
+    "correctIntentStatement": "Monitor and control outdoor air quality intake for thermal comfort modeling"
+  },
+  {
+    "code": "LBi-7",
+    "section": "LBi",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "80%+ of regularly occupied spaces with exterior views",
+        "desc": "Provide exterior views to 80% or more of regularly occupied floor area"
+      }
+    ],
+    "correctIntentStatement": "Provide visual connection to outdoor environment for daylight access and glare control"
+  },
+  {
+    "code": "NS-1",
+    "section": "NS",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Bird-friendly glazing or design strategies",
+        "desc": "Apply bird-friendly glazing or design strategies to minimize collisions"
+      }
+    ],
+    "correctIntentStatement": "Reduce bird mortality through collision avoidance design"
+  },
+  {
+    "code": "NS-3",
+    "section": "NS",
+    "currentPts": 2,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 2,
+        "label": "80%+ of landscaped areas with native species",
+        "desc": "Achieve 80% or more of landscaped areas with native plant species"
+      }
+    ],
+    "correctIntentStatement": "Restore native plant communities to support local biodiversity and ecological enhancement"
+  },
+  {
+    "code": "NS-4",
+    "section": "NS",
+    "currentPts": 3,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Basic biodiversity measures",
+        "desc": "Implement basic biodiversity measures (plantings, habitat features)"
+      },
+      {
+        "pts": 3,
+        "label": "Comprehensive biodiversity strategy with species targets",
+        "desc": "Implement comprehensive biodiversity strategy with species count targets"
+      }
+    ],
+    "correctIntentStatement": "Enhance site biodiversity through ecological design and habitat creation"
+  },
+  {
+    "code": "IDP-1",
+    "section": "IDP",
+    "currentPts": 2,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 2,
+        "label": "Life cycle costing analysis including capital and operational costs",
+        "desc": "Conduct life cycle costing analysis including capital and operational costs"
+      }
+    ],
+    "correctIntentStatement": "Evaluate economic value through building lifecycle analysis"
+  },
+  {
+    "code": "IDP-2",
+    "section": "IDP",
+    "currentPts": 1,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "On-site or accessible accommodation for temporary workers",
+        "desc": "Provide on-site or accessible accommodation for temporary workers with specified amenities"
+      }
+    ],
+    "correctIntentStatement": "Provide adequate accommodation for workers in regions with worker housing challenges"
+  },
+  {
+    "code": "IDP-3",
+    "section": "IDP",
+    "currentPts": 2,
+    "structure": "multi-level",
+    "pointOptions": [
+      {
+        "pts": 1,
+        "label": "Basic construction environmental management practices",
+        "desc": "Implement basic construction environmental management practices"
+      },
+      {
+        "pts": 2,
+        "label": "Comprehensive construction environmental management plan with monitoring",
+        "desc": "Implement comprehensive construction environmental management plan with monitoring"
+      }
+    ],
+    "correctIntentStatement": "Minimize environmental impacts during construction phase"
+  },
+  {
+    "code": "IDP-5",
+    "section": "IDP",
+    "currentPts": 3,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 3,
+        "label": "Recommissioning plan to optimize systems performance",
+        "desc": "Implement recommissioning plan to optimize systems performance after 1 year of operation"
+      }
+    ],
+    "correctIntentStatement": "Optimize building performance during and after commissioning through re-commissioning"
+  },
+  {
+    "code": "IDP-6",
+    "section": "IDP",
+    "currentPts": 2,
+    "structure": "binary",
+    "pointOptions": [
+      {
+        "pts": 2,
+        "label": "Occupant communication program documenting sustainability features and performance",
+        "desc": "Provide occupant communication program documenting sustainability features and performance"
+      }
+    ],
+    "correctIntentStatement": "Communicate building sustainability features to occupants"
+  }
+]

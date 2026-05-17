@@ -1,0 +1,316 @@
+{
+  "document_info": {
+    "title": "Pearl Building Rating System",
+    "version": "1.0 (April 2010)",
+    "note": "This appears to be Version 1.0, not Version 10"
+  },
+  "sections": {
+    "IDP": {
+      "name": "Integrated Development Process",
+      "max_points": 13,
+      "credits": {
+        "IDP-R1": {
+          "title": "Integrated Development Strategy",
+          "type": "Required (R)",
+          "points": 0,
+          "intent": "Ensure new development adopts the Integrated Development Process (IDP) to gain full benefit from integrated development approach",
+          "point_structure": "Binary - Required credit, no points awarded",
+          "criteria": [
+            "Demonstrate team organization and IDP process chart",
+            "Develop implementation strategy for design-to-construction transitions",
+            "Show vision, objectives and targets for project"
+          ]
+        },
+        "IDP-R2": {
+          "title": "Tenant Fit-Out Design & Construction Guide",
+          "type": "Required (R)",
+          "points": 0,
+          "intent": "Ensure design and construction of interior fit-out contributes to overall project sustainability objectives",
+          "point_structure": "Binary - Required credit (core & shell only), no points awarded",
+          "criteria": [
+            "Develop Tenant Fit-Out Design & Construction Guide",
+            "Must accompany lease documents",
+            "Include IDP requirements, sustainability vision, and technical guidance"
+          ]
+        },
+        "IDP-R3": {
+          "title": "Basic Commissioning",
+          "type": "Required (R)",
+          "points": 0,
+          "intent": "Ensure building performs as designed to protect occupant health and provide comfort",
+          "point_structure": "Binary - Required credit, no points awarded",
+          "criteria": [
+            "Engage independent commissioning agent",
+            "Include comprehensive commissioning in specifications",
+            "Complete commissioning at building completion",
+            "Verify commissioning report prior to completion"
+          ]
+        },
+        "IDP-1": {
+          "title": "Life Cycle Costing",
+          "type": "Optional",
+          "max_points": 4,
+          "point_structure": "Multi-level: 0-4 points",
+          "criteria": {
+            "design_rating": "4 pts: Conduct LCC analysis during concept design to evaluate and compare design options",
+            "construction_rating": "4 pts: Update LCC report with final construction costs"
+          }
+        },
+        "IDP-2": {
+          "title": "Guest Worker Accommodation",
+          "type": "Optional",
+          "max_points": 2,
+          "point_structure": "Multi-level: 0-2 points",
+          "criteria": {
+            "design_rating": "2 pts: Develop Guest Worker Accommodation Plan meeting Abu Dhabi Cabinet Decision No. 13/2009",
+            "construction_rating": "2 pts: Implement the Guest Worker Accommodation Plan with maintenance records and inspections"
+          }
+        },
+        "IDP-3": {
+          "title": "Construction Environmental Management",
+          "type": "Optional",
+          "max_points": 2,
+          "point_structure": "Multi-level: 0-2 points",
+          "criteria": {
+            "design_rating": "1 pt: CEMP prepared per EAD standards; 1 pt: Project Lead Contractor ISO 14001 or EHSMS certified",
+            "construction_rating": "1 pt: CEMP properly applied to site; 1 pt: Contractor maintains ISO 14001 or EHSMS certification"
+          }
+        },
+        "IDP-4": {
+          "title": "Building Envelope Verification",
+          "type": "Optional",
+          "max_points": 1,
+          "point_structure": "Binary: 0 or 1 point",
+          "criteria": {
+            "design_rating": "1 pt: Design team reviews building envelope design and specifications",
+            "construction_rating": "1 pt: Off-site testing of prototypes and on-site water/air-tightness testing performed"
+          }
+        },
+        "IDP-5": {
+          "title": "Re-Commissioning",
+          "type": "Optional",
+          "max_points": 2,
+          "point_structure": "Multi-level: 0-2 points",
+          "criteria": {
+            "design_rating": "2 pts: Demonstrate re-commissioning plan for 1 and 2 years post-completion",
+            "construction_rating": "2 pts: Provide updated re-commissioning plan and O&M manual"
+          }
+        },
+        "IDP-6": {
+          "title": "Sustainability Communication",
+          "type": "Optional",
+          "max_points": 2,
+          "point_structure": "Multi-level: 0-2 points",
+          "criteria": {
+            "design_rating": "1 pt: Develop Occupant Handbook; 1 pt: Design occupant feedback mechanism",
+            "construction_rating": "1 pt: Update Occupant Handbook; 1 pt: Build occupant feedback components"
+          }
+        }
+      }
+    },
+    "NS": {
+      "name": "Natural Systems",
+      "max_points": 12,
+      "credits": {
+        "NS-R1": {
+          "title": "Natural Systems Assessment",
+          "type": "Required (R)",
+          "points": 0,
+          "intent": "Ensure environmental baseline conditions are assessed before design process begins",
+          "point_structure": "Binary - Required credit, no points awarded",
+          "criteria": [
+            "Assessment at project site, area of probable impact, sub-regional, and regional scales",
+            "Identify opportunities and constraints",
+            "Prepare measurable KPIs to guide design"
+          ]
+        },
+        "NS-R2": {
+          "title": "Natural Systems Protection",
+          "type": "Required (R)",
+          "points": 0,
+          "intent": "Protect significant and valuable Natural Systems assets identified in NS-R1",
+          "point_structure": "Binary - Required credit, no points awarded",
+          "criteria": [
+            "Strategy 1 - Protection: Retain 100% of significant assets, 80% of valuable assets",
+            "Strategy 2 - Onsite Mitigation: Retain 70% of significant assets, 50% of valuable assets with mitigation at 2:1 ratio",
+            "Strategy 3 - Offsite Compensation: Off-site habitat creation at 2:1 ratio outside development areas"
+          ]
+        },
+        "NS-R3": {
+          "title": "Natural Systems Design & Management Strategy",
+          "type": "Required (R)",
+          "points": 0,
+          "intent": "Minimize resource demand and ensure long-term survival of landscaped/habitat areas",
+          "point_structure": "Binary - Required credit, no points awarded",
+          "criteria": [
+            "Develop Natural Systems Design and Management Strategy",
+            "Promote soil protection and enhancement",
+            "Include management of protected, enhanced, and restored areas"
+          ]
+        },
+        "NS-1": {
+          "title": "Reuse of Land",
+          "type": "Optional",
+          "max_points": 2,
+          "point_structure": "Binary: 0 or 2 points",
+          "criteria": {
+            "design_rating": "2 pts: Demonstrate at least 75% of site area has been previously developed",
+            "construction_rating": "2 pts: Confirm at least 75% previously developed area remains at final site"
+          }
+        },
+        "NS-2": {
+          "title": "Remediation of Contaminated Land",
+          "type": "Optional",
+          "max_points": 2,
+          "point_structure": "Binary: 0 or 2 points",
+          "criteria": {
+            "design_rating": "2 pts: Demonstrate site contamination via Phase I & II ASTM analysis; provide remediation strategy",
+            "construction_rating": "2 pts: Demonstrate site was contaminated and adequate remediation was completed"
+          }
+        },
+        "NS-3": {
+          "title": "Ecological Enhancement",
+          "type": "Optional",
+          "max_points": 2,
+          "point_structure": "Multi-level: 0-2 points",
+          "criteria": {
+            "1_point": "50% of plants are native/adaptive drought/saline tolerant species with minimum 5 different types",
+            "2_points": "70% of plants are native/adaptive with minimum 10 different types"
+          }
+        },
+        "NS-4": {
+          "title": "Habitat Creation & Restoration",
+          "type": "Optional",
+          "max_points": 6,
+          "point_structure": "Multi-level: 0-6 points (cumulative)",
+          "criteria": {
+            "4_points": "Create/restore Priority Habitat on-site (2x minimum landscape area) or off-site (4x minimum landscape area)",
+            "2_points": "Create ecological corridors (minimum 40m width) linking to similar habitat types through neighbor collaboration"
+          }
+        }
+      }
+    },
+    "LBo": {
+      "name": "Livable Buildings - Outdoors",
+      "max_points": 14,
+      "credits": {
+        "LBo-R1": {
+          "title": "Plan 2030",
+          "type": "Required (R)",
+          "points": 0,
+          "intent": "Ensure development supports the vision for Abu Dhabi Emirate",
+          "criteria": [
+            "Development within Urban Growth Boundary",
+            "FAR, building height/mass consistent with Plan 2030, Development Code, Area Plan"
+          ]
+        },
+        "LBo-R2": {
+          "title": "Urban Systems Assessment",
+          "type": "Required (R)",
+          "points": 0,
+          "intent": "Understand project site within urban context before design process begins",
+          "criteria": [
+            "Assessment at local, sub-regional, and regional scales",
+            "Identify opportunities and constraints",
+            "Analysis of community facilities, public transit, land uses, solar orientation"
+          ]
+        },
+        "LBo-R3": {
+          "title": "Outdoor Thermal Comfort Strategy",
+          "type": "Required (R)",
+          "points": 0,
+          "intent": "Increase outdoor thermal comfort and reduce thermal discomfort in public spaces",
+          "criteria": [
+            "Minimum shading: Parking 40%, Public spaces 60%, Primary walkways 75%, Secondary walkways 75%, Cycle tracks 50%, Playgrounds 90%",
+            "High-albedo surfaces minimum SRI 29",
+            "Calculated at equinox and summer solstice at 1:00pm"
+          ]
+        },
+        "LBo-1": {
+          "title": "Improved Outdoor Thermal Comfort",
+          "type": "Optional",
+          "max_points": 2,
+          "point_structure": "Multi-level: 0-2 points",
+          "criteria": {
+            "1_point": "Increased shading beyond minimums: Parking 50%, Public spaces 65%, Walkways 80%, Cycle tracks 55%",
+            "2_points": "Further increased shading: Parking 55%, Public spaces 70%, Walkways 85%, Cycle tracks 65%"
+          }
+        },
+        "LBo-2": {
+          "title": "Pearl Rated Communities",
+          "type": "Optional",
+          "max_points": 1,
+          "point_structure": "Binary: 0 or 1 point",
+          "criteria": "1 pt: Building located within Pearl Rated community"
+        },
+        "LBo-3": {
+          "title": "Accessible Community Facilities",
+          "type": "Optional",
+          "max_points": 1,
+          "point_structure": "Binary: 0 or 1 point",
+          "criteria": "1 pt: Building within 350m walking distance of any 5 of these facilities: Mosque, Women's/Youth center, School, Library, Post office, Medical services, Grocery, Public open space, Retail (bank/restaurant/shopping)"
+        },
+        "LBo-4": {
+          "title": "Active Urban Environments",
+          "type": "Optional",
+          "max_points": 1,
+          "point_structure": "Binary: 0 or 1 point",
+          "criteria": "1 pt: Provide outdoor spaces for recreation (landscaped areas, playgrounds, sports fields) with programming for communal, women/children only, and men only uses"
+        },
+        "LBo-5": {
+          "title": "Private Outdoor Space",
+          "type": "Optional",
+          "max_points": 1,
+          "note": "Multi-Residential only",
+          "point_structure": "Binary: 0 or 1 point",
+          "criteria": "1 pt: 90% of residential units have private outdoor space \u226510% of unit floor area, minimum 2m x 3m, 95% shaded for 3+ hours (9am-5pm on July 21)"
+        },
+        "LBo-6": {
+          "title": "Public Transport",
+          "type": "Optional",
+          "max_points": 3,
+          "point_structure": "Multi-level: 0-3 points",
+          "criteria": {
+            "2_points": "Within 350m of bus/tram stop with 15-minute max midday frequency",
+            "3_points": "2 points PLUS within 350m of metro or regional rail station"
+          }
+        },
+        "LBo-7": {
+          "title": "Bicycle Facilities",
+          "type": "Optional",
+          "max_points": 2,
+          "point_structure": "Multi-level: 0-2 points",
+          "criteria": {
+            "1_point": "Adequate cycle parking (1 per 500m2 long-term commuter, 1 per 500m2 short-term visitor) with secure, shaded, Sheffield-type stands",
+            "2_points": "1 point PLUS shower/changing facilities (1 shower per 5,000m2 per gender) OR on-site cycle lanes with direct access to storage"
+          }
+        },
+        "LBo-8": {
+          "title": "Preferred Car Parking Spaces",
+          "type": "Optional",
+          "max_points": 1,
+          "point_structure": "Binary: 0 or 1 point",
+          "criteria": "1 pt: 6% of parking spaces reserved for electric/gas/hybrid vehicles or car-sharing, with 50% supplied with charging points"
+        },
+        "LBo-9": {
+          "title": "Travel Plan",
+          "type": "Optional",
+          "max_points": 1,
+          "point_structure": "Binary: 0 or 1 point",
+          "criteria": "1 pt: Develop and implement Travel Plan with car reduction targets (5-10% reduction expected in first 3 years), monitoring mechanisms, and remedial measures"
+        },
+        "LBo-10": {
+          "title": "Light Pollution Reduction",
+          "type": "Optional",
+          "max_points": 1,
+          "point_structure": "Binary: 0 or 1 point",
+          "criteria": {
+            "interior": "Interior lighting angle of maximum candela must not exit windows OR automatic shutoff outside occupancy hours",
+            "exterior": "Non-safety/security lighting off 23:00-07:00hrs; Safety lighting at reduced levels per IESNA RP-33-99; Security lighting motion-activated",
+            "boundary": "Meet IECC 2009 LZ requirements: LZ1 <1 Lux at boundary; LZ2 1.1 max at boundary; LZ3 2.2 max at boundary"
+          }
+        }
+      }
+    }
+  }
+}

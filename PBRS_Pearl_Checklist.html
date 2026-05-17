@@ -408,6 +408,7 @@ function renderCreditRow(c) {
           <span class="req-badge">Required</span>
         </div>
         <div class="credit-name">${c.title}</div>
+        ${c.desc && c.desc !== 'Desc placeholder' ? `<div class="credit-description">${c.desc}</div>` : ''}
         <div class="credit-pts-note">Mandatory for all Pearl ratings - no credit points</div>
       </div>
     </div>`;

@@ -1,0 +1,427 @@
+[
+  {
+    "code": "IDP-1",
+    "title": "Life Cycle Costing",
+    "intent": "To enable effective long-term decisions about building design and construction in order to maximize efficiency over the whole life of the development."
+  },
+  {
+    "code": "IDP-2",
+    "title": "Guest Worker Accommodation",
+    "intent": "To promote fair labor practices in building construction."
+  },
+  {
+    "code": "IDP-3",
+    "title": "Construction Environmental Management",
+    "intent": "To reduce the environmental impacts associated with construction practices."
+  },
+  {
+    "code": "IDP-4",
+    "title": "Building Envelope Verification",
+    "intent": "To ensure the building envelope meets the design intent and minimizes building impacts from condensation, water ingress, air infiltration and improper drainage."
+  },
+  {
+    "code": "IDP-5",
+    "title": "Re-Commissioning",
+    "intent": "To ensure that the building performs as designed to protect occupant health and comfort, as well as providing for ongoing building efficiency."
+  },
+  {
+    "code": "IDP-6",
+    "title": "Sustainability Communication",
+    "intent": "To promote the efficient ongoing operation of the building by enabling occupants to appreciate, understand and therefore contribute to responsible resource use in the building."
+  },
+  {
+    "code": "IDP-R2",
+    "title": "Tenant Fit-Out Design & Construction Guide",
+    "intent": "To ensure that the design and construction of interior space fit-out will contribute to the overall project’s sustainability objectives and targets."
+  },
+  {
+    "code": "IDP-R3",
+    "title": "Basic Commissioning",
+    "intent": "To ensure that the building performs as designed to protect occupant health and provide comfort and ongoing building efficiency."
+  },
+  {
+    "code": "IP-1",
+    "title": "Innovative Cultural & Regional Practices",
+    "intent": "Develop designs that showcase cultural and regional practices, while contributing to the environmental performance of the building."
+  },
+  {
+    "code": "IP-2",
+    "title": "Innovating Practice",
+    "intent": "To reward design and construction practices that result in a significant positive impact in relation to any of the four pillars of Estidama."
+  },
+  {
+    "code": "LBi-1",
+    "title": "Ventilation Quality",
+    "intent": "To promote the provision of building systems that support the wellbeing and comfort of occupants by providing sufficient outside air ventilation."
+  },
+  {
+    "code": "LBi-10",
+    "title": "Safe & Secure Environment",
+    "intent": "To provide a safe and secure environment for building occupants and visitors."
+  },
+  {
+    "code": "LBi-2.1",
+    "title": "Material Emissions: Adhesives & Sealants",
+    "intent": "Confirm the use of low emission adhesives and sealants to encourage the desirability of these spaces in relation to improved occupant health."
+  },
+  {
+    "code": "LBi-2.2",
+    "title": "Material Emissions: Paints & Coatings",
+    "intent": "Confirm the use of low emission Paints and Coatings to encourage the desirability of these spaces in relation to improved occupant health."
+  },
+  {
+    "code": "LBi-2.3",
+    "title": "Material Emissions: Carpet & Hard Flooring",
+    "intent": "Confirm the use of low emission flooring systems to encourage the desirability of these spaces in relation to improved occupant health."
+  },
+  {
+    "code": "LBi-2.4",
+    "title": "Material Emissions: Ceiling Systems",
+    "intent": "Confirm the use of low emission ceiling systems to encourage the desirability of these spaces in relation to improved occupant health."
+  },
+  {
+    "code": "LBi-2.5",
+    "title": "Material Emissions: Formaldehyde Reduction",
+    "intent": "To mitigate the health risks associated with formaldehyde in building materials and products."
+  },
+  {
+    "code": "LBi-3",
+    "title": "Construction Indoor Air Quality Management",
+    "intent": "To implement construction practices that promote a high degree of indoor air quality (IAQ) for construction workers and building occupants."
+  },
+  {
+    "code": "LBi-4",
+    "title": "Car Park Air Quality Management",
+    "intent": "To facilitate the provision of adequate air quality within enclosed car parks."
+  },
+  {
+    "code": "LBi-5.1",
+    "title": "Thermal Comfort & Controls: Thermal Zoning",
+    "intent": "To promote logical thermal zoning strategies in relation to the on-floor ventilation system, to achieve improved occupant comfort, future flexibility and energy efficiency."
+  },
+  {
+    "code": "LBi-5.2",
+    "title": "Thermal Comfort & Controls: Occupant Control",
+    "intent": "To promote projects that provide individual comfort controls for the wellbeing, productivity and thermal comfort of occupants."
+  },
+  {
+    "code": "LBi-5.3",
+    "title": "Thermal Comfort & Controls: Thermal Comfort Modeling",
+    "intent": "To promote projects that are designed to deliver optimal thermal comfort."
+  },
+  {
+    "code": "LBi-6",
+    "title": "High Frequency Lighting",
+    "intent": "To promote indoor visual comfort through the use of high frequency lighting solutions."
+  },
+  {
+    "code": "LBi-7",
+    "title": "Daylight & Glare",
+    "intent": "To promote building designs that maximize the use of natural daylight indoors."
+  },
+  {
+    "code": "LBi-8",
+    "title": "Views",
+    "intent": "To provide building occupants with a visual connection to the outdoors."
+  },
+  {
+    "code": "LBi-9",
+    "title": "Indoor Noise Pollution",
+    "intent": "Provide acoustic conditions that are commensurate with the sensitivity and/or acoustic privacy requirements of the proposed use."
+  },
+  {
+    "code": "LBi-R1",
+    "title": "Healthy Ventilation Delivery",
+    "intent": "To protect the quality of air drawn into buildings for ventilation and to ensure minimum delivery of outdoor fresh air."
+  },
+  {
+    "code": "LBi-R2",
+    "title": "Smoking Control",
+    "intent": "To eliminate or minimize exposure of building occupants to the harmful effects of tobacco smoke."
+  },
+  {
+    "code": "LBi-R3",
+    "title": "Legionella Prevention",
+    "intent": "To manage the risk of Legionella in water based building systems."
+  },
+  {
+    "code": "LBo-1",
+    "title": "Improved Outdoor Thermal Comfort",
+    "intent": "To improve outdoor thermal comfort during transition months and further reduce thermal discomfort during summer months in public spaces and walkways."
+  },
+  {
+    "code": "LBo-10",
+    "title": "Light Pollution Reduction",
+    "intent": "To encourage the reduction of night time light pollution and its associated impacts on human and ecological health."
+  },
+  {
+    "code": "LBo-2",
+    "title": "Pearl Rated Communities",
+    "intent": "To encourage new buildings to be built within Pearl Rated communities."
+  },
+  {
+    "code": "LBo-3",
+    "title": "Accessible Community Facilities",
+    "intent": "To minimize reliance on private car use by locating buildings in areas with a mix of uses and amenities."
+  },
+  {
+    "code": "LBo-4",
+    "title": "Active Urban Environments",
+    "intent": "To encourage active lifestyles by providing building occupants and users with recreational public open spaces."
+  },
+  {
+    "code": "LBo-5",
+    "title": "Private Outdoor Space",
+    "intent": "To improve the occupiers quality of life by providing private outdoor space."
+  },
+  {
+    "code": "LBo-6",
+    "title": "Public Transport",
+    "intent": "To encourage the use of public transport by building occupants and visitors."
+  },
+  {
+    "code": "LBo-7",
+    "title": "Bicycle Facilities",
+    "intent": "To minimize greenhouse gas emissions, improve connectivity and encourage bicycle use (particularly during the cooler winter months)."
+  },
+  {
+    "code": "LBo-8",
+    "title": "Preferred Car Parking Spaces",
+    "intent": "To encourage car sharing and more fuel-efficient forms of personal transport."
+  },
+  {
+    "code": "LBo-9",
+    "title": "Travel Plan",
+    "intent": "To reduce single occupancy vehicle use by managing the demand for travel and by maximizing the availability of alternatives to traveling by car."
+  },
+  {
+    "code": "LBo-R1",
+    "title": "Plan 2030",
+    "intent": "To ensure that all new development supports the vision for the Emirate of Abu Dhabi, as defined by the applicable Plan 2030, and/or Development Code, and/ or Area Plan."
+  },
+  {
+    "code": "LBo-R2",
+    "title": "Urban Systems Assessment",
+    "intent": "To ensure that, before the design process begins, a thorough understanding of the project site is developed within its urban context to better inform project programming, connectivity and built form. Requirements GENERAL Demonstrate that, before the start of the design process and site clearance, an urban systems assessment has been carried out for the project site and at the following scales: Local, Sub-regional, and Regional scale. Based on the urban systems analysis, identify opportunities and constraints associated with the development and present them in an Urban Systems Assessment Report. ADDITIONAL REQUIREMENT/CLARIFICATIONS None Requirement This is a requirement. There are no Credit Points awarded. Achievement"
+  },
+  {
+    "code": "LBo-R3",
+    "title": "Outdoor Thermal Comfort Strategy",
+    "intent": "To increase outdoor thermal comfort during transition months and reduce thermal discomfort during summer months in public spaces and walkways."
+  },
+  {
+    "code": "NS-1",
+    "title": "Reuse of Land",
+    "intent": "To encourage new developments to reuse land that has already been built on and infill existing urban areas rather than using undisturbed land."
+  },
+  {
+    "code": "NS-2",
+    "title": "Remediation of Contaminated Land",
+    "intent": "To encourage and promote the remediation of land for building development."
+  },
+  {
+    "code": "NS-3",
+    "title": "Ecological Enhancement",
+    "intent": "To enhance the ecological value of the site."
+  },
+  {
+    "code": "NS-4",
+    "title": "Habitat Creation & Restoration",
+    "intent": "To restore or re-create a habitat that is self sustaining."
+  },
+  {
+    "code": "NS-R1",
+    "title": "Natural Systems Assessment",
+    "intent": "To ensure that at the commencement of the design process, the environmental baseline conditions surrounding, connected to and on the site are considered and assessed."
+  },
+  {
+    "code": "NS-R2",
+    "title": "Natural Systems Protection",
+    "intent": "To protect significant and valuable Natural Systems assets identified in NS-R1 Natural Systems Assessment."
+  },
+  {
+    "code": "NS-R3",
+    "title": "Natural Systems Design & Management Strategy",
+    "intent": "To minimize demand for resources, promote soil protection and enhancement and ensure the long term survival and management of landscaped/habitat areas."
+  },
+  {
+    "code": "PW-1",
+    "title": "Improved Interior Water Use Reduction",
+    "intent": "To promote further reductions in the project’s interior potable water consumption through the use of efficient fixtures and appliances, and the use of recycled water."
+  },
+  {
+    "code": "PW-2.1",
+    "title": "Exterior Water Use Reduction: Landscaping",
+    "intent": "To minimize landscaping water demands through effective plant selection, irrigation strategies, and promoting the use of recycled water."
+  },
+  {
+    "code": "PW-2.2",
+    "title": "Exterior Water Use Reduction: Heat Rejection",
+    "intent": "To reduce potable water use for heat rejection by promoting the use of recycled water and/or alternatives to water-based heat rejection."
+  },
+  {
+    "code": "PW-2.3",
+    "title": "Exterior Water Use Reduction: Water Features",
+    "intent": "Reduce potable water use in exterior water features by minimizing evaporative loss and through the use of recycled water."
+  },
+  {
+    "code": "PW-3",
+    "title": "Water Monitoring & Leak Detection",
+    "intent": "To encourage the provision of metering facilities that allow the water consumption of the building to be recorded and monitored to allow future improvement and understanding of the use of water in buildings."
+  },
+  {
+    "code": "PW-4",
+    "title": "Stormwater Management",
+    "intent": "To minimize peak stormwater discharge and protect the stormwater drainage system and receiving water bodies from pollutant loading during and after storm events."
+  },
+  {
+    "code": "PW-R1",
+    "title": "Minimum Interior Water Use Reduction",
+    "intent": "To develop and implement a comprehensive water strategy during the early stages of design as a tool to minimize the project’s interior potable water consumption."
+  },
+  {
+    "code": "PW-R2",
+    "title": "Exterior Water Monitoring",
+    "intent": "To encourage the provision of metering facilities on all exterior water uses enabling effective management of outdoor water consumption and prevention of leaks."
+  },
+  {
+    "code": "RE-1",
+    "title": "Improved Energy Performance",
+    "intent": "To promote further reductions in the projects energy consumption and hence carbon emissions associated with building operation."
+  },
+  {
+    "code": "RE-2",
+    "title": "Cool Building Strategies",
+    "intent": "To determine the most effective solution to reducing a building’s cooling demand by incorporating passive design strategies as a priority."
+  },
+  {
+    "code": "RE-3",
+    "title": "Energy Efficient Appliances",
+    "intent": "To minimise the energy consumed by common building appliances."
+  },
+  {
+    "code": "RE-4",
+    "title": "Vertical Transportation",
+    "intent": "To promote projects that specify and install energy efficient vertical movement and transportation systems"
+  },
+  {
+    "code": "RE-5",
+    "title": "Peak Load Reduction",
+    "intent": "To reduce energy demand and consequent increased infrastructure requirements to cater for loads at peak use times through efficient building and services design and site- based renewable energy generation."
+  },
+  {
+    "code": "RE-6",
+    "title": "Renewable Energy",
+    "intent": "To reward projects for the use of renewable technologies, therefore reducing the carbon emissions associated with building operation and the reliance on fossil fuel based power generation."
+  },
+  {
+    "code": "RE-7",
+    "title": "Global Warming Impacts of Refrigerants & Fire Suppression Systems",
+    "intent": "To promote the selection of refrigerants and fire suppression systems that minimise impacts on the environment."
+  },
+  {
+    "code": "RE-R1",
+    "title": "Minimum Energy Performance",
+    "intent": "To create a decision-support tool to assist the project team in making informed decisions about the options, implications and benefits of various aspects of the building design in order to achieve a minimum level of energy efficiency."
+  },
+  {
+    "code": "RE-R2",
+    "title": "Energy Monitoring & Reporting",
+    "intent": "To encourage the provision of metering facilities that allow the energy performance of the building to be recorded and monitored to allow future improvement and understanding of the use of energy in buildings."
+  },
+  {
+    "code": "RE-R3",
+    "title": "Ozone Impacts of Refrigerants & Fire Suppression Systems",
+    "intent": "To promote the selection of refrigerants and fire suppression systems that minimise impacts on the environment"
+  },
+  {
+    "code": "SM-1",
+    "title": "Non-Polluting Materials",
+    "intent": "To promote the selection of materials that do not have long-term negative impacts on human health or pollute natural systems."
+  },
+  {
+    "code": "SM-10",
+    "title": "Recycled Materials",
+    "intent": "To increase the demand for recycled materials to reduce the amount of waste going to disposal."
+  },
+  {
+    "code": "SM-11",
+    "title": "Rapidly Renewable Materials",
+    "intent": "To increase the use of fast growing materials as an alternative to slow growing materials and finite resources."
+  },
+  {
+    "code": "SM-12",
+    "title": "Reused or Certified Timber",
+    "intent": "To encourage the use of timber sourced from legal and sustainable sources."
+  },
+  {
+    "code": "SM-13",
+    "title": "Improved Construction Waste Management",
+    "intent": "To further reduce the long-term environmental impacts associated with construction waste collection, transport and disposal."
+  },
+  {
+    "code": "SM-14",
+    "title": "Improved Operational Waste Management",
+    "intent": "To further reduce the long-term environmental impacts associated with operational waste collection, transport and disposal."
+  },
+  {
+    "code": "SM-15",
+    "title": "Organic Waste Management",
+    "intent": "To encourage the recovery and reuse of organic waste from building operations including landscaping and food waste."
+  },
+  {
+    "code": "SM-2",
+    "title": "Design for Materials Reduction",
+    "intent": "To reduce the overall amount of material used in the development of buildings."
+  },
+  {
+    "code": "SM-3",
+    "title": "Design for Flexibility & Adaptability",
+    "intent": "To lengthen the useful life of buildings through designs that are easily adaptable for other program uses."
+  },
+  {
+    "code": "SM-4",
+    "title": "Design for Disassembly",
+    "intent": "To facilitate the future deconstruction and reuse of buildings and their structural and envelope components."
+  },
+  {
+    "code": "SM-5",
+    "title": "Modular Flooring Systems",
+    "intent": "To minimize waste associated with replacement of flooring systems through the use of modular systems."
+  },
+  {
+    "code": "SM-6",
+    "title": "Design for Durability",
+    "intent": "To promote a long life building by protecting its components from condensation, water ingress, improper drainage and protecting vulnerable areas of the building envelope and surroundings."
+  },
+  {
+    "code": "SM-7",
+    "title": "Building Reuse",
+    "intent": "To encourage the reuse and improvement of existing building stock, reduce waste and other environmental impacts associated with new materials extraction, manufacturing, and transport."
+  },
+  {
+    "code": "SM-8",
+    "title": "Material Reuse",
+    "intent": "To promote the selection of previously used or salvaged materials in order to reduce demand on natural resources and reduce waste"
+  },
+  {
+    "code": "SM-9",
+    "title": "Regional Materials",
+    "intent": "To encourage the selection of building materials that have reduced transport impacts and promotes regional economies"
+  },
+  {
+    "code": "SM-R1",
+    "title": "Hazardous Materials Elimination",
+    "intent": "To eliminate exposure of building occupants to asbestos and minimize toxic effects of chromated copper arsenate (CCA) treated timber on people and the environment."
+  },
+  {
+    "code": "SM-R2",
+    "title": "Basic Construction Waste Management",
+    "intent": "To reduce the long-term environmental impacts associated with construction waste collection, transport and disposal."
+  },
+  {
+    "code": "SM-R3",
+    "title": "Basic Operational Waste Management",
+    "intent": "To reduce the long-term environmental impacts associated with operational waste collection, transport and disposal."
+  }
+]

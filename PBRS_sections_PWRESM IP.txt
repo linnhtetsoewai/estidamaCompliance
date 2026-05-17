@@ -1,0 +1,2517 @@
+
+
+====================================================================================================
+SECTION: PW
+====================================================================================================
+
+PW-R1: Minimum Interior Water Use Reduction
+Intent To develop and implement a comprehensive water strategy during the early stages of
+design as a tool to minimize the project’s interior potable water consumption.
+Credit GENERAL
+Requirements
+Demonstrate that the project’s predicted interior potable water consumption will be no
+greater than the baseline building water consumption using efficiency measures only.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Requirement This is a requirement. There are no Credit Points awarded.
+Achievement
+Credit
+(cid:2) Building Water Calculator confirming that the building’s predicted interior potable
+Submission: water consumption will be no greater than the baseline building interior potable
+Design Rating water consumption using efficiency measures only;
+(cid:2) Brief narrative describing all proposed water conservation strategies;
+(cid:2) Extracts from specifications for all proposed fixtures and fittings indicating flow
+rates and flow regulation systems; and
+(cid:2) Extracts from specifications for all proposed appliances including information on
+their water use.
+Credit
+(cid:2) Updated Building Water Calculator (if changed from design), confirming that the
+Submission: building’s predicted interior potable water consumption is no greater than the
+Construction baseline building interior potable water consumption using efficiency measures
+Rating only;
+(cid:2) Brief narrative describing all installed water conservation strategies;
+(cid:2) Manufacturer information for all installed fixtures and fittings indicating flow rates
+and flow regulation systems;
+(cid:2) Manufacturer information for all installed appliances including information on their
+water use; and
+(cid:2) Photographic evidence confirming installation of specified fixtures and appliances.
+Calculations and (cid:1) The baseline and proposed building interior water consumption is determined using
+Methodology the Building Water Calculator which serves as the foundation for numerous
+calculations within the Precious Water section.
+(cid:1) Interior water use is defined as the water demand that relates solely to fixtures,
+fittings, and appliances.
+(cid:1) Efficiency measures are all measures which reduce the overall demand for water
+from the baseline requirement. Reductions in potable water cannot be claimed
+through the use of any recycled water within this prerequisite.
+(cid:1) Calculations are based on building occupancy and include all interior water use
+relating to fixtures, fittings and appliances.
+(cid:1) All tenant fit-out areas that are not under developer control must be modelled
+identically in both the baseline and proposed building unless tenant guidelines
+prescribing relied upon fixture flow rates etc are provided as part of IDP-R2 Tenant
+Fit-Out Design & Construction Guide.
+(cid:1) Baseline flow rates/volumes are based on the following:
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 118 of 223
+Fixture of Fixture Fitting Percentage Reduction
+Bathroom Taps, private 6 liters/min at 417.7 kPa
+Bathroom Taps, public 1.9 liters/min at 417.7 kPa
+Shower Head 9.5 liters/min at 551.6 kPa
+Kitchen Sink Faucet 6 liters/min at 417.7 kPa
+Bidets 6 liters/min
+Urinal 0.5 liters/flushing cycle
+Toilets (Dual Flush) 6/4 liters/flushing cycle (full/low)
+Occupancy
+(cid:1) Non-Residential
+o Occupancy is determined based on the number of Full Time Equivalent
+(FTE) permanent occupants and transient visitors.
+o The FTE is determined based on a typical 8 hour working day. The
+permanent FTE is then calculated as follows :
+o Transient occupancies must be input as daily totals.
+(cid:1) Residential
+o Covers all primary spaces used for living and / or sleeping. Occupancy
+is based on number and size of residential units within the building.
+(cid:1) Mixed Use
+o Where a building is mixed use i.e. contains occupancies with different
+fixture uses, this will need to be documented within the building water
+calculator. A maximum of 8 different fixture use occupancies may be
+included (6 Non-Residential and 2 Residential).
+Example :
+A 40 storey building located in downtown Abu Dhabi includes ground floor retail, 20
+office floors, 15 multi-residential floors and 4 penthouse floors. Only the penthouse
+floors are supplied with baths.
+Based on the above, 4 different fixture uses would be required as follows :
+(cid:1) retail,
+(cid:1) office
+(cid:1) multi-residential
+(cid:1) penthouse
+References (cid:1) Pearl Rating System Building Water Calculator
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 119 of 223
+PW-R2: Exterior Water Monitoring
+Intent To encourage the provision of metering facilities on all exterior water uses enabling
+effective management of outdoor water consumption and prevention of leaks.
+Credit
+GENERAL
+Requirements
+Demonstrate that easily accessible and clearly labelled water meters are provided and
+capable of monitoring the water consumption of, at a minimum, the following exterior
+water uses (where present):
+(cid:1) Heat rejection;
+(cid:1) External hose bibs;
+(cid:1) Irrigation systems;
+(cid:1) Swimming pools; and
+(cid:1) Water features.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Requirement This is a requirement. There are no Credit Points awarded.
+Achievement
+Credit
+(cid:2) Brief narrative describing how the requirements of the credit will be achieved;
+Submission:
+(cid:2) Extracts from specifications and MEP drawings clearly indicating the type, extent
+Design Rating
+and locations of all metering, and central monitoring system; and
+(cid:2) List of all exterior uses and corresponding metering equipment.
+Credit
+(cid:2) Updated narrative describing how the requirements of the credit have been met;
+Submission:
+(cid:2) Manufacturer’s data and as-built drawings clearly indicating the type, extent and
+Construction
+locations of all metering, and central monitoring system;
+Rating
+(cid:2) Photographic evidence confirming the installation of specified meters and central
+monitoring system; and
+(cid:2) Written commitment from the building owner to submit all exterior water
+monitoring data to Estidama (if requested).
+Calculations and (cid:1) All meters must have data logging capability and be connected to a central
+Methodology monitoring system so that information on the exterior water consumption can be
+recorded. The monitoring system must have, at a minimum, the following capability:
+(cid:1) Provide hourly, daily, weekly, monthly and annual water consumption for each
+end-use;
+(cid:1) Compare consumption to previous days, weeks, months and years for trend
+analysis;
+(cid:1) Determine ‘out-of-range’ values to alert building operators to unusually high
+consumption; and
+(cid:1) Record peak water consumption for each end-use.
+(cid:1) The Building owner must provide a written commitment to supply all water
+monitoring data to Estidama (if requested). All reported information will be treated
+as confidential.
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 120 of 223
+PW-1: Improved Interior Water Use Reduction
+Intent To promote further reductions in the project’s interior potable water consumption
+through the use of efficient fixtures and appliances, and the use of recycled water.
+Credit
+Requirements GENERAL
+(cid:1) 1-15 Credit Points: Demonstrate using the Building Water Calculator that the
+proposed building has achieved the following reduction in potable water consumption
+compared to the baseline building:
+Points Percentage
+Achieved Reduction
+1 4%
+2 8%
+3 12%
+4 16%
+5 20%
+6 24%
+7 28%
+8 32%
+9 36%
+10 40%
+11 44%
+12 48%
+13 52%
+14 56%
+15 60%
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+Points
+CREDIT POINTS REQUIREMENTS
+15 Design Rating
+(maximum)
+Achieve further reductions in the proposed building
+1-15 potable water consumption compared to the baseline
+building.
+15 Construction Rating
+(maximum)
+Achieve further reductions in the proposed building
+1-15 potable water consumption compared to the baseline
+building.
+Credit
+(cid:2) Completed Building Water Calculator confirming the percentage reduction in
+Submission: potable water consumption compared to the baseline;
+Design Rating
+(cid:2) Brief narrative describing all proposed water conservation strategies;
+(cid:2) Extracts from specifications for all proposed fixtures and fittings indicating flow
+rates and flow regulation systems;
+(cid:2) Extracts from specifications for all proposed appliances including information on
+their water use; and
+(cid:2) A composite utility schematic illustrating routing of recycled water mainline and
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 121 of 223
+laterals to all interior non-potable demands (where applicable).
+Credit
+(cid:2) Updated version of the Building Water Calculator (if changed from design),
+Submission: confirming the percentage reduction in potable water consumption compared to
+Construction the baseline;
+Rating
+(cid:2) Updated narrative describing all installed water conservation strategies;
+(cid:2) Manufacturer information for all installed fixtures and fittings indicating flow rates
+and flow regulation systems;
+(cid:2) Manufacturer information for all installed appliances including information on their
+water use;
+(cid:2) As-built composite utility schematic illustrating routing of recycled water mainline
+and laterals to all interior non-potable demands (where applicable);
+(cid:2) Photographic evidence confirming installation of specified fixtures and appliances;
+and
+(cid:2) Photographic evidence confirming recycled water pipes have been separately color
+coded from pipes containing potable water (where applicable).
+Calculations and (cid:1) The methodology is the same as PW-R1 Minimum Interior Water Use Reduction,
+Methodology except that further reductions in the building interior potable water consumption
+within this credit may be achieved through the use recycled water.
+(cid:1) All pipes containing recycled water must be color coded in order to easily
+distinguish them from potable water pipes.
+References (cid:1) Pearl Rating System Building Water Calculator
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 122 of 223
+PW-2.1: Exterior Water Use Reduction: Landscaping
+Intent To minimize landscaping water demands through effective plant selection, irrigation
+strategies, and promoting the use of recycled water.
+Credit
+GENERAL
+Requirements
+Plant Selection
+Demonstrate that the average irrigation requirement for all landscape areas (as
+outlined within the Calculations and Methodologies section) meets the following:
+(cid:1) 2 Credit Points: Average landscape irrigation demand < 4 liters/m2/day
+(cid:1) 4 Credit Points: Average landscape irrigation demand < 2 liters/m2/day
+Irrigation System
+(cid:1) 1 Credit Point: Demonstrate that a Water Efficient Irrigation System has been
+incorporated into the landscape design.
+Irrigation System Management
+(cid:1) 1 Credit Point: Demonstrate that an Irrigation Operation and Maintenance Plan has
+been developed.
+Recycled Water
+(cid:1) 2 Credit Points:
+o Achieve at least two credit points related to Plant Selection; and
+o Demonstrate that 100% of the exterior irrigation demand can be served using
+the Exterior Water Allowance (as outlined in the Calculations and Methodology
+section); and
+o Where recycled water is not immediately available, demonstrate that a
+recycled water mainline loop has been installed which allows for the future
+switch from potable to recycled water for exterior irrigation demands when it
+becomes available; and
+o All pipes containing recycled water must be color coded in order to easily
+distinguish them from potable water pipes.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+Schools
+(cid:1) 2 Credit Points: Where playing fields are present onsite demonstrate that non-
+water turf substitutes are installed in place of turf.
+Awarding Credit REQUIREMENTS
+CREDIT POINTS
+Points
+8-10
+Design Rating
+(maximum)
+Demonstrate that the average irrigation requirement for all
+2-4
+landscaped areas has been minimized.
+Demonstrate that a water efficient irrigation system has
+1
+been incorporated into the landscape design.
+Demonstrate that best practices for ongoing system
+1
+management and operation have been established.
+Demonstrate that 100% of the exterior irrigation demand
+can be served using the Exterior Water Allowance, and that
+2
+a recycled water mainline loop has been installed where
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 123 of 223
+recycled water is not immediately available.
+Schools only: Demonstrate that non-water turf substitutes
+2
+are installed in place of turf.
+8-10
+Construction Rating
+(maximum)
+Demonstrate that the average irrigation requirement for all
+2-4
+landscaped areas has been minimized.
+Demonstrate that a water efficient irrigation system has
+1
+been incorporated into the landscape design.
+Demonstrate that best practices for ongoing system
+1
+management and operation have been established.
+Demonstrate that 100% of the exterior irrigation demand
+can be served using the Exterior Water Allowance, and that
+2
+a recycled water mainline loop has been installed where
+recycled water is not immediately available.
+Schools only: Demonstrate that non-water turf substitutes
+2
+are installed in place of turf.
+Credit Plant Selection
+Submission: (cid:2) Low Water Use Landscaping Strategy including:
+Design Rating
+(cid:3) Completed Building Water Calculator;
+(cid:3) Site plan illustrating landscape areas, highlighting areas of hardscape and
+softscape along with their irrigation requirements, as well as water feature /
+swimming pool areas;
+(cid:3) Calculations detailing how the total annual average irrigation demand of all
+external softscape areas (liters/day) is determined; and
+(cid:3) Plant schedules for the development’s landscape program that includes the
+following key data:
+(cid:1) Plant names (common and botanic); and
+(cid:1) Annual water demand at third year of growth.
+Irrigation System
+(cid:2) Irrigation Strategy including:
+(cid:3) Narrative describing the project’s irrigation approach, technology to be used
+and anticipated irrigation efficiency;
+(cid:3) System schematic indicating mainline routing, laterals, irrigation controller and
+meter locations as well as proposed landscape/hydrozones;
+(cid:3) System specifications including cut sheets and/or manufacturer’s specifications
+for the following equipment:
+(cid:1) Master controller(s);
+(cid:1) Valves; and
+(cid:1) Monitoring equipment including moisture sensors, wind sensors etc.
+(cid:2) Soil Amendment Strategy including:
+(cid:3) Narrative describing moisture retention approach for soil amendments
+including type, location, extent of application, and frequency of reapplication
+(if needed) to maintain effectiveness; and
+(cid:3) Techniques to be used to reduce plant evapotranspiration identified on a site
+plan.
+Irrigation System Management
+(cid:2) Monitoring Strategy including:
+(cid:3) Brief narrative describing the monitoring strategy and how it is integrated into
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 124 of 223
+the overall landscaping plan;
+(cid:3) System specifications including cut sheets and/or manufacturer’s specifications
+for the following equipment:
+(cid:1) Override sensors;
+(cid:1) Backflow valves; and
+(cid:1) Separate meters.
+(cid:2) Drawings showing the location of each device on a site plan.
+Recycled Water
+(cid:2) Completed Building Water Calculator confirming that 100% of the exterior irrigation
+demand can be served using the Exterior Water Allowance; and
+(cid:2) A composite utility schematic illustrating routing of recycled water mainline and
+laterals.
+Schools Only
+(cid:2) Confirmation that all playing fields use turf substitutes requiring no irrigation
+water;
+(cid:2) Site plans indicating location and size of playing fields; and
+(cid:2) Specification/manufacturer’s details of turf substitutes.
+Credit
+(cid:2) Revised As-Built documentation as per Design Rating; and
+Submission:
+(cid:2) Photographs of the installed irrigation systems, landscaping, school playing fields
+Construction
+(where applicable), water recycling systems (where installed) and routing of
+Rating
+recycled water mainline and laterals indicating their color code.
+Calculations and Plant Selection
+Methodology (cid:1) Landscaped area refers to the plot area excluding the building footprint and all
+water feature / swimming pool areas, and is made up of all hardscape and
+softscape areas. Where communal rooftop amenities are provided (e.g.
+podium/skylight gardens), any landscape associated with these spaces must also be
+included in the calculation.
+The average irrigation demand for all landscaped areas is calculated as follows:
+A = Plot Area,
+P
+A = Building Footprint Area,
+B
+A = Softscape Area (grade level)
+S
+A = Water Feature/Swimming Pool Area (grade level),
+W
+A = Roof Amenity Area
+RA
+A = Softscape Area (roof level),
+RS
+A = Water Feature/Swimming Pool Area (roof level)
+RW
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 125 of 223
+I=Total annual average irrigation demand of all external softscape areas (liters/day)
+S
+Note: Areas associated with school playing fields are excluded from the average
+landscape irrigation requirement calculation.
+Irrigation System
+A water efficient irrigation system must:
+(cid:1) Eliminate all surface spray components (except in public parks or playing fields);
+(cid:1) Irrigate only during non-daylight hours (except if sub-surface);
+(cid:1) Include moisture sensors that control the irrigation system to irrigate only when
+required;
+(cid:1) Provide irrigation zones, with independently controlled valves, segregated by plant
+water needs; and
+(cid:1) Utilize mulch and/or soil amendment techniques to reduce evapotranspiration.
+Irrigation System Management
+An Irrigation Operation and Maintenance Plan should include:
+(cid:1) Regular maintenance and operation efficiency performance monitoring;
+(cid:1) Procedures for alerting operator and shutting system down when flows exceed
+design range due to mainline, lateral, valve or emitter failure or there is a leak
+detected; and
+(cid:1) Irrigation systems must demonstrate that they incorporate sensors and valves
+connected to a central system by:
+(cid:1) Providing override sensors tied to a centralized computer controller with a
+feedback loop to shut down zones that are malfunctioning; and
+(cid:1) Including separate meters and backflow prevention at point of mainline
+connection.
+Recycled Water
+The Exterior Water Allowance, E , is based on achieving a water balance between the
+WA
+building wastewater and the project’s exterior uses (irrigation, heat rejection and
+water features). It is a notional value that represents the amount of water that is
+allowed for exterior uses. Although recycled water may not physically be used for the
+project’s exterior demand, it is offsetting the potable demand of exterior uses within
+the Emirate of Abu Dhabi and therefore the focus is placed on achieving this balance
+irrespective of whether recycled water is physically used.
+Note: This offset approach only applies to exterior uses. To document reductions in
+potable water within the building (as in PW-1), recycled water must physically be used
+within the building in order to achieve reductions attributed to recycled water.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 126 of 223
+The E that is available to serve the projects exterior water demand is determined as
+WA
+follows:
+Case 1 : Project not connected to onsite or private offsite wastewater treatment
+facility
+B = Total Building Wastewater
+W
+E = Municipal recycled water supply efficiency
+M
+R = Volume of recycled water received from municipal supply that is supplied to the
+MB
+building
+Case 2 : Project connected to onsite or private offsite wastewater treatment facility
+(cid:1) Exterior Water Allowance is based on the proportion of onsite/offsite recycled
+water used for exterior purposes and any remaining building wastewater sent for
+municipal treatment as follows:
+B = Total Building Wastewater
+W
+B = Volume of B sent to onsite/private offsite treatment
+OT W
+B = Volume of B sent to municipal system = B – B
+M W W OT
+R = Volume of recycled water received from municipal supply that is supplied to the
+MB
+building
+E = Municipal recycled water supply efficiency
+M
+R = Volume of onsite/private offsite recycled water supplied to building
+OB
+E = Onsite/private offsite wastewater treatment plant efficiency
+OT
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 127 of 223
+R = Volume of onsite/private offsite recycled water supplied to exterior uses
+OE
+(cid:1) E must not be ‘double counted’ towards other uses such as heat rejection and/or
+WA
+water features. The design team must decide upon the most appropriate use of the
+Exterior Water Allowance in order to balance their building wastewater volume with
+their exterior water demand. The overall water balance must be documented in
+the Building Water Calculator.
+Example Calculation: Plant Selection
+A multi-residential building has a building footprint of 6,000 m2 and is located within a
+16,000m2 plot. It has a 500m2 sky garden located on the roof which contains 100m2 of
+softscape requiring 6 l/m2/day and a 10m2 water feature. At the base of the building
+there is softscape requiring 8l/m2/day which covers an area of 3,000m2. Adjacent to
+the ground level softscape is a 150m2 water feature.
+Plot Area, A 16,000 m2
+P
+Building Footprint, A 6,000 m2
+B
+Softscape Area (grade level), A 3,000 m2
+S
+Softscape Irrigation Demand (grade level), I 8 l/m2/day
+S
+Water Feature Area (grade level), A 150 m2
+W
+Roof Amenity Area, A 500 m2
+RA
+Softscape Area (roof level), A 100 m2
+RS
+Softscape Irrigation Demand (roof level), I 6 l/m2/day
+RS
+Water Feature Area (roof level), A 10 m2
+RW
+Total annual average irrigation demand of all 24,600 Liters / day
+external softscape areas, I
+S
+References (cid:1) Pearl Rating System Building Water Calculator
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 128 of 223
+PW-2.2: Exterior Water Use Reduction: Heat Rejection
+Intent To reduce potable water use for heat rejection by promoting the use of recycled water
+and/or alternatives to water-based heat rejection.
+Credit
+GENERAL
+Requirements
+Water-Based Heat Rejection
+Demonstrate that the following percentage of the projects cooling tower/district
+cooling water make-up requirements can be served using the Exterior Water Allowance
+(as outlined in the Calculations and Methodology section):
+(cid:1) 2 Credit Points: > 25%
+(cid:1) 3 Credit Points: > 50%
+(cid:1) 4 Credit Points: > 75%
+(cid:1) 5 Credit Points: 100%
+AND
+Where cooling towers are installed onsite and recycled water is not immediately
+available, demonstrate that a recycled water mainline loop has been installed which
+allows for the future switch from potable to recycled water in onsite cooling towers
+when it becomes available. All pipes containing recycled water must be color coded in
+order to easily distinguish them from potable water pipes.
+OR
+No Water Used for Heat Rejection
+(cid:1) 8 Credit Points: Demonstrate that the project uses no water for heat rejection
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+Points REQUIREMENTS
+CREDIT POINTS
+8
+Design Rating
+(maximum)
+Demonstrate that a percentage of the projects cooling
+2-5 tower/district cooling water make-up requirements can be
+served using the Exterior Water Allowance.
+8 Demonstrate that no water is required for heat rejection.
+8
+Construction Rating
+(maximum)
+Demonstrate that a percentage of the projects cooling
+2-5 tower/district cooling water make-up requirements can be
+served using the Exterior Water Allowance.
+8 Demonstrate that no water is required for heat rejection.
+Credit Water-Based Heat Rejection
+Submission:
+(cid:2) Building Water Calculator confirming the percentage of the projects cooling
+Design Rating
+tower/district cooling water make-up requirements that can be served using the
+Exterior Water Allowance; and
+(cid:2) A composite utility schematic illustrating routing of recycled water mainline and
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 129 of 223
+laterals.
+No Water Used for Heat Rejection
+(cid:2) Confirmation that no water is used for heat rejection.
+Credit Water-Based Heat Rejection
+Submission:
+(cid:2) Updated Building Water Calculator confirming the percentage of the projects
+Construction
+cooling tower/district cooling water make-up requirements that can be served
+Rating using the Exterior Water Allowance;
+(cid:2) As-built composite utility schematic illustrating routing of recycled water mainline
+and laterals; and
+(cid:2) Photographs of the installed cooling towers/district cooling plant, water recycling
+systems (where installed) and routing of recycled water mainline and laterals
+indicating their color code.
+No Water Used for Heat Rejection
+(cid:2) Confirmation that no water is used for heat rejection.
+Calculations and The projects cooling tower/district cooling water make-up requirements must be based
+Methodology on the proposed buildings cooling demand determined within RE-R1 Minimum Energy
+Performance / RE-1 Improved Energy Performance.
+The Exterior Water Allowance, E , that is available to serve the projects exterior
+WA
+water demand is determined as per the Calculations and Methodology section of PW-
+2.1: Exterior Water Use Reduction: Landscaping
+E must not be ‘double counted’ towards other uses such as irrigation and/or water
+WA
+features. The design team must decide upon the most appropriate use of the Exterior
+Water Allowance in order to balance their building wastewater volume with their
+exterior water demand. The overall water balance must be documented in the Building
+Water Calculator.
+References (cid:1) Pearl Rating System Building Water Calculator
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 130 of 223
+PW-2.3: Exterior Water Use Reduction: Water Features
+Intent Reduce potable water use in exterior water features by minimizing evaporative loss and
+through the use of recycled water.
+Credit
+GENERAL
+Requirements
+2 Credit Points: Demonstrate that the water make-up requirements for all exterior
+water features can be served using the Exterior Water Allowance (as outlined in the
+calculations and methodology section); and
+Where recycled water is not immediately available, demonstrate that a recycled water
+mainline loop has been installed which allows for the future switch from potable to
+recycled water for exterior water feature demands when it becomes available. All pipes
+containing recycled water must be color coded in order to easily distinguish them from
+potable water pipes.
+1 Credit Points: Demonstrate that all external swimming pools are supplied with
+permanently installed retractable pool blankets.
+Or
+4 Credit Points: Demonstrate that there are no exterior water features or swimming
+pools.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+Points CREIDT POINTS REQUIREMENTS
+4 Design Rating
+(maximum)
+2 Demonstrate that the water make-up requirements for all
+exterior water features can be served using the Exterior
+Water Allowance.
+1 Demonstrate that all external swimming pools are provided
+with adequate pool blankets.
+4 Demonstrate that there are no exterior water features or
+swimming pools.
+4 Construction Rating
+(maximum)
+2 Demonstrate that the water make-up requirements for all
+exterior water features can be served using the Exterior
+Water Allowance.
+1 Demonstrate that all external swimming pools are provided
+with adequate pool blankets.
+4 Demonstrate that there are no exterior water features or
+swimming pools.
+Credit
+(cid:1) Site plans highlighting locations of all water features and swimming pools including
+Submission: their associated areas;
+Design Rating
+(cid:1) Building Water Calculator confirming that the water make-up requirements for all
+exterior water features can be served using the Exterior Water Allowance;
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 131 of 223
+(cid:2) A composite utility schematic illustrating routing of recycled water mainline and
+laterals; and
+(cid:2) Specification of proposed retractable pool blankets.
+OR
+(cid:2) Site plans confirming that there will be no exterior water features or swimming
+pools.
+Credit
+(cid:2) As-built site plans highlighting locations of all water features and swimming pools
+Submission: including their associated areas;
+Construction
+(cid:2) Updated Building Water Calculator confirming that the water make-up
+Rating
+requirements for all exterior water features can be served using the Exterior Water
+Allowance;
+(cid:2) As-built composite utility schematic illustrating routing of recycled water mainline
+and laterals;
+(cid:2) Photographs illustrating routing of recycled water mainline and laterals indicating
+their color code, water recycling systems (where installed) and pool blankets.
+OR
+(cid:2) As-built site plans confirming that there are no exterior water features or
+swimming pools.
+Calculations and (cid:1) Exterior water features: Include any open surface water associated with fountains,
+Methodology ponds etc (excluding swimming pools).
+(cid:1) The water loss from all external water features is determined using the Building
+Water Calculator and based on the total surface area of water features and
+catchment area of fountains; and the evaporation loss of surface water, E , as
+L
+follows:
+A = Water Feature Area
+WF
+A = Fountain Catchment Area
+FC
+F = Fountain loss factor
+L
+E = Evaporative Loss of surface water = 2,200 liters/m2/yr
+L
+The Exterior Water Allowance, E , that is available to serve the project’s exterior
+WA
+water demand is determined as per the Calculations and Methodology section of PW-
+2.1: Exterior Water Use Reduction: Landscaping
+E must not be ‘double counted’ towards other uses such as irrigation and/or
+
+====================================================================================================
+SECTION: RE
+====================================================================================================
+
+Credit Mechanical Ventilation
+Submission:
+(cid:1) Narrative of CO monitoring systems and CO alert set-points describing how the
+2 2
+Design Rating
+credit requirements will be met;
+(cid:1) Narrative describing how the mechanical design system will meet the Credit
+Requirements, including description of mechanical ventilation system;
+(cid:1) Calculations of fresh air ventilation rates based on the ventilation rate procedure for
+all zones; and
+(cid:1) Drawings of mechanical system, including locations of CO monitoring systems,
+2
+schematics clearly indicating ventilation systems and any air handling units.
+Mixed mode Ventilation
+(cid:1) All credit submissions for mechanically ventilated buildings as noted above;
+(cid:1) Sections, elevations and plans showing details of all proposed natural ventilation
+openings;
+(cid:1) For automated window opening control systems, provide a description of proposed
+opening strategy; and
+(cid:1) Summary Report based on DSM modeling of Natural Ventilation Design Performance.
+Credit Mechanical Ventilation
+Submission:
+(cid:1) Updated narrative of CO monitoring systems and CO alert set-points describing how
+2 2
+Construction
+the credit requirements have been met;
+Rating
+(cid:1) Updated narrative describing how the mechanical design system meets the Credit
+Requirements, including description of mechanical ventilation system;
+(cid:1) Commissioning results demonstrating compliance with minimum fresh air ventilation
+rate requirements; and
+(cid:1) As-Built Drawings of mechanical system, including locations of CO monitoring
+2
+systems, schematics clearly indicating ventilation systems and any air handling units.
+Mixed mode Ventilation
+(cid:1) All credit submissions for mechanically ventilated buildings as noted above;
+(cid:1) Sections, Elevations and Plans showing details of all proposed natural ventilation
+openings;
+(cid:1) For automated window opening control systems, provide a description of proposed
+opening strategy; and
+(cid:1) Updated Summary Report based on DSM modeling of Natural Ventilation Design
+Performance.
+Calculations Ventilation Rate Procedure is outlined in ASHRAE 62.1.2007.
+and DSM Modeling must use a suitable weather file representative of the project location. Also
+Methodology include within the narrative details of how the project has been designed in relation to
+CISBE Applications Manual 10:2005. Simulations of typical floors will be accepted where it
+can be demonstrated that this approach is a reasonable approximation of anticipated
+performance.
+‘Return point’ typically includes return ducts for VAV systems, and spigot / bell mouth
+returns in ceiling voids for FCU systems.
+‘Dynamic Simulation Modelling (DSM)’ software must be capable of simulating a minimum
+of 8760 hours based on historic weather data. In this credit, the software must be capable
+of modeling inter-zonal air movements, thermal comfort, internal CO levels and, for
+2
+Mixed Mode buildings, allow window opening controls to be set based on internal and/or
+external temperature.
+‘Open area’ must be calculated by the design team and these areas must be consistent
+where relied upon in any energy or thermal modeling (for example in RE-R1, RE-1, or LBi-
+5.3).
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 82 of 223
+References (cid:1) ANSI/ASHRAE 62.1:2007 Ventilation and Acceptable Indoor Air Quality,
+www.ashrae.org
+(cid:1) CIBSE AM10 : 2005 Natural Ventilation in Non-Domestic Buildings, www.cibse.org
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 83 of 223
+LBi-2.1: Material Emissions: Adhesives & Sealants
+Intent Confirm the use of low emission adhesives and sealants to encourage the desirability of
+these spaces in relation to improved occupant health.
+Credit
+GENERAL
+Requirements
+Demonstrate that a minimum of 95% (by weight) of all adhesives and sealants used on the
+building interior must not exceed the prescribed VOC limits in South Coast Air Quality
+Management District Rule 1168, some of which are reproduced in the table below.
+The VOC limits of the remaining non compliant adhesives and sealants must be no more
+than 50% higher than values listed for each product type.
+Maximum grams of VOC per liter of
+Product Type adhesive or sealant, less water and
+exempt compounds
+Indoor Carpet Adhesive 50
+Carpet Pad Adhesive 50
+Wood flooring Adhesive 100
+Rubber flooring Adhesive 60
+Sub-floor adhesive 50
+Ceramic tile adhesive 65
+Cove base adhesive 50
+Plasterboard and wall panel adhesive 50
+Multipurpose construction adhesive 70
+Structural glazing adhesive 100
+Architectural sealants 250
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+Schools
+100% of all adhesives and sealants must be compliant.
+Awarding
+CREDIT POINTS REQUIREMENTS
+Credit Points
+1
+Design Rating
+(maximum)
+95% of all adhesives & sealants meet criteria; or
+1
+Schools : 100% of all adhesives & sealants meet criteria
+1
+Construction Rating
+(maximum)
+95% of all adhesives & sealants meet criteria; or
+1
+Schools : 100% of all adhesives & sealants meet criteria
+Credit
+(cid:1) Narrative with extracts from specifications for all interior adhesives and sealants in
+Submission: relation to the project confirming which products will and will not comply with the
+Design Rating requirements. Establish estimates for quantities of products likely to be used in the
+case where projects are aiming to meet the VOC limits for 95% of products and enter
+these into the LBi-2.1 Adhesives and Sealants template.
+Credit
+(cid:1) Billing/purchase receipts for all interior adhesives and sealants used in the project;
+Submission:
+(cid:1) Tracking sheet, signed by the construction managers for receipt of all adhesives and
+Construction
+sealants;
+Rating
+(cid:1) Enter all compliant and non-compliant adhesives and sealants into the LBi-2.1 Adhesives
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 84 of 223
+and Sealants template, their VOC content, the allowable VOC content and the quantity
+used; and
+(cid:2) Material Safety Data Sheets and Technical Data Sheets for all interior adhesives and
+sealants.
+Calculations None
+and
+Methodology
+References (cid:1) South Coast Air Quality Management District (California, US) – Rule 1168 “Adhesive and
+Sealant Applications”, www.aqmd.gov
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 85 of 223
+LBi-2.2: Material Emissions: Paints & Coatings
+Intent Confirm the use of low emission Paints and Coatings to encourage the desirability of
+these spaces in relation to improved occupant health.
+Credit
+GENERAL
+Requirements
+Demonstrate that the interior surface area covered by paints and coatings in the project
+meet or are less than the maximum VOC content limits values for paints and coatings for
+95% of all surface areas covered by paints and coatings per Annex II, Phase II, Table A of
+European Directive 2004/42/CE: 2004. The VOC limits of the remaining non-compliant
+paints and coatings must be no more than 50% higher than the values listed above for
+each product type.
+All paints and coatings must have fungal resistance.
+Maximum VOC content limits :
+Phase II
+Product Category Type**
+(g/l)*
+WB 30
+Interior matt walls and ceilings (Gloss <25 @60º)
+SB 30
+WB 100
+Interior glossy walls and ceilings (Gloss >25 @60º)
+SB 100
+WB 130
+Interior trim and cladding paints for wood and metal
+SB 300
+Interior trim varnishes and wood stains, including opaque wood WB 130
+stains SB 400
+WB 130
+Interior minimal build wood stains
+SB 700
+WB 30
+Primers
+SB 350
+WB 30
+Binding Primers
+SB 750
+WB 140
+One-pack performance coatings
+SB 500
+Two-pack reactive performance coatings for specific end use WB 140
+such as floors SB 500
+WB 100
+Multi-colored coatings
+SB 100
+WB 200
+Decorative effect coatings
+SB 200
+*g/l of ready to use product
+** WB = Water Based, SB = Solvent Based
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+Schools
+100% of all surface areas covered by paints and coatings must have VOC limits no more
+than the limits prescribed per Annex II, Phase II, Table A of European Directive
+2004/42/CE: 2004.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 86 of 223
+Awarding
+CREDIT POINTS REQUIREMENTS
+Credit Points
+1
+Design Rating
+(maximum)
+95% of all surface areas meet criteria
+1
+Schools : 100% of all surface areas meet criteria
+1
+Construction Rating
+(maximum)
+95% of all surface areas meet criteria
+1
+Schools : 100% of all surface areas meet criteria
+Credit
+(cid:2) Narrative with extracts from specifications for all interior paints and coatings in
+Submission: relation to the project confirming which products will and will not comply with the
+Design Rating requirements. Establish estimates for quantities of paint and coating products likely
+to be used and enter these in the LBi-2.2 Paints and Coatings template.
+Credit
+(cid:2) Billing / purchase receipts for all interior paints and coatings used in the project;
+Submission:
+(cid:2) Tracking sheet, signed by the construction managers for receipt of all paints and
+Construction
+coatings;
+Rating
+(cid:2) Enter all compliant and non-compliant paints and coatings into the LBi-2.2 Paints and
+Coatings template, their VOC content, the allowable VOC content and the total
+quantity used; and
+(cid:2) Material Safety Data Sheets (MSDS) and Technical Data Sheets for all interior paints
+and coatings.
+Calculations None
+and
+Methodology
+References (cid:1) Annex II, Table A of Directive 2004/42/CE of the European Parliament and of The
+Council of 21 April 2004, http://eur-
+lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2004:143:0087:0096:EN:PDF
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 87 of 223
+LBi-2.3: Material Emissions: Carpet & Hard Flooring
+Intent Confirm the use of low emission flooring systems to encourage the desirability of these
+spaces in relation to improved occupant health.
+Credit
+GENERAL
+Requirements
+Demonstrate that 100% of all surface areas covered by carpets and cushion and hard
+floor and associated finishes comply with the following requirements:
+Carpet
+Demonstrate that all carpet and carpet cushion meet or exceed the Carpet and Rug
+Institute Green Label or Green Label Plus Program or Greenguard Indoor Air Quality
+Certification Program for Carpets.
+Hard Flooring
+Demonstrate that all hard flooring systems and finishes have achieved FloorScore
+Certification or Greenguard Indoor Air Quality Certification for low emitting products.
+or
+For Wood Flooring
+Confirm that ALL wood flooring products do not exceed class E1 for formaldehyde
+content and do not exceed 5 parts per million (ppm) for Pentachlorophenol (PCP)
+content. Wood products must be tested, classified and appropriately marked according
+to the requirements of BS EN 14342:2005. All remaining non-wood flooring must comply
+with the requirements above.
+To achieve this credit, any adhesives associated with the carpet, carpet cushion or hard
+flooring system must meet LBi-2.1 – Materials Emissions : Adhesives and Sealants
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+1
+Design Rating
+(maximum)
+100% of all carpets, carpet cushion, hard flooring and associated
+1
+finishes comply
+1
+Construction Rating
+(maximum)
+100% of all carpets, carpet cushion, hard flooring and associated
+1
+finishes comply
+Credit
+(cid:1) Narrative and extracts from specifications for all carpet, carpet cushion, hard
+Submission: flooring, associated finishes and adhesives (as appropriate) in relation to the
+Design Rating project. Confirm that the specification complies with the credit requirements.
+Credit
+(cid:1) Brief narrative (with submitted As-Built drawings as required) describing the
+Submission: locations of all carpets, carpet cushion, hard flooring products and finishes installed
+Construction in the project. Enter all types of carpet, carpet cushion, hard flooring products and
+Rating finishes installed in the project into the LBi-2.3 Carpet and Hard Flooring template.
+Confirm that all products comply with the requirements outlined. Also upload all
+associated Material Safety Data Sheets and Technical Data Sheets for these products
+to demonstrate compliance with the credit requirements.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 88 of 223
+Calculations and None
+Methodology
+References (cid:1) Carpet and Rug Institute – GreenLabel and Green Label Plus Program, www.carpet-
+rug.org
+(cid:1) The FloorScore Program from the Resilient Floor Covering Institute: Certification of
+flooring products for indoor air quality compliance. Products covered under this
+program include (Tile, Rubber flooring, engineered hardwood flooring, bamboo
+flooring, polymeric flooring, linoleum flooring, sheet vinyl flooring, vinyl tile, vinyl
+composition tile),www.rfci.com/int_FloorScore.htm
+(cid:1) Greenguard Indoor Air Quality Certification Program from the Greenguard
+Environmental Institute. Products covered under this program include Laminate
+Flooring, Carpet, Resilient Flooring, Wood Flooring, Stone / Terrazzo flooring,
+flooring underlay, wood floor finishes, hard surface floor finishes.
+www.greenguard.org
+(cid:1) BS EN 14342:2005 “Wood Flooring. Characteristics, evaluation of conformity and
+marking”, www.bsigroup.com
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 89 of 223
+LBi-2.4: Material Emissions: Ceiling Systems
+Intent Confirm the use of low emission ceiling systems to encourage the desirability of these
+spaces in relation to improved occupant health.
+Credit
+GENERAL
+Requirements
+Suspended Ceiling Systems
+Demonstrate that all suspended ceiling systems comply
+with the requirements of BS EN 13964: 2004 section 4.5,
+in relation to asbestos (no asbestos) and formaldehyde
+content (which must meet class E1 at a minimum and be
+tested, classified and appropriately marked).
+Non-Suspended Ceiling Systems
+Comply with the requirements listed in LBi-2.1 for any
+Adhesives and Sealants.
+Comply with the requirements listed in LBi-2.2 for any
+Paints and Coatings.
+Permission to reproduce extracts from BS EN
+13964: 2004 is granted by BSI*
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+For any wood based paneled ceilings, comply with the requirements of BS EN 13986:2004
+in relation to limits and testing requirements for formaldehyde VOC content (which must
+meet class E1 at a minimum) and do not exceed 5 parts per million (ppm) for
+Pentachlorophenol (PCP) content.
+Awarding
+CREDIT POINTS REQUIREMENTS
+Credit Points
+1
+Design Rating
+(maximum)
+1 All ceiling systems meet credit criteria
+1
+Construction Rating
+(maximum)
+1 All ceiling systems meet credit criteria
+Credit
+(cid:2) Narrative describing all ceiling systems along with extracts from specifications for all
+Submission: ceiling systems and their components in relation to the project. Confirm that all
+Design Rating components comply with the credit requirements.
+Credit
+(cid:2) Billing/purchase receipts for all aspects relating to the ceiling systems of the project;
+Submission:
+(cid:2) Tracking sheet, signed by the construction managers for receipt of all products
+Construction
+requiring compliance with the requirements; and
+Rating
+(cid:2) Material Safety Data Sheets and Technical Data Sheets for all products requiring
+compliance with the credit requirements.
+Calculations None
+and
+Methodology
+References (cid:1) BS EN 13964: 2004 “Suspended Ceilings – Requirements and Test Methods”, section
+4.5, www.bsigroup.com
+(cid:1) BS EN 13986:2004 “Wood-based panels for use in construction – Characteristics,
+evaluation of conformity and marking”, sections 5.7 and 5.18, www.bsigroup.com
+(cid:1) See also LBi-5.1 Adhesives and Sealants and LBi-5.2 Paints and Coatings.
+* British Standards can be obtained in PDF or hard copy formats from the BSI online shop: www.bsigroup.com/Shop or by contacting BSI Customer Services for hardcopies only: Tel: +44 (0)20 8996 9001, Email:
+cservices@bsigroup.com.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 90 of 223
+LBi-2.5: Material Emissions: Formaldehyde Reduction
+Intent To mitigate the health risks associated with formaldehyde in building materials and
+products.
+Credit
+GENERAL
+Requirements
+(cid:1) 1 Credit Point; Demonstrate that all internal construction materials do not exceed
+formaldehyde VOC content class E1 levels.
+(cid:1) 1 Credit Point: In addition to achieving the requirement above, demonstrate that all
+installed furniture does not exceed formaldehyde VOC content class E1 levels.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+Schools
+For schools to earn points in this credit, they must achieve both Credit Points.
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+2
+Design Rating
+(maximum)
+All internal construction materials meet formaldehyde class E1
+levels (available to schools only in association with additional
+1
+credit requirement).
+Schools must achieve this credit point
+All internal construction and furniture meets formaldehyde class
+1 E1 levels.
+Schools must achieve this credit point
+2
+Construction Rating
+(maximum)
+All internal construction materials meet formaldehyde class E1
+levels (available to schools only in association with additional
+1
+credit requirement).
+Schools must achieve this credit point
+All internal construction and furniture meets formaldehyde class
+1 E1 levels.
+Schools must achieve this credit point
+Credit
+(cid:2) Interior finish schedule highlighting products likely to contain formaldehyde;
+Submission:
+(cid:2) Interior furniture schedule highlighting products likely to contain formaldehyde; and
+Design Rating
+(cid:2) For all products containing formaldehyde, provide extracts from relevant
+specifications showing how credit requirements are met.
+Credit
+(cid:2) As Built interior finish schedule for all installed products highlighting products
+Submission: containing formaldehyde;
+Construction
+(cid:2) Schedule for all installed furniture highlighting products containing formaldehyde;
+Rating
+and
+(cid:2) For all products containing formaldehyde, provide either Manufacturer’s Data
+sheets.
+or
+(cid:2) Third party evidence showing certification of formaldehyde content tested,
+according to appropriate testing standards (see reference standards) by one of the
+following:
+(cid:3) Reputable certified independent testing laboratory; or
+(cid:3) Certification from a reputable third party assessment body.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 91 of 223
+Calculations and Product Testing for Formaldehyde Content
+Methodology
+All products must be tested according to the reference standards or demonstrated
+equivalent testing standards.
+References • EN 717-1 for initial type testing, www.bsigroup.com
+• EN120 and EN 717-2 for factory production control, www.bsigroup.com
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 92 of 223
+LBi-3: Construction Indoor Air Quality Management
+Intent To implement construction practices that promote a high degree of indoor air quality (IAQ)
+for construction workers and building occupants.
+Credit
+GENERAL
+Requirements
+Demonstrate the development and implementation of a comprehensive Construction IAQ
+Management Plan. At a minimum the plan must address the following:
+(cid:1) Source Control;
+(cid:1) Building Flush Out; and
+(cid:1) Resuming Normal Building Operation.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding
+CREDIT POINTS REQUIREMENTS
+Credit Points
+2
+Design Rating
+(maximum)
+2 Develop a construction IAQ plan
+2
+Construction Rating
+(maximum)
+2 Implement the construction IAQ plan
+Credit
+(cid:2) Construction IAQ Management Plan;
+Submission:
+(cid:2) Completed IAQ Planning Checklists and evaluations of proposed control measures as
+Design Rating
+per Appendix C of SMACNA IAQ guidelines for occupied buildings under construction;
+and
+(cid:2) Assessment of the duration required for pre-occupancy flush-out as follows:
+(cid:3) Estimation of pre-occupancy flush-out based on likely ambient conditions
+according to the project schedule.
+(cid:3) Estimation of pre-occupancy flush-out based on the most onerous ambient
+conditions to demonstrate possible maximum impact of project delays.
+Credit
+(cid:2) Construction IAQ Management Plan, if amended from Design Rating submission;
+Submission:
+(cid:2) Completed IAQ Planning Checklists and evaluations of proposed control measures (if
+Construction
+changed from the Design Rating stage) as per Appendix C of SMACNA IAQ guidelines for
+Rating
+occupied buildings under construction, 2007, 2nd Edition. Provide a summary report
+detailing the reasons for each change;
+(cid:2) Time stamped photographs demonstrating the storage and protection of all absorptive
+materials from moisture damage; and
+(cid:2) Summary report including:
+(cid:3) IAQ Inspection Checklists as per Appendix D of SMACNA IAQ guidelines for occupied
+buildings under construction, 2007, 2nd Edition. Include time stamped
+photographic evidence taken by the site supervisors showing each installed control
+measure. Weekly photos must be provided at a minimum;
+(cid:3) Time stamped photographic evidence of the building cleaning phase prior to
+occupancy;
+(cid:3) Results of the HVAC testing and balancing phase;
+(cid:3) Ambient humidity levels during the building flush-out period, including
+demonstrable results of the fresh air delivery rate and duration of both the pre-
+occupancy and post-occupancy flush-out phases; and
+(cid:3) Demonstrable results of how the air conditioning systems have been reset
+according to the building design basis for ongoing operation.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 93 of 223
+Calculations The Construction IAQ Management Plan must address the following:
+and
+Methodology
+Step 1 - Source Control
+(cid:1) Design for and implement an IAQ management plan according to the measures
+stipulated in SMACNA IAQ Guidelines for Occupied Buildings Under Construction, 2007,
+2nd Edition;
+(cid:1) Protection of all absorptive materials from moisture damage; and
+(cid:1) When permanently installed air handling equipment needs to be operated during
+construction to serve other areas of the building, installation of MERV 8 or G4 class
+filters in each return air grille during construction and replacement with new filters of
+identical class immediately prior to occupancy.
+Step 2 - Building Flush Out
+(cid:1) Thoroughly clean the building prior to commencement of building flush out;
+(cid:1) Complete testing and balancing of HVAC equipment;
+(cid:1) Assess the ambient humidity and temperature for the duration of the anticipated
+building flush-out period;
+(cid:1) Determine the maximum fresh air delivery rate that can be provided to the whole
+building through its mechanical systems such that the humidity and temperature of
+the air will not exceed the buildings design basis for normal building operation;
+(cid:1) Provide this fresh air quantity (at design basis humidity and temperature conditions) to
+the building continuously and prior to building occupation, for a period of no less than
+nine consecutive days and at a fresh air rate of 2ach to all spaces or until 1,185m3 per
+m2 internal floor area of fresh air has been delivered; and
+(cid:1) Continue to provide fresh air continuously, post occupation, for a period of no less
+than twenty four consecutive days and at a fresh air rate of 2ach to all spaces or until
+an additional 3,160m3 per m2 internal floor area of fresh air has been delivered. The
+fresh air rate must equal or exceed the minimum rate determined in LBi-R1 or the
+increased rate in LBi-1 if pursued, whichever is greater and commence at least 2 hours
+prior to occupancy and continue during all occupied times in the post occupancy
+building flush out period.
+Step 3 – Normal Building Operation
+(cid:1) The air conditioning systems must be reset according to the building design basis for
+ongoing operation.
+Building design basis relates to design humidity and air temperature set points.
+‘Continuously’ is defined as 24 hours per day.
+Fresh air rate in ach (air changes per hour) must be calculated based on fresh air quantity
+alone excluding re-circulated air quantities.
+References (cid:1) SMACNA IAQ Guidelines for Occupied Buildings Under Construction, 2007, 2nd Edition,
+www.smacna.org
+(cid:1) BS EN 779 2002 “Particulate air filters for general ventilation – determination of the
+filtration performance”, www.bsigroup.com
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 94 of 223
+LBi-4: Car Park Air Quality Management
+Intent To facilitate the provision of adequate air quality within enclosed car parks.
+Credit
+GENERAL
+Requirements
+Demonstrate that the ventilation design meets or exceeds requirements for pollutant
+concentrations in car parks. This will be achieved via continuous measurement of the
+following pollutants:
+Air Pollutant Averaging Time Maximum concentration
+Carbon Monoxide (CO) 15 minutes 100 mg / m3
+Nitrogen Dioxide (NO ) 1 hour 200 (cid:1)g/m3
+2
+Particular Matter PM10 24 hours 50 (cid:1)g/m3
+Where the project does not contain any enclosed car parks (75% enclosure), the credit is
+automatically awarded.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Requirement
+Achievement CREDIT POINTS REQUIREMENTS
+1
+Design Rating
+(maximum)
+Ensure car parking ventilation design meets the credit
+1
+requirements.
+1
+Construction Rating
+(maximum)
+Ensure car parking ventilation design meets the credit
+1
+requirements.
+Credit
+(cid:1) Brief narrative describing how the project intends to meet the credit criteria;
+Submission:
+(cid:1) Drawings or extracts from specifications indicating the proposed location of air
+Design Rating
+quality sensors, outdoor air intakes and outlets, and the air quality alert system;
+and
+(cid:1) BMS point schedules.
+Credit
+(cid:1) Update narrative describing how the project meets the credit criteria;
+Submission:
+(cid:1) Description and as-built drawings of all air quality sensors, outdoor air intakes and
+Construction
+outlets, and the air quality alert system; and
+Rating
+(cid:1) Commissioning report showing appropriate calibration, set-points and control
+sequences (as relevant) of all air quality sensors and alert systems.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 95 of 223
+Calculations and Install and connect an air quality alert system to the BMS. The ventilation provided must
+Methodology provide sufficient dilution at all times, in particular during peak operating hours when
+queuing and congestion may occur.
+Set trigger values for each of these pollutants, taking into account response times so
+ventilation rates will adjust and these maximum values are not exceeded. The levels in
+all instances must comply with WHO Guidelines 2000 Air Quality Guidelines for Europe
+2nd Edition in relation to carbon monoxide and nitrogen dioxide and particulate matter
+PM10 from ASHRAE 62.1.2007.
+Demonstrate that the monitoring locations selected are considered worst-case within
+the car park area. For example, monitoring must not take place immediately adjacent to
+air distribution vents, where pollutant levels would be lower as a result of dilution.
+The number of monitoring points will depend on the size of the car park. No part of the
+car park must be more than 25 meters from a sampling point. Each area that is serviced
+by a separate ventilation system will require a separate monitoring point and at least
+one monitoring point will be required on each level. In addition, at least one sampling
+point must be provided at each of the entrances and exits of the car park.
+Monitoring must take place within the breathing zone. This is the region within an
+occupied space between 1 and 1.8m above the floor and more than 0.1 m from walls or
+air conditioning equipment.
+Outdoor air intakes must be placed away from known sources of pollution such as busy
+roads or boiler exhausts.
+The system presented in this credit must be consistent with the system included in the
+energy model (e.g. variable speed drive fans).
+75% enclosure is defined as a car park with a roof and 75% of the wall area perimeter
+enclosed.
+References (cid:1) ANSI/ASHRAE 62.1:2007 Ventilation and Acceptable Indoor Air Quality
+www.ashrae.org
+(cid:1) World Health Organization Guidelines 2000 Air Quality Guidelines for Europe 2nd
+Edition. www.who.int
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 96 of 223
+LBi-5.1: Thermal Comfort & Controls: Thermal Zoning
+Intent To promote logical thermal zoning strategies in relation to the on-floor ventilation
+system, to achieve improved occupant comfort, future flexibility and energy efficiency.
+Credit
+GENERAL
+Requirements
+Demonstrate that all spaces within the building(s) have been modeled to determine zonal
+cooling demand and designed to have separately controllable thermal zones, as follows:
+Design for separate zones and controls for a maximum of 35m2 of open plan space on the
+perimeter of the building and a maximum of 70m2 of open plan space in the internal areas
+of the building. Each thermal zone must have thermostats that allow control over air
+speed or temperature as a minimum.
+For private enclosed spaces intended for individual use, one thermostatic controller must
+be provided that allows control over air speed or temperature as a minimum.
+Multi-occupant spaces intended for group activities (meeting rooms, classrooms, lecture
+theatres, conference halls etc) must at least have one thermostatic controller. In the
+case where these spaces have movable internal partitions intended to sub-divide spaces,
+each space must have at least one thermostatic controller.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+For speculative developments designed for an unknown tenant, contract lease
+requirements must specify that the fit-out will meet the requirements for thermal zoning
+and thermostatic controllers.
+Retail
+As a minimum, separate thermal zones must be provided for each tenancy. For larger
+open plan retail spaces over 100m2, follow the general guidance above. Particular
+attention must be given to retail areas that hav
+
+====================================================================================================
+SECTION: SM
+====================================================================================================
+
+SM-R1: Hazardous Materials Elimination
+Intent To eliminate exposure of building occupants to asbestos and minimize toxic effects of
+chromated copper arsenate (CCA) treated timber on people and the environment.
+Credit
+GENERAL
+Requirements
+Demonstrate that no Asbestos Containing Materials (ACMs) are used within the
+development and that all ACMs have been removed from refurbished buildings.
+This Credit Requirement builds on Cabinet Resolution No. 39 of 2006 Concerning
+Prohibiting Import, Production and Utilization of Asbestos Boards and extends the
+prohibition to all ACMs.
+Demonstrate that where timber is specified to treat external structures where there is
+frequent and intimate contact, such as –but not limited to- shading devices,
+playground equipment and handrails that no chromated copper arsenate (CCA)-treated
+timber is used on the project.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Requirement This is a requirement. There are no Credit Points awarded.
+Achievement
+Credit
+(cid:2) Extracts from specifications indicating that no ACMs or CCA-treated timber are to
+Submission: be used in the project as per the Credit Requirements.
+Design Rating
+Where portions of the project are reused from an existing building:
+(cid:2) Results of a hazardous materials survey documenting the existence, if any, of ACMs
+in the building. It is recommended to follow internationally recognized standards
+such as ASTM E 256-04 – Comprehensive Building Asbestos Surveys or similar
+standards; and
+(cid:2) Where ACMs were found, Asbestos removal and disposal plan.
+Credit
+(cid:2) Evidence of purchase indicating that no ACMs or CCA-treated timber were used in
+Submission: the project as per the Credit Requirements.
+Construction
+Rating Where portions of the project are reused from an existing building:
+(cid:2) Where ACMs were found, evidence of disposal at a hazardous waste facility.
+Calculations and None
+Methodology
+References (cid:1) Cabinet Resolution No. 39 of 2006 Concerning Prohibiting Import, Production and
+Utilization of Asbestos Boards
+(cid:1) ASTM E 2356-04 - Comprehensive Building Asbestos Surveys
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 172 of 223
+SM-R2: Basic Construction Waste Management
+Intent To reduce the long-term environmental impacts associated with construction waste
+collection, transport and disposal.
+Credit
+GENERAL
+Requirements
+(cid:1) Demonstrate that the General contractor, working collaboratively with all sub-
+contractors and specialty contractors (e.g. demolition), developed a Construction
+and Demolition Waste Management Plan (CDWMP) prior to the start of construction
+and demolition activities. The CDWMP must identify the materials to be diverted
+from landfill and indicate whether the materials will be segregated on-site or
+commingled. If materials are planned for salvage, the plan must indicate their
+planned use.
+(cid:1) Demonstrate that the Contractor implemented monthly monitoring of the CDWMP,
+and achieved a minimum final recycling/salvage rate of 30% of construction and
+demolition waste (by weight or volume). This figure excludes all hazardous waste
+that must undergo specialized treatment.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Requirement This is a requirement. There are no Credit Points awarded.
+Achievement
+Credit
+(cid:2) CDWMP conforming to the Credit Requirements; and
+Submission:
+(cid:2) Schedule of items to be recycled/salvaged, their source within the project, their
+Design Rating
+total estimated weight or volume and the name and location of potential
+reclaim/recycling haulers.
+Credit
+(cid:2) Calculations, supported with detailed receipts, summarizing final results of the
+Submission: CDWMP activities listing items recycled/salvaged, their source within the project,
+Construction their total weight or volume, the name and location of the reclaim/recycling
+Rating haulers, and markets for the recyclable materials.
+Calculations and Calculations can be done by weight or volume, but must be consistent throughout.
+Methodology
+References (cid:1) Centre of Waste Management, Abu Dhabi: www.cwm.ae
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 173 of 223
+SM-R3: Basic Operational Waste Management
+Intent To reduce the long-term environmental impacts associated with operational waste
+collection, transport and disposal.
+Credit
+GENERAL
+Requirements
+Demonstrate that an Operational Waste Strategy has been developed from the concept
+stage. As a minimum, the following must be addressed by the design and development
+team:
+(cid:1) Annual estimates of Operational waste;
+(cid:1) Summary review of existing and planned waste management infrastructure and
+programs available from the appropriate authority;
+(cid:1) Proposed options for diverting waste from landfills and incineration with a
+minimum targeted diversion rate of 40% by weight or volume of the total
+operational waste generated at full occupancy;
+(cid:1) Provision of adequately sized and accessible facilities and clearly labeled
+containers for the storage and collection of source-segregated waste as
+recommended by the Centre of Waste Management. At a minimum, allow for
+separation as follows:
+o Green container for recyclable plastics, glass and metals;
+o Blue container for recyclable paper and cardboard;
+o Black container for non recyclable and non compostable waste; and
+o An optional container may be provided for compostable organic waste;
+(cid:1) Distance to carry waste containers to the nearest collection point inside or outside
+the building may not exceed 30 m; and
+(cid:1) Adequate vehicular access for waste handling vehicles must also be ensured.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+Multi-Residential Buildings
+The minimum targeted diversion rate for Operational Waste is 30% by weight or volume
+of the total operational waste generated at full occupancy.
+Requirement This is a requirement. There are no Credit Points awarded.
+Achievement
+Credit
+Operational Waste Strategy that includes:
+Submission:
+(cid:2) Narrative summarizing options researched and selected to meet the diversion
+Design Rating
+targets. The strategy must address waste minimization, storage, collection, and
+treatment and links to private or municipal and regional infrastructure and
+programs;
+(cid:2) Calculations documenting projected waste quantities for the development during
+operation on an annual basis. Waste benchmarks may be obtained from the Centre
+of Waste Management, waste audits of similar buildings or literature research.
+References must be clearly listed;
+(cid:2) Drawing(s) indicating location of the storage/disposal facilities and vehicle access
+areas designed to ensure adequate space for maneuvering delivery and waste
+removal vehicles; and
+(cid:2) Waste transfer inventory outlining the intended receiver of waste. This should
+include information indicating that the carrier, recycling and disposal facilities are
+licensed.
+Credit
+(cid:2) Updated calculations documenting projected waste quantities for the development
+Submission: during operation on an annual basis;
+Construction
+(cid:2) As-built drawing(s) and photographs indicating location of the storage/disposal
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 174 of 223
+Rating facilities and vehicle access areas designed to ensure adequate space for
+maneuvering delivery and waste removal vehicles; and
+(cid:2) Updated waste transfer inventory outlining the contracted receiver of waste. This
+should include information indicating that the carrier, recycling and disposal
+facilities are licensed.
+Calculations and (cid:1) Calculations can be done by weight or volume but must be consistent throughout.
+Methodology (cid:1) Waste benchmarks may be obtained from the Centre of Waste Management, waste
+audits of similar buildings or literature research. References must be clearly listed.
+References (cid:1) Centre of Waste Management, Abu Dhabi: www.cwm.ae
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 175 of 223
+SM-1: Non-Polluting Materials
+Intent To promote the selection of materials that do not have long-term negative impacts on
+human health or pollute natural systems.
+Credit
+GENERAL
+Requirements
+Demonstrate that the project has achieved the following:
+Zero ODP, Low GWP Insulation
+(cid:1) 1 Credit Point: All thermal insulation materials used in the project have an Ozone
+Depleting Potential of zero (ODP = 0) and a low Global Warming Potential of less
+than five (GWP(cid:1)5). Compliance is required for any blowing agent used to
+manufacture the insulation product or to spray it in place.
+Chlorine Free Materials
+(cid:1) 1 Credit Point: Replace ‘business as usual’ use of chlorine-based materials
+including Polyvinyl Chloride (PVC), Chlorinated polyethylene (CPE), Chlorinated
+polyvinyl chloride (CPVC), Chlorosulfonated polyethylene (CSPE), and
+Polychloroprene with more sustainable alternatives for three or more of the
+following building product groups (The proportions required are indicated below):
+o Insulation (80% or more by surface area);
+o Waterproofing sheets and membranes (50% or more by surface area);
+o External cladding (90% or more by surface area);
+o Floor and wall coverings (90% or more by surface area);
+o Windows and door frames (90% or more by linear length);
+o Pipes (50% or more by linear length); and
+o Electrical Cables, cable sheathing and Conduits (50% or more by linear
+length).
+Low Toxicity Materials
+(cid:1) 1 Credit Point: Eliminate materials or building products or components
+containing elements or compounds with the following R-phrase attribution under
+EU Risk Phrases (R-Phrases) listed in Annex III of EU Directives 67/548/EEC:
+o R20 - Harmful by inhalation.
+o R21 - Harmful in contact with skin.
+o R22 - Harmful if swallowed.
+o R23 - Toxic by inhalation.
+o R24 - Toxic in contact with skin.
+o R25 - Toxic if swallowed.
+o R26 - Very toxic by inhalation.
+o R27 - Very toxic in contact with skin.
+o R28 - Very toxic if swallowed.
+o R29 - Contact with water liberates toxic gas.
+o R31 - Contact with acids liberates toxic gas.
+o R32 - Contact with acids liberates very toxic gas.
+o R33 - Danger of cumulative effects.
+o R36 - Irritating to eyes.
+o R37 - Irritating to respiratory system.
+o R38 - Irritating to skin.
+o R39 - Danger of very serious irreversible effects.
+o R41 - Risk of serious damage to eyes.
+o R42 - May cause sensitization by inhalation.
+o R43 - May cause sensitization by skin contact.
+o R45 - May cause cancer.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 176 of 223
+o R46 - May cause heritable genetic damage.
+o R48 - Danger of serious damage to health by prolonged exposure.
+o R49 - May cause cancer by inhalation.
+o R50 - Very toxic to aquatic organisms.
+o R51 - Toxic to aquatic organisms.
+o R52 - Harmful to aquatic organisms.
+o R53 - May cause long-term adverse effects in the aquatic environment.
+o R54 - Toxic to flora.
+o R55 - Toxic to fauna.
+o R56 - Toxic to soil organisms.
+o R57 - Toxic to bees.
+o R58 - May cause long-term adverse effects in the environment.
+o R59 - Dangerous for the ozone layer.
+o R60 - May impair fertility.
+o R61 - May cause harm to the unborn child.
+o R62 - Possible risk of impaired fertility.
+o R63 - Possible risk of harm to the unborn child.
+o R64 - May cause harm to breastfed babies.
+o R65 - Harmful: may cause lung damage if swallowed.
+(cid:1) In order to qualify for this credit, all building materials must not contain
+materials or compounds with over 1% of constituent materials with designated R-
+phrases in the above categories (minor exceptions permitted if it can be
+demonstrated that no alternatives are available).
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+3
+Design Rating
+(maximum)
+Building meets the ‘Zero ODP, Low GWP Insulation’ Credit
+1
+Requirements through design.
+Building meets the ‘Chlorine Free Materials’ Credit Requirements
+1
+through design.
+Building meets the ‘Low Toxicity Materials’ Credit Requirements
+1
+through design.
+3
+Construction Rating
+(maximum)
+Building meets the ‘Zero ODP, Low GWP Insulation’ Credit
+1
+Requirements through construction.
+Building meets the ‘Chlorine Free Materials’ Credit Requirements
+1
+through construction.
+Building meets the ‘Low Toxicity Materials’ Credit Requirements
+1
+through construction..
+.
+Credit Zero ODP, Low GWP Insulation
+Submission: (cid:2) Summary sheet listing all uses of insulation in the project; and
+Design Rating
+(cid:2) For all listed products, extracts from specifications requiring materials
+manufactured without the use of ozone-depleting materials and with a global
+warming potential of less than 5.
+Chlorine Free Materials
+(cid:2) Extracts from specifications requiring the use of chlorine free materials/products
+corresponding to the chosen initiatives; and
+(cid:2) Area/ length percentage calculations for each material product category.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 177 of 223
+Low Toxicity Materials
+(cid:2) Extracts from specifications highlighting that all materials in the project meet the
+Credit Requirements.
+Credit Zero ODP, Low GWP Insulation
+Submission: (cid:2) Updated summary sheet listing all uses of insulation in the project; and
+Construction
+(cid:2) For all listed products, evidence of purchase of materials manufactured without
+Rating
+the use of ozone-depleting materials and with a global warming potential of less
+than 5.
+Chlorine Free Materials
+(cid:2) Updated calculations describing how the Credit Requirements are met; and
+(cid:2) Evidence of purchase confirming the use of chlorine free materials/products.
+Low Toxicity Materials
+(cid:2) Confirmation that all materials comply with the EU Risk Phrases (R-Phrases)
+Directive 67/548/EEC , Annex III. This can be in the form of evidence of purchase
+or manufacturer information.
+Calculations and None
+Methodology
+References (cid:1) EU Directive on Dangerous Substances 67/548/EEC :
+http://ec.europa.eu/environment/chemicals/dansub/consolidated_en.htm
+(cid:1) EU Directive 67/548/EEC Annex III :
+http://ec.europa.eu/environment/chemicals/dansub/pdfs/annex3_en.pdf
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 178 of 223
+SM-2: Design for Materials Reduction
+Intent To reduce the overall amount of material used in the development of buildings.
+Credit GENERAL
+Requirements Demonstrate that fewer materials are used in the final building design than in a typical
+building of the same type by achieving at least one of the following initiatives:
+(cid:1) At least 90% of the interior floor area does not include finishes (apart from
+sealant);
+(cid:1) At least 90% of the ceiling area does not have any ceiling systems (exposed ceilings
+only); or
+(cid:1) Use of dual function surfaces or materials such as:
+o Building Integrated Photovoltaics (BIPV) replacing traditional building
+envelope materials on at least 10% of the area of the building envelope
+(including roof);
+o Vegetated roofs on at least 50% of the area of roof. (Plant selection should
+favor native and drought-resistant species. This section of the roof must
+also be accessible to building users); or
+o Vegetated walls on at least 10% of the area of all interior partitions (Plant
+selection should favor native and drought-resistant species).
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+Office
+Office buildings must achieve at least two of three initiatives from the list above.
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+1
+Design Rating
+(maximum)
+General: Building is designed with at least one material
+1 reduction initiative.
+Offices only: At least two initiatives are required.
+1
+Construction Rating
+(maximum)
+General: Building is constructed with at least one material
+1 reduction initiative.
+Offices only: At least two initiatives are required.
+Credit
+(cid:2) Brief narrative describing how the project intends to meet the Credit
+Submission: Requirements, including any calculations; and
+Design Rating
+(cid:2) Extracts from specifications requiring the proposed initiative(s).
+Credit
+(cid:2) Updated brief narrative describing how the project intends to meet the Credit
+Submission: Requirements, including any calculations; and
+Construction
+(cid:2) Calculations and photographs of the relevant features confirming the initiatives
+Rating
+meet credit requirements.
+Calculations and Area calculations are required and must show a comparison between a traditional
+Methodology approach and current design using reduced amount of materials.
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 179 of 223
+SM-3: Design for Flexibility & Adaptability
+Intent To lengthen the useful life of buildings through designs that are easily adaptable for
+other program uses.
+Credit GENERAL
+Requirements Demonstrate the following:
+(cid:1) 90% of the building has regular rhythm to exposed facades (by area);
+(cid:1) Floor-to-floor heights of at least 3.6 meters;
+(cid:1) 90% of the windows are evenly distributed around exposed elevations (by area);
+(cid:1) 90% of interior, non-structural walls are demountable or movable (by area); and
+(cid:1) 90% of pipes, wiring and conduits are not permanently embedded in building
+materials (in length).
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+1
+Design Rating
+(maximum)
+Building is designed to meet Credit Requirements for flexibility
+1
+and adaptability.
+1
+Construction Rating
+(maximum)
+Building is constructed to meet Credit Requirements for
+1
+flexibility and adaptability.
+Credit
+(cid:2) Brief narrative describing how the project intends to meet the Credit
+Submission: Requirements, including any calculations;
+Design Rating
+(cid:2) Building elevations clearly indicating how the building has regular rhythm to
+exposed facades, floor-to-floor heights and distribution of windows;
+(cid:2) Typical floor plan indicating the location of any load bearing walls and other
+interior walls as well as any connections for movable/demountable walls; and
+(cid:2) Drawings indicating plumbing and electrical services are not to be permanently
+embedded in building materials.
+Credit
+(cid:2) Updated narrative describing how the project intends to meet the Credit
+Submission: Requirements, including any calculations;
+Construction
+(cid:2) Photographs clearly illustrating how the building has regular rhythm to exposed
+Rating
+facade, floor-to-floor heights and distribution of windows;
+(cid:2) Photographs of movable/demountable walls; and
+(cid:2) As Built drawings illustrating how plumbing and electrical services have not been
+permanently embedded in building materials.
+Calculations and None
+Methodology
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 180 of 223
+SM-4: Design for Disassembly
+Intent To facilitate the future deconstruction and reuse of buildings and their structural and
+envelope components.
+Credit
+GENERAL
+Requirements
+Develop a Building Disassembly Plan highlighting the following:
+(cid:1) materials intended for recovery;
+(cid:1) materials connection requirements;
+(cid:1) system for marking and identifying recoverable elements prior to installation;
+(cid:1) best management practices for disassembly; and
+(cid:1) the disassembly sequence.
+Demonstrate that 50% of the building structural skeleton, 75% of façade, or 90% of the
+roof is designed for disassembly (by surface area).
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+1
+Design Rating
+(maximum)
+Building is designed to meet Credit Requirements for design for
+1
+disassembly.
+1
+Construction Rating
+(maximum)
+Building is constructed to meet Credit Requirements for design
+1
+for disassembly.
+Credit
+(cid:2) Brief narrative describing how the project intends to meet the Credit
+Submission: Requirements, including any calculations; and
+Design Rating
+(cid:2) Building Disassembly Plan conforming to Project and the Credit Requirements.
+Credit
+(cid:2) Updated brief narrative describing how the project meets the Credit Requirements,
+Submission: including any calculations; and
+Construction
+(cid:2) Photographs illustrating building elements designed for disassembly.
+Rating
+Calculations and Calculations must indicate the total surface area of the building skeleton, façade and
+Methodology roofing systems, and the amount of this surface area that can be disassembled, both in
+square meters and as a percentage of the total surface area.
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 181 of 223
+SM-5: Modular Flooring Systems
+Intent To minimize waste associated with replacement of flooring systems through the use of
+modular systems.
+Credit GENERAL
+Requirements Demonstrate that at least 95% (by surface area) of finished floor areas use modular
+flooring products. To qualify, the proposed product must have one or more of the
+following environmental characteristics:
+(cid:1) Have a minimum of 30% post-consumer recycled content;
+(cid:1) Be fully or partly recyclable;
+(cid:1) be rapidly renewable; or
+(cid:1) be extracted, harvested or recovered and manufactured locally as per SM-9.
+Projects where 95% or more of the floor areas are not finished automatically achieve
+the Credit.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+1
+Design Rating
+(maximum)
+At least 95% (by surface area) of finished floor areas are
+1
+specified with modular flooring products.
+1
+Construction Rating
+(maximum)
+Demonstrate that at least 95% (by surface area) of finished floor
+1
+areas are constructed with modular flooring products.
+Credit
+(cid:2) Floor plans and floor finishes schedule describing all flooring systems used
+Submission: (excluding all non-finished floor areas such as plant rooms), their locations in the
+Design Rating building, total area covered, and their environmental characteristic(s);
+(cid:2) Calculations demonstrating that the flooring systems used meet the Credit
+Requirements in aggregate; and
+(cid:2) Extracts from specifications showing that modular flooring systems meet the
+environmental characteristic(s) requirements.
+Credit
+(cid:2) As-built floor plans and updated floor finishes schedule describing all flooring
+Submission: systems used (excluding all non-finished floor areas such as plant rooms), their
+Construction locations in the building, total area covered, and their environmental
+Rating characteristics;
+(cid:2) Updated calculations demonstrating that the flooring systems used meet the Credit
+Requirements in aggregate;
+(cid:2) Evidence of purchase and installation of these materials in the project in the form
+of invoices from suppliers and installers.
+Calculations and None
+Methodology
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 182 of 223
+SM-6: Design for Durability
+Intent To promote a long life building by protecting its components from condensation, water
+ingress, improper drainage and protecting vulnerable areas of the building envelope
+and surroundings.
+Credit
+GENERAL
+Requirements
+Develop and implement a Building Durability Plan (BDP) to optimize the integrity of the
+building envelope.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+1
+Building Design Rating
+(maximum)
+1 Develop a Building Durability Plan.
+1
+Building Construction Rating
+(maximum)
+1 Implement the Building Durability Plan.
+QUIREMENTS
+Credit
+(cid:2) BDP conforming to the Credit Requirements; and
+Submission:
+(cid:2) Drawings and extracts from specifications and consultant briefs or scope
+Design Rating
+demonstrating provision of the supporting measures described in the BDP.
+Credit
+(cid:2) Report summarizing the implementation of the BDP within the building conforming
+Submission: with the Credit Requirements, including:
+Construction
+(cid:2) Drawings and consultant reports demonstrating the implementation of measures
+Rating
+described in the BDP; and
+(cid:2) If the items covered by the BDP are damaged or not operating as intended,
+rectification work undertaken to ensure the operation is restored to approved
+Design Rating functionality levels.
+Calculations and The Building Durability Plan must include the following:
+Methodology (cid:1) Estimated life span of key building features, including concrete walls,
+foundations and structural elements, flooring, ceilings, roofs, cladding,
+windows and glazing/curtain wall systems or installations;
+(cid:1) Where components or assemblies have a shorter service life than the life of the
+building, a plan for how these slower cycling materials will be specified to
+reduce life-cycle impacts (e.g. carbon and toxicity) and be maintained or
+replaced without damage to the longer cycling elements/materials; and
+(cid:1) Description of design measures to improve durability and long term service life
+such as:
+o Bollards in loading areas;
+o Condensate capture;
+o Drains/shower waterproofing and drainage gradients;
+o Façade waterproofing and leakage;
+o Insulation of ducts and durability of ceilings (particularly
+waterproofing);
+o Ease of maintenance; or
+o Access to façade and systems.
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 183 of 223
+SM-7: Building Reuse
+Intent To encourage the reuse and improvement of existing building stock, reduce waste and
+other environmental impacts associated with new materials extraction, manufacturing,
+and transport.
+Credit
+GENERAL
+Requirements
+Demonstrate that a portion of the building structural system, by surface area, is reused
+from an existing building. as follows:
+(cid:1) 1 Credit Point: At least 25% of the building structural system, by surface area, will
+be reused.
+(cid:1) 2 Credit Points: At least 50% of the building structural system, by surface area, will
+be reused.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+2
+Design Rating
+(maximum)
+At least 25% of the building structural system, by surface area,
+1
+will be reused.
+At least 50% of the building structural system, by surface area,
+2
+will be reused.
+2
+Construction Rating
+(maximum)
+At least 25% of the building structural system, by surface area, is
+1
+reused.
+At least 50% of the building structural system, by surface area, is
+2
+reused.
+Credit
+(cid:2) Narrative describing how the project intends to meet the Credit Requirements,
+Submission: including calculations demonstrating the amount of surface area to be reused; and
+Design Rating
+(cid:2) Plan drawings of the proposed building and demolition plan of the existing building
+demonstrating the amount of surface area to be reused.
+Credit
+(cid:2) Updated narrative describing how the project meets the Credit Requirements,
+Submission: including calculations demonstrating the amount of surface area to be reused;
+Construction
+(cid:2) As-built drawings of the new building and demolition drawings of the existing
+Rating
+building demonstrating the amount of surface area reused; and
+(cid:2) Site photographs illustrating the reuse of the existing structural system.
+Calculations and
+Methodology
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 184 of 223
+SM-8: Material Reuse
+Intent To promote the selection of previously used or salvaged materials in order to reduce
+demand on natural resources and reduce waste
+Credit
+GENERAL
+Requirements
+Demonstrate that the total material cost of reused and salvaged materials represents
+3% of the total material cost.
+The following materials are not eligible for this credit:
+(cid:1) Materials addressed in all other credits under Stewarding Materials section
+except SM 9- Regional Materials;
+(cid:1) Materials constituting the reused portion of the building's structural system as
+per SM-7 Building Reuse compliance criteria; and
+(cid:1) Building components whose performance can influence the energy or water use
+are only eligible if an equivalent level of performance can be demonstrated in
+comparison to new components available in the current market.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+CREDIT POINTS REQUIREMENTS
+Points
+1
+Design Rating
+(maximum)
+The cost of specified reused materials equal to at least 3% of the
+1
+Total Material Cost.
+1
+Construction Rating
+(maximum)
+The cost of installed reused materials equal to 3% of the Total
+1
+Material Cost.
+Credit
+(cid:2) Summary sheet listing all proposed reused materials meeting the Credit
+Submission: Requirements, their cost, the source or location of previous use, and intended new
+Design Rating use;
+(cid:2) Calculations demonstrating that the total cost of the proposed reused materials
+meet the Credit Requirements; and
+(cid:2) Extracts from specifications requiring the use of the proposed materials.
+Credit
+(cid:2) Updated summary sheet listing all proposed reused materials meeting the Credit
+Submission: Requirements, their cost, the source or location of previous use, and new use; and
+Construction
+(cid:2) Updated calculations demonstrating that the total cost of the proposed reused
+Rating
+materials meet the Credit Requirements.
+Calculations and
+Methodology
+Total Material Cost: exclude labor and equipment costs and include the following
+divisions from the Construction Specifications Institute (CSI) MasterFormatTM or
+equivalent: Division 03 Concrete, Division 04 Masonry, Division 05 Metals, Division 06
+Wood, Plastics, and Composites, Division 07 Thermal and Moisture Protection, Division
+08 Openings, Division 09 Finishes, Division 10 Specialties, Division 31 Earthwork,
+Division 32 Exterior Improvements. Division 12 may be included; however, associated
+costs must be carried throughout all Stewarding Materials credits.
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 185 of 223
+SM-9: Regional Materials
+Intent To encourage the selection of building materials that have reduced transport impacts
+and
+
+====================================================================================================
+SECTION: IP
+====================================================================================================
+
+IP-1: Innovative Cultural & Regional Practices
+Intent Develop designs that showcase cultural and regional practices, while contributing to the
+environmental performance of the building.
+Credit
+GENERAL
+Requirements
+Develop a strategy for incorporating architectural and/or technical solutions that are
+inspired by cultural and regional precedents, and demonstrate their contribution to
+energy efficiency, water conservation or improved indoor or outdoor comfort.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Achieving Credit
+CREDIT POINTS REQUIREMENTS
+Points
+1
+Design Rating
+(maximum)
+Develop a design strategy for incorporating solutions that
+1
+showcase cultural and regional practices
+1
+Construction Rating
+(maximum)
+Demonstrate that the proposed solutions are built as part of the
+1
+development
+Credit
+(cid:1) Narrative describing the proposed strategy, documenting:
+Submission:
+(cid:2) Precedents for the proposed solutions;
+Design Rating
+(cid:2) Numerical or physical performance modeling/testing describing the
+performance of the proposed initiative(s) within the project setting; and
+(cid:2) Rationale of how the proposed solutions will be incorporated into the project.
+Credit
+(cid:1) Updated narrative describing the nominated solutions; and
+Submission:
+(cid:1) Photographs illustrating the proposed built-in solutions.
+Construction
+Rating
+Calculations and None
+Methodology
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 202 of 223
+IP-2: Innovating Practice
+Intent To reward design and construction practices that result in a significant positive impact
+in relation to any of the four pillars of Estidama.
+Credit
+GENERAL
+Requirements
+Develop, document and implement an innovative design and/or construction solution
+that addresses one or more of the four pillars of Estidama.
+AND
+Develop a guideline document that enables the innovative solution to be repeated.
+ADDITIONAL REQUIREMENT/CLARIFICATIONS
+None
+Awarding Credit
+Points
+CREDIT POINTS REQUIREMENTS
+2
+Design Rating
+(maximum)
+2 Innovative solution report.
+2
+Construction Rating
+(maximum)
+Implement the innovative solution, update the innovative
+2
+solution report and produce guideline documentation.
+Credit
+(cid:2) Evidence of IDP related to the innovative design and / or construction solution
+Submission: engaging all relevant team members; and
+Design Rating
+(cid:2) Innovative solution report.
+Credit
+(cid:2) Updated innovative solution report; and
+Submission:
+(cid:2) Guideline Document.
+Construction
+Rating
+Calculations and
+Methodology The four pillars that make up the Estidama concept are :
+(cid:1) Environmental
+(cid:1) Cultural
+(cid:1) Social
+(cid:1) Economic
+The innovative solution must be developed in conjunction with the IDP-R1 Integrated
+Development Strategy and be developed into a workable final solution.
+An Innovative Solution Report must be prepared that demonstrates the process by
+which the final innovative solution has evolved from early concepts and addresses the
+following subjects where relevant:
+(cid:1) Detailed narrative of final design solution that must:
+o fully describe the design innovation so that it may be repeated;
+o be fully supported by concept proofs from studies, experiments or other
+research;
+o document key parameters relied upon in the context of the project; and
+o be fully supported by design drawings, photographs and specifications.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 203 of 223
+(cid:1) Predicted impact in relation to the four pillars of Estidama: The final design
+solution should be contextualized in terms of tangible impacts against one or more
+of the four pillars;
+(cid:1) Feasibility studies: This must address documented design evolution decisions
+toward the final design solution and address any and all considerations that lead to
+the final solution;
+(cid:1) Cost Benefit Analysis: A detailed cost benefit analysis of the design measure(s)
+including, at a minimum, capital cost, operational and maintenance cost, cost as a
+percentage of total project cost and revenue where appropriate. The benefit
+analysis must include performance targets / levels attained or anticipated to be
+attained as a direct result of the measures;
+(cid:1) Risk: The risk analysis must detail the framework within which the design solution
+is intended to work and highlight any and all weaknesses that would impede
+performance. The analysis must anticipate the impact of such weaknesses on the
+performance of the design solution;
+(cid:1) Integration and Implementation: This section must clearly demonstrate how the
+design solution has been integrated with any and all related elements associated
+with the development as well as a detailed plan of how the design solution is
+implemented;
+(cid:1) Measurability: This section must address how the performance of the design
+solution will be measured in-use and include all metrics and associated
+technologies relied upon; and
+(cid:1) Maintainability and Durability: This section must address all maintenance and
+durability aspects related to the design solution.
+Awarding innovative credit points are subject to Estidama approval.
+References None
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 204 of 223
+Acronyms
+ACM Asbestos Containing Material
+ADSSC Abu Dhabi Sewerage Services Company
+ANSI American National Standards Institute
+ASHRAE American Society of Heating, Refrigerating and Air-Conditioning Engineers
+ASTM American Society for Testing and Materials
+ATM Automated Teller Machine
+ATTMA Air Tightness Testing & Measurement Association
+BCIS Building Cost Information Service
+BDP Building Durability Plan
+BIPV Building Integrated Photovoltaics
+BLB Building Log Book
+BMS Building Management System
+BRE Building Research Establishment
+BS British Standard
+BSI British Standards Institute
+CCA Chromated Copper Arsenate
+CCR California Code of Regulations
+CCTV Closed-circuit Television
+CDWMP Construction & Demolition Waste Management Plan
+CEMP Construction Environmental Management Plan
+CFC Chlorofluorocarbon
+CFD Computational Fluid Dynamics
+CIBSE Chartered Institution of Building Services Engineers
+CIE Commission Internationale de l’Eclairage
+CITES Convention on International Trade in Endangered Species
+CLR Contaminated Land Report
+CNIA Critical National Infrastructure Authority (Abu Dhabi)
+CoC Chain of Custody
+COP Coefficient of Performance
+CPE Chlorinated Polyethylene
+CPVC Chlorinated Polyvinyl Chloride
+CRI Color Rendering Index
+CSA Canadian Standards Association
+CSI Construction Specifications Institute
+CSIRO Commonwealth Scientific and Industrial Research Organization
+CSPE Chlorosulfonated Polyethylene
+CV Curriculum Vitae
+CWM Center of Waste Management (Abu Dhabi)
+DC District Cooling
+D&C Design and Construction
+DOT Department of Transport (Abu Dhabi)
+DSM Dynamic Simulation Modeling
+EAD Environment Agency Abu Dhabi
+EEC European Economic Community
+EHSMS Environmental Health and Safety Management System
+EIA Environmental Impact Assessment
+EPA Environmental Protection Agency (US)
+EU European Union
+FCU Fan Coil Unit
+FSC Forest Stewardship Council
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 205 of 223
+GFA Gross Floor Area
+GGBFS Ground Granulated Blast Furnace Slag
+GHG Greenhouse Gas
+GS Green Seal
+GWP Global Warming Potential
+HCFC Hydrochlorofluorocarbon
+HFC Hydrofluorocarbon
+HVAC Heating, Ventilating and Air Conditioning
+IAQ Indoor Air Quality
+IDP Integrated Development Process
+IECC International Energy Conservation Code
+IEQ Indoor Environmental Quality
+IESNA Illuminating Engineering Society of North America
+IP Innovating Practice
+ISAC Integrated Situational Awareness Centre
+ISO International Standards Organization
+IUCN International Union for Conservation of Nature
+JNCC Joint Nature Conservation Committee
+KPI Key Performance Indicator
+LB Livable Buildings
+LCC Life Cycle Cost
+LCD Liquid Crystal Display
+LED Light Emitting Diode
+MEP Mechanical, Electrical and Plumbing
+MERV Minimum Efficiency Reporting Value
+MSDS Material Safety Data Sheet
+MTCS Malaysian Timber Certification Scheme
+NGO Non-Governmental Organization
+ODP Ozone Depletion Potential
+OH Occupant Handbook
+OMM Operation and Maintenance Manual
+OMP Operation and Maintenance Plan
+PAD Plan Abu Dhabi
+PCP Pentachlorophenol
+PEFC Program for the Endorsement of Forest Certification
+PER Preliminary Environmental Review
+PMV Predicted Mean Vote
+PPD Predicted Percentage Dissatisfied
+PPM Parts Per Million
+PRS Pearl Rating System
+PV Photovoltaic
+PVC Polyvinyl Chloride
+PW Precious Water
+QP Qualified Professional
+R R-value
+RE Resourceful Energy
+REC Renewable Energy Certificate
+RFCI Resilient Floor Covering Institute
+RSB Regulation & Supervision Bureau (Abu Dhabi)
+RWE Recycled Water Equivalent
+SCM Supplementary Cementing Material
+SFI Sustainable Forestry Initiative
+SHGC Solar Heat Gain Coefficient
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 206 of 223
+SLL Society of Light and Lighting
+SM Stewarding Materials
+SMACNA Sheet Metal and Air Conditioning Contractors’ National Association
+SRI Solar Reflectance Index
+TVOC Total Volatile Organic Compound
+TSS Total Suspended Solids
+U U-value
+UAE United Arab Emirates
+UKAS United Kingdom Accreditation Service
+UPC Abu Dhabi Urban Planning Council
+VAV Variable Air Volume
+VOC Volatile Organic Compound
+WHO World Health Organization
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 207 of 223
+Units
+ach air changes per hour
+ºC ºCelsius
+dB decibel
+g gram
+Hz Hertz
+J Joule
+K Kelvin
+kg kilogram
+km kilometer
+kW kilowatt
+kWh kilowatt hour
+l liter
+m meter
+Pa Pascal
+ppm parts per million
+s second
+W Watt
+yr year
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 208 of 223
+Glossary
+The glossary for the Pearl Rating System is available on the Estidama website (www.upc.gov.ae).
+Above-grade wall A wall that is above the finish grade and not in contact with the ground.
+Adaptive species A plant species which has adapted to the local climate that is drought and/or
+saline tolerant.
+Admixture A material other than water, aggregates, lime, or cement, used as an ingredient
+of concrete or mortar, and added immediately before or during the mixing
+process.
+Air leakage rate The air flow rate required to pressurise a building to a stated pressure differential
+divided by the surface area of the building.
+Air tightness The resistance of the building envelope to inward or outward air leakage.
+Aggregate The particulate material used in construction including sand, gravel, crushed
+stone, slag, recycled concrete and geosynthetic aggregates.
+Albedo The amount of solar energy reflected by a surface.
+American National The non-profit organisation that coordinates and administers the U.S. voluntary
+Standards Institute national standards in both the private and public sectors.
+(ANSI)
+American Society The international organisation that establishes standards for the uniform testing
+of Heating, and rating of heating, ventilation, air conditioning and refrigeration equipment. It
+Refrigerating and also conducts related research, disseminates publications and provides continuing
+Air-Conditioning education to its members.
+Engineers (ASHRAE)
+Area of probable The extent of a physical area occupied by an environmental component that is
+impact likely to be impacted by at least one of the phases of the proposed project. The
+boundary of the area of probable impact is determined by measurements,
+previous studies, models or best professional judgment and may vary by
+environmental component. In simple terms the extent of the area outside of the
+project area that is likely to be directly or indirectly impacted by the proposed
+project.
+Asbestos A fibrous mineral formerly used for making incombustible or fireproof articles.
+The inhalation of asbestos fibres can cause serious illnesses, including malignant
+lung cancer, mesothelioma, asbestosis and gastro-intestinal cancer.
+Audit A systematic process of objectively obtaining and assessing evidence, including
+physical inspections and verification.
+Ballast An electrical device for starting and regulating fluorescent and discharge lamps.
+Baseline building The annual energy consumption of a baseline building design as defined in
+performance ANSI/ASHRAE/IESNA Standard 90.1-2007.
+Below-grade wall The portion of a wall in the building envelope that is entirely below the finish
+grade and in contact with the ground.
+Benchmark A standard against which something can be measured or judged.
+Blackwater The wastewater from toilets, urinals, kitchen sinks and dishwashers.
+Building envelope The elements of a building that separate conditioned spaces from the exterior.
+Building integrated Photovoltaics that replace conventional building elements such as the roof,
+photovoltaics façade or skylights.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 209 of 223
+(BIPV)
+Building Log Book A simple document providing the building owner/manager with easily understood
+(BLB) information on how the building should be operated, maintained and serviced. It
+also allows ongoing building performance and major alterations to be recorded.
+Building A computer based system with the capability to monitor, control and optimise the
+Management performance of building systems, controls and functions.
+System (BMS)
+Business As Usual The practice of conducting business according to the status quo, with no attempt
+(BAU) to assess new/additional needs, identify possibilities for improvement or
+implement change.
+Candela The base unit of luminous intensity i.e. the power emitted by a light source in a
+particular direction.
+Carbon emissions The release of carbon (or carbon dioxide) into the atmosphere.
+Carrying capacity The maximum number of organisms or amount of biomass that can be supported
+in a given area.
+Car sharing The shared use of a car by the driver and one or more passengers, usually for
+commuting.
+Central monitoring A central point for the storage and monitoring of information.
+system
+Chromated Copper A chemical wood preservative containing chromium, copper and arsenic.
+Arsenate (CCA)
+Climate change A change of climate which is attributed directly or indirectly to human activity
+that alters the composition of the global atmosphere and which is in addition to
+natural climate variability observed over comparable time periods.
+Clock time The artificial time used in everyday life to standardise time measurements. It
+allows people in difference locations to use the same time or to easily convert
+time from one location to another. Clock time differs from Solar Time, also known
+as local solar time, which is the time according to the position of the sun in the
+sky relative to one specific location on the ground. In solar time, the sun is always
+due south in the northern hemisphere at exactly noon.
+Coefficient of The ratio of the net cooling energy exported from the system to the total electric
+performance (COP) power used by the system.
+- cooling
+Co-generation The generation of both electricity and useful heat. Also known as combined heat
+and power (CHP).
+Color Rendering A scale of 0 to 100 of the ability of a light source to reproduce the colors of
+Index (CRI) various objects in comparison with an ideal or natural light source. The higher the
+CRI, the closer the color reproduction is to that of the ideal/natural light source.
+Commissioning The process of ensuring that newly constructed/installed systems (HVAC,
+plumbing, electrical, fire/life safety, building security etc) operate as designed
+and meet the performance requirements of the building occupant.
+Commissioning An individual with responsibility for co-ordinating and monitoring the
+agent commissioning process.
+Compensation The measures taken to make up for the loss of, or permanent damage to,
+biological resources through the provision of replacement areas. Any replacement
+area should be similar to or, with appropriate management, have the ability to
+reproduce the ecological functions and conditions of those biological resources
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 210 of 223
+that have been lost or damaged.
+Compost A mixture of decomposed organic matter used to improve soil structure and
+provide nutrients.
+Computational A branch of fluid mechanics that uses numerical methods and algorithms to
+Fluid Dynamics analyse and solve problems that involve fluid flows.
+(CFD)
+Condensate The product of condensation.
+Condensation The change of a gas or vapor into a liquid, either by being cooled or being
+subjected to increased pressure. A common occurrence is the condensation of
+atmospheric moisture on a cold surface.
+Conduction The transfer of thermal energy through a material.
+Connectivity A measure of the functional availability of the habitats needed for a particular
+species to move through a given area.
+Construction waste The unwanted material generated during construction, including demolition
+waste.
+Cutoff luminaire A luminaire that controls the amount of uplight. Luminaires are classified as full
+cutoff, cutoff, semi-cutoff or non-cutoff according to the most recent adopted
+criteria of the Illuminating Engineering Society of North America (IESNA).
+Desalinization The removal of salt from water.
+Development The Urban Planning Council’s process for reviewing development proposals.
+Review Process
+Distribution system The systems, components and mechanisms (such as ducts, pipes, and wires)
+conveying substances or energy from a source to the point of use. The distribution
+system includes such auxiliary equipment as fans, pumps and transformers and
+their respective control systems.
+District cooling The centralized production and distribution of cooling energy.
+Dynamic Simulation The modeling of a building that simulates the energy inputs and outputs for
+Modeling (DSM) different types of buildings over time.
+Energy The modifications or installations to the building design in order to reduce energy
+conservation consumption. Such measures include external shading, orientation, system
+measures efficiencies, on-site renewable technologies etc.
+Energy rate The cost of a unit of energy or power.
+Environmental An attribute or constituent of the environment (i.e. air quality, marine waters,
+component waste management, geology, seismicity, soil, groundwater, marine ecology,
+terrestrial ecology, noise, traffic, socio-economic) that may be impacted by the
+proposed project.
+Environmental The process of addressing surrounding environmental parameters when devising
+design plans, programmes, policies, buildings or products. Environmental design in the
+traditional sense develops physical environments to meet one or more aesthetic
+or day-to-day functional needs, or to create a specific sort of experience.
+Environmental The positive or negative impact that occurs to an environmental component as a
+impact result of the proposed project. This impact can be directly or indirectly caused by
+the project’s different phases (i.e. construction, operation and decommissioning).
+Environmental The assessment of the possible impacts (both positive and negative) that a
+Impact Assessment proposed development may have on the environment, covering natural, social and
+(EIA) economic aspects.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 211 of 223
+Equinox Either of the two times of the year when the sun crosses the plane of the earth's
+equator and day and night are of equal length.
+Evapotranspiration The transport of water into the atmosphere from surfaces, including soil and
+vegetation.
+Façade The exterior wall of a building exposed to public view or that wall viewed by
+persons not within the building. The portion of any exterior elevation of a building
+extending vertically from the grade to the top of a parapet wall or eave, and
+horizontally across the entire width of the building elevation.
+Fan Coil Unit (FCU) A unit that provides cooling and/or heating air as part of a comfort air
+conditioning system. An FCU uses heated or chilled water and supplies air via one
+or more electrically driven fans.
+Fire suppression The system within a building that discharges inert gases or chemical agents to
+system control/extinguish a fire.
+Floor-to-floor The vertical distance measured from the finished floor of one storey to the
+height finished floor of the above or below storey.
+Formaldehyde A simple, highly reactive hydrocarbon that is used as a fixative in the pathology
+laboratory, a fumigant, and in the manufacture of foam insulation, cosmetics,
+drugs, clothing and furniture. It is also a major toxic component of photochemical
+smog. Formaldehyde is a strong allergen.
+Fossil fuel A fuel manufactured from a hydrocarbon deposit such as petroleum, coal or
+natural gas derived from living matter of a previous geologic time.
+The contractor with the main responsibility for performing/supervising the
+General contractor
+construction of a project. The general contractor hires all the subcontractors and
+suppliers for the project.
+Geothermal The heating and/or cooling potential of the ground.
+Glare The result of excessive contrast between bright and dark areas in the field of
+view, causing discomfort or reducing the ability to discern detail.
+Global Warming An indicator that reflects the relative effect of a greenhouse gas in terms of
+Potential (GWP) climate change considering a fixed time period, such as 100 years (GWP100). The
+GWPs for different emissions can then be added together to give one single
+indicator that expresses the overall contribution to climate change of these
+emissions.
+Graywater The wastewater from uses such as showers, laundry, sinks, fire system tests and
+cooling tower drain-down water.
+Green A strategically planned and managed network of wilderness, parks, greenways,
+infrastructure conservation easements and working lands with conservation value that supports
+native species, maintains natural ecological processes, sustains air and water
+resources and contributes to the health and quality of life for communities and
+people.
+Greenfield Previously undeveloped land in a city or rural area, currently used for agriculture,
+landscape design or left to nature.
+Greenhouse gas A gas which absorb infrared radiation (heat) and contributes to the greenhouse
+(GHG) effect (examples include water vapour, carbon dioxide, methane etc).
+Gross Floor Area The sum of the floor areas of the spaces within a building, including basements,
+(GFA) mezzanines and intermediate floors, and penthouses with an internal height of
+2.3m or greater. It is measured from the exterior faces of the exterior walls or
+from the centreline of walls separating buildings. It excludes covered walkways,
+porches, pipe trenches, exterior terraces or steps, chimneys, roof overhangs and
+similar features.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 212 of 223
+Groundwater The water that occurs below the surface of the earth where it occupies spaces in
+soils or geological strata.
+Habitat A place in which a particular plant or animal lives. Often used in the wider sense
+referring to major assemblages of plants and animals found together.
+Habitat creation The establishment of an ecosystem on land that did not previously support that
+ecosystem, or on severely altered sites.
+Hazardous A material that can cause harm to people, other living organisms or the
+material/waste environment.
+Heat rejection The removal of heat from a system, commonly water based.
+Heating, The equipment, distribution systems and terminals that provide heating,
+Ventilation and Air ventilating or air conditioning to a building or portion of a building.
+Conditioning
+(HVAC) system
+High-frequency A ballast that operates at a frequency greater than 20 kHz and typically around
+electronic ballast 30kHz.
+Illuminance The total luminous flux incident on a surface, per unit area.
+Incandescent lamp A lamp in which light is produced by a filament heated to incandescence by an
+electric current.
+Indoor The quality of the internal environment in relation to airborne contaminants,
+Environmental thermal comfort, lighting, acoustics etc.
+Quality (IEQ)
+Infiltration - air The uncontrolled leakage of air through cracks and gaps in any building element
+and around windows and doors of a building. Infiltration is caused by pressure
+differences across these elements due to wind, inside and outside temperature
+differences and imbalance between supply and exhaust air systems.
+Infiltration - water The downward movement of water through soil.
+Infiltration rate – The rate of water entry into the soil expressed as a depth of water per unit of
+water time (mm/hour).
+Infrared radiation The energy in the region of the electromagnetic radiation spectrum at
+wavelengths longer than those of visible light but shorter than those of radio
+waves.
+Key Performance An indicator set in a key area to measure performance.
+Indicator (KPI)
+Landscaping The planting, configuration and maintenance of trees, ground cover, shrubbery,
+decorative natural and structural features (walls, fences, hedges, trellises,
+fountains, sculptures), earth patterning and bedding materials, and other similar
+site improvements that serve an aesthetic or functional purpose.
+Legionnaires A respiratory disease caused by inhaling Legionella bacteria either in the form of
+disease contaminated water droplets (aerosols) or in droplet nuclei (after water has
+evaporated). Fatal in approximately 12% of reported cases.
+Life Cycle Cost An analysis of building impacts covering the consecutive and interlinked stages of
+(LCC) analysis a constructed building, from raw material acquisition to the final disposal.
+Life span The length of time an object, material or organism is expected to survive.
+Light pollution The adverse effect of artificial light, including sky glow, glare, light trespass, light
+clutter, decreased visibility at night and energy waste.
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 213 of 223
+Living area Any family room in a residential unit, such as a living room, dining room, majlis
+rooms, playroom, TV room, home theatre room, study, party rooms.
+Load bearing wall A wall that supports other elements of a building in addition to its own weight.
+Lumen A unit of luminous flux equal to the amount of light given out through a solid
+angle of one steradian by a point source of one candela intensity radiating
+uniformly in all directions.
+Microclimate The localised climate conditions within an urban area or neighbourhood.
+Minimum The minimum area of landscaping as defined by development type and location
+landscaped area within the Abu Dhabi Development Code.
+Mitigation The measures taken to avoid or reduce negative impacts.
+Mixed mode The combination of natural ventilation and mechanical ventilation and/or cooling
+ventilation to ventilate a space. In the context of this document and the UAE climate, this
+refers to changeover mixed mode design and operation. This implies a change of
+ventilation and cooling ‘mode’ from fully sealed in the hotter months, to one of
+natural ventilation through operable windows in cooler months.
+Mixed-use A development that includes more than occupancy type - such as residential,
+development commercial, industrial, public or semi-public - within the same building, project
+or site . The most common examples are a project with both commercial and
+residential uses, or commercial and industrial uses.
+Nadir The reference direction directly below a luminaire, or "straight down" (0 degree
+angle).
+Native species An indigenous species living naturally within a given area.
+Non-renewable The energy derived from a fossil fuel source.
+energy
+Operation and A document containing instructions for the operation and maintenance of systems
+Maintenance and components within a building.
+Manual (OMM)
+Occupied area Any internal space intended for sedentary occupancy.
+Open area The area of opening through which air exchange occurs between indoors and
+outdoors. It is not the same as the whole window area (glass and frame) and is
+typically much smaller and depends on the opening style of the window.
+Operational waste The waste produced as a result of operating/running a building e.g. office waste,
+landscaping waste, food waste.
+Organic waste The carbon-containing waste derived from animal and plant materials.
+Outdoor/outside The air that is outside the building envelope or is taken from outside the building
+air that has not been previously circulated through the building.
+Ozone Depletion The relative amount of degradation to the ozone layer a chemical compound can
+Potential (ODP) cause. The ODP of CFC-11 is 1 and the ODPs of other compounds are calculated
+relative to this.
+Permeable paving Paving designed to allow water to pass through its surface using porous asphalt or
+concrete or using interlocking concrete permeable pavers or open grid pavers.
+Phase I habitat A field survey technique which provides a relatively rapid method to record semi-
+survey natural and natural vegetation and other wildlife habitats, designed to cover large
+areas relatively rapidly.
+Photovoltaics Cells that produce a voltage when exposed to radiant energy (especially light).
+Pearl Building Rating System: Design & Construction, Version 1.0, April 2010 214 of 223
+The main application is the conversion of solar radiation to usable energy.
+Plan 2030 The plan which has been designed to help Abu Dhabi filter all planning decisions
+through environmental, social and economic development criteria. The full title
+is the Abu Dhabi 2030 Urban Structure Framework Plan.
+Predicted Mean A thermal scale from -3 (cold) to +3 (hot).
+Vote (PMV)
+The percentage of a hypothetical sample population who will be dissatisfied
+Predicted
+(uncomfortable) in a given environment. As the PMV moves away from neutral
+Percentage
+(PMV = 0) in either direction, the PPD increases.
+Dissatisfied 

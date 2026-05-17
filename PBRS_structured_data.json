@@ -1,0 +1,149 @@
+{
+  "PW": [
+    {
+      "code": "PW-1",
+      "title": "Improved Interior Water Use Reduction",
+      "max_pts": 15,
+      "structure": "Multi-level",
+      "levels": []
+    },
+    {
+      "code": "PW-2.1",
+      "title": "Exterior Water Use Reduction: Landscaping",
+      "max_pts": 10,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "PW-2.2",
+      "title": "Exterior Water Use Reduction: Heat Rejection",
+      "max_pts": 8,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "PW-2.3",
+      "title": "Exterior Water Use Reduction: Water Features",
+      "max_pts": 4,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "PW-R1",
+      "title": "Minimum Interior Water Use Reduction",
+      "max_pts": 0,
+      "structure": "Unknown",
+      "levels": []
+    },
+    {
+      "code": "PW-R2",
+      "title": "Exterior Water Monitoring",
+      "max_pts": 0,
+      "structure": "Unknown",
+      "levels": []
+    }
+  ],
+  "RE": [],
+  "SM": [
+    {
+      "code": "SM-1",
+      "title": "Non-Polluting Materials",
+      "max_pts": 3,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "SM-2",
+      "title": "Design for Materials Reduction",
+      "max_pts": 1,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "SM-3",
+      "title": "Design for Flexibility & Adaptability",
+      "max_pts": 1,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "SM-4",
+      "title": "Design for Disassembly",
+      "max_pts": 1,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "SM-5",
+      "title": "Modular Flooring Systems",
+      "max_pts": 1,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "SM-6",
+      "title": "Design for Durability",
+      "max_pts": 0,
+      "structure": "Unknown",
+      "levels": []
+    },
+    {
+      "code": "SM-7",
+      "title": "Building Reuse",
+      "max_pts": 2,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "SM-8",
+      "title": "Material Reuse",
+      "max_pts": 1,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "SM-9",
+      "title": "Regional Materials",
+      "max_pts": 0,
+      "structure": "Unknown",
+      "levels": []
+    },
+    {
+      "code": "SM-R1",
+      "title": "Hazardous Materials Elimination",
+      "max_pts": 0,
+      "structure": "Unknown",
+      "levels": []
+    },
+    {
+      "code": "SM-R2",
+      "title": "Basic Construction Waste Management",
+      "max_pts": 0,
+      "structure": "Unknown",
+      "levels": []
+    },
+    {
+      "code": "SM-R3",
+      "title": "Basic Operational Waste Management",
+      "max_pts": 0,
+      "structure": "Unknown",
+      "levels": []
+    }
+  ],
+  "IP": [
+    {
+      "code": "IP-1",
+      "title": "Innovative Cultural & Regional Practices",
+      "max_pts": 1,
+      "structure": "Binary",
+      "levels": []
+    },
+    {
+      "code": "IP-2",
+      "title": "Innovating Practice",
+      "max_pts": 2,
+      "structure": "Multi-level",
+      "levels": []
+    }
+  ]
+}
