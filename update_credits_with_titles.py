@@ -5,8 +5,8 @@ import re
 with open('credit_categories.json') as f:
     excel_data = json.load(f)
 
-# Extract titles from existing credits.js
-with open('credits.js', 'r') as f:
+# Extract titles from existing src/credits.js
+with open('src/credits.js', 'r') as f:
     credits_js = f.read()
 
 # Find all credit code and title pairs
@@ -19,7 +19,7 @@ for code, title in matches:
 
 print(f"Found {len(credit_titles)} credit titles")
 
-# Now create the updated credits.js
+# Now create the updated src/credits.js
 def get_section_from_code(code):
     """Determine section from credit code"""
     if code.startswith('IDP'): return 'IDP'
@@ -90,7 +90,7 @@ for credit_type, credits in excel_data.items():
         credit_obj = create_credit_object(code, info, credit_type)
         new_credits[section].append(credit_obj)
 
-# Generate the new credits.js content
+# Generate the new src/credits.js content
 def format_credit_obj(obj):
     """Format a credit object as JavaScript"""
     lines = []
@@ -141,7 +141,7 @@ const CREDITS = {{
 const ALL_CREDITS = Object.values(CREDITS).flat();
 """
 
-# Write the new credits.js
+# Write the new src/credits.js
 with open('credits_updated.js', 'w') as f:
     f.write(new_credits_js)
 

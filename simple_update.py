@@ -5,11 +5,11 @@ import re
 with open('credit_categories.json') as f:
     excel_data = json.load(f)
 
-# Load the existing credits.js
-with open('credits.js', 'r') as f:
+# Load the existing src/credits.js
+with open('src/credits.js', 'r') as f:
     credits_js = f.read()
 
-print(f"Loaded credits.js ({len(credits_js)} chars)")
+print(f"Loaded src/credits.js ({len(credits_js)} chars)")
 
 # Function to update a credit's pointOptions and pts
 def update_credit_in_js(js_content, code, excel_info, credit_type):
@@ -61,6 +61,6 @@ for credit_type, credits in excel_data.items():
 with open('credits_updated.js', 'w') as f:
     f.write(updated_js)
 
-print("Updated credits.js saved as credits_updated.js")
+print("Updated src/credits.js saved as credits_updated.js")
 print(f"Original: {len(credits_js)} chars")
 print(f"Updated: {len(updated_js)} chars")

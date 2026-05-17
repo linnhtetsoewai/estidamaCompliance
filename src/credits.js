@@ -1,4 +1,4 @@
-// Static PBRS credit catalog loaded by PBRS_Pearl_Checklist.html
+﻿// Static PBRS credit catalog loaded by PBRS_Pearl_Checklist.html
 const SECTIONS = {
   IDP: 'IDP - Integrated Development Process',
   NS:  'NS - Natural Systems',
@@ -12,7 +12,7 @@ const SECTIONS = {
 
 const CREDITS = {
   IDP: [
-    { code:'IDP-R1', title:'Title placeholder', desc:'Desc placeholder', pts:'R', req:true },
+    { code:'IDP-R1', title:'Integrated Development Strategy', desc:'To ensure new development adopts the Integrated Development Process (IDP) as a way of attaining greater synergy between project systems, resulting in high performance buildings.', pts:'R', req:true },
     { code:'IDP-R2', title:'Tenant Fit-Out Design & Construction Guide', desc:"To ensure that the design and construction of interior space fit-out will contribute to the overall project's sustainability objectives and targets.", pts:'R', req:true },
     { code:'IDP-R3', title:'Basic Commissioning', desc:'To ensure that the building performs as designed to protect occupant health and provide comfort and ongoing building efficiency.', pts:'R', req:true },
     { code:'IDP-1', title:'Life Cycle Costing', desc:'To enable effective long-term decisions about building design and construction in order to maximize efficiency over the whole life of the development.', pts:4, req:false, uiType:'straight',

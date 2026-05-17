@@ -4,49 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PBRS Pearl Building Rating - Design Checklist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --blue: #2c6fad;
-    --blue-light: #e8f2fb;
-    --blue-mid: #b5d4f4;
-    --green: #2a7a2a;
-    --green-light: #eaf4ea;
-    --amber: #b07d00;
-    --amber-light: #fdf3dc;
-    --red: #9a1f1f;
-    --red-light: #fdf0f0;
-    --gray-50: #f8f8f7;
-    --gray-100: #f0efeb;
-    --gray-200: #e0dfd9;
-    --gray-300: #c8c7c0;
-    --gray-500: #888780;
-    --gray-700: #4a4a48;
-    --gray-900: #1e1e1c;
-    --border: #dddcd6;
-    --radius: 6px;
-    --radius-lg: 10px;
-    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --sand: #F5EDE0;
+    --cream: #FFFDF6;
+    --gold: #A67C3A;
+    --gold-dark: #7A5820;
+    --gold-light: #F2E2B6;
+    --gold-mid: #CFB06A;
+    --espresso: #231406;
+    --warm-800: #3C2308;
+    --warm-700: #5B3C1D;
+    --warm-600: #7A5535;
+    --warm-500: #896742;
+    --warm-400: #A68460;
+    --warm-300: #C5AF96;
+    --warm-200: #DDD0BA;
+    --warm-100: #ECE5D5;
+    --warm-50: #F6F2EB;
+    --border: #D8C9AC;
+    --green: #2C6A48;
+    --green-light: #E5F1EC;
+    --amber: #A07200;
+    --amber-light: #FAF0D0;
+    --red-text: #7A2A0A;
+    --radius: 8px;
+    --radius-lg: 14px;
+    --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --shadow-sm: 0 1px 3px rgba(35,20,6,0.09), 0 1px 2px rgba(35,20,6,0.05);
+    --shadow-md: 0 4px 14px rgba(35,20,6,0.1), 0 2px 4px rgba(35,20,6,0.06);
   }
-  html { font-size: 14px; }
-  body { font-family: var(--font); color: var(--gray-900); background: #f4f3ef; min-height: 100vh; }
+  html { font-size: 14px; scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--espresso); background: var(--sand); min-height: 100vh; }
 
   /* ---------- LAYOUT ---------- */
-  .page-wrap { max-width: 1020px; margin: 0 auto; padding: 0 16px 48px; }
-  .site-header { background: #fff; border-bottom: 1px solid var(--border); padding: 0 16px; position: sticky; top: 0; z-index: 100; }
-  .header-inner { max-width: 1020px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 52px; gap: 12px; }
-  .header-logo { display: flex; align-items: center; gap: 10px; }
-  .logo-mark { width: 32px; height: 32px; background: var(--blue); border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .page-wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px 60px; }
+  .site-header { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 20px; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+  .header-inner { max-width: 1040px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 12px; }
+  .header-logo { display: flex; align-items: center; gap: 11px; }
+  .logo-mark { width: 34px; height: 34px; background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 6px rgba(122,88,32,0.35); }
   .logo-mark svg { width: 18px; height: 18px; fill: #fff; }
-  .header-title { font-size: 14px; font-weight: 600; color: var(--gray-900); line-height: 1.2; }
-  .header-sub { font-size: 11px; color: var(--gray-500); margin-top: 1px; }
+  .header-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--espresso); line-height: 1.2; letter-spacing: 0.01em; }
+  .header-sub { font-size: 10.5px; color: var(--warm-500); margin-top: 1px; letter-spacing: 0.03em; }
   .header-actions { display: flex; gap: 8px; align-items: center; }
 
   /* ---------- BUTTONS ---------- */
-  .btn { padding: 7px 16px; font-size: 12.5px; border-radius: var(--radius); cursor: pointer; border: 1px solid var(--border); background: #fff; color: var(--gray-700); font-family: var(--font); font-weight: 500; transition: background 0.1s, border-color 0.1s; white-space: nowrap; }
-  .btn:hover { background: var(--gray-50); border-color: var(--gray-300); }
-  .btn.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
-  .btn.primary:hover { background: #245d93; border-color: #245d93; }
+  .btn { padding: 7px 16px; font-size: 12.5px; border-radius: var(--radius); cursor: pointer; border: 1px solid var(--border); background: var(--cream); color: var(--warm-700); font-family: var(--font); font-weight: 600; transition: all 0.15s ease; white-space: nowrap; letter-spacing: 0.01em; }
+  .btn:hover { background: var(--warm-50); border-color: var(--warm-300); box-shadow: var(--shadow-sm); }
+  .btn.primary { background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%); color: var(--cream); border-color: transparent; box-shadow: 0 2px 8px rgba(122,88,32,0.35); }
+  .btn.primary:hover { box-shadow: 0 4px 14px rgba(122,88,32,0.45); transform: translateY(-1px); }
   .btn.sm { padding: 5px 12px; font-size: 11.5px; }
 
   /* ---------- PAGE SECTIONS ---------- */
@@ -54,126 +65,158 @@
   #view-setup.active, #view-stage.active { display: block; }
 
   /* ---------- PAGE TITLE ROW ---------- */
-  .page-title-row { display: flex; align-items: flex-end; justify-content: space-between; padding: 22px 0 14px; gap: 16px; flex-wrap: wrap; }
-  .page-title { font-size: 20px; font-weight: 600; color: var(--gray-900); }
-  .page-desc { font-size: 12.5px; color: var(--gray-500); margin-top: 3px; }
+  .page-title-row { display: flex; align-items: flex-end; justify-content: space-between; padding: 24px 0 16px; gap: 16px; flex-wrap: wrap; }
+  .page-title { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--espresso); letter-spacing: -0.01em; line-height: 1.2; }
+  .page-desc { font-size: 12.5px; color: var(--warm-500); margin-top: 4px; }
 
   /* ---------- SUMMARY CARDS ---------- */
-  .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 18px; }
+  .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
   @media (max-width: 700px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
-  .pile-chart { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px 12px; margin-bottom: 18px; }
-  .pile-chart .pile-title { font-size: 12.5px; color: var(--gray-600); margin-bottom: 10px; font-weight: 600; }
-  .pile-row { display: flex; height: 22px; border-radius: 999px; overflow: hidden; background: var(--gray-100); margin-bottom: 8px; }
-  .pile-segment { display: flex; align-items: center; justify-content: center; font-size: 11px; color: #fff; padding: 0 8px; min-width: 28px; white-space: nowrap; text-shadow: 0 0 2px rgba(0,0,0,0.25); }
-  .pile-segment.light { opacity: 0.88; }
-  .pile-segment.dark { opacity: 1; }
-  .pile-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
-  .pile-chip { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: #f8f8f7; border-radius: 999px; font-size: 11px; color: var(--gray-700); }
-  .pile-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-  .sum-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; }
-  .sum-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-500); margin-bottom: 5px; }
-  .sum-value { font-size: 26px; font-weight: 600; line-height: 1; color: var(--gray-900); }
-  .sum-sub { font-size: 11px; color: var(--gray-500); margin-top: 4px; }
-  .rating-pill { display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border-radius: 20px; font-size: 13px; font-weight: 600; }
-  .rp-0 { background: var(--gray-100); color: var(--gray-700); }
-  .rp-1 { background: #e2f0e2; color: #1b5e1b; }
-  .rp-2 { background: #c8e6c8; color: #14511a; }
-  .rp-3 { background: #aad4aa; color: #0c4012; }
-  .rp-4 { background: #85c490; color: #05300b; }
-  .rp-5 { background: #5aad6a; color: #011f05; }
+  .sum-card { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 18px; box-shadow: var(--shadow-sm); border-top: 3px solid var(--gold-mid); transition: transform 0.15s, box-shadow 0.15s; animation: fadeSlideUp 0.35s ease both; }
+  .sum-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .sum-card:nth-child(2) { animation-delay: 0.06s; }
+  .sum-card:nth-child(3) { animation-delay: 0.12s; }
+  .sum-card:nth-child(4) { animation-delay: 0.18s; }
+  .sum-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.09em; color: var(--warm-400); margin-bottom: 6px; font-weight: 700; }
+  .sum-value { font-family: var(--font-display); font-size: 36px; font-weight: 700; line-height: 1; color: var(--espresso); }
+  .sum-sub { font-size: 11px; color: var(--warm-400); margin-top: 5px; }
+  .rating-pill { display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 20px; font-family: var(--font-display); font-size: 15px; font-weight: 700; }
+  .rp-0 { background: var(--warm-100); color: var(--warm-700); }
+  .rp-1 { background: var(--gold-light); color: var(--gold-dark); box-shadow: 0 1px 6px rgba(166,124,58,0.25); }
+  .rp-2 { background: #e5f0dc; color: #2a5818; }
+  .rp-3 { background: #c8e4bb; color: #1c4a0c; }
+  .rp-4 { background: #aad3a0; color: #113c08; }
+  .rp-5 { background: #80c276; color: #062800; }
+
+  @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ---------- DONUT CHART ---------- */
+  .donut-wrap { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px 22px 16px; margin-bottom: 20px; box-shadow: var(--shadow-sm); }
+  .donut-title { font-family: var(--font-display); font-size: 16px; color: var(--espresso); margin-bottom: 3px; font-weight: 700; letter-spacing: 0.01em; }
+  .donut-sub { font-size: 12px; color: var(--warm-500); margin-bottom: 14px; letter-spacing: 0.01em; }
+  .donut-layout { display: flex; align-items: center; gap: 26px; }
+  .donut-svg-wrap { position: relative; flex-shrink: 0; }
+  .donut-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
+  .donut-center-num { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--espresso); line-height: 1; }
+  .donut-center-label { font-size: 8.5px; color: var(--warm-400); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
+  .donut-legend { display: grid; grid-template-columns: 10px auto 1.5px auto auto; column-gap: 20px; row-gap: 0; align-items: center; align-content: start; }
+  .donut-legend-row { display: contents; }
+  .donut-legend-hdr { display: contents; }
+  .donut-divider { background: rgba(166,124,58,0.3); align-self: stretch; border-radius: 1px; }
+  .donut-col-hdr { font-size: 9.5px; color: var(--warm-400); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; text-align: right; padding: 0 0 8px; }
+  .donut-col-hdr-blank { padding: 0 0 8px; }
+  .donut-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .donut-legend-name { font-size: 11.5px; color: var(--warm-700); white-space: nowrap; padding: 4px 0; }
+  .donut-legend-opt { color: var(--warm-500); font-size: 11.5px; text-align: right; padding: 4px 0; }
+  .donut-legend-req { font-size: 11px; color: var(--warm-500); text-align: right; padding: 4px 0; }
+  .donut-seg { transition: opacity 0.2s; cursor: pointer; }
+  .donut-seg:hover { opacity: 0.8; }
+  .donut-layout { align-items: flex-start; }
+  .donut-detail { flex: 1; min-width: 0; border-left: 1px solid var(--border); padding-left: 20px; padding-top: 2px; }
+  .donut-detail-empty { font-size: 12px; color: var(--warm-300); font-style: italic; }
+  .donut-detail-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .donut-detail-swatch { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+  .donut-detail-sec { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--espresso); }
+  .donut-credit-list { display: flex; flex-direction: column; }
+  .donut-credit-row { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--warm-50); }
+  .donut-credit-code { flex: 1; font-size: 12px; font-weight: 600; color: var(--warm-700); }
+  .donut-credit-badge { font-size: 9px; background: var(--gold-light); color: var(--gold-dark); border-radius: 3px; padding: 1px 5px; font-weight: 600; letter-spacing: 0.03em; flex-shrink: 0; }
+  .donut-credit-pts { font-size: 12px; color: var(--warm-500); min-width: 16px; text-align: right; flex-shrink: 0; }
 
   /* ---------- KICKOFF NOTE ---------- */
-  .notice { background: var(--blue-light); border-left: 3px solid var(--blue); border-radius: 0 var(--radius) var(--radius) 0; padding: 9px 14px; font-size: 12.5px; color: #1a4a77; margin-bottom: 16px; line-height: 1.5; }
+  .notice { background: linear-gradient(to right, var(--gold-light), rgba(242,226,182,0.2)); border-left: 3px solid var(--gold-mid); border-radius: 0 var(--radius) var(--radius) 0; padding: 10px 16px; font-size: 12.5px; color: var(--warm-700); margin-bottom: 18px; line-height: 1.5; }
 
   /* ---------- STAGE TABS ---------- */
-  .stage-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 18px; }
-  .stage-tab { padding: 9px 22px; font-size: 13px; cursor: pointer; background: none; border: none; color: var(--gray-500); font-family: var(--font); font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.1s; }
-  .stage-tab:hover { color: var(--gray-900); }
-  .stage-tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+  .stage-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 20px; }
+  .stage-tab { padding: 10px 24px; font-size: 13px; cursor: pointer; background: none; border: none; color: var(--warm-500); font-family: var(--font); font-weight: 600; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; }
+  .stage-tab:hover { color: var(--espresso); }
+  .stage-tab.active { color: var(--gold-dark); border-bottom-color: var(--gold); }
 
-  .section-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-  .section-tab-button { padding: 9px 16px; font-size: 13px; font-family: var(--font); font-weight: 600; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; color: var(--gray-700); cursor: pointer; transition: background 0.1s, border-color 0.1s, color 0.1s; }
-  .section-tab-button:hover { background: var(--gray-50); }
-  .section-tab-button.active { color: var(--blue); border-color: var(--blue); box-shadow: inset 0 -2px 0 0 var(--blue); }
+  /* ---------- SECTION TABS ---------- */
+  .section-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .section-tab-button { padding: 8px 16px; font-size: 12.5px; font-family: var(--font); font-weight: 600; border: 1.5px solid var(--border); border-radius: 999px; background: var(--cream); color: var(--warm-600); cursor: pointer; transition: all 0.15s ease; }
+  .section-tab-button:hover { border-color: var(--gold-mid); color: var(--gold-dark); background: var(--warm-50); }
+  .section-tab-button.active { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); color: var(--cream); border-color: transparent; box-shadow: 0 2px 8px rgba(122,88,32,0.3); }
 
   /* ---------- CREDIT SECTIONS ---------- */
-  .section-wrap { margin-bottom: 6px; }
-  .section-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--gray-100); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; user-select: none; transition: background 0.1s; }
-  .section-head:hover { background: var(--gray-200); }
+  .section-wrap { margin-bottom: 8px; }
+  .section-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--warm-50); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; user-select: none; transition: background 0.12s; }
+  .section-head:hover { background: var(--warm-100); }
   .section-head.open { border-radius: var(--radius) var(--radius) 0 0; border-bottom-color: transparent; }
-  .sec-left { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--gray-900); }
-  .sec-chevron { color: var(--gray-500); font-size: 10px; transition: transform 0.15s; display: inline-block; }
+  .sec-left { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700; color: var(--espresso); }
+  .sec-chevron { color: var(--warm-400); font-size: 10px; transition: transform 0.2s; display: inline-block; }
   .sec-chevron.open { transform: rotate(90deg); }
-  .sec-pts { font-size: 12px; color: var(--gray-500); font-weight: 400; }
+  .sec-pts { font-size: 12px; color: var(--warm-500); font-weight: 500; }
 
   /* ---------- CREDIT ROWS (SETUP) ---------- */
-  .credits-body { border: 1px solid var(--border); border-top: none; border-radius: 0 0 var(--radius) var(--radius); background: #fff; }
-  .credit-row { display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px 10px 32px; border-bottom: 1px solid var(--border); transition: background 0.08s; }
+  .credits-body { border: 1px solid var(--border); border-top: none; border-radius: 0 0 var(--radius) var(--radius); background: var(--cream); }
+  .credit-row { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px 12px 32px; border-bottom: 1px solid var(--warm-100); transition: background 0.12s, border-left-color 0.12s; border-left: 3px solid transparent; }
   .credit-row:last-child { border-bottom: none; }
-  .credit-row.checked { background: #f4f9ff; }
-  .credit-row.req-row { background: #fafaf8; }
-  .credit-cb { width: 15px; height: 15px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--blue); }
-  .credit-cb:disabled { cursor: default; accent-color: var(--gray-300); }
+  .credit-row.checked { background: linear-gradient(to right, rgba(166,124,58,0.07), transparent); border-left-color: var(--gold-mid); }
+  .credit-row.req-row { background: var(--warm-50); border-left-color: var(--warm-200); }
+  .credit-cb { width: 15px; height: 15px; margin-top: 3px; flex-shrink: 0; cursor: pointer; accent-color: var(--gold); }
+  .credit-cb:disabled { cursor: default; accent-color: var(--warm-300); }
   .credit-meta { flex: 1; min-width: 0; }
-  .credit-description { font-size: 12px; color: var(--gray-500); margin-top: 3px; line-height: 1.4; }
-  .credit-code-line { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
-  .credit-code { font-size: 11.5px; font-weight: 700; color: var(--blue); }
-  .req-badge { font-size: 9.5px; background: #f0e8ff; color: #6b3fa0; border-radius: 3px; padding: 1px 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-  .uitype-badge { font-size: 9px; border-radius: 3px; padding: 1px 5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
-  .uitype-straight { background: #e8f5e9; color: #2e7d32; }
-  .uitype-dropdown { background: #e3f2fd; color: #1565c0; }
-  .uitype-checkbox { background: #fff3e0; color: #e65100; }
-  .credit-name { font-size: 13px; color: var(--gray-900); font-weight: 500; }
-  .credit-pts-note { font-size: 11px; color: var(--gray-500); margin-top: 3px; }
-  .credit-pts-picker { margin-top: 6px; max-width: 100%; }
-  .credit-pts-summary { list-style: none; border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; font-size: 12.5px; font-family: var(--font); background: #fff; color: var(--gray-900); cursor: pointer; white-space: normal; line-height: 1.35; }
-  .credit-pts-picker[open] .credit-pts-summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+  .credit-description { font-size: 11.5px; color: var(--warm-500); margin-top: 3px; line-height: 1.5; }
+  .credit-code-line { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+  .credit-code { font-size: 12px; font-weight: 700; color: var(--gold-dark); letter-spacing: 0.03em; }
+  .req-badge { font-size: 9px; background: rgba(122,88,32,0.13); color: var(--gold-dark); border-radius: 4px; padding: 1.5px 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+  .uitype-badge { font-size: 9px; border-radius: 4px; padding: 1.5px 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+  .uitype-straight { background: var(--green-light); color: var(--green); }
+  .uitype-dropdown { background: #e3edf9; color: #1a5090; }
+  .uitype-checkbox { background: var(--amber-light); color: var(--amber); }
+  .credit-name { font-size: 13px; color: var(--espresso); font-weight: 600; line-height: 1.35; }
+  .credit-pts-note { font-size: 11px; color: var(--warm-400); margin-top: 3px; }
+  .credit-pts-picker { margin-top: 8px; max-width: 100%; }
+  .credit-pts-summary { list-style: none; border: 1px solid var(--border); border-radius: var(--radius); padding: 7px 10px; font-size: 12.5px; font-family: var(--font); background: var(--cream); color: var(--espresso); cursor: pointer; white-space: normal; line-height: 1.4; transition: border-color 0.12s; }
+  .credit-pts-summary:hover { border-color: var(--gold-mid); }
+  .credit-pts-picker[open] .credit-pts-summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-color: var(--gold); }
   .credit-pts-summary::-webkit-details-marker { display: none; }
   .credit-pts-summary::marker { content: ''; }
-  .credit-pts-menu { border: 1px solid var(--border); border-top: none; border-bottom-left-radius: var(--radius); border-bottom-right-radius: var(--radius); background: #fff; overflow: hidden; }
-  .credit-pts-option { display: block; width: 100%; text-align: left; border: none; border-top: 1px solid var(--border); background: #fff; color: var(--gray-900); font: inherit; padding: 7px 10px; cursor: pointer; white-space: normal; line-height: 1.45; }
+  .credit-pts-menu { border: 1px solid var(--gold); border-top: none; border-bottom-left-radius: var(--radius); border-bottom-right-radius: var(--radius); background: var(--cream); overflow: hidden; box-shadow: var(--shadow-md); }
+  .credit-pts-option { display: block; width: 100%; text-align: left; border: none; border-top: 1px solid var(--warm-100); background: var(--cream); color: var(--espresso); font: inherit; padding: 8px 12px; cursor: pointer; white-space: normal; line-height: 1.45; transition: background 0.1s; }
   .credit-pts-option:first-child { border-top: none; }
-  .credit-pts-option:hover { background: var(--gray-50); }
-  .credit-pts-option.active { background: var(--blue-light); }
-  .credit-pts-points { font-weight: 700; color: var(--blue); margin-right: 4px; }
+  .credit-pts-option:hover { background: var(--gold-light); }
+  .credit-pts-option.active { background: rgba(166,124,58,0.12); }
+  .credit-pts-points { font-weight: 700; color: var(--gold-dark); margin-right: 5px; }
 
   /* ---------- CHECKBOX OPTION ROWS ---------- */
   .option-check-row { display: flex; align-items: flex-start; gap: 8px; margin-top: 7px; cursor: pointer; }
-  .option-check-row input[type=checkbox] { width: 14px; height: 14px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--blue); }
-  .option-check-label { font-size: 12.5px; line-height: 1.4; color: var(--gray-900); }
-  .option-pts-badge { font-weight: 700; color: var(--blue); margin-right: 4px; }
+  .option-check-row input[type=checkbox] { width: 14px; height: 14px; margin-top: 2px; flex-shrink: 0; cursor: pointer; accent-color: var(--gold); }
+  .option-check-label { font-size: 12.5px; line-height: 1.45; color: var(--espresso); }
+  .option-pts-badge { font-weight: 700; color: var(--gold-dark); margin-right: 4px; }
 
   /* ---------- STAGE CREDIT ROWS ---------- */
-  .stage-credit-block { border-bottom: 1px solid var(--border); }
+  .stage-credit-block { border-bottom: 1px solid var(--warm-100); }
   .stage-credit-block:last-child { border-bottom: none; }
-  .stage-credit-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px 10px 32px; cursor: pointer; transition: background 0.08s; gap: 12px; }
-  .stage-credit-head:hover { background: var(--gray-50); }
-  .stage-credit-head.open { background: #f7f9fd; }
+  .stage-credit-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px 12px 32px; cursor: pointer; transition: background 0.1s; gap: 12px; }
+  .stage-credit-head:hover { background: var(--warm-50); }
+  .stage-credit-head.open { background: rgba(166,124,58,0.05); }
   .sch-left { flex: 1; min-width: 0; }
-  .sch-title-row { display: flex; align-items: center; gap: 7px; margin-bottom: 2px; flex-wrap: wrap; }
-  .sch-right { font-size: 11.5px; font-weight: 600; flex-shrink: 0; color: var(--gray-500); }
+  .sch-title-row { display: flex; align-items: center; gap: 7px; margin-bottom: 3px; flex-wrap: wrap; }
+  .sch-right { font-size: 11.5px; font-weight: 600; flex-shrink: 0; color: var(--warm-400); }
 
   /* ---------- NOTES PANEL ---------- */
-  .notes-panel { padding: 10px 16px 14px 48px; background: #fbfbf9; border-top: 1px solid var(--border); }
-  .note-label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
-  .note-field { width: 100%; font-size: 12.5px; font-family: var(--font); color: var(--gray-900); background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 7px 10px; resize: vertical; min-height: 44px; line-height: 1.5; transition: border-color 0.1s; }
-  .note-field:focus { outline: none; border-color: var(--blue); }
+  .notes-panel { padding: 12px 18px 16px 48px; background: var(--warm-50); border-top: 1px solid var(--warm-100); }
+  .note-label { font-size: 10.5px; color: var(--warm-400); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 5px; font-weight: 700; }
+  .note-field { width: 100%; font-size: 12.5px; font-family: var(--font); color: var(--espresso); background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; resize: vertical; min-height: 48px; line-height: 1.5; transition: border-color 0.15s, box-shadow 0.15s; }
+  .note-field:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(166,124,58,0.12); }
 
   /* ---------- STAGE SUMMARY ---------- */
-  .stage-summary { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 18px; margin-top: 18px; }
-  .ss-title { font-size: 13px; font-weight: 600; margin-bottom: 12px; color: var(--gray-900); }
-  .ss-row { display: flex; justify-content: space-between; align-items: flex-start; font-size: 12.5px; padding: 7px 0; border-bottom: 1px solid var(--border); gap: 16px; }
+  .stage-summary { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px 20px; margin-top: 20px; box-shadow: var(--shadow-sm); }
+  .ss-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; margin-bottom: 14px; color: var(--espresso); letter-spacing: 0.01em; }
+  .ss-row { display: flex; justify-content: space-between; align-items: flex-start; font-size: 12.5px; padding: 8px 0; border-bottom: 1px solid var(--warm-100); gap: 16px; }
   .ss-row:last-child { border-bottom: none; }
-  .ss-row-label { color: var(--gray-700); flex-shrink: 0; }
-  .ss-codes { font-weight: 600; text-align: right; line-height: 1.6; color: var(--gray-900); }
+  .ss-row-label { color: var(--warm-700); flex-shrink: 0; font-weight: 500; }
+  .ss-codes { font-weight: 600; text-align: right; line-height: 1.7; color: var(--espresso); }
 
   /* ---------- PROJECT INFO BANNER ---------- */
-  .project-banner { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; display: flex; align-items: flex-end; gap: 12px; flex-wrap: nowrap; overflow-x: auto; }
-  .proj-field { display: flex; flex-direction: column; gap: 3px; flex: 1 1 160px; min-width: 150px; }
+  .project-banner { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 20px; margin-bottom: 18px; display: flex; align-items: flex-end; gap: 14px; flex-wrap: nowrap; overflow-x: auto; box-shadow: var(--shadow-sm); }
+  .proj-field { display: flex; flex-direction: column; gap: 4px; flex: 1 1 160px; min-width: 150px; }
   .proj-field.project-record { flex: 0 0 260px; min-width: 220px; }
-  .proj-field label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-500); white-space: nowrap; }
-  .proj-field input, .proj-field select { font-size: 13px; font-family: var(--font); color: var(--gray-900); border: 1px solid var(--border); border-radius: var(--radius); padding: 5px 8px; background: #fff; min-width: 0; }
-  .proj-field input:focus, .proj-field select:focus { outline: none; border-color: var(--blue); }
+  .proj-field label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--warm-400); white-space: nowrap; font-weight: 700; }
+  .proj-field input, .proj-field select { font-size: 13px; font-family: var(--font); color: var(--espresso); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 10px; background: var(--cream); min-width: 0; transition: border-color 0.15s, box-shadow 0.15s; }
+  .proj-field input:focus, .proj-field select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(166,124,58,0.12); }
   @media (max-width: 980px) { .project-banner { flex-wrap: wrap; } }
 
   /* ---------- PRINT ---------- */
@@ -193,15 +236,15 @@
         <svg viewBox="0 0 20 20"><polygon points="10,2 18,7 18,13 10,18 2,13 2,7"/></svg>
       </div>
       <div>
-        <div class="header-title">Pearl Building Rating System</div>
-        <div class="header-sub">Design Checklist | PBRS Version 1.0 | Estidama Abu Dhabi</div>
+        <div class="header-title">Sustainability Platform</div>
+        <div class="header-sub">Report Generation | Coordination | Estidama Abu Dhabi</div>
       </div>
     </div>
     <div class="header-actions">
       <button class="btn sm" onclick="exportData()">Export JSON</button>
       <button class="btn sm" onclick="importData()">Import JSON</button>
       <button class="btn sm" onclick="window.print()">Print</button>
-      <span id="save-indicator" style="font-size:11px;color:var(--green);display:none;">Saved</span>
+      <span id="save-indicator" style="font-size:11px;color:var(--green);display:none;font-weight:600;letter-spacing:0.04em;">Saved</span>
     </div>
   </div>
 </header>
@@ -221,7 +264,7 @@
       <div class="proj-field project-record">
         <label>Project record</label>
         <div style="display:flex;gap:8px;align-items:center;">
-          <select id="proj-select" onchange="loadProject(this.value)" style="flex:1;min-width:120px;padding:5px 8px;border:1px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:13px;color:var(--gray-900);background:#fff;">
+          <select id="proj-select" onchange="loadProject(this.value)" style="flex:1;min-width:120px;padding:6px 10px;border:1px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:13px;color:var(--espresso);background:var(--cream);">
             <option value="">New project</option>
           </select>
           <button class="btn sm" type="button" onclick="saveProject()">Save</button>
@@ -245,10 +288,6 @@
 
     <div class="summary-grid" id="setup-summary"></div>
     <div id="points-pile-chart"></div>
-    <div class="notice">
-      Tick optional credits your team will pursue. Mandatory credits (R) are pre-selected and cannot be deselected.<br>
-      <strong>Straight</strong> credits are all-or-nothing. <strong>Dropdown</strong> credits have escalating tiers - pick one. <strong>Checkbox</strong> credits have independent sub-options - tick any combination.
-    </div>
     <div class="section-tabs" id="setup-section-tabs"></div>
     <div id="setup-credits"></div>
   </div>
@@ -273,7 +312,7 @@
   </div>
 </div>
 
-<script src="credits.js"></script>
+<script src="src/credits.js"></script>
 
 <script>
 const SECTION_COLORS = {
@@ -369,33 +408,147 @@ function renderSetupSectionTabs() {
   document.getElementById('setup-section-tabs').innerHTML = html;
 }
 
+function showSectionDetail(sec, color) {
+  const panel = document.getElementById('donut-detail-panel');
+  if (!panel) return;
+  if (window._donutActiveSec === sec) {
+    window._donutActiveSec = null;
+    document.querySelectorAll('.donut-seg[data-sec]').forEach(el => el.style.opacity = '');
+    panel.innerHTML = '<div class="donut-detail-empty">Click a slice to view credits</div>';
+    return;
+  }
+  window._donutActiveSec = sec;
+  document.querySelectorAll('.donut-seg[data-sec]').forEach(el => {
+    el.style.opacity = el.dataset.sec === sec ? '1' : '0.25';
+  });
+  _renderDonutPanel(sec, color);
+}
+
+function _renderDonutPanel(sec, color) {
+  const panel = document.getElementById('donut-detail-panel');
+  if (!panel) return;
+  const credits = CREDITS[sec] || [];
+  const rows = credits.map(c => {
+    const pts = getCreditPoints(c.code);
+    return `<div class="donut-credit-row">
+      <span class="donut-credit-code">${c.code}</span>
+      ${c.req ? '<span class="donut-credit-badge">Req</span>' : ''}
+      <span class="donut-credit-pts">${pts}</span>
+    </div>`;
+  }).join('');
+  panel.innerHTML = `
+    <div class="donut-detail-head">
+      <span class="donut-detail-swatch" style="background:${color};"></span>
+      <span class="donut-detail-sec">${SECTIONS[sec] || sec}</span>
+    </div>
+    <div class="donut-credit-list">${rows}</div>`;
+}
+
 function renderPointsPileChart() {
   const chart = document.getElementById('points-pile-chart');
   if (!chart) return;
+
   const sectionData = Object.entries(CREDITS).map(([sec, credits]) => ({
     sec,
+    label: SECTIONS[sec] || sec,
     optPoints: credits.filter(c => !c.req).reduce((sum, c) => sum + getCreditPoints(c.code), 0),
     reqCount: credits.filter(c => c.req).length,
     color: SECTION_COLORS[sec] || '#777',
-  }));
+  })).filter(d => d.optPoints > 0 || d.reqCount > 0);
+
+  if (sectionData.length === 0) { chart.innerHTML = ''; return; }
+
   const totalOpt = sectionData.reduce((s, d) => s + d.optPoints, 0);
-  let html = `<div class="pile-chart"><div class="pile-title">Credit pile preview</div>`;
-  html += `<div style="font-size:12.5px;color:var(--gray-600);margin-bottom:10px;">Darker bars = mandatory credits by section; lighter bars = selected optional points.</div>`;
-  html += `<div class="pile-row">`;
-  sectionData.filter(d => d.optPoints > 0).forEach(d => {
-    html += `<div class="pile-segment light" title="${SECTIONS[d.sec]} - ${d.optPoints} optional pt${d.optPoints===1?'':'s'}" style="background:${d.color};flex:${d.optPoints};">${d.optPoints}</div>`;
-  });
-  html += `</div><div class="pile-row">`;
-  sectionData.filter(d => d.reqCount > 0).forEach(d => {
-    html += `<div class="pile-segment dark" title="${SECTIONS[d.sec]} - ${d.reqCount} mandatory" style="background:${d.color};flex:${d.reqCount};">${d.reqCount}</div>`;
-  });
-  html += `</div><div class="pile-legend">`;
-  sectionData.forEach(d => {
-    if (d.optPoints > 0 || d.reqCount > 0)
-      html += `<div class="pile-chip"><span class="pile-dot" style="background:${d.color};"></span>${d.sec}</div>`;
-  });
-  html += `</div></div>`;
-  chart.innerHTML = html;
+  const totalReq = sectionData.reduce((s, d) => s + d.reqCount, 0);
+
+  // Two-ring donut: outer = optional pts, inner = mandatory credits
+  const SZ = 160, cx = SZ / 2, cy = SZ / 2;
+  const R_opt = 62, sw_opt = 18;
+  const R_req = 38, sw_req = 14;
+  const C_opt = 2 * Math.PI * R_opt;
+  const C_req = 2 * Math.PI * R_req;
+  const GAP = 0.016;
+
+  let svg = `<circle cx="${cx}" cy="${cy}" r="${R_opt}" fill="none" stroke="var(--warm-100)" stroke-width="${sw_opt}"/>`;
+  svg    += `<circle cx="${cx}" cy="${cy}" r="${R_req}" fill="none" stroke="var(--warm-100)" stroke-width="${sw_req}"/>`;
+
+  // Outer ring — optional points
+  if (totalOpt > 0) {
+    let off = 0;
+    sectionData.filter(d => d.optPoints > 0).forEach(d => {
+      const frac = d.optPoints / totalOpt;
+      const dash = (Math.max(0, frac - GAP) * C_opt).toFixed(3);
+      const gap  = (C_opt - +dash).toFixed(3);
+      const rot  = (off * 360 - 90).toFixed(3);
+      svg += `<circle class="donut-seg" data-sec="${d.sec}" data-color="${d.color}" onclick="showSectionDetail('${d.sec}','${d.color}')" cx="${cx}" cy="${cy}" r="${R_opt}" fill="none" stroke="${d.color}" stroke-width="${sw_opt}" stroke-dasharray="${dash} ${gap}" transform="rotate(${rot} ${cx} ${cy})"><title>${d.sec}: ${d.optPoints} optional pts</title></circle>`;
+      off += frac;
+    });
+  }
+
+  // Inner ring — mandatory credits
+  if (totalReq > 0) {
+    let off = 0;
+    sectionData.filter(d => d.reqCount > 0).forEach(d => {
+      const frac = d.reqCount / totalReq;
+      const dash = (Math.max(0, frac - GAP) * C_req).toFixed(3);
+      const gap  = (C_req - +dash).toFixed(3);
+      const rot  = (off * 360 - 90).toFixed(3);
+      svg += `<circle class="donut-seg" data-sec="${d.sec}" data-color="${d.color}" onclick="showSectionDetail('${d.sec}','${d.color}')" cx="${cx}" cy="${cy}" r="${R_req}" fill="none" stroke="${d.color}" stroke-width="${sw_req}" stroke-dasharray="${dash} ${gap}" transform="rotate(${rot} ${cx} ${cy})"><title>${d.sec}: ${d.reqCount} mandatory</title></circle>`;
+      off += frac;
+    });
+  }
+
+  const legendRows = sectionData.map(d => `
+    <div class="donut-legend-row">
+      <span class="donut-dot" style="background:${d.color};"></span>
+      <span class="donut-legend-name">${d.sec}</span>
+      <span class="donut-divider"></span>
+      <span class="donut-legend-opt">${d.optPoints > 0 ? d.optPoints : '—'}</span>
+      <span class="donut-legend-req">${d.reqCount > 0 ? d.reqCount : '—'}</span>
+    </div>`).join('');
+
+  chart.innerHTML = `
+    <div class="donut-wrap">
+      <div class="donut-title">Points distribution</div>
+      <div class="donut-sub">Outer ring: optional pts &nbsp;·&nbsp; Inner ring: mandatory credits</div>
+      <div class="donut-layout">
+        <div class="donut-svg-wrap">
+          <svg width="${SZ}" height="${SZ}" viewBox="0 0 ${SZ} ${SZ}" style="display:block;">
+            ${svg}
+          </svg>
+          <div class="donut-center">
+            <span class="donut-center-num">${totalOpt}</span>
+            <span class="donut-center-label">opt pts</span>
+          </div>
+        </div>
+        <div class="donut-legend">
+          <div class="donut-legend-hdr">
+            <span class="donut-col-hdr-blank"></span>
+            <span class="donut-col-hdr-blank"></span>
+            <span class="donut-col-hdr-blank"></span>
+            <span class="donut-col-hdr">Opt</span>
+            <span class="donut-col-hdr">Req</span>
+          </div>
+          ${legendRows}
+        </div>
+        <div class="donut-detail" id="donut-detail-panel">
+          <div class="donut-detail-empty">Click a slice to view credits</div>
+        </div>
+      </div>
+    </div>`;
+
+  // Restore active section after re-render
+  if (window._donutActiveSec) {
+    const active = sectionData.find(d => d.sec === window._donutActiveSec);
+    if (active) {
+      _renderDonutPanel(active.sec, active.color);
+      document.querySelectorAll('.donut-seg[data-sec]').forEach(el => {
+        el.style.opacity = el.dataset.sec === active.sec ? '1' : '0.25';
+      });
+    } else {
+      window._donutActiveSec = null;
+    }
+  }
 }
 
 function renderCreditRow(c) {
@@ -429,7 +582,7 @@ function renderCreditRow(c) {
         <div class="credit-name">${c.title}</div>
         ${c.desc && c.desc !== 'Desc placeholder' ? `<div class="credit-description">${c.desc}</div>` : ''}
         <div class="credit-pts-note">${c.pts} pt${c.pts>1?'s':''} if achieved</div>
-        ${sel && opts[0] ? `<div class="credit-description" style="margin-top:6px;color:var(--gray-700);">${opts[0].desc}</div>` : ''}
+        ${sel && opts[0] ? `<div class="credit-description" style="margin-top:6px;color:var(--warm-700);">${opts[0].desc}</div>` : ''}
       </div>
     </div>`;
   }
@@ -568,13 +721,13 @@ function renderStageCredits() {
             <div class="sch-left">
               <div class="sch-title-row">
                 <span class="credit-code">${c.code}</span>
-                <span style="font-size:13px;font-weight:600;color:var(--gray-900)">${c.title}</span>
+                <span style="font-size:13px;font-weight:600;color:var(--espresso)">${c.title}</span>
                 ${c.req ? '<span class="req-badge">Required</span>' : ''}
                 ${hasNote ? '<span style="font-size:10px;background:#eaf4ea;color:#2a7a2a;border-radius:3px;padding:1px 5px;font-weight:600;">Note</span>' : ''}
               </div>
-              <div style="font-size:11px;color:var(--gray-500);margin-top:2px;">${ptsInfo}</div>
+              <div style="font-size:11px;color:var(--warm-500);margin-top:2px;">${ptsInfo}</div>
             </div>
-            <span style="font-size:18px;color:var(--gray-300);transform:${cOpen?'rotate(90deg)':'none'};transition:transform 0.15s;display:inline-block;">&#8250;</span>
+            <span style="font-size:20px;color:var(--warm-300);transform:${cOpen?'rotate(90deg)':'none'};transition:transform 0.2s;display:inline-block;">&#8250;</span>
           </div>`;
         if (cOpen) {
           html += `<div class="notes-panel">

@@ -5,11 +5,11 @@ import re
 with open('credit_categories.json') as f:
     excel_data = json.load(f)
 
-# Load the existing credits.js
-with open('credits.js', 'r') as f:
+# Load the existing src/credits.js
+with open('src/credits.js', 'r') as f:
     credits_js = f.read()
 
-print("Generating replacement commands for credits.js...")
+print("Generating replacement commands for src/credits.js...")
 
 # Generate replacement commands for each credit
 replacements = []
@@ -66,6 +66,6 @@ for old, new in replacements:
 with open('credits_updated.js', 'w') as f:
     f.write(updated_js)
 
-print("Updated credits.js saved as credits_updated.js")
+print("Updated src/credits.js saved as credits_updated.js")
 print(f"Original: {len(credits_js)} chars")
 print(f"Updated: {len(updated_js)} chars")

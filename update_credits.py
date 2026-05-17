@@ -4,8 +4,8 @@ import json
 with open('credit_categories.json') as f:
     excel_data = json.load(f)
 
-# Load the existing credits.js content
-with open('credits.js', 'r') as f:
+# Load the existing src/credits.js content
+with open('src/credits.js', 'r') as f:
     credits_js = f.read()
 
 # Extract the CREDITS object from the JS file
@@ -16,7 +16,7 @@ start_idx = credits_js.find(start_marker)
 end_idx = credits_js.find(end_marker, start_idx) + 2
 
 if start_idx == -1 or end_idx == -1:
-    print("Could not find CREDITS object in credits.js")
+    print("Could not find CREDITS object in src/credits.js")
     exit(1)
 
 credits_content = credits_js[start_idx:end_idx]
@@ -92,7 +92,7 @@ for credit_type, credits in excel_data.items():
         credit_obj = create_credit_object(code, info, credit_type)
         new_credits[section].append(credit_obj)
 
-# Generate the new credits.js content
+# Generate the new src/credits.js content
 def format_credit_obj(obj):
     """Format a credit object as JavaScript"""
     lines = []
@@ -143,7 +143,7 @@ const CREDITS = {{
 const ALL_CREDITS = Object.values(CREDITS).flat();
 """
 
-# Write the new credits.js
+# Write the new src/credits.js
 with open('credits_new.js', 'w') as f:
     f.write(new_credits_js)
 
